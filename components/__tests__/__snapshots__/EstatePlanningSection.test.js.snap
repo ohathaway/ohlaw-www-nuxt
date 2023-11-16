@@ -1,0 +1,1876 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EstatePlanningSection component > matches the snapshot 1`] = `
+VueWrapper {
+  "__app": {
+    "_component": {
+      "name": "VTU_ROOT",
+      "render": [Function],
+      "setup": [Function],
+    },
+    "_container": <div
+      data-v-app=""
+    >
+      <div>
+        <div
+          class="row no-gutters"
+          id="service-estate-planning"
+        >
+          <div
+            class="col-lg service-img"
+          >
+            <img
+              src="/img/estatenotebook_1024_smallest.jpg"
+            />
+          </div>
+          <div
+            class="col-lg service-text service-text-right"
+          >
+            <div
+              class="p-3 pt-lg-5 px-lg-4"
+            >
+              <h4>
+                Estate Planning
+              </h4>
+              <p>
+                 You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+              </p>
+              <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more estate-planning&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.estate-planning&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+              <button
+                class="btn btn-outline-primary"
+                data-bs-target="#service-description-estate-planning"
+                data-bs-toggle="collapse"
+              >
+                 Learn more 
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row service-description estate-planning bg-white collapse"
+          id="service-description-estate-planning"
+        >
+          <div
+            class="col-3 bg-primary cta-sidebar p-5"
+            id="cta-sidebar-estate-planning"
+          >
+            <contact-form-stub />
+          </div>
+          <div
+            class="col-9 p-5"
+          >
+            <h2>
+              Estate Planning Services
+            </h2>
+            <p>
+               You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+            </p>
+            <p>
+               We believe that everyone should have at least a minimal estate plan in a place to make sure that things go the way they want them. A basic estate plan contains four documents: 1) a will; 2) a living will; 3) a durable medical power of attorney; and 4) a statement of burial instructions. Most people will also find that additional tools will help make life easier for the folks they leave behind. We use trusts in a variety of ways to help with tax planning, probate avoidance, handling specialized assets such as firearms, and more. We can help you understand all of these tools and how to create a plan that protects your life investment. 
+            </p>
+            <p>
+               If you own a business, we find it extremely helpful to build your estate plan with an attorney who also has the knowledge and experience in business law to make sure your business interests align with your estate plan. Your business is a big part of your legacy, and failure to plan well can leave that legacy to the wolves when you are gone. Good estate planning for a business owner will necessarily include good succession planning for the business. Check out our easy options to get the process started. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>,
+    "_context": {
+      "app": [Circular],
+      "components": {
+        "ContactForm": {
+          "name": "ContactForm",
+        },
+        "transition": {
+          "name": "transition",
+        },
+        "transition-group": {
+          "name": "transition-group",
+        },
+      },
+      "config": {
+        "compilerOptions": {},
+        "errorHandler": undefined,
+        "globalProperties": {},
+        "isNativeTag": [Function],
+        "optionMergeStrategies": {},
+        "performance": false,
+        "warnHandler": undefined,
+      },
+      "directives": {},
+      "emitsCache": WeakMap {},
+      "mixins": [
+        {
+          "beforeCreate": [Function],
+        },
+      ],
+      "optionsCache": WeakMap {},
+      "propsCache": WeakMap {},
+      "provides": {},
+      "reload": [Function],
+    },
+    "_instance": {
+      "a": null,
+      "accessCache": {},
+      "appContext": {
+        "app": [Circular],
+        "components": {
+          "ContactForm": {
+            "name": "ContactForm",
+          },
+          "transition": {
+            "name": "transition",
+          },
+          "transition-group": {
+            "name": "transition-group",
+          },
+        },
+        "config": {
+          "compilerOptions": {},
+          "errorHandler": undefined,
+          "globalProperties": {},
+          "isNativeTag": [Function],
+          "optionMergeStrategies": {},
+          "performance": false,
+          "warnHandler": undefined,
+        },
+        "directives": {},
+        "emitsCache": WeakMap {},
+        "mixins": [
+          {
+            "beforeCreate": [Function],
+          },
+        ],
+        "optionsCache": WeakMap {},
+        "propsCache": WeakMap {},
+        "provides": {},
+        "reload": [Function],
+      },
+      "asyncDep": null,
+      "asyncResolved": false,
+      "attrs": {},
+      "attrsProxy": null,
+      "bc": null,
+      "bm": null,
+      "bu": null,
+      "bum": null,
+      "c": null,
+      "components": null,
+      "ctx": {
+        "VTU_COMPONENT": {},
+      },
+      "da": null,
+      "data": {},
+      "devtoolsRawSetupState": {
+        "VTU_COMPONENT": RefImpl {
+          "__v_isRef": true,
+          "__v_isShallow": false,
+          "_rawValue": {},
+          "_value": {},
+          "dep": undefined,
+        },
+      },
+      "directives": null,
+      "ec": null,
+      "effect": ReactiveEffect {
+        "active": true,
+        "allowRecurse": true,
+        "deps": [
+          Set {
+            [Circular],
+          },
+          Set {
+            [Circular],
+          },
+          Set {
+            [Circular],
+          },
+        ],
+        "fn": [Function],
+        "onTrack": undefined,
+        "onTrigger": undefined,
+        "parent": undefined,
+        "scheduler": [Function],
+      },
+      "emit": [Function],
+      "emitsOptions": null,
+      "emitted": null,
+      "exposeProxy": null,
+      "exposed": null,
+      "inheritAttrs": undefined,
+      "isDeactivated": false,
+      "isMounted": true,
+      "isUnmounted": false,
+      "m": null,
+      "next": null,
+      "parent": null,
+      "props": {},
+      "propsDefaults": {},
+      "propsOptions": [
+        {},
+        [],
+      ],
+      "provides": {},
+      "proxy": {
+        "VTU_COMPONENT": {},
+      },
+      "refs": {
+        "VTU_COMPONENT": {},
+      },
+      "render": [Function],
+      "renderCache": [],
+      "root": [Circular],
+      "rtc": null,
+      "rtg": null,
+      "scope": EffectScope {
+        "_active": true,
+        "cleanups": [],
+        "detached": true,
+        "effects": [
+          ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+            ],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "parent": undefined,
+            "scheduler": [Function],
+          },
+        ],
+        "parent": undefined,
+      },
+      "setupContext": null,
+      "setupState": {
+        "VTU_COMPONENT": {},
+      },
+      "slots": {},
+      "slotsProxy": null,
+      "sp": null,
+      "subTree": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": null,
+        "children": null,
+        "component": {
+          "a": null,
+          "accessCache": {},
+          "appContext": {
+            "app": [Circular],
+            "components": {
+              "ContactForm": {
+                "name": "ContactForm",
+              },
+              "transition": {
+                "name": "transition",
+              },
+              "transition-group": {
+                "name": "transition-group",
+              },
+            },
+            "config": {
+              "compilerOptions": {},
+              "errorHandler": undefined,
+              "globalProperties": {},
+              "isNativeTag": [Function],
+              "optionMergeStrategies": {},
+              "performance": false,
+              "warnHandler": undefined,
+            },
+            "directives": {},
+            "emitsCache": WeakMap {},
+            "mixins": [
+              {
+                "beforeCreate": [Function],
+              },
+            ],
+            "optionsCache": WeakMap {},
+            "propsCache": WeakMap {},
+            "provides": {},
+            "reload": [Function],
+          },
+          "asyncDep": null,
+          "asyncResolved": false,
+          "attrs": {},
+          "attrsProxy": null,
+          "bc": null,
+          "bm": null,
+          "bu": null,
+          "bum": null,
+          "c": null,
+          "components": {},
+          "ctx": {},
+          "da": null,
+          "data": {},
+          "devtoolsRawSetupState": {
+            "ContactForm": {
+              "__file": "/Users/owenhathaway/source/ohlaw-www-vue3/src/components/ContactForm.vue",
+              "__name": "ContactForm",
+              "props": [
+                "headline",
+                "textColor",
+                "serviceFormName",
+              ],
+              "render": [Function],
+              "setup": [Function],
+            },
+          },
+          "directives": null,
+          "ec": null,
+          "effect": ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "parent": undefined,
+            "scheduler": [Function],
+          },
+          "emit": [Function],
+          "emitsOptions": null,
+          "emitted": null,
+          "exposeProxy": {},
+          "exposed": {},
+          "inheritAttrs": undefined,
+          "isDeactivated": false,
+          "isMounted": true,
+          "isUnmounted": false,
+          "m": null,
+          "next": null,
+          "parent": [Circular],
+          "props": {},
+          "propsDefaults": {},
+          "propsOptions": [
+            {},
+            [],
+          ],
+          "provides": {},
+          "proxy": {},
+          "refs": {},
+          "render": [Function],
+          "renderCache": [],
+          "root": [Circular],
+          "rtc": null,
+          "rtg": null,
+          "scope": EffectScope {
+            "_active": true,
+            "cleanups": [],
+            "detached": true,
+            "effects": [
+              ReactiveEffect {
+                "active": true,
+                "allowRecurse": true,
+                "deps": [],
+                "fn": [Function],
+                "onTrack": undefined,
+                "onTrigger": undefined,
+                "parent": undefined,
+                "scheduler": [Function],
+              },
+            ],
+            "parent": undefined,
+          },
+          "setupContext": {
+            "attrs": {},
+            "emit": [Function],
+            "expose": [Function],
+            "slots": {},
+          },
+          "setupState": {
+            "ContactForm": {
+              "__file": "/Users/owenhathaway/source/ohlaw-www-vue3/src/components/ContactForm.vue",
+              "__name": "ContactForm",
+              "props": [
+                "headline",
+                "textColor",
+                "serviceFormName",
+              ],
+              "render": [Function],
+              "setup": [Function],
+            },
+          },
+          "slots": {},
+          "slotsProxy": {},
+          "sp": null,
+          "subTree": {
+            "__v_isVNode": true,
+            "__v_skip": true,
+            "anchor": null,
+            "appContext": null,
+            "children": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": <div
+                  class="row no-gutters"
+                  id="service-estate-planning"
+                >
+                  <div
+                    class="col-lg service-img"
+                  >
+                    <img
+                      src="/img/estatenotebook_1024_smallest.jpg"
+                    />
+                  </div>
+                  <div
+                    class="col-lg service-text service-text-right"
+                  >
+                    <div
+                      class="p-3 pt-lg-5 px-lg-4"
+                    >
+                      <h4>
+                        Estate Planning
+                      </h4>
+                      <p>
+                         You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+                      </p>
+                      <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more estate-planning&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.estate-planning&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                      <button
+                        class="btn btn-outline-primary"
+                        data-bs-target="#service-description-estate-planning"
+                        data-bs-toggle="collapse"
+                      >
+                         Learn more 
+                      </button>
+                    </div>
+                  </div>
+                </div>,
+                "appContext": null,
+                "children": "<div class=\\"row no-gutters\\" id=\\"service-estate-planning\\"><div class=\\"col-lg service-img\\"><img src=\\"/img/estatenotebook_1024_smallest.jpg\\"></div><div class=\\"col-lg service-text service-text-right\\"><div class=\\"p-3 pt-lg-5 px-lg-4\\"><h4>Estate Planning</h4><p> You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. </p><!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more estate-planning&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.estate-planning&quot;&gt;Learn more&lt;/a&gt;&lt;/p--><button class=\\"btn btn-outline-primary\\" data-bs-toggle=\\"collapse\\" data-bs-target=\\"#service-description-estate-planning\\"> Learn more </button></div></div></div>",
+                "component": null,
+                "ctx": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="row no-gutters"
+                  id="service-estate-planning"
+                >
+                  <div
+                    class="col-lg service-img"
+                  >
+                    <img
+                      src="/img/estatenotebook_1024_smallest.jpg"
+                    />
+                  </div>
+                  <div
+                    class="col-lg service-text service-text-right"
+                  >
+                    <div
+                      class="p-3 pt-lg-5 px-lg-4"
+                    >
+                      <h4>
+                        Estate Planning
+                      </h4>
+                      <p>
+                         You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+                      </p>
+                      <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more estate-planning&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.estate-planning&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                      <button
+                        class="btn btn-outline-primary"
+                        data-bs-target="#service-description-estate-planning"
+                        data-bs-toggle="collapse"
+                      >
+                         Learn more 
+                      </button>
+                    </div>
+                  </div>
+                </div>,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 8,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 1,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": Symbol(v-stc),
+              },
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": [
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": null,
+                        "component": {
+                          "a": null,
+                          "accessCache": {},
+                          "appContext": {
+                            "app": [Circular],
+                            "components": {
+                              "ContactForm": {
+                                "name": "ContactForm",
+                              },
+                              "transition": {
+                                "name": "transition",
+                              },
+                              "transition-group": {
+                                "name": "transition-group",
+                              },
+                            },
+                            "config": {
+                              "compilerOptions": {},
+                              "errorHandler": undefined,
+                              "globalProperties": {},
+                              "isNativeTag": [Function],
+                              "optionMergeStrategies": {},
+                              "performance": false,
+                              "warnHandler": undefined,
+                            },
+                            "directives": {},
+                            "emitsCache": WeakMap {},
+                            "mixins": [
+                              {
+                                "beforeCreate": [Function],
+                              },
+                            ],
+                            "optionsCache": WeakMap {},
+                            "propsCache": WeakMap {},
+                            "provides": {},
+                            "reload": [Function],
+                          },
+                          "asyncDep": null,
+                          "asyncResolved": false,
+                          "attrs": {},
+                          "attrsProxy": null,
+                          "bc": null,
+                          "bm": null,
+                          "bu": null,
+                          "bum": null,
+                          "c": null,
+                          "components": null,
+                          "ctx": {
+                            "headline": undefined,
+                            "serviceFormName": undefined,
+                            "textColor": undefined,
+                          },
+                          "da": null,
+                          "data": {},
+                          "directives": null,
+                          "ec": null,
+                          "effect": ReactiveEffect {
+                            "active": true,
+                            "allowRecurse": true,
+                            "deps": [
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                            ],
+                            "fn": [Function],
+                            "onTrack": undefined,
+                            "onTrigger": undefined,
+                            "parent": undefined,
+                            "scheduler": [Function],
+                          },
+                          "emit": [Function],
+                          "emitsOptions": null,
+                          "emitted": null,
+                          "exposeProxy": null,
+                          "exposed": null,
+                          "inheritAttrs": undefined,
+                          "isDeactivated": false,
+                          "isMounted": true,
+                          "isUnmounted": false,
+                          "m": null,
+                          "next": null,
+                          "parent": [Circular],
+                          "props": {
+                            "headline": undefined,
+                            "serviceFormName": undefined,
+                            "textColor": undefined,
+                          },
+                          "propsDefaults": {},
+                          "propsOptions": [
+                            {
+                              "headline": {},
+                              "serviceFormName": {},
+                              "textColor": {},
+                            },
+                            [],
+                          ],
+                          "provides": {},
+                          "proxy": {
+                            "headline": undefined,
+                            "serviceFormName": undefined,
+                            "textColor": undefined,
+                          },
+                          "refs": {},
+                          "render": [Function],
+                          "renderCache": [],
+                          "root": [Circular],
+                          "rtc": null,
+                          "rtg": null,
+                          "scope": EffectScope {
+                            "_active": true,
+                            "cleanups": [],
+                            "detached": true,
+                            "effects": [
+                              ReactiveEffect {
+                                "active": true,
+                                "allowRecurse": true,
+                                "deps": [
+                                  Set {
+                                    [Circular],
+                                  },
+                                  Set {
+                                    [Circular],
+                                  },
+                                  Set {
+                                    [Circular],
+                                  },
+                                  Set {
+                                    [Circular],
+                                  },
+                                ],
+                                "fn": [Function],
+                                "onTrack": undefined,
+                                "onTrigger": undefined,
+                                "parent": undefined,
+                                "scheduler": [Function],
+                              },
+                            ],
+                            "parent": undefined,
+                          },
+                          "setupContext": {
+                            "attrs": {},
+                            "emit": [Function],
+                            "expose": [Function],
+                            "slots": {},
+                          },
+                          "setupState": {},
+                          "slots": {},
+                          "slotsProxy": {},
+                          "sp": null,
+                          "subTree": {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": null,
+                            "component": null,
+                            "ctx": [Circular],
+                            "dirs": null,
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <contact-form-stub />,
+                            "key": null,
+                            "patchFlag": 0,
+                            "props": {
+                              "headline": undefined,
+                              "serviceFormName": undefined,
+                              "textColor": undefined,
+                            },
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 1,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "contact-form-stub",
+                          },
+                          "suspense": null,
+                          "suspenseId": 0,
+                          "type": {
+                            "model": undefined,
+                            "name": "ContactForm",
+                            "props": [
+                              "headline",
+                              "textColor",
+                              "serviceFormName",
+                            ],
+                            "setup": [Function],
+                          },
+                          "u": null,
+                          "uid": 2,
+                          "um": null,
+                          "update": [Function],
+                          "vnode": [Circular],
+                          "withProxy": null,
+                        },
+                        "ctx": [Circular],
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <contact-form-stub />,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": null,
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 4,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": {
+                          "model": undefined,
+                          "name": "ContactForm",
+                          "props": [
+                            "headline",
+                            "textColor",
+                            "serviceFormName",
+                          ],
+                          "setup": [Function],
+                        },
+                      },
+                    ],
+                    "component": null,
+                    "ctx": [Circular],
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <div
+                      class="col-3 bg-primary cta-sidebar p-5"
+                      id="cta-sidebar-estate-planning"
+                    >
+                      <contact-form-stub />
+                    </div>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {
+                      "class": "col-3 bg-primary cta-sidebar p-5",
+                      "id": "cta-sidebar-estate-planning",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "div",
+                  },
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "ce": undefined,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "ce": undefined,
+                        "children": "Estate Planning Services",
+                        "component": null,
+                        "ctx": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <h2>
+                          Estate Planning Services
+                        </h2>,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": null,
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "h2",
+                      },
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "ce": undefined,
+                        "children": " You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. ",
+                        "component": null,
+                        "ctx": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <p>
+                           You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+                        </p>,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": null,
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "p",
+                      },
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "ce": undefined,
+                        "children": " We believe that everyone should have at least a minimal estate plan in a place to make sure that things go the way they want them. A basic estate plan contains four documents: 1) a will; 2) a living will; 3) a durable medical power of attorney; and 4) a statement of burial instructions. Most people will also find that additional tools will help make life easier for the folks they leave behind. We use trusts in a variety of ways to help with tax planning, probate avoidance, handling specialized assets such as firearms, and more. We can help you understand all of these tools and how to create a plan that protects your life investment. ",
+                        "component": null,
+                        "ctx": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <p>
+                           We believe that everyone should have at least a minimal estate plan in a place to make sure that things go the way they want them. A basic estate plan contains four documents: 1) a will; 2) a living will; 3) a durable medical power of attorney; and 4) a statement of burial instructions. Most people will also find that additional tools will help make life easier for the folks they leave behind. We use trusts in a variety of ways to help with tax planning, probate avoidance, handling specialized assets such as firearms, and more. We can help you understand all of these tools and how to create a plan that protects your life investment. 
+                        </p>,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": null,
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "p",
+                      },
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "ce": undefined,
+                        "children": " If you own a business, we find it extremely helpful to build your estate plan with an attorney who also has the knowledge and experience in business law to make sure your business interests align with your estate plan. Your business is a big part of your legacy, and failure to plan well can leave that legacy to the wolves when you are gone. Good estate planning for a business owner will necessarily include good succession planning for the business. Check out our easy options to get the process started. ",
+                        "component": null,
+                        "ctx": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <p>
+                           If you own a business, we find it extremely helpful to build your estate plan with an attorney who also has the knowledge and experience in business law to make sure your business interests align with your estate plan. Your business is a big part of your legacy, and failure to plan well can leave that legacy to the wolves when you are gone. Good estate planning for a business owner will necessarily include good succession planning for the business. Check out our easy options to get the process started. 
+                        </p>,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": null,
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "p",
+                      },
+                    ],
+                    "component": null,
+                    "ctx": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <div
+                      class="col-9 p-5"
+                    >
+                      <h2>
+                        Estate Planning Services
+                      </h2>
+                      <p>
+                         You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+                      </p>
+                      <p>
+                         We believe that everyone should have at least a minimal estate plan in a place to make sure that things go the way they want them. A basic estate plan contains four documents: 1) a will; 2) a living will; 3) a durable medical power of attorney; and 4) a statement of burial instructions. Most people will also find that additional tools will help make life easier for the folks they leave behind. We use trusts in a variety of ways to help with tax planning, probate avoidance, handling specialized assets such as firearms, and more. We can help you understand all of these tools and how to create a plan that protects your life investment. 
+                      </p>
+                      <p>
+                         If you own a business, we find it extremely helpful to build your estate plan with an attorney who also has the knowledge and experience in business law to make sure your business interests align with your estate plan. Your business is a big part of your legacy, and failure to plan well can leave that legacy to the wolves when you are gone. Good estate planning for a business owner will necessarily include good succession planning for the business. Check out our easy options to get the process started. 
+                      </p>
+                    </div>,
+                    "key": null,
+                    "patchFlag": -1,
+                    "props": {
+                      "class": "col-9 p-5",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "div",
+                  },
+                ],
+                "component": null,
+                "ctx": [Circular],
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="row service-description estate-planning bg-white collapse"
+                  id="service-description-estate-planning"
+                >
+                  <div
+                    class="col-3 bg-primary cta-sidebar p-5"
+                    id="cta-sidebar-estate-planning"
+                  >
+                    <contact-form-stub />
+                  </div>
+                  <div
+                    class="col-9 p-5"
+                  >
+                    <h2>
+                      Estate Planning Services
+                    </h2>
+                    <p>
+                       You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+                    </p>
+                    <p>
+                       We believe that everyone should have at least a minimal estate plan in a place to make sure that things go the way they want them. A basic estate plan contains four documents: 1) a will; 2) a living will; 3) a durable medical power of attorney; and 4) a statement of burial instructions. Most people will also find that additional tools will help make life easier for the folks they leave behind. We use trusts in a variety of ways to help with tax planning, probate avoidance, handling specialized assets such as firearms, and more. We can help you understand all of these tools and how to create a plan that protects your life investment. 
+                    </p>
+                    <p>
+                       If you own a business, we find it extremely helpful to build your estate plan with an attorney who also has the knowledge and experience in business law to make sure your business interests align with your estate plan. Your business is a big part of your legacy, and failure to plan well can leave that legacy to the wolves when you are gone. Good estate planning for a business owner will necessarily include good succession planning for the business. Check out our easy options to get the process started. 
+                    </p>
+                  </div>
+                </div>,
+                "key": null,
+                "patchFlag": 0,
+                "props": {
+                  "class": "row service-description estate-planning bg-white collapse",
+                  "id": "service-description-estate-planning",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+            ],
+            "component": null,
+            "ctx": [Circular],
+            "dirs": null,
+            "dynamicChildren": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": null,
+                "component": {
+                  "a": null,
+                  "accessCache": {
+                    "@@__IMMUTABLE_ITERABLE__@@": 0,
+                    "@@__IMMUTABLE_RECORD__@@": 0,
+                    "_isMockFunction": 0,
+                    "constructor": 0,
+                    "headline": 3,
+                    "serviceFormName": 3,
+                    "textColor": 3,
+                    "toJSON": 0,
+                    Symbol(Symbol.toStringTag): 0,
+                  },
+                  "appContext": {
+                    "app": [Circular],
+                    "components": {
+                      "ContactForm": {
+                        "name": "ContactForm",
+                      },
+                      "transition": {
+                        "name": "transition",
+                      },
+                      "transition-group": {
+                        "name": "transition-group",
+                      },
+                    },
+                    "config": {
+                      "compilerOptions": {},
+                      "errorHandler": undefined,
+                      "globalProperties": {},
+                      "isNativeTag": [Function],
+                      "optionMergeStrategies": {},
+                      "performance": false,
+                      "warnHandler": undefined,
+                    },
+                    "directives": {},
+                    "emitsCache": WeakMap {},
+                    "mixins": [
+                      {
+                        "beforeCreate": [Function],
+                      },
+                    ],
+                    "optionsCache": WeakMap {},
+                    "propsCache": WeakMap {},
+                    "provides": {},
+                    "reload": [Function],
+                  },
+                  "asyncDep": null,
+                  "asyncResolved": false,
+                  "attrs": {},
+                  "attrsProxy": {},
+                  "bc": null,
+                  "bm": null,
+                  "bu": null,
+                  "bum": null,
+                  "c": null,
+                  "components": null,
+                  "ctx": {
+                    "headline": undefined,
+                    "serviceFormName": undefined,
+                    "textColor": undefined,
+                  },
+                  "da": null,
+                  "data": {},
+                  "directives": null,
+                  "ec": null,
+                  "effect": ReactiveEffect {
+                    "active": true,
+                    "allowRecurse": true,
+                    "deps": [
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                    ],
+                    "fn": [Function],
+                    "onTrack": undefined,
+                    "onTrigger": undefined,
+                    "parent": undefined,
+                    "scheduler": [Function],
+                  },
+                  "emit": [Function],
+                  "emitsOptions": null,
+                  "emitted": null,
+                  "exposeProxy": null,
+                  "exposed": null,
+                  "inheritAttrs": undefined,
+                  "isDeactivated": false,
+                  "isMounted": true,
+                  "isUnmounted": false,
+                  "m": null,
+                  "next": null,
+                  "parent": [Circular],
+                  "props": {
+                    "headline": undefined,
+                    "serviceFormName": undefined,
+                    "textColor": undefined,
+                  },
+                  "propsDefaults": {},
+                  "propsOptions": [
+                    {
+                      "headline": {},
+                      "serviceFormName": {},
+                      "textColor": {},
+                    },
+                    [],
+                  ],
+                  "provides": {},
+                  "proxy": {
+                    "headline": undefined,
+                    "serviceFormName": undefined,
+                    "textColor": undefined,
+                  },
+                  "refs": {},
+                  "render": [Function],
+                  "renderCache": [],
+                  "root": [Circular],
+                  "rtc": null,
+                  "rtg": null,
+                  "scope": EffectScope {
+                    "_active": true,
+                    "cleanups": [],
+                    "detached": true,
+                    "effects": [
+                      ReactiveEffect {
+                        "active": true,
+                        "allowRecurse": true,
+                        "deps": [
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
+                    ],
+                    "parent": undefined,
+                  },
+                  "setupContext": {
+                    "attrs": {},
+                    "emit": [Function],
+                    "expose": [Function],
+                    "slots": {},
+                  },
+                  "setupState": {},
+                  "slots": {},
+                  "slotsProxy": {},
+                  "sp": null,
+                  "subTree": {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": null,
+                    "component": null,
+                    "ctx": [Circular],
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <contact-form-stub />,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {
+                      "headline": undefined,
+                      "serviceFormName": undefined,
+                      "textColor": undefined,
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 1,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "contact-form-stub",
+                  },
+                  "suspense": null,
+                  "suspenseId": 0,
+                  "type": {
+                    "model": undefined,
+                    "name": "ContactForm",
+                    "props": [
+                      "headline",
+                      "textColor",
+                      "serviceFormName",
+                    ],
+                    "setup": [Function],
+                  },
+                  "u": null,
+                  "uid": 2,
+                  "um": null,
+                  "update": [Function],
+                  "vnode": [Circular],
+                  "withProxy": null,
+                },
+                "ctx": [Circular],
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <contact-form-stub />,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 4,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": {
+                  "model": undefined,
+                  "name": "ContactForm",
+                  "props": [
+                    "headline",
+                    "textColor",
+                    "serviceFormName",
+                  ],
+                  "setup": [Function],
+                },
+              },
+            ],
+            "dynamicProps": null,
+            "el": <div>
+              <div
+                class="row no-gutters"
+                id="service-estate-planning"
+              >
+                <div
+                  class="col-lg service-img"
+                >
+                  <img
+                    src="/img/estatenotebook_1024_smallest.jpg"
+                  />
+                </div>
+                <div
+                  class="col-lg service-text service-text-right"
+                >
+                  <div
+                    class="p-3 pt-lg-5 px-lg-4"
+                  >
+                    <h4>
+                      Estate Planning
+                    </h4>
+                    <p>
+                       You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+                    </p>
+                    <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more estate-planning&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.estate-planning&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                    <button
+                      class="btn btn-outline-primary"
+                      data-bs-target="#service-description-estate-planning"
+                      data-bs-toggle="collapse"
+                    >
+                       Learn more 
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="row service-description estate-planning bg-white collapse"
+                id="service-description-estate-planning"
+              >
+                <div
+                  class="col-3 bg-primary cta-sidebar p-5"
+                  id="cta-sidebar-estate-planning"
+                >
+                  <contact-form-stub />
+                </div>
+                <div
+                  class="col-9 p-5"
+                >
+                  <h2>
+                    Estate Planning Services
+                  </h2>
+                  <p>
+                     You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+                  </p>
+                  <p>
+                     We believe that everyone should have at least a minimal estate plan in a place to make sure that things go the way they want them. A basic estate plan contains four documents: 1) a will; 2) a living will; 3) a durable medical power of attorney; and 4) a statement of burial instructions. Most people will also find that additional tools will help make life easier for the folks they leave behind. We use trusts in a variety of ways to help with tax planning, probate avoidance, handling specialized assets such as firearms, and more. We can help you understand all of these tools and how to create a plan that protects your life investment. 
+                  </p>
+                  <p>
+                     If you own a business, we find it extremely helpful to build your estate plan with an attorney who also has the knowledge and experience in business law to make sure your business interests align with your estate plan. Your business is a big part of your legacy, and failure to plan well can leave that legacy to the wolves when you are gone. Good estate planning for a business owner will necessarily include good succession planning for the business. Check out our easy options to get the process started. 
+                  </p>
+                </div>
+              </div>
+            </div>,
+            "key": null,
+            "patchFlag": 0,
+            "props": null,
+            "ref": null,
+            "scopeId": null,
+            "shapeFlag": 17,
+            "slotScopeIds": null,
+            "ssContent": null,
+            "ssFallback": null,
+            "staticCount": 0,
+            "suspense": null,
+            "target": null,
+            "targetAnchor": null,
+            "transition": null,
+            "type": "div",
+          },
+          "suspense": null,
+          "suspenseId": 0,
+          "type": {
+            "__file": "/Users/owenhathaway/source/ohlaw-www-vue3/src/components/EstatePlanningSection.vue",
+            "__name": "EstatePlanningSection",
+            "components": {},
+            "render": [Function],
+            "setup": [Function],
+          },
+          "u": null,
+          "uid": 1,
+          "um": null,
+          "update": [Function],
+          "vnode": [Circular],
+          "withProxy": null,
+        },
+        "ctx": [Circular],
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <div>
+          <div
+            class="row no-gutters"
+            id="service-estate-planning"
+          >
+            <div
+              class="col-lg service-img"
+            >
+              <img
+                src="/img/estatenotebook_1024_smallest.jpg"
+              />
+            </div>
+            <div
+              class="col-lg service-text service-text-right"
+            >
+              <div
+                class="p-3 pt-lg-5 px-lg-4"
+              >
+                <h4>
+                  Estate Planning
+                </h4>
+                <p>
+                   You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+                </p>
+                <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more estate-planning&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.estate-planning&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                <button
+                  class="btn btn-outline-primary"
+                  data-bs-target="#service-description-estate-planning"
+                  data-bs-toggle="collapse"
+                >
+                   Learn more 
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row service-description estate-planning bg-white collapse"
+            id="service-description-estate-planning"
+          >
+            <div
+              class="col-3 bg-primary cta-sidebar p-5"
+              id="cta-sidebar-estate-planning"
+            >
+              <contact-form-stub />
+            </div>
+            <div
+              class="col-9 p-5"
+            >
+              <h2>
+                Estate Planning Services
+              </h2>
+              <p>
+                 You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+              </p>
+              <p>
+                 We believe that everyone should have at least a minimal estate plan in a place to make sure that things go the way they want them. A basic estate plan contains four documents: 1) a will; 2) a living will; 3) a durable medical power of attorney; and 4) a statement of burial instructions. Most people will also find that additional tools will help make life easier for the folks they leave behind. We use trusts in a variety of ways to help with tax planning, probate avoidance, handling specialized assets such as firearms, and more. We can help you understand all of these tools and how to create a plan that protects your life investment. 
+              </p>
+              <p>
+                 If you own a business, we find it extremely helpful to build your estate plan with an attorney who also has the knowledge and experience in business law to make sure your business interests align with your estate plan. Your business is a big part of your legacy, and failure to plan well can leave that legacy to the wolves when you are gone. Good estate planning for a business owner will necessarily include good succession planning for the business. Check out our easy options to get the process started. 
+              </p>
+            </div>
+          </div>
+        </div>,
+        "key": null,
+        "patchFlag": 0,
+        "props": {
+          "ref": "VTU_COMPONENT",
+        },
+        "ref": {
+          "f": false,
+          "i": [Circular],
+          "k": undefined,
+          "r": "VTU_COMPONENT",
+        },
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "__file": "/Users/owenhathaway/source/ohlaw-www-vue3/src/components/EstatePlanningSection.vue",
+          "__name": "EstatePlanningSection",
+          "components": {},
+          "render": [Function],
+          "setup": [Function],
+        },
+      },
+      "suspense": null,
+      "suspenseId": 0,
+      "type": {
+        "name": "VTU_ROOT",
+        "render": [Function],
+        "setup": [Function],
+      },
+      "u": null,
+      "uid": 0,
+      "um": null,
+      "update": [Function],
+      "vnode": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": {
+          "app": [Circular],
+          "components": {
+            "ContactForm": {
+              "name": "ContactForm",
+            },
+            "transition": {
+              "name": "transition",
+            },
+            "transition-group": {
+              "name": "transition-group",
+            },
+          },
+          "config": {
+            "compilerOptions": {},
+            "errorHandler": undefined,
+            "globalProperties": {},
+            "isNativeTag": [Function],
+            "optionMergeStrategies": {},
+            "performance": false,
+            "warnHandler": undefined,
+          },
+          "directives": {},
+          "emitsCache": WeakMap {},
+          "mixins": [
+            {
+              "beforeCreate": [Function],
+            },
+          ],
+          "optionsCache": WeakMap {},
+          "propsCache": WeakMap {},
+          "provides": {},
+          "reload": [Function],
+        },
+        "children": null,
+        "component": [Circular],
+        "ctx": null,
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <div>
+          <div
+            class="row no-gutters"
+            id="service-estate-planning"
+          >
+            <div
+              class="col-lg service-img"
+            >
+              <img
+                src="/img/estatenotebook_1024_smallest.jpg"
+              />
+            </div>
+            <div
+              class="col-lg service-text service-text-right"
+            >
+              <div
+                class="p-3 pt-lg-5 px-lg-4"
+              >
+                <h4>
+                  Estate Planning
+                </h4>
+                <p>
+                   You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+                </p>
+                <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more estate-planning&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.estate-planning&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                <button
+                  class="btn btn-outline-primary"
+                  data-bs-target="#service-description-estate-planning"
+                  data-bs-toggle="collapse"
+                >
+                   Learn more 
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row service-description estate-planning bg-white collapse"
+            id="service-description-estate-planning"
+          >
+            <div
+              class="col-3 bg-primary cta-sidebar p-5"
+              id="cta-sidebar-estate-planning"
+            >
+              <contact-form-stub />
+            </div>
+            <div
+              class="col-9 p-5"
+            >
+              <h2>
+                Estate Planning Services
+              </h2>
+              <p>
+                 You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+              </p>
+              <p>
+                 We believe that everyone should have at least a minimal estate plan in a place to make sure that things go the way they want them. A basic estate plan contains four documents: 1) a will; 2) a living will; 3) a durable medical power of attorney; and 4) a statement of burial instructions. Most people will also find that additional tools will help make life easier for the folks they leave behind. We use trusts in a variety of ways to help with tax planning, probate avoidance, handling specialized assets such as firearms, and more. We can help you understand all of these tools and how to create a plan that protects your life investment. 
+              </p>
+              <p>
+                 If you own a business, we find it extremely helpful to build your estate plan with an attorney who also has the knowledge and experience in business law to make sure your business interests align with your estate plan. Your business is a big part of your legacy, and failure to plan well can leave that legacy to the wolves when you are gone. Good estate planning for a business owner will necessarily include good succession planning for the business. Check out our easy options to get the process started. 
+              </p>
+            </div>
+          </div>
+        </div>,
+        "key": null,
+        "patchFlag": 0,
+        "props": null,
+        "ref": null,
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "name": "VTU_ROOT",
+          "render": [Function],
+          "setup": [Function],
+        },
+      },
+      "withProxy": null,
+    },
+    "_props": null,
+    "_uid": 0,
+    "component": [Function],
+    "config": {
+      "compilerOptions": {},
+      "errorHandler": undefined,
+      "globalProperties": {},
+      "isNativeTag": [Function],
+      "optionMergeStrategies": {},
+      "performance": false,
+      "warnHandler": undefined,
+    },
+    "directive": [Function],
+    "mixin": [Function],
+    "mount": [Function],
+    "provide": [Function],
+    "runWithContext": [Function],
+    "unmount": [Function],
+    "use": [Function],
+    "version": "3.3.4",
+  },
+  "__setProps": [Function],
+  "cleanUpCallbacks": [
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+  ],
+  "componentVM": {},
+  "isDisabled": [Function],
+  "rootVM": {
+    "VTU_COMPONENT": {},
+  },
+  "wrapperElement": <div>
+    <div
+      class="row no-gutters"
+      id="service-estate-planning"
+    >
+      <div
+        class="col-lg service-img"
+      >
+        <img
+          src="/img/estatenotebook_1024_smallest.jpg"
+        />
+      </div>
+      <div
+        class="col-lg service-text service-text-right"
+      >
+        <div
+          class="p-3 pt-lg-5 px-lg-4"
+        >
+          <h4>
+            Estate Planning
+          </h4>
+          <p>
+             You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+          </p>
+          <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more estate-planning&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.estate-planning&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+          <button
+            class="btn btn-outline-primary"
+            data-bs-target="#service-description-estate-planning"
+            data-bs-toggle="collapse"
+          >
+             Learn more 
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row service-description estate-planning bg-white collapse"
+      id="service-description-estate-planning"
+    >
+      <div
+        class="col-3 bg-primary cta-sidebar p-5"
+        id="cta-sidebar-estate-planning"
+      >
+        <contact-form-stub />
+      </div>
+      <div
+        class="col-9 p-5"
+      >
+        <h2>
+          Estate Planning Services
+        </h2>
+        <p>
+           You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them. 
+        </p>
+        <p>
+           We believe that everyone should have at least a minimal estate plan in a place to make sure that things go the way they want them. A basic estate plan contains four documents: 1) a will; 2) a living will; 3) a durable medical power of attorney; and 4) a statement of burial instructions. Most people will also find that additional tools will help make life easier for the folks they leave behind. We use trusts in a variety of ways to help with tax planning, probate avoidance, handling specialized assets such as firearms, and more. We can help you understand all of these tools and how to create a plan that protects your life investment. 
+        </p>
+        <p>
+           If you own a business, we find it extremely helpful to build your estate plan with an attorney who also has the knowledge and experience in business law to make sure your business interests align with your estate plan. Your business is a big part of your legacy, and failure to plan well can leave that legacy to the wolves when you are gone. Good estate planning for a business owner will necessarily include good succession planning for the business. Check out our easy options to get the process started. 
+        </p>
+      </div>
+    </div>
+  </div>,
+}
+`;

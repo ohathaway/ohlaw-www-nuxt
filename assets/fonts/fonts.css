@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'alegreya_sansregular';
+    src: url('alegreyasans-regular-webfont.woff2') format('woff2'),
+         url('alegreyasans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quatrocento';
+  src: url('Quatrocento-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'QuatrocentoBold';
+  src: url('Quatrocento-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}

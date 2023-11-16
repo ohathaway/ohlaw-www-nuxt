@@ -1,0 +1,1931 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SmallBusinessSection component > matches the snapshot 1`] = `
+VueWrapper {
+  "__app": {
+    "_component": {
+      "name": "VTU_ROOT",
+      "render": [Function],
+      "setup": [Function],
+    },
+    "_container": <div
+      data-v-app=""
+    >
+      <div>
+        <div
+          class="row no-gutters"
+          id="service-small-business"
+        >
+          <div
+            class="col-lg m-0 service-img"
+          >
+            <img
+              src="/img/business1_1024_smallest.jpg"
+            />
+          </div>
+          <div
+            class="col-lg m-0 service-text service-text-right"
+          >
+            <div
+              class="p-3 py-lg-5 px-lg-4"
+            >
+              <h4>
+                Small Business
+              </h4>
+              <p>
+                 We are a small business. We’ve started and run several small business. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees? We can help you keep your focus on building your business while managing predictable legal costs. 
+              </p>
+              <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more small-business&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.small-business&quot; href=&quot;#service-description-small-business&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+              <button
+                class="btn btn-outline-primary"
+                data-bs-target="#service-description-small-business"
+                data-bs-toggle="collapse"
+              >
+                 Learn more 
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row service-description small-business bg-white collapse"
+          id="service-description-small-business"
+        >
+          <div
+            class="col-3 bg-primary cta-sidebar p-5"
+            id="cta-sidebar-small-business"
+          >
+            <contact-form-stub />
+          </div>
+          <div
+            class="col-9 p-5"
+          >
+            <h2>
+              Looking to start a business?
+            </h2>
+            <p>
+              We can help you navigate the dizzying array of choices out there.
+            </p>
+            <p>
+               Not really sure about differences between partnerships, LLC’s, corporations, DBA’s, etc.? We make sure our clients understand why they want an LLC (almost always the right answer). 
+            </p>
+            <p>
+               Think it’s simple, and an online service will get you everything you need? Perhaps, and go for it if that’s your thing. We’ll be here if you change your mind. 
+            </p>
+            <p>
+               Someone tell you that you should re-form your company as a Sub-Chapter S corporation? We can help you decide whether that’s really necessary, or whether you might prefer an easier, less expensive option. 
+            </p>
+            <p>
+               Uh oh, there’s more than one owner of the business? Oh the ways this can go wrong! We’ve been there, done that, got the judicially administered dissolution. Let us help you avoid the biggest, costliest mistakes folks make. 
+            </p>
+            <h2>
+              Already In Business But Need Some Help?
+            </h2>
+            <p>
+               Ok, you’ve filed your articles with the secretary of state, got your EIN from the IRS, and opened your bank account and secured your startup funding. Now what? First, you might want to double-check our checklist to see if you missed something. If you’re all set, let’s start doing some business! 
+            </p>
+            <p>
+               Hmmm, too much business to handle? Maybe it’s time to hire some employees. This opens a whole new can of worms we can help you wrangle. Employment agreements vs. compensation plans, non-competes, NDA’s, we can create, review or negotiate any of these and more. 
+            </p>
+            <p>
+               Oh yeah, you need a place for your business to live. We can help you make sure you protect your interests with the lease terms. 
+            </p>
+            <p>
+               Vendor contracts. Ugh. Lots of words in the way of getting your stuff. Don’t ignore them. They’ll come back to haunt you and cost you money. Our services are a lot less expensive. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>,
+    "_context": {
+      "app": [Circular],
+      "components": {
+        "ContactForm": {
+          "name": "ContactForm",
+        },
+        "transition": {
+          "name": "transition",
+        },
+        "transition-group": {
+          "name": "transition-group",
+        },
+      },
+      "config": {
+        "compilerOptions": {},
+        "errorHandler": undefined,
+        "globalProperties": {},
+        "isNativeTag": [Function],
+        "optionMergeStrategies": {},
+        "performance": false,
+        "warnHandler": undefined,
+      },
+      "directives": {},
+      "emitsCache": WeakMap {},
+      "mixins": [
+        {
+          "beforeCreate": [Function],
+        },
+      ],
+      "optionsCache": WeakMap {},
+      "propsCache": WeakMap {},
+      "provides": {},
+      "reload": [Function],
+    },
+    "_instance": {
+      "a": null,
+      "accessCache": {},
+      "appContext": {
+        "app": [Circular],
+        "components": {
+          "ContactForm": {
+            "name": "ContactForm",
+          },
+          "transition": {
+            "name": "transition",
+          },
+          "transition-group": {
+            "name": "transition-group",
+          },
+        },
+        "config": {
+          "compilerOptions": {},
+          "errorHandler": undefined,
+          "globalProperties": {},
+          "isNativeTag": [Function],
+          "optionMergeStrategies": {},
+          "performance": false,
+          "warnHandler": undefined,
+        },
+        "directives": {},
+        "emitsCache": WeakMap {},
+        "mixins": [
+          {
+            "beforeCreate": [Function],
+          },
+        ],
+        "optionsCache": WeakMap {},
+        "propsCache": WeakMap {},
+        "provides": {},
+        "reload": [Function],
+      },
+      "asyncDep": null,
+      "asyncResolved": false,
+      "attrs": {},
+      "attrsProxy": null,
+      "bc": null,
+      "bm": null,
+      "bu": null,
+      "bum": null,
+      "c": null,
+      "components": null,
+      "ctx": {
+        "VTU_COMPONENT": {},
+      },
+      "da": null,
+      "data": {},
+      "devtoolsRawSetupState": {
+        "VTU_COMPONENT": RefImpl {
+          "__v_isRef": true,
+          "__v_isShallow": false,
+          "_rawValue": {},
+          "_value": {},
+          "dep": undefined,
+        },
+      },
+      "directives": null,
+      "ec": null,
+      "effect": ReactiveEffect {
+        "active": true,
+        "allowRecurse": true,
+        "deps": [
+          Set {
+            [Circular],
+          },
+          Set {
+            [Circular],
+          },
+          Set {
+            [Circular],
+          },
+        ],
+        "fn": [Function],
+        "onTrack": undefined,
+        "onTrigger": undefined,
+        "parent": undefined,
+        "scheduler": [Function],
+      },
+      "emit": [Function],
+      "emitsOptions": null,
+      "emitted": null,
+      "exposeProxy": null,
+      "exposed": null,
+      "inheritAttrs": undefined,
+      "isDeactivated": false,
+      "isMounted": true,
+      "isUnmounted": false,
+      "m": null,
+      "next": null,
+      "parent": null,
+      "props": {},
+      "propsDefaults": {},
+      "propsOptions": [
+        {},
+        [],
+      ],
+      "provides": {},
+      "proxy": {
+        "VTU_COMPONENT": {},
+      },
+      "refs": {
+        "VTU_COMPONENT": {},
+      },
+      "render": [Function],
+      "renderCache": [],
+      "root": [Circular],
+      "rtc": null,
+      "rtg": null,
+      "scope": EffectScope {
+        "_active": true,
+        "cleanups": [],
+        "detached": true,
+        "effects": [
+          ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+            ],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "parent": undefined,
+            "scheduler": [Function],
+          },
+        ],
+        "parent": undefined,
+      },
+      "setupContext": null,
+      "setupState": {
+        "VTU_COMPONENT": {},
+      },
+      "slots": {},
+      "slotsProxy": null,
+      "sp": null,
+      "subTree": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": null,
+        "children": null,
+        "component": {
+          "a": null,
+          "accessCache": {},
+          "appContext": {
+            "app": [Circular],
+            "components": {
+              "ContactForm": {
+                "name": "ContactForm",
+              },
+              "transition": {
+                "name": "transition",
+              },
+              "transition-group": {
+                "name": "transition-group",
+              },
+            },
+            "config": {
+              "compilerOptions": {},
+              "errorHandler": undefined,
+              "globalProperties": {},
+              "isNativeTag": [Function],
+              "optionMergeStrategies": {},
+              "performance": false,
+              "warnHandler": undefined,
+            },
+            "directives": {},
+            "emitsCache": WeakMap {},
+            "mixins": [
+              {
+                "beforeCreate": [Function],
+              },
+            ],
+            "optionsCache": WeakMap {},
+            "propsCache": WeakMap {},
+            "provides": {},
+            "reload": [Function],
+          },
+          "asyncDep": null,
+          "asyncResolved": false,
+          "attrs": {},
+          "attrsProxy": null,
+          "bc": null,
+          "bm": null,
+          "bu": null,
+          "bum": null,
+          "c": null,
+          "components": {},
+          "ctx": {},
+          "da": null,
+          "data": {},
+          "devtoolsRawSetupState": {
+            "ContactForm": {
+              "__file": "/Users/owenhathaway/source/ohlaw-www-vue3/src/components/ContactForm.vue",
+              "__name": "ContactForm",
+              "props": [
+                "headline",
+                "textColor",
+                "serviceFormName",
+              ],
+              "render": [Function],
+              "setup": [Function],
+            },
+          },
+          "directives": null,
+          "ec": null,
+          "effect": ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "parent": undefined,
+            "scheduler": [Function],
+          },
+          "emit": [Function],
+          "emitsOptions": null,
+          "emitted": null,
+          "exposeProxy": {},
+          "exposed": {},
+          "inheritAttrs": undefined,
+          "isDeactivated": false,
+          "isMounted": true,
+          "isUnmounted": false,
+          "m": null,
+          "next": null,
+          "parent": [Circular],
+          "props": {},
+          "propsDefaults": {},
+          "propsOptions": [
+            {},
+            [],
+          ],
+          "provides": {},
+          "proxy": {},
+          "refs": {},
+          "render": [Function],
+          "renderCache": [],
+          "root": [Circular],
+          "rtc": null,
+          "rtg": null,
+          "scope": EffectScope {
+            "_active": true,
+            "cleanups": [],
+            "detached": true,
+            "effects": [
+              ReactiveEffect {
+                "active": true,
+                "allowRecurse": true,
+                "deps": [],
+                "fn": [Function],
+                "onTrack": undefined,
+                "onTrigger": undefined,
+                "parent": undefined,
+                "scheduler": [Function],
+              },
+            ],
+            "parent": undefined,
+          },
+          "setupContext": {
+            "attrs": {},
+            "emit": [Function],
+            "expose": [Function],
+            "slots": {},
+          },
+          "setupState": {
+            "ContactForm": {
+              "__file": "/Users/owenhathaway/source/ohlaw-www-vue3/src/components/ContactForm.vue",
+              "__name": "ContactForm",
+              "props": [
+                "headline",
+                "textColor",
+                "serviceFormName",
+              ],
+              "render": [Function],
+              "setup": [Function],
+            },
+          },
+          "slots": {},
+          "slotsProxy": {},
+          "sp": null,
+          "subTree": {
+            "__v_isVNode": true,
+            "__v_skip": true,
+            "anchor": null,
+            "appContext": null,
+            "children": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": <div
+                  class="row no-gutters"
+                  id="service-small-business"
+                >
+                  <div
+                    class="col-lg m-0 service-img"
+                  >
+                    <img
+                      src="/img/business1_1024_smallest.jpg"
+                    />
+                  </div>
+                  <div
+                    class="col-lg m-0 service-text service-text-right"
+                  >
+                    <div
+                      class="p-3 py-lg-5 px-lg-4"
+                    >
+                      <h4>
+                        Small Business
+                      </h4>
+                      <p>
+                         We are a small business. We’ve started and run several small business. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees? We can help you keep your focus on building your business while managing predictable legal costs. 
+                      </p>
+                      <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more small-business&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.small-business&quot; href=&quot;#service-description-small-business&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                      <button
+                        class="btn btn-outline-primary"
+                        data-bs-target="#service-description-small-business"
+                        data-bs-toggle="collapse"
+                      >
+                         Learn more 
+                      </button>
+                    </div>
+                  </div>
+                </div>,
+                "appContext": null,
+                "children": "<div class=\\"row no-gutters\\" id=\\"service-small-business\\"><div class=\\"col-lg m-0 service-img\\"><img src=\\"/img/business1_1024_smallest.jpg\\"></div><div class=\\"col-lg m-0 service-text service-text-right\\"><div class=\\"p-3 py-lg-5 px-lg-4\\"><h4>Small Business</h4><p> We are a small business. We’ve started and run several small business. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees? We can help you keep your focus on building your business while managing predictable legal costs. </p><!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more small-business&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.small-business&quot; href=&quot;#service-description-small-business&quot;&gt;Learn more&lt;/a&gt;&lt;/p--><button class=\\"btn btn-outline-primary\\" data-bs-toggle=\\"collapse\\" data-bs-target=\\"#service-description-small-business\\"> Learn more </button></div></div></div>",
+                "component": null,
+                "ctx": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="row no-gutters"
+                  id="service-small-business"
+                >
+                  <div
+                    class="col-lg m-0 service-img"
+                  >
+                    <img
+                      src="/img/business1_1024_smallest.jpg"
+                    />
+                  </div>
+                  <div
+                    class="col-lg m-0 service-text service-text-right"
+                  >
+                    <div
+                      class="p-3 py-lg-5 px-lg-4"
+                    >
+                      <h4>
+                        Small Business
+                      </h4>
+                      <p>
+                         We are a small business. We’ve started and run several small business. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees? We can help you keep your focus on building your business while managing predictable legal costs. 
+                      </p>
+                      <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more small-business&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.small-business&quot; href=&quot;#service-description-small-business&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                      <button
+                        class="btn btn-outline-primary"
+                        data-bs-target="#service-description-small-business"
+                        data-bs-toggle="collapse"
+                      >
+                         Learn more 
+                      </button>
+                    </div>
+                  </div>
+                </div>,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 8,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 1,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": Symbol(v-stc),
+              },
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": [
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": null,
+                        "component": {
+                          "a": null,
+                          "accessCache": {},
+                          "appContext": {
+                            "app": [Circular],
+                            "components": {
+                              "ContactForm": {
+                                "name": "ContactForm",
+                              },
+                              "transition": {
+                                "name": "transition",
+                              },
+                              "transition-group": {
+                                "name": "transition-group",
+                              },
+                            },
+                            "config": {
+                              "compilerOptions": {},
+                              "errorHandler": undefined,
+                              "globalProperties": {},
+                              "isNativeTag": [Function],
+                              "optionMergeStrategies": {},
+                              "performance": false,
+                              "warnHandler": undefined,
+                            },
+                            "directives": {},
+                            "emitsCache": WeakMap {},
+                            "mixins": [
+                              {
+                                "beforeCreate": [Function],
+                              },
+                            ],
+                            "optionsCache": WeakMap {},
+                            "propsCache": WeakMap {},
+                            "provides": {},
+                            "reload": [Function],
+                          },
+                          "asyncDep": null,
+                          "asyncResolved": false,
+                          "attrs": {},
+                          "attrsProxy": null,
+                          "bc": null,
+                          "bm": null,
+                          "bu": null,
+                          "bum": null,
+                          "c": null,
+                          "components": null,
+                          "ctx": {
+                            "headline": undefined,
+                            "serviceFormName": undefined,
+                            "textColor": undefined,
+                          },
+                          "da": null,
+                          "data": {},
+                          "directives": null,
+                          "ec": null,
+                          "effect": ReactiveEffect {
+                            "active": true,
+                            "allowRecurse": true,
+                            "deps": [
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                            ],
+                            "fn": [Function],
+                            "onTrack": undefined,
+                            "onTrigger": undefined,
+                            "parent": undefined,
+                            "scheduler": [Function],
+                          },
+                          "emit": [Function],
+                          "emitsOptions": null,
+                          "emitted": null,
+                          "exposeProxy": null,
+                          "exposed": null,
+                          "inheritAttrs": undefined,
+                          "isDeactivated": false,
+                          "isMounted": true,
+                          "isUnmounted": false,
+                          "m": null,
+                          "next": null,
+                          "parent": [Circular],
+                          "props": {
+                            "headline": undefined,
+                            "serviceFormName": undefined,
+                            "textColor": undefined,
+                          },
+                          "propsDefaults": {},
+                          "propsOptions": [
+                            {
+                              "headline": {},
+                              "serviceFormName": {},
+                              "textColor": {},
+                            },
+                            [],
+                          ],
+                          "provides": {},
+                          "proxy": {
+                            "headline": undefined,
+                            "serviceFormName": undefined,
+                            "textColor": undefined,
+                          },
+                          "refs": {},
+                          "render": [Function],
+                          "renderCache": [],
+                          "root": [Circular],
+                          "rtc": null,
+                          "rtg": null,
+                          "scope": EffectScope {
+                            "_active": true,
+                            "cleanups": [],
+                            "detached": true,
+                            "effects": [
+                              ReactiveEffect {
+                                "active": true,
+                                "allowRecurse": true,
+                                "deps": [
+                                  Set {
+                                    [Circular],
+                                  },
+                                  Set {
+                                    [Circular],
+                                  },
+                                  Set {
+                                    [Circular],
+                                  },
+                                  Set {
+                                    [Circular],
+                                  },
+                                ],
+                                "fn": [Function],
+                                "onTrack": undefined,
+                                "onTrigger": undefined,
+                                "parent": undefined,
+                                "scheduler": [Function],
+                              },
+                            ],
+                            "parent": undefined,
+                          },
+                          "setupContext": {
+                            "attrs": {},
+                            "emit": [Function],
+                            "expose": [Function],
+                            "slots": {},
+                          },
+                          "setupState": {},
+                          "slots": {},
+                          "slotsProxy": {},
+                          "sp": null,
+                          "subTree": {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": null,
+                            "component": null,
+                            "ctx": [Circular],
+                            "dirs": null,
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <contact-form-stub />,
+                            "key": null,
+                            "patchFlag": 0,
+                            "props": {
+                              "headline": undefined,
+                              "serviceFormName": undefined,
+                              "textColor": undefined,
+                            },
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 1,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "contact-form-stub",
+                          },
+                          "suspense": null,
+                          "suspenseId": 0,
+                          "type": {
+                            "model": undefined,
+                            "name": "ContactForm",
+                            "props": [
+                              "headline",
+                              "textColor",
+                              "serviceFormName",
+                            ],
+                            "setup": [Function],
+                          },
+                          "u": null,
+                          "uid": 2,
+                          "um": null,
+                          "update": [Function],
+                          "vnode": [Circular],
+                          "withProxy": null,
+                        },
+                        "ctx": [Circular],
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <contact-form-stub />,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": null,
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 4,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": {
+                          "model": undefined,
+                          "name": "ContactForm",
+                          "props": [
+                            "headline",
+                            "textColor",
+                            "serviceFormName",
+                          ],
+                          "setup": [Function],
+                        },
+                      },
+                    ],
+                    "component": null,
+                    "ctx": [Circular],
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <div
+                      class="col-3 bg-primary cta-sidebar p-5"
+                      id="cta-sidebar-small-business"
+                    >
+                      <contact-form-stub />
+                    </div>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {
+                      "class": "col-3 bg-primary cta-sidebar p-5",
+                      "id": "cta-sidebar-small-business",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "div",
+                  },
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": <div
+                      class="col-9 p-5"
+                    >
+                      <h2>
+                        Looking to start a business?
+                      </h2>
+                      <p>
+                        We can help you navigate the dizzying array of choices out there.
+                      </p>
+                      <p>
+                         Not really sure about differences between partnerships, LLC’s, corporations, DBA’s, etc.? We make sure our clients understand why they want an LLC (almost always the right answer). 
+                      </p>
+                      <p>
+                         Think it’s simple, and an online service will get you everything you need? Perhaps, and go for it if that’s your thing. We’ll be here if you change your mind. 
+                      </p>
+                      <p>
+                         Someone tell you that you should re-form your company as a Sub-Chapter S corporation? We can help you decide whether that’s really necessary, or whether you might prefer an easier, less expensive option. 
+                      </p>
+                      <p>
+                         Uh oh, there’s more than one owner of the business? Oh the ways this can go wrong! We’ve been there, done that, got the judicially administered dissolution. Let us help you avoid the biggest, costliest mistakes folks make. 
+                      </p>
+                      <h2>
+                        Already In Business But Need Some Help?
+                      </h2>
+                      <p>
+                         Ok, you’ve filed your articles with the secretary of state, got your EIN from the IRS, and opened your bank account and secured your startup funding. Now what? First, you might want to double-check our checklist to see if you missed something. If you’re all set, let’s start doing some business! 
+                      </p>
+                      <p>
+                         Hmmm, too much business to handle? Maybe it’s time to hire some employees. This opens a whole new can of worms we can help you wrangle. Employment agreements vs. compensation plans, non-competes, NDA’s, we can create, review or negotiate any of these and more. 
+                      </p>
+                      <p>
+                         Oh yeah, you need a place for your business to live. We can help you make sure you protect your interests with the lease terms. 
+                      </p>
+                      <p>
+                         Vendor contracts. Ugh. Lots of words in the way of getting your stuff. Don’t ignore them. They’ll come back to haunt you and cost you money. Our services are a lot less expensive. 
+                      </p>
+                    </div>,
+                    "appContext": null,
+                    "children": "<div class=\\"col-9 p-5\\"><h2>Looking to start a business?</h2><p>We can help you navigate the dizzying array of choices out there.</p><p> Not really sure about differences between partnerships, LLC’s, corporations, DBA’s, etc.? We make sure our clients understand why they want an LLC (almost always the right answer). </p><p> Think it’s simple, and an online service will get you everything you need? Perhaps, and go for it if that’s your thing. We’ll be here if you change your mind. </p><p> Someone tell you that you should re-form your company as a Sub-Chapter S corporation? We can help you decide whether that’s really necessary, or whether you might prefer an easier, less expensive option. </p><p> Uh oh, there’s more than one owner of the business? Oh the ways this can go wrong! We’ve been there, done that, got the judicially administered dissolution. Let us help you avoid the biggest, costliest mistakes folks make. </p><h2>Already In Business But Need Some Help?</h2><p> Ok, you’ve filed your articles with the secretary of state, got your EIN from the IRS, and opened your bank account and secured your startup funding. Now what? First, you might want to double-check our checklist to see if you missed something. If you’re all set, let’s start doing some business! </p><p> Hmmm, too much business to handle? Maybe it’s time to hire some employees. This opens a whole new can of worms we can help you wrangle. Employment agreements vs. compensation plans, non-competes, NDA’s, we can create, review or negotiate any of these and more. </p><p> Oh yeah, you need a place for your business to live. We can help you make sure you protect your interests with the lease terms. </p><p> Vendor contracts. Ugh. Lots of words in the way of getting your stuff. Don’t ignore them. They’ll come back to haunt you and cost you money. Our services are a lot less expensive. </p></div>",
+                    "component": null,
+                    "ctx": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <div
+                      class="col-9 p-5"
+                    >
+                      <h2>
+                        Looking to start a business?
+                      </h2>
+                      <p>
+                        We can help you navigate the dizzying array of choices out there.
+                      </p>
+                      <p>
+                         Not really sure about differences between partnerships, LLC’s, corporations, DBA’s, etc.? We make sure our clients understand why they want an LLC (almost always the right answer). 
+                      </p>
+                      <p>
+                         Think it’s simple, and an online service will get you everything you need? Perhaps, and go for it if that’s your thing. We’ll be here if you change your mind. 
+                      </p>
+                      <p>
+                         Someone tell you that you should re-form your company as a Sub-Chapter S corporation? We can help you decide whether that’s really necessary, or whether you might prefer an easier, less expensive option. 
+                      </p>
+                      <p>
+                         Uh oh, there’s more than one owner of the business? Oh the ways this can go wrong! We’ve been there, done that, got the judicially administered dissolution. Let us help you avoid the biggest, costliest mistakes folks make. 
+                      </p>
+                      <h2>
+                        Already In Business But Need Some Help?
+                      </h2>
+                      <p>
+                         Ok, you’ve filed your articles with the secretary of state, got your EIN from the IRS, and opened your bank account and secured your startup funding. Now what? First, you might want to double-check our checklist to see if you missed something. If you’re all set, let’s start doing some business! 
+                      </p>
+                      <p>
+                         Hmmm, too much business to handle? Maybe it’s time to hire some employees. This opens a whole new can of worms we can help you wrangle. Employment agreements vs. compensation plans, non-competes, NDA’s, we can create, review or negotiate any of these and more. 
+                      </p>
+                      <p>
+                         Oh yeah, you need a place for your business to live. We can help you make sure you protect your interests with the lease terms. 
+                      </p>
+                      <p>
+                         Vendor contracts. Ugh. Lots of words in the way of getting your stuff. Don’t ignore them. They’ll come back to haunt you and cost you money. Our services are a lot less expensive. 
+                      </p>
+                    </div>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 1,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(v-stc),
+                  },
+                ],
+                "component": null,
+                "ctx": [Circular],
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="row service-description small-business bg-white collapse"
+                  id="service-description-small-business"
+                >
+                  <div
+                    class="col-3 bg-primary cta-sidebar p-5"
+                    id="cta-sidebar-small-business"
+                  >
+                    <contact-form-stub />
+                  </div>
+                  <div
+                    class="col-9 p-5"
+                  >
+                    <h2>
+                      Looking to start a business?
+                    </h2>
+                    <p>
+                      We can help you navigate the dizzying array of choices out there.
+                    </p>
+                    <p>
+                       Not really sure about differences between partnerships, LLC’s, corporations, DBA’s, etc.? We make sure our clients understand why they want an LLC (almost always the right answer). 
+                    </p>
+                    <p>
+                       Think it’s simple, and an online service will get you everything you need? Perhaps, and go for it if that’s your thing. We’ll be here if you change your mind. 
+                    </p>
+                    <p>
+                       Someone tell you that you should re-form your company as a Sub-Chapter S corporation? We can help you decide whether that’s really necessary, or whether you might prefer an easier, less expensive option. 
+                    </p>
+                    <p>
+                       Uh oh, there’s more than one owner of the business? Oh the ways this can go wrong! We’ve been there, done that, got the judicially administered dissolution. Let us help you avoid the biggest, costliest mistakes folks make. 
+                    </p>
+                    <h2>
+                      Already In Business But Need Some Help?
+                    </h2>
+                    <p>
+                       Ok, you’ve filed your articles with the secretary of state, got your EIN from the IRS, and opened your bank account and secured your startup funding. Now what? First, you might want to double-check our checklist to see if you missed something. If you’re all set, let’s start doing some business! 
+                    </p>
+                    <p>
+                       Hmmm, too much business to handle? Maybe it’s time to hire some employees. This opens a whole new can of worms we can help you wrangle. Employment agreements vs. compensation plans, non-competes, NDA’s, we can create, review or negotiate any of these and more. 
+                    </p>
+                    <p>
+                       Oh yeah, you need a place for your business to live. We can help you make sure you protect your interests with the lease terms. 
+                    </p>
+                    <p>
+                       Vendor contracts. Ugh. Lots of words in the way of getting your stuff. Don’t ignore them. They’ll come back to haunt you and cost you money. Our services are a lot less expensive. 
+                    </p>
+                  </div>
+                </div>,
+                "key": null,
+                "patchFlag": 0,
+                "props": {
+                  "class": "row service-description small-business bg-white collapse",
+                  "id": "service-description-small-business",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+            ],
+            "component": null,
+            "ctx": [Circular],
+            "dirs": null,
+            "dynamicChildren": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": null,
+                "component": {
+                  "a": null,
+                  "accessCache": {
+                    "@@__IMMUTABLE_ITERABLE__@@": 0,
+                    "@@__IMMUTABLE_RECORD__@@": 0,
+                    "_isMockFunction": 0,
+                    "constructor": 0,
+                    "headline": 3,
+                    "serviceFormName": 3,
+                    "textColor": 3,
+                    "toJSON": 0,
+                    Symbol(Symbol.toStringTag): 0,
+                  },
+                  "appContext": {
+                    "app": [Circular],
+                    "components": {
+                      "ContactForm": {
+                        "name": "ContactForm",
+                      },
+                      "transition": {
+                        "name": "transition",
+                      },
+                      "transition-group": {
+                        "name": "transition-group",
+                      },
+                    },
+                    "config": {
+                      "compilerOptions": {},
+                      "errorHandler": undefined,
+                      "globalProperties": {},
+                      "isNativeTag": [Function],
+                      "optionMergeStrategies": {},
+                      "performance": false,
+                      "warnHandler": undefined,
+                    },
+                    "directives": {},
+                    "emitsCache": WeakMap {},
+                    "mixins": [
+                      {
+                        "beforeCreate": [Function],
+                      },
+                    ],
+                    "optionsCache": WeakMap {},
+                    "propsCache": WeakMap {},
+                    "provides": {},
+                    "reload": [Function],
+                  },
+                  "asyncDep": null,
+                  "asyncResolved": false,
+                  "attrs": {},
+                  "attrsProxy": {},
+                  "bc": null,
+                  "bm": null,
+                  "bu": null,
+                  "bum": null,
+                  "c": null,
+                  "components": null,
+                  "ctx": {
+                    "headline": undefined,
+                    "serviceFormName": undefined,
+                    "textColor": undefined,
+                  },
+                  "da": null,
+                  "data": {},
+                  "directives": null,
+                  "ec": null,
+                  "effect": ReactiveEffect {
+                    "active": true,
+                    "allowRecurse": true,
+                    "deps": [
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                      Set {
+                        [Circular],
+                      },
+                    ],
+                    "fn": [Function],
+                    "onTrack": undefined,
+                    "onTrigger": undefined,
+                    "parent": undefined,
+                    "scheduler": [Function],
+                  },
+                  "emit": [Function],
+                  "emitsOptions": null,
+                  "emitted": null,
+                  "exposeProxy": null,
+                  "exposed": null,
+                  "inheritAttrs": undefined,
+                  "isDeactivated": false,
+                  "isMounted": true,
+                  "isUnmounted": false,
+                  "m": null,
+                  "next": null,
+                  "parent": [Circular],
+                  "props": {
+                    "headline": undefined,
+                    "serviceFormName": undefined,
+                    "textColor": undefined,
+                  },
+                  "propsDefaults": {},
+                  "propsOptions": [
+                    {
+                      "headline": {},
+                      "serviceFormName": {},
+                      "textColor": {},
+                    },
+                    [],
+                  ],
+                  "provides": {},
+                  "proxy": {
+                    "headline": undefined,
+                    "serviceFormName": undefined,
+                    "textColor": undefined,
+                  },
+                  "refs": {},
+                  "render": [Function],
+                  "renderCache": [],
+                  "root": [Circular],
+                  "rtc": null,
+                  "rtg": null,
+                  "scope": EffectScope {
+                    "_active": true,
+                    "cleanups": [],
+                    "detached": true,
+                    "effects": [
+                      ReactiveEffect {
+                        "active": true,
+                        "allowRecurse": true,
+                        "deps": [
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                          Set {
+                            [Circular],
+                          },
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "parent": undefined,
+                        "scheduler": [Function],
+                      },
+                    ],
+                    "parent": undefined,
+                  },
+                  "setupContext": {
+                    "attrs": {},
+                    "emit": [Function],
+                    "expose": [Function],
+                    "slots": {},
+                  },
+                  "setupState": {},
+                  "slots": {},
+                  "slotsProxy": {},
+                  "sp": null,
+                  "subTree": {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": null,
+                    "component": null,
+                    "ctx": [Circular],
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <contact-form-stub />,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {
+                      "headline": undefined,
+                      "serviceFormName": undefined,
+                      "textColor": undefined,
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 1,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "contact-form-stub",
+                  },
+                  "suspense": null,
+                  "suspenseId": 0,
+                  "type": {
+                    "model": undefined,
+                    "name": "ContactForm",
+                    "props": [
+                      "headline",
+                      "textColor",
+                      "serviceFormName",
+                    ],
+                    "setup": [Function],
+                  },
+                  "u": null,
+                  "uid": 2,
+                  "um": null,
+                  "update": [Function],
+                  "vnode": [Circular],
+                  "withProxy": null,
+                },
+                "ctx": [Circular],
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <contact-form-stub />,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 4,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": {
+                  "model": undefined,
+                  "name": "ContactForm",
+                  "props": [
+                    "headline",
+                    "textColor",
+                    "serviceFormName",
+                  ],
+                  "setup": [Function],
+                },
+              },
+            ],
+            "dynamicProps": null,
+            "el": <div>
+              <div
+                class="row no-gutters"
+                id="service-small-business"
+              >
+                <div
+                  class="col-lg m-0 service-img"
+                >
+                  <img
+                    src="/img/business1_1024_smallest.jpg"
+                  />
+                </div>
+                <div
+                  class="col-lg m-0 service-text service-text-right"
+                >
+                  <div
+                    class="p-3 py-lg-5 px-lg-4"
+                  >
+                    <h4>
+                      Small Business
+                    </h4>
+                    <p>
+                       We are a small business. We’ve started and run several small business. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees? We can help you keep your focus on building your business while managing predictable legal costs. 
+                    </p>
+                    <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more small-business&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.small-business&quot; href=&quot;#service-description-small-business&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                    <button
+                      class="btn btn-outline-primary"
+                      data-bs-target="#service-description-small-business"
+                      data-bs-toggle="collapse"
+                    >
+                       Learn more 
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="row service-description small-business bg-white collapse"
+                id="service-description-small-business"
+              >
+                <div
+                  class="col-3 bg-primary cta-sidebar p-5"
+                  id="cta-sidebar-small-business"
+                >
+                  <contact-form-stub />
+                </div>
+                <div
+                  class="col-9 p-5"
+                >
+                  <h2>
+                    Looking to start a business?
+                  </h2>
+                  <p>
+                    We can help you navigate the dizzying array of choices out there.
+                  </p>
+                  <p>
+                     Not really sure about differences between partnerships, LLC’s, corporations, DBA’s, etc.? We make sure our clients understand why they want an LLC (almost always the right answer). 
+                  </p>
+                  <p>
+                     Think it’s simple, and an online service will get you everything you need? Perhaps, and go for it if that’s your thing. We’ll be here if you change your mind. 
+                  </p>
+                  <p>
+                     Someone tell you that you should re-form your company as a Sub-Chapter S corporation? We can help you decide whether that’s really necessary, or whether you might prefer an easier, less expensive option. 
+                  </p>
+                  <p>
+                     Uh oh, there’s more than one owner of the business? Oh the ways this can go wrong! We’ve been there, done that, got the judicially administered dissolution. Let us help you avoid the biggest, costliest mistakes folks make. 
+                  </p>
+                  <h2>
+                    Already In Business But Need Some Help?
+                  </h2>
+                  <p>
+                     Ok, you’ve filed your articles with the secretary of state, got your EIN from the IRS, and opened your bank account and secured your startup funding. Now what? First, you might want to double-check our checklist to see if you missed something. If you’re all set, let’s start doing some business! 
+                  </p>
+                  <p>
+                     Hmmm, too much business to handle? Maybe it’s time to hire some employees. This opens a whole new can of worms we can help you wrangle. Employment agreements vs. compensation plans, non-competes, NDA’s, we can create, review or negotiate any of these and more. 
+                  </p>
+                  <p>
+                     Oh yeah, you need a place for your business to live. We can help you make sure you protect your interests with the lease terms. 
+                  </p>
+                  <p>
+                     Vendor contracts. Ugh. Lots of words in the way of getting your stuff. Don’t ignore them. They’ll come back to haunt you and cost you money. Our services are a lot less expensive. 
+                  </p>
+                </div>
+              </div>
+            </div>,
+            "key": null,
+            "patchFlag": 0,
+            "props": null,
+            "ref": null,
+            "scopeId": null,
+            "shapeFlag": 17,
+            "slotScopeIds": null,
+            "ssContent": null,
+            "ssFallback": null,
+            "staticCount": 0,
+            "suspense": null,
+            "target": null,
+            "targetAnchor": null,
+            "transition": null,
+            "type": "div",
+          },
+          "suspense": null,
+          "suspenseId": 0,
+          "type": {
+            "__file": "/Users/owenhathaway/source/ohlaw-www-vue3/src/components/SmallBusinessSection.vue",
+            "__name": "SmallBusinessSection",
+            "components": {},
+            "render": [Function],
+            "setup": [Function],
+          },
+          "u": null,
+          "uid": 1,
+          "um": null,
+          "update": [Function],
+          "vnode": [Circular],
+          "withProxy": null,
+        },
+        "ctx": [Circular],
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <div>
+          <div
+            class="row no-gutters"
+            id="service-small-business"
+          >
+            <div
+              class="col-lg m-0 service-img"
+            >
+              <img
+                src="/img/business1_1024_smallest.jpg"
+              />
+            </div>
+            <div
+              class="col-lg m-0 service-text service-text-right"
+            >
+              <div
+                class="p-3 py-lg-5 px-lg-4"
+              >
+                <h4>
+                  Small Business
+                </h4>
+                <p>
+                   We are a small business. We’ve started and run several small business. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees? We can help you keep your focus on building your business while managing predictable legal costs. 
+                </p>
+                <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more small-business&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.small-business&quot; href=&quot;#service-description-small-business&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                <button
+                  class="btn btn-outline-primary"
+                  data-bs-target="#service-description-small-business"
+                  data-bs-toggle="collapse"
+                >
+                   Learn more 
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row service-description small-business bg-white collapse"
+            id="service-description-small-business"
+          >
+            <div
+              class="col-3 bg-primary cta-sidebar p-5"
+              id="cta-sidebar-small-business"
+            >
+              <contact-form-stub />
+            </div>
+            <div
+              class="col-9 p-5"
+            >
+              <h2>
+                Looking to start a business?
+              </h2>
+              <p>
+                We can help you navigate the dizzying array of choices out there.
+              </p>
+              <p>
+                 Not really sure about differences between partnerships, LLC’s, corporations, DBA’s, etc.? We make sure our clients understand why they want an LLC (almost always the right answer). 
+              </p>
+              <p>
+                 Think it’s simple, and an online service will get you everything you need? Perhaps, and go for it if that’s your thing. We’ll be here if you change your mind. 
+              </p>
+              <p>
+                 Someone tell you that you should re-form your company as a Sub-Chapter S corporation? We can help you decide whether that’s really necessary, or whether you might prefer an easier, less expensive option. 
+              </p>
+              <p>
+                 Uh oh, there’s more than one owner of the business? Oh the ways this can go wrong! We’ve been there, done that, got the judicially administered dissolution. Let us help you avoid the biggest, costliest mistakes folks make. 
+              </p>
+              <h2>
+                Already In Business But Need Some Help?
+              </h2>
+              <p>
+                 Ok, you’ve filed your articles with the secretary of state, got your EIN from the IRS, and opened your bank account and secured your startup funding. Now what? First, you might want to double-check our checklist to see if you missed something. If you’re all set, let’s start doing some business! 
+              </p>
+              <p>
+                 Hmmm, too much business to handle? Maybe it’s time to hire some employees. This opens a whole new can of worms we can help you wrangle. Employment agreements vs. compensation plans, non-competes, NDA’s, we can create, review or negotiate any of these and more. 
+              </p>
+              <p>
+                 Oh yeah, you need a place for your business to live. We can help you make sure you protect your interests with the lease terms. 
+              </p>
+              <p>
+                 Vendor contracts. Ugh. Lots of words in the way of getting your stuff. Don’t ignore them. They’ll come back to haunt you and cost you money. Our services are a lot less expensive. 
+              </p>
+            </div>
+          </div>
+        </div>,
+        "key": null,
+        "patchFlag": 0,
+        "props": {
+          "ref": "VTU_COMPONENT",
+        },
+        "ref": {
+          "f": false,
+          "i": [Circular],
+          "k": undefined,
+          "r": "VTU_COMPONENT",
+        },
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "__file": "/Users/owenhathaway/source/ohlaw-www-vue3/src/components/SmallBusinessSection.vue",
+          "__name": "SmallBusinessSection",
+          "components": {},
+          "render": [Function],
+          "setup": [Function],
+        },
+      },
+      "suspense": null,
+      "suspenseId": 0,
+      "type": {
+        "name": "VTU_ROOT",
+        "render": [Function],
+        "setup": [Function],
+      },
+      "u": null,
+      "uid": 0,
+      "um": null,
+      "update": [Function],
+      "vnode": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": {
+          "app": [Circular],
+          "components": {
+            "ContactForm": {
+              "name": "ContactForm",
+            },
+            "transition": {
+              "name": "transition",
+            },
+            "transition-group": {
+              "name": "transition-group",
+            },
+          },
+          "config": {
+            "compilerOptions": {},
+            "errorHandler": undefined,
+            "globalProperties": {},
+            "isNativeTag": [Function],
+            "optionMergeStrategies": {},
+            "performance": false,
+            "warnHandler": undefined,
+          },
+          "directives": {},
+          "emitsCache": WeakMap {},
+          "mixins": [
+            {
+              "beforeCreate": [Function],
+            },
+          ],
+          "optionsCache": WeakMap {},
+          "propsCache": WeakMap {},
+          "provides": {},
+          "reload": [Function],
+        },
+        "children": null,
+        "component": [Circular],
+        "ctx": null,
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <div>
+          <div
+            class="row no-gutters"
+            id="service-small-business"
+          >
+            <div
+              class="col-lg m-0 service-img"
+            >
+              <img
+                src="/img/business1_1024_smallest.jpg"
+              />
+            </div>
+            <div
+              class="col-lg m-0 service-text service-text-right"
+            >
+              <div
+                class="p-3 py-lg-5 px-lg-4"
+              >
+                <h4>
+                  Small Business
+                </h4>
+                <p>
+                   We are a small business. We’ve started and run several small business. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees? We can help you keep your focus on building your business while managing predictable legal costs. 
+                </p>
+                <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more small-business&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.small-business&quot; href=&quot;#service-description-small-business&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+                <button
+                  class="btn btn-outline-primary"
+                  data-bs-target="#service-description-small-business"
+                  data-bs-toggle="collapse"
+                >
+                   Learn more 
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row service-description small-business bg-white collapse"
+            id="service-description-small-business"
+          >
+            <div
+              class="col-3 bg-primary cta-sidebar p-5"
+              id="cta-sidebar-small-business"
+            >
+              <contact-form-stub />
+            </div>
+            <div
+              class="col-9 p-5"
+            >
+              <h2>
+                Looking to start a business?
+              </h2>
+              <p>
+                We can help you navigate the dizzying array of choices out there.
+              </p>
+              <p>
+                 Not really sure about differences between partnerships, LLC’s, corporations, DBA’s, etc.? We make sure our clients understand why they want an LLC (almost always the right answer). 
+              </p>
+              <p>
+                 Think it’s simple, and an online service will get you everything you need? Perhaps, and go for it if that’s your thing. We’ll be here if you change your mind. 
+              </p>
+              <p>
+                 Someone tell you that you should re-form your company as a Sub-Chapter S corporation? We can help you decide whether that’s really necessary, or whether you might prefer an easier, less expensive option. 
+              </p>
+              <p>
+                 Uh oh, there’s more than one owner of the business? Oh the ways this can go wrong! We’ve been there, done that, got the judicially administered dissolution. Let us help you avoid the biggest, costliest mistakes folks make. 
+              </p>
+              <h2>
+                Already In Business But Need Some Help?
+              </h2>
+              <p>
+                 Ok, you’ve filed your articles with the secretary of state, got your EIN from the IRS, and opened your bank account and secured your startup funding. Now what? First, you might want to double-check our checklist to see if you missed something. If you’re all set, let’s start doing some business! 
+              </p>
+              <p>
+                 Hmmm, too much business to handle? Maybe it’s time to hire some employees. This opens a whole new can of worms we can help you wrangle. Employment agreements vs. compensation plans, non-competes, NDA’s, we can create, review or negotiate any of these and more. 
+              </p>
+              <p>
+                 Oh yeah, you need a place for your business to live. We can help you make sure you protect your interests with the lease terms. 
+              </p>
+              <p>
+                 Vendor contracts. Ugh. Lots of words in the way of getting your stuff. Don’t ignore them. They’ll come back to haunt you and cost you money. Our services are a lot less expensive. 
+              </p>
+            </div>
+          </div>
+        </div>,
+        "key": null,
+        "patchFlag": 0,
+        "props": null,
+        "ref": null,
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "name": "VTU_ROOT",
+          "render": [Function],
+          "setup": [Function],
+        },
+      },
+      "withProxy": null,
+    },
+    "_props": null,
+    "_uid": 0,
+    "component": [Function],
+    "config": {
+      "compilerOptions": {},
+      "errorHandler": undefined,
+      "globalProperties": {},
+      "isNativeTag": [Function],
+      "optionMergeStrategies": {},
+      "performance": false,
+      "warnHandler": undefined,
+    },
+    "directive": [Function],
+    "mixin": [Function],
+    "mount": [Function],
+    "provide": [Function],
+    "runWithContext": [Function],
+    "unmount": [Function],
+    "use": [Function],
+    "version": "3.3.4",
+  },
+  "__setProps": [Function],
+  "cleanUpCallbacks": [
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+    [Function],
+  ],
+  "componentVM": {},
+  "isDisabled": [Function],
+  "rootVM": {
+    "VTU_COMPONENT": {},
+  },
+  "wrapperElement": <div>
+    <div
+      class="row no-gutters"
+      id="service-small-business"
+    >
+      <div
+        class="col-lg m-0 service-img"
+      >
+        <img
+          src="/img/business1_1024_smallest.jpg"
+        />
+      </div>
+      <div
+        class="col-lg m-0 service-text service-text-right"
+      >
+        <div
+          class="p-3 py-lg-5 px-lg-4"
+        >
+          <h4>
+            Small Business
+          </h4>
+          <p>
+             We are a small business. We’ve started and run several small business. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees? We can help you keep your focus on building your business while managing predictable legal costs. 
+          </p>
+          <!--p&gt;&lt;a class=&quot;btn btn-outline-primary learn-more small-business&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.service-description.small-business&quot; href=&quot;#service-description-small-business&quot;&gt;Learn more&lt;/a&gt;&lt;/p-->
+          <button
+            class="btn btn-outline-primary"
+            data-bs-target="#service-description-small-business"
+            data-bs-toggle="collapse"
+          >
+             Learn more 
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row service-description small-business bg-white collapse"
+      id="service-description-small-business"
+    >
+      <div
+        class="col-3 bg-primary cta-sidebar p-5"
+        id="cta-sidebar-small-business"
+      >
+        <contact-form-stub />
+      </div>
+      <div
+        class="col-9 p-5"
+      >
+        <h2>
+          Looking to start a business?
+        </h2>
+        <p>
+          We can help you navigate the dizzying array of choices out there.
+        </p>
+        <p>
+           Not really sure about differences between partnerships, LLC’s, corporations, DBA’s, etc.? We make sure our clients understand why they want an LLC (almost always the right answer). 
+        </p>
+        <p>
+           Think it’s simple, and an online service will get you everything you need? Perhaps, and go for it if that’s your thing. We’ll be here if you change your mind. 
+        </p>
+        <p>
+           Someone tell you that you should re-form your company as a Sub-Chapter S corporation? We can help you decide whether that’s really necessary, or whether you might prefer an easier, less expensive option. 
+        </p>
+        <p>
+           Uh oh, there’s more than one owner of the business? Oh the ways this can go wrong! We’ve been there, done that, got the judicially administered dissolution. Let us help you avoid the biggest, costliest mistakes folks make. 
+        </p>
+        <h2>
+          Already In Business But Need Some Help?
+        </h2>
+        <p>
+           Ok, you’ve filed your articles with the secretary of state, got your EIN from the IRS, and opened your bank account and secured your startup funding. Now what? First, you might want to double-check our checklist to see if you missed something. If you’re all set, let’s start doing some business! 
+        </p>
+        <p>
+           Hmmm, too much business to handle? Maybe it’s time to hire some employees. This opens a whole new can of worms we can help you wrangle. Employment agreements vs. compensation plans, non-competes, NDA’s, we can create, review or negotiate any of these and more. 
+        </p>
+        <p>
+           Oh yeah, you need a place for your business to live. We can help you make sure you protect your interests with the lease terms. 
+        </p>
+        <p>
+           Vendor contracts. Ugh. Lots of words in the way of getting your stuff. Don’t ignore them. They’ll come back to haunt you and cost you money. Our services are a lot less expensive. 
+        </p>
+      </div>
+    </div>
+  </div>,
+}
+`;
