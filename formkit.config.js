@@ -1,3 +1,4 @@
+import { defineFormKitConfig } from '@formkit/vue'
 import { genesisIcons } from '@formkit/icons'
 import { library, o2svg } from '@/plugins/fontawesome'
 import { createFloatingLabelsPlugin } from '@formkit/addons'
@@ -48,7 +49,7 @@ function addAsteriskPlugin(node) {
   })
 }
 
-export const FormKitConfig = {
+export default {
   config: {
     classes: {
       /*
@@ -86,7 +87,7 @@ export const FormKitConfig = {
     }
   },
   plugins: [
-    addAsteriskPlugin,
+    // addAsteriskPlugin,
     createFloatingLabelsPlugin({ useAsDefault: true }),
     pro
   ],

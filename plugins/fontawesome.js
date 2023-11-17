@@ -84,7 +84,7 @@ const o2svg = (faIcon) => {
       class="svg-inline--fa fa-at"
       role="img">
       <path fillColor="currentColor" d="${faIcon[4]}" />
-    </svg
+    </svg>
   `
 }
 

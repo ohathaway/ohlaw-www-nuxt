@@ -12,7 +12,5 @@
 </template>
 
 <script setup>
-import ContactForm from './ContactForm.vue'
-
 const headline = 'Get in touch, we\'d love to hear from you'
 </script>
