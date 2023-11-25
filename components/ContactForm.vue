@@ -60,7 +60,8 @@
 /* eslint-disable no-unused-vars */
 import { computed } from 'vue'
 import { reset } from '@formkit/core'
-import { isEmpty } from 'lodash'
+import pkg from 'lodash'
+const { isEmpty } = pkg
 import { useMainStore } from '@/stores/mainStore'
 import axios from 'axios'
 
