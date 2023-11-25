@@ -16,10 +16,7 @@ export const useMainStore = defineStore('main', () => {
   }
 
   return {
-    addNotification,
     mainClasses,
-    notifications,
-    removeNotification,
     toastError,
     toastSuccess
   }
