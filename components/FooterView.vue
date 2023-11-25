@@ -34,10 +34,10 @@
     <div class="col-sm footer-address">
       <ul class="list-unstyled">
         <li>
-          <a href="https://goo.gl/maps/QaDjyDhbHFkbF4iE6">
+          <a href="https://goo.gl/maps/QaDjyDhbHFkbF4iE6" target="_blank">
             <font-awesome-icon icon="fas fa-map" inverse></font-awesome-icon>
+            &nbsp;&nbsp;&nbsp;<u>Ft. Collins Office:</u>
           </a>
-          &nbsp;&nbsp;&nbsp;<u>Ft. Collins Office:</u>
         </li>
         <li>2580 E Harmony Rd</li>
         <li>Suite 201</li>
@@ -60,7 +60,7 @@
 
 <style scoped>
 a {
-  color: #ffffff;
+  color: v-bind(white);
   text-decoration: none;
   &:hover {
     text-decoration: underline;

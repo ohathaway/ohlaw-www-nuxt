@@ -12,11 +12,12 @@ export default defineNuxtConfig({
       '@fortawesome/fontawesome-svg-core',
       '@fortawesome/free-regular-svg-icons',
       '@fortawesome/free-solid-svg-icons',
-      '@fortawesome/vue-fontawesome'
+      '@fortawesome/vue-fontawesome',
+      'vue-toastification'
     ]
   },
   css: [
-    'bootstrap/scss/bootstrap.scss',
+    // 'bootstrap/scss/bootstrap.scss',
     '@fortawesome/fontawesome-svg-core/styles.css',
     '@formkit/themes/genesis',
     '~/assets/scss/site.scss'
@@ -26,6 +27,8 @@ export default defineNuxtConfig({
     autoImport: true
   },
   modules: [
+    'nuxt-icon',
+    '@vueuse/nuxt',
     '@formkit/nuxt',
     '@pinia/nuxt'
   ],

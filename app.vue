@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <LayoutNotificationContainer /> -->
     <HeaderView />
     <NuxtPage />
     <FooterView />
