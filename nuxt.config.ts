@@ -1,5 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      meta: [
+        {
+          name: "google-site-verification",
+          content: "Q4l9tT_meQV5Wpva7hnU27YZyc6Eja7hVsf8NqHdhKU"
+        }
+      ]
+    }
+  },
   build: {
     transpile: [
       '@formkit/icons',
