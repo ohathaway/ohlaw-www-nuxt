@@ -10,6 +10,14 @@ export default defineNuxtConfig({
       ]
     }
   },
+  apollo: {
+    clients: {
+      default: {
+        authType: 'none',
+        httpEndpoint: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
+      }
+    }
+  },
   build: {
     transpile: [
       '@formkit/icons',
@@ -36,11 +44,17 @@ export default defineNuxtConfig({
   formkit: {
     autoImport: true
   },
+  env: {
+    strapiBaseUri: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
+  },
   modules: [
     'nuxt-icon',
     '@vueuse/nuxt',
     '@formkit/nuxt',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxtjs/apollo',
+    '@nuxtjs/strapi'
   ],
-  pages: true
+  pages: true,
+  ssr: false
 })

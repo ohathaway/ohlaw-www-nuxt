@@ -1,15 +1,12 @@
 <template>
   <div>
-    <!-- <LayoutNotificationContainer /> -->
     <HeaderView />
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
     <FooterView />
   </div>
 </template>
-
-<script setup>
-const store = useMainStore()
-</script>
 
 <style lang="scss">
 #app {
