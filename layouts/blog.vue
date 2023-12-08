@@ -18,4 +18,9 @@ a {
     text-decoration: underline;
   }
 }
+
+p {
+  font-size: 1.4rem;
+  font-weight: 100;
+}
 </style>

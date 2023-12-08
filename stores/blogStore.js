@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const useBlogStore = defineStore('blog', () => {
+  const post = ref()
   const tags = ref([])
 
   const loadTags = async () => {
@@ -17,5 +18,5 @@ export const useBlogStore = defineStore('blog', () => {
     return true
   }
 
-  return { loadTags, tags }
+  return { loadTags, post, tags }
 })

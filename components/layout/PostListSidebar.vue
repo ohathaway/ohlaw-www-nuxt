@@ -17,7 +17,10 @@
                   {{ tag.attributes.Name }}
                 </NuxtLink>
               </span>
-                <NuxtLink :to="`blog/${post.attributes.slug}`">
+                <NuxtLink
+                  :to="`blog/${post.attributes.slug}`"
+                  @click="getPost(post.id)"
+                >
                   <h4>{{  post.attributes.Title }}</h4>
                 </NuxtLink>
                 {{ post.attributes.Snippet }}
@@ -45,6 +48,8 @@ import { storeToRefs } from 'pinia'
 import { useBlogStore } from '@/stores/blogStore'
 
 const props = defineProps(['title', 'posts'])
+const blogStore = useBlogStore()
+
 
 </script>
 
