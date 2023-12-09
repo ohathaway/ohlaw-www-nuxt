@@ -1,8 +1,10 @@
 <template>
-   <main class="main pt-5 px-5">
-    <BlogHeader />
-    <slot />
-  </main>
+  <div>
+    <main class="main pt-5 px-5">
+      <BlogHeader />
+      <slot />
+    </main>
+  </div>
 </template>
 
 <script setup>

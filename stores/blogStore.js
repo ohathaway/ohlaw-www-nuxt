@@ -3,6 +3,7 @@ import { ref } from 'vue'
 
 export const useBlogStore = defineStore('blog', () => {
   const post = ref()
+  const posts = ref([])
   const tags = ref([])
 
   const loadTags = async () => {
@@ -18,5 +19,5 @@ export const useBlogStore = defineStore('blog', () => {
     return true
   }
 
-  return { loadTags, post, tags }
+  return { loadTags, post, posts, tags }
 })

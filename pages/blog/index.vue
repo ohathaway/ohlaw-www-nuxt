@@ -4,13 +4,16 @@
       <LayoutMediaFocus source="/img/estatenotebook_1024_smallest.jpg" title="Life and Legacy Notebook" />
     </div>
     <div class="col-md-5">
-      <LayoutPostListSidebar title="Spotlight" :posts="data.posts.data"/>
+      <LayoutPostListSidebar title="Spotlight"/>
     </div>
   </div>
 </template>
 
 <script setup>
+import { provide } from 'vue'
 import { useBlogStore } from '@/stores/blogStore'
+
+const store = useBlogStore()
 
 definePageMeta({
   layout: 'blog'
@@ -18,18 +21,26 @@ definePageMeta({
 
 const postsQuery = gql`
 query {
-  posts {
+  posts(sort: "publishedAt:ASC") {
     data {
       id
       attributes {
         Title,
         Snippet,
+        Image {
+          data {
+            attributes {
+              name
+              url
+            }
+          }
+        },
         slug,
         tags {
           data {
             id,
-              attributes {
-              Name
+            attributes {
+                Name
             }
           }
         }
@@ -40,6 +51,9 @@ query {
 
 
 const { data } = await useAsyncQuery(postsQuery)
+store.posts.value = data.value.posts.data
+console.debug('store.posts.value: ', store.posts.value)
+provide('posts', data)
 </script>
 
 <style scoped>
