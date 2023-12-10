@@ -130,7 +130,7 @@ ${fields.content}
     }
 
     const result = await endpoint.post('/', body)
-    console.debug('result: ', result)
+
     const notification = {
       type: 'success',
       header: 'Success',

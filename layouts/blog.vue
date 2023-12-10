@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="main pt-5 px-5">
+    <main class="main p-5">
       <BlogHeader />
       <slot />
     </main>
@@ -16,7 +16,7 @@ a {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 100;
 }
 </style>

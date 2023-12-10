@@ -52,7 +52,6 @@ query {
 
 const { data } = await useAsyncQuery(postsQuery)
 store.posts.value = data.value.posts.data
-console.debug('store.posts.value: ', store.posts.value)
 provide('posts', data)
 </script>
 
