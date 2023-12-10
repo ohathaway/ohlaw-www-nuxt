@@ -50,9 +50,11 @@ query {
 }`
 
 
-const { data } = await useAsyncQuery(postsQuery)
-store.posts.value = data.value.posts.data
-provide('posts', data)
+const { data: { value: { posts: { data } }} } = await useAsyncQuery(postsQuery)
+const posts = [ ...data ]
+const featured = posts.pop()
+// store.posts.value = data
+provide('posts', posts.reverse())
 </script>
 
 <style scoped>

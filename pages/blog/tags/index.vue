@@ -34,5 +34,4 @@ query {
 }`
 
 const { data } = await useAsyncQuery(postsQuery)
-console.debug('data: ', data)
 </script>

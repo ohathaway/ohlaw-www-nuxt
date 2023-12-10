@@ -7,7 +7,9 @@
       <h1 class="pb-5">{{ post.attributes.Title }}</h1>
       <BlogRichText
         :block="post.attributes.Content"
-        :closing="post.attributes.Closing"
+      />
+      <BlogRichText
+        :block="post.attributes.CTA"
       />
     </div>
     <div class="col-3">
@@ -32,7 +34,7 @@ query {
       id,
       attributes {
         Content,
-        Closing,
+        CTA,
         publishedAt,
         Title,
         category {
@@ -64,6 +66,7 @@ const {
     }
   }
 } = await useAsyncQuery(query)
-
-console.debug('post: ', post)
+if (isEmpty(post)) {
+  showError({'404': 'Page not found'})
+}
 </script>
