@@ -1,13 +1,13 @@
 <template>
   <div class="row">
     <div class="col-3">
-      <BlogTOC :content="data.post.data.attributes.Content" />
+      <BlogTOC :content="post.attributes.Content" />
     </div>
     <div class="col-6">
-      <h1 class="pb-5">{{ data.post.data.attributes.Title }}</h1>
+      <h1 class="pb-5">{{ post.attributes.Title }}</h1>
       <BlogRichText
-        :block="data.post.data.attributes.Content"
-        :closing="data.post.data.attributes.Closing"
+        :block="post.attributes.Content"
+        :closing="post.attributes.Closing"
       />
     </div>
     <div class="col-3">
@@ -23,11 +23,11 @@ definePageMeta({
   layout: 'blog'
 })
 
-const route = useRoute()
+const { path } = useRoute()
 
 const query = gql`
 query {
-  post(id:1) {
+  posts(filters: { slug: { eq: "${path.split('/').pop()}"}}) {
     data {
       id,
       attributes {
@@ -56,5 +56,14 @@ query {
   }
 }`
 
-const { data } = await useAsyncQuery(query)
+const {
+  data: {
+   value: 
+    { posts: 
+      { data: [post] }
+    }
+  }
+} = await useAsyncQuery(query)
+
+console.debug('post: ', post)
 </script>

@@ -9,8 +9,7 @@
           <div class="row">
             <div class="col-8">
               <NuxtLink
-                :to="`${post.attributes.slug}`"
-                @click="getPost(post.id)"
+                :to="`/blog/${post.attributes.slug}`"
               >
                 <h4>{{  post.attributes.Title }}</h4>
               </NuxtLink>
@@ -18,7 +17,7 @@
                 v-for="tag in post.attributes.tags.data"
                 class="badge rounded-pill text-bg-primary">
                 <NuxtLink
-                  :to="`tags/${tag.attributes.Name}`"
+                  :to="`/blog/tags/${tag.attributes.Name}`"
                 >
                   {{ tag.attributes.Name }}
                 </NuxtLink>
@@ -26,7 +25,7 @@
             </div>
             <div class="col-4">
               <NuxtLink
-                :to="`${post.attributes.slug}`"
+                :to="`/blog/${post.attributes.slug}`"
                 @click="getPost(post.id)"
               >
                 <LayoutMediaListing
@@ -39,7 +38,7 @@
           <div class="row">
             <div class="col-12">
               {{ post.attributes.Snippet }}
-              <NuxtLink :to="`blog/${post.attributes.slug}`">
+              <NuxtLink :to="`/blog/${post.attributes.slug}`">
                 read more...
               </NuxtLink>
             </div>
