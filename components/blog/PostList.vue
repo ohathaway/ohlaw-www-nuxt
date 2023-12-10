@@ -5,7 +5,7 @@
     </div>
     <div class="list-entries pt-3">
       <div class="entry" v-for="post in posts.posts.data">
-        <div class="entry-wrapper ms-0 pb-3 border-bottom">
+        <div class="entry-wrapper ms-0 py-3 border-bottom">
           <div class="row">
             <div class="col-8">
               <NuxtLink

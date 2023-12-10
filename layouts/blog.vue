@@ -7,12 +7,6 @@
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  layout: 'blog'
-})
-</script>
-
 <style lang="scss">
 a {
   color: black;
