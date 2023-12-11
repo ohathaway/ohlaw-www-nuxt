@@ -7,5 +7,7 @@
 </template>
 
 <script setup>
-const posts = inject('allPosts')
+const { posts } = defineProps({
+  posts: Object
+})
 </script>

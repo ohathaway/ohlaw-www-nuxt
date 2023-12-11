@@ -7,7 +7,7 @@
       <LayoutPostListSidebar title="Spotlight" :posts="spotlightPosts" />
     </div>
   </div>
-  <LayoutPostListRow />
+  <LayoutPostListRow :posts="allPosts" />
 </template>
 
 <script setup>
@@ -46,7 +46,6 @@ const {
 } = await useAsyncQuery(spotlightPostsQuery)
 
 const { data: { value: { posts: { data: allPosts } }} } = await useAsyncQuery(allPostsQuery)
-provide('allPosts', allPosts)
 </script>
 
 <style scoped>
