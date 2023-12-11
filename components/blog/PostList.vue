@@ -28,13 +28,13 @@
                 :to="`/blog/${post.attributes.slug}`"
               >
                 <LayoutMediaListing
-                  :source="`${strapiUrl}${getThumbnailUrl(post.attributes.Image.data.attributes.url)}`"
+                  :source="getStrapiThumbnailUrl(post.attributes.Image)"
                   :title="post.attributes.Title"
                 />
               </NuxtLink>
             </div>
           </div>
-          <div class="row">
+          <div class="row" v-if="snippet">
             <div class="col-12">
               <BlogRichText :block="post.attributes.Snippet" />
               <NuxtLink :to="`/blog/${post.attributes.slug}`">
@@ -49,12 +49,11 @@
 </template>
 
 <script setup>
-import { inject } from 'vue'
-const { title } = defineProps(['title'])
-
-const posts = inject('posts')
-
-const { public: { strapi: { url: strapiUrl } } } = useRuntimeConfig()
+const { posts, snippet, title } = defineProps({
+  posts: Array,
+  snippet: Boolean,
+  title: String
+})
 </script>
 
 <style scoped>

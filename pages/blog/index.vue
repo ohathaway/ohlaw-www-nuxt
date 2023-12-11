@@ -1,60 +1,52 @@
 <template>
   <div class="row">
     <div class="col-md-7">
-      <LayoutMediaFocus source="/img/estatenotebook_1024_smallest.jpg" title="Life and Legacy Notebook" />
+      <BlogFeaturedPost :post="featuredPost"/>
     </div>
     <div class="col-md-5">
-      <LayoutPostListSidebar title="Spotlight"/>
+      <LayoutPostListSidebar title="Spotlight" :posts="spotlightPosts" />
     </div>
   </div>
+  <LayoutPostListRow />
 </template>
 
 <script setup>
-import { provide } from 'vue'
-import { useBlogStore } from '@/stores/blogStore'
-
-const store = useBlogStore()
-
 definePageMeta({
   layout: 'blog'
 })
 
-const postsQuery = gql`
-query {
-  posts(sort: "publishedAt:ASC") {
-    data {
-      id
-      attributes {
-        Title,
-        Snippet,
-        Image {
-          data {
-            attributes {
-              name
-              url
-            }
+const {
+  data: {
+    value: {
+      featuredPost: {
+        data: {
+          attributes: {
+            post: { data: featuredPost }
           }
-        },
-        slug,
-        tags {
-          data {
-            id,
-            attributes {
-                Name
+        }
+      }
+    }
+  }
+} = await useAsyncQuery(featuredPostQuery)
+
+const {
+  data: {
+    value: {
+      spotlight: {
+        data: {
+          attributes: {
+            posts: {
+              data: spotlightPosts 
             }
           }
         }
       }
     }
   }
-}`
+} = await useAsyncQuery(spotlightPostsQuery)
 
-
-const { data: { value: { posts: { data } }} } = await useAsyncQuery(postsQuery)
-const posts = [ ...data ]
-const featured = posts.pop()
-// store.posts.value = data
-provide('posts', posts.reverse())
+const { data: { value: { posts: { data: allPosts } }} } = await useAsyncQuery(allPostsQuery)
+provide('allPosts', allPosts)
 </script>
 
 <style scoped>

@@ -1,11 +1,13 @@
 <template>
   <aside>
     <BlogPostList 
+      :posts="posts"
       :title="title"
+      :snippet="false"
     />
   </aside>
 </template>
 
 <script setup>
-const { title } = defineProps(['title'])
+const { posts, title } = defineProps(['posts', 'title'])
 </script>
