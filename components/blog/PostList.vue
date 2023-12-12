@@ -17,7 +17,7 @@
                 v-for="tag in post.attributes.tags.data"
                 class="badge rounded-pill text-bg-primary">
                 <NuxtLink
-                  :to="`/blog/tags/${tag.attributes.Name}`"
+                  :to="`/blog/tags/${tag.attributes.slug}`"
                 >
                   {{ tag.attributes.Name }}
                 </NuxtLink>

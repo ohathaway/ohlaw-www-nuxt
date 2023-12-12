@@ -53,7 +53,8 @@ const singlePostQuery = slug => {
             data {
               id,
               attributes{
-                Name
+                Name,
+                slug
               }
             }
           },
@@ -61,7 +62,8 @@ const singlePostQuery = slug => {
             data {
               id,
               attributes {
-                Name
+                Name,
+                slug
               }
             }
           },
@@ -100,7 +102,8 @@ query {
           data {
             id,
             attributes {
-                Name
+              Name,
+              slug
             }
           }
         }
@@ -127,7 +130,8 @@ query {
                 data {
                   id,
                     attributes{
-                    Name
+                    Name,
+                    slug
                   }
                 }
               },
@@ -144,7 +148,8 @@ query {
                 data {
                   id,
                     attributes {
-                    Name
+                    Name,
+                    slug
                   }
                 }
               }
@@ -174,7 +179,8 @@ query {
                 data {
                   id,
                     attributes{
-                    Name
+                    Name,
+                    slug
                   }
                 }
               },
@@ -190,7 +196,8 @@ query {
                 data {
                   id,
                     attributes {
-                    Name
+                    Name,
+                    slug
                   }
                 }
               }
@@ -244,6 +251,48 @@ const categoryPostsQuery = (category, limit = 3) => {
   }`
 }
 
+const tagPostsQuery = (tag, limit = 3) => {
+  return gql`
+  query {
+    tags(
+      pagination: { start: 0, limit: ${limit} },
+      filters: { slug: { eq: "${tag}" } }
+    ) {
+      data {
+        attributes {
+          posts {
+            data {
+              id,
+              attributes {
+                Snippet,
+                Title,
+                slug,
+                tags {
+                  data {
+                    id,
+                    attributes {
+                      Name,
+                      slug
+                    }
+                  }
+                },
+                Image {
+                  data {
+                    attributes {
+                      name
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }`
+}
+
 export {
   allPostsQuery,
   categoryPostsQuery,
@@ -253,5 +302,6 @@ export {
   featuredPostQuery,
   isModifier,
   singlePostQuery,
-  spotlightPostsQuery 
+  spotlightPostsQuery,
+  tagPostsQuery
 }
