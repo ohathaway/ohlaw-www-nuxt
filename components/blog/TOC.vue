@@ -1,5 +1,8 @@
 <template>
-  <div class="position-sticky top-50 p-2">
+  <div
+    id="toc"
+    class="position-sticky top-50 p-2"
+  >
     <h4>In This Article</h4>
     <div v-for="brick in content">
       <div v-if="brick.type === 'heading' && brick.level === 1 ">

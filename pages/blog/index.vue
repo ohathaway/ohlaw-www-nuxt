@@ -1,13 +1,15 @@
 <template>
-  <div class="row">
+  <div class="row p-5">
     <div class="col-md-7">
       <BlogFeaturedPost :post="featuredPost"/>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5 d-flex align-items-center">
       <LayoutPostListSidebar title="Spotlight" :posts="spotlightPosts" />
     </div>
   </div>
-  <LayoutPostListRow :posts="allPosts" />
+  <div class="p-5">
+    <LayoutPostListRow :posts="allPosts" />
+  </div>
 </template>
 
 <script setup>

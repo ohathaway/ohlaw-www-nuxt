@@ -1,6 +1,7 @@
 <template>
   <div>
-    <main class="main p-5">
+    <HeaderViewBlog />
+    <main class="main px-0 py-5">
       <BlogHeader />
       <slot />
     </main>
@@ -18,5 +19,13 @@ a {
 p {
   font-size: 1.2rem;
   font-weight: 100;
+}
+
+.nav-item.blog-category {
+  font-family: Quatrocentro, "Cantata One", Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  .nav-link {
+    color: #3a3a3a;
+  }
 }
 </style>

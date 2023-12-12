@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div v-for="post in posts" class="col-4">
+  <div class="row justify-content-center">
+    <div v-for="post in posts" :class="`col-${col}`">
       <BlogCard :post="post" />
     </div>
   </div>
@@ -8,6 +8,10 @@
 
 <script setup>
 const { posts } = defineProps({
-  posts: Object
+  posts: Object,
+  col: {
+    type: Number,
+    default: 4
+  }
 })
 </script>

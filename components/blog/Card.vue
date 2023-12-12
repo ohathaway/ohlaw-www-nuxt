@@ -1,17 +1,19 @@
-
-import type { BlogRichText } from '#build/components'
 <template>
   <div class="card m-3">
-    <img
-      class="card-img-top object-fit-cover"
-      :src="getStrapiUrl(post.attributes.Image)"
-      :title="post.attributes.Title"
-    />
+    <a :href="`/blog/${post.attributes.slug}`">
+      <img
+        class="card-img-top object-fit-cover"
+        :src="getStrapiUrl(post.attributes.Image)"
+        :title="post.attributes.Title"
+      />
+    </a>
     <div class="card-body">
-      <h3 class="card-title">{{ post.attributes.Title }}</h3>
-      <p class="card-text">
-        <BlogRichText :block="post.attributes.Snippet" />
-      </p>
+      <a :href="`/blog/${post.attributes.slug}`">
+        <h3 class="card-title">{{ post.attributes.Title }}</h3>
+        <p class="card-text">
+          <BlogRichText :block="post.attributes.Snippet" />
+        </p>
+      </a>
     </div>
   </div>
 </template>

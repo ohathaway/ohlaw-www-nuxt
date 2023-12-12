@@ -31,9 +31,53 @@ const getStrapiUrl = image => {
   return strapiUrl+url
 }
 
+const addScrollSpy = () => {
+
+}
+
 /*
  * graphQl queries
  */
+const singlePostQuery = slug => {
+  return gql`
+  query {
+    posts(filters: { slug: { eq: "${slug}" } }) {
+      data {
+        id,
+        attributes {
+          Content,
+          CTA,
+          publishedAt,
+          Title,
+          category {
+            data {
+              id,
+              attributes{
+                Name
+              }
+            }
+          },
+          tags {
+            data {
+              id,
+              attributes {
+                Name
+              }
+            }
+          },
+          Image {
+            data {
+              attributes {
+                name
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }`
+}
 
 const allPostsQuery = gql`
 query {
@@ -124,6 +168,7 @@ query {
               Content,
                 CTA,
                 publishedAt,
+                slug,
                 Title,
                 category {
                 data {
@@ -158,12 +203,55 @@ query {
 }
 `
 
+const categoryPostsQuery = (category, limit = 3) => {
+  return gql`
+  query {
+    categories(
+      pagination: { start: 0, limit: ${limit} },
+      filters: { Name: { eq: "${category}" } }
+    ) {
+      data {
+        attributes {
+          posts {
+            data {
+              id,
+              attributes {
+                Snippet,
+                Title,
+                slug,
+                tags {
+                  data {
+                    id,
+                    attributes {
+                      Name
+                    }
+                  }
+                },
+                Image {
+                  data {
+                    attributes {
+                      name
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }`
+}
+
 export {
   allPostsQuery,
+  categoryPostsQuery,
   getStrapiThumbnailUrl,
   getStrapiUrl,
   getThumbnailUrl,
   featuredPostQuery,
   isModifier,
+  singlePostQuery,
   spotlightPostsQuery 
 }

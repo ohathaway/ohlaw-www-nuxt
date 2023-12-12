@@ -1,10 +1,25 @@
 <template>
-  <div class="row">
+  <div class="row post-title px-5">
+    <div class="col-6">
+      <LayoutMediaFocus
+        :source="getStrapiUrl(post.attributes.Image)"
+        :title="post.attributes.Title"
+      />
+    </div>
+    <div class="col-6 d-flex align-items-center">
+      <h1 class="pb-5">{{ post.attributes.Title }}</h1>
+    </div>
+  </div>
+  <div class="row p-5 post-display">
     <div class="col-3">
       <BlogTOC :content="post.attributes.Content" />
     </div>
-    <div class="col-6">
-      <h1 class="pb-5">{{ post.attributes.Title }}</h1>
+    <div
+      class="col-6"
+      data-bs-spy="scroll"
+      data-bs-target="#toc"
+      data-bs-smooth-scroll="true"
+    >
       <BlogRichText
         :block="post.attributes.Content"
       />
@@ -13,7 +28,12 @@
       />
     </div>
     <div class="col-3">
-      <p>list of related posts</p>
+      <div class="position-sticky top-0">
+        <LayoutPostListSidebar
+          title="Related Articles"
+          :posts="relatedPosts"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -27,37 +47,6 @@ definePageMeta({
 
 const { path } = useRoute()
 
-const query = gql`
-query {
-  posts(filters: { slug: { eq: "${path.split('/').pop()}"}}) {
-    data {
-      id,
-      attributes {
-        Content,
-        CTA,
-        publishedAt,
-        Title,
-        category {
-          data {
-            id,
-            attributes{
-              Name
-            }
-          }
-        },
-        tags {
-          data {
-            id,
-            attributes {
-              Name
-            }
-          }
-        }
-      }
-    }
-  }
-}`
-
 const {
   data: {
    value: 
@@ -65,8 +54,46 @@ const {
       { data: [post] }
     }
   }
-} = await useAsyncQuery(query)
+} = await useAsyncQuery(singlePostQuery(path.split('/').pop()))
+
+console.debug('post: ', post)
+const {
+  attributes: {
+    category: {
+      data: {
+        attributes: {
+          Name: category
+        }
+      }
+    }
+  }
+} = post
+
+let {
+  data: {
+    value: {
+      categories: {
+        data: [{
+          attributes: {
+            posts: { data: relatedPosts }
+          }
+        }]
+      }
+    }
+  }
+} = await useAsyncQuery(categoryPostsQuery(category))
+
+relatedPosts = relatedPosts.filter(relatedPost => {
+  return relatedPost.id !== post.id
+})
+
 if (isEmpty(post)) {
   showError({'404': 'Page not found'})
 }
 </script>
+
+<style lang="scss">
+.post-title {
+  background: #d8d8d8;
+}
+</style>

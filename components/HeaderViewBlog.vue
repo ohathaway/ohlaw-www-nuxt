@@ -15,24 +15,8 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse navbar-nav nav-fill mr-auto mt-2 pe-5" id="navbarToggler">
-        <div class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            area-expanded="false"
-          >
-            Practice Areas
-          </a>
-          <div class="dropdown-menu">
-            <a :class="dropdownItemClasses" href="/#service-small-business"> Small Business </a>
-            <a :class="dropdownItemClasses" href="/#service-nonprofit"> NonProfits </a>
-            <a :class="dropdownItemClasses" href="/#service-estate-planning"> Estate Planning </a>
-            <a :class="dropdownItemClasses" href="/#service-bankruptcy"> Bankruptcy </a>
-          </div>
-        </div>
+      <div class="collapse navbar-collapse navbar-nav nav-fill mr-auto mt-2" id="navbarToggler">
+        <a class="nav-item nav-link" href="/">Home</a>
         <a class="nav-item nav-link" href="https://app.clio.com/link/3ARYYeKZ7DfX"
           >Make a Payment</a
         >
@@ -54,3 +38,9 @@
 <script setup>
 const dropdownItemClasses = ['dropdown-item']
 </script>
+
+<style lang="scss" scoped>
+#navbarToggler {
+  padding-right: 20rem;
+}
+</style>
