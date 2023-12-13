@@ -18,7 +18,7 @@
             <font-awesome-icon icon="fas fa-comment-sms"></font-awesome-icon>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a class="text-white" href="sms://+19708185888">
-              970-818-5888
+              970-818-5558
             </a>
           </li>
           <li>

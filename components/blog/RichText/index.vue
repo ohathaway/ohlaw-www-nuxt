@@ -43,6 +43,5 @@
 </template>
 
 <script setup>
-import { intersection } from 'lodash'
 const { block } = defineProps(['block'])
 </script>

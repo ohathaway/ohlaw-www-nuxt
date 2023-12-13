@@ -16,7 +16,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse navbar-nav nav-fill mr-auto mt-2" id="navbarToggler">
-        <a class="nav-item nav-link" href="/">Home</a>
+        <a class="nav-item nav-link" href="/#lines-of-business">Practice Areas</a>
         <a class="nav-item nav-link" href="https://app.clio.com/link/3ARYYeKZ7DfX"
           >Make a Payment</a
         >

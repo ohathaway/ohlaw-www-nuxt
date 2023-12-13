@@ -8,7 +8,7 @@
         <div class="p-3 py-lg-5 px-lg-4">
           <h4>Small Business</h4>
           <p class="fw-normal">
-            We are a small business. We’ve started and run several small business. We understand the
+            We are a small business. We’ve started and run several small businesses. We understand the
             reward as well as the challenges small business owners face. Choosing an entity,
             dividing ownership, managing liability, vendor contracts, staying out of tax trouble,
             employees? We can help you keep your focus on building your business while managing
