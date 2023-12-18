@@ -47,8 +47,12 @@ export default defineNuxtConfig({
   env: {
     strapiBaseUri: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
   },
+  gtag: {
+    id: 'G-24N250X41Q'
+  },
   modules: [
     'nuxt-icon',
+    'nuxt-gtag',
     '@vueuse/nuxt',
     '@formkit/nuxt',
     '@pinia/nuxt',

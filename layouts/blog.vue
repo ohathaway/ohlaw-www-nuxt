@@ -10,7 +10,7 @@
 
 <style lang="scss">
 a {
-  color: black;
+  color: #003399;
   &.hover {
     text-decoration: underline;
   }
