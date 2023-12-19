@@ -1,5 +1,5 @@
 <template>
-  <div class="row p-5">
+  <div class="row py-3 p-lg-5">
     <div class="col-md-7">
       <BlogFeaturedPost :post="featuredPost"/>
     </div>
@@ -47,7 +47,7 @@ const {
   }
 } = await useAsyncQuery(spotlightPostsQuery)
 
-const { data: { value: { posts: { data: allPosts } }} } = await useAsyncQuery(allPostsQuery)
+const { data: { value: { posts: { data: allPosts } } } } = await useAsyncQuery(allPostsQuery)
 </script>
 
 <style scoped>
