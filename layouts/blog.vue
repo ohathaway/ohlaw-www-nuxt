@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderViewBlog />
-    <main class="main px-0 py-lg-5">
+    <main class="main px-3 py-lg-5">
       <BlogHeader />
       <slot />
     </main>

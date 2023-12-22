@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     clients: {
       default: {
         authType: 'none',
-        httpEndpoint: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
+        httpEndpoint: import.meta.env.VITE_STRAPI_URL || 'http://localhost:1337/graphql'
       }
     }
   },
@@ -38,6 +38,7 @@ export default defineNuxtConfig({
     // 'bootstrap/scss/bootstrap.scss',
     '@fortawesome/fontawesome-svg-core/styles.css',
     '@formkit/themes/genesis',
+    '@formkit/addons/css/floatingLabels',
     '~/assets/scss/site.scss'
   ],
   devtools: { enabled: true },

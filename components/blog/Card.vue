@@ -27,5 +27,18 @@ const { post } = defineProps(['post'])
 .card-body {
   height: 400px;
   overflow: auto;
+  .card-text { color: #3a3a3a; }
+  @media (max-width: 1025px) {
+    height: auto;
+    overflow: clip;
+  }
 }
+
+/*
+@media (max-width: 1025px) {
+  .card-body {
+    width: 225px;
+  }
+}
+*/
 </style>

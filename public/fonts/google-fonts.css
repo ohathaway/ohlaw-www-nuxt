@@ -48,7 +48,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: auto;
-	src: local('Poppins Regular'), local('Poppins-Regular'), url(Poppins-Regular.woff) format('woff');
+	src: local('Poppins Regular'), local('Poppins-Regular'), url(Poppins-Regular.woff2) format('woff2');
 	unicode-range: U+0-10FFFF;
 }
 
@@ -100,8 +100,8 @@
 @font-face {
 	font-family: 'Benguiat';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 500;
 	font-display: auto;
-	src: url(BenguiatRegular.woff) format('woff');
+	src: url(BenguiatRegular.ttf) format('ttf');
 	unicode-range: U+0-10FFFF;
 }

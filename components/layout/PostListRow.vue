@@ -1,6 +1,6 @@
 <template>
   <div class="row justify-content-center">
-    <div v-for="post in posts" :class="`col-${col}`">
+    <div v-for="post in posts" :class="`col-12 col-lg-${col}`">
       <BlogCard :post="post" />
     </div>
   </div>

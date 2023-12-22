@@ -7,6 +7,7 @@
       <LayoutPostListSidebar title="Spotlight" :posts="spotlightPosts" />
     </div>
   </div>
+  <BlogSignup />
   <div class="p-5">
     <LayoutPostListRow :posts="allPosts" />
   </div>
