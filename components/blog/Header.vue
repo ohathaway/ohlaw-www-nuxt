@@ -11,7 +11,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerBlog" aria-controls="navbarTogglerBlogCategories" aria-expanded="false" aria-label="Toggle blog categories">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="justify-content-center">
+      <div class="d-lg-none justify-content-center">
         <h5>Categories</h5>
       </div>
       <div class="collapse navbar-collapse" id="navbarTogglerBlog">
