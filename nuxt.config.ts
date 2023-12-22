@@ -45,9 +45,6 @@ export default defineNuxtConfig({
   formkit: {
     autoImport: true
   },
-  env: {
-    strapiBaseUri: 'https://strapi.ohlawcolorado.com/graphql'
-  },
   gtag: {
     id: 'G-24N250X41Q'
   },
