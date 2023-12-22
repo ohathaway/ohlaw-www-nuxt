@@ -1,0 +1,62 @@
+on:
+  push:
+    branches: [ "master", "stage" ]
+  pull_request:
+    branches: [ "master", "stage" ]
+jobs:
+  # test:
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     # actions/checkout MUST come before auth
+  #     - uses: 'actions/checkout@v3'
+  #     - name: Setup Node.js # setup Node.js un runner
+  #       uses: actions/setup-node@v3
+  #       with:
+  #           node-version: '16'
+  #     - uses: actions/cache@v3
+  #       with:
+  #         path: ~/.npm
+  #         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+  #         restore-keys: ${{ runner.os }}-node-
+  #     - run: npm install # install dependencies
+  #     - run: npm run test:unit # build project
+
+  build_deploy:
+    runs-on: ubuntu-latest
+  
+    # Add "id-token" with the intended permissions.
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+      # actions/checkout MUST come before auth
+      - uses: 'actions/checkout@v3'
+      - name: Setup Node.js # setup Node.js un runner
+        uses: actions/setup-node@v3
+        with:
+            node-version: '18'
+      - uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+      - run: npm install # install dependencies
+      - run: npx nuxi generate --if-present # build project
+
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          service_account: ${{ vars.GCS_SERVICE_ACCOUNT }}
+          credentials_json: '${{ secrets.GCS_WWW_PROD }}'
+          export_environment_variables: true
+          create_credentials_file: true
+      - id: 'deploy'
+        name: 'Deploy to Google Cloud bucket'
+        uses: 'google-github-actions/upload-cloud-storage@v1'
+        with:
+          path: '.output/public'
+          destination: ${{ vars.BUCKET_NAME }}
+          parent: false
