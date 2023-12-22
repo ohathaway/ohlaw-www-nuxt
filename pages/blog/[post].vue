@@ -20,6 +20,7 @@
       data-bs-target="#toc"
       data-bs-smooth-scroll="true"
     >
+      <span class="fst-italic fs-5">{{ formatDateFull(post.attributes.publishDate) }}</span>
       <BlogRichText
         :block="post.attributes.Content"
       />

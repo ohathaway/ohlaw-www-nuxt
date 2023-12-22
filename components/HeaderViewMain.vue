@@ -33,9 +33,13 @@
             <a :class="dropdownItemClasses" href="/#service-bankruptcy"> Bankruptcy </a>
           </div>
         </div>
-        <a class="nav-item nav-link" href="https://app.clio.com/link/3ARYYeKZ7DfX"
-          >Make a Payment</a
+        <a
+          class="nav-item nav-link"
+          href="https://secure.lawpay.com/pages/owen-hathaway/trust"
+          target="_blank"
         >
+          Make a Payment
+        </a>
         <a class="nav-item nav-link" href="#contact-form">Contact Us</a>
         <a class="nav-item nav-link" href="tel:+19708183052">970-818-3052</a>
         <!-- Display isn't right. Disabled since the content isn't up to date anyway

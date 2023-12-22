@@ -30,6 +30,7 @@ import {
   faUser
 } from '@fortawesome/free-solid-svg-icons'
 import {
+  faCalendarDays,
   faIdBadge,
   faRectangleXmark
 } from '@fortawesome/free-regular-svg-icons'
@@ -48,6 +49,7 @@ library.add(
   faAt,
   faBan,
   faBoxArchive,
+  faCalendarDays,
   faCircleCheck,
   faCircleInfo,
   faCircleXmark,

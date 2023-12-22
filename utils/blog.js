@@ -47,7 +47,7 @@ const singlePostQuery = slug => {
         attributes {
           Content,
           CTA,
-          publishedAt,
+          publishDate,
           Title,
           category {
             data {
@@ -83,12 +83,13 @@ const singlePostQuery = slug => {
 
 const allPostsQuery = gql`
 query {
-  posts(sort: "publishedAt:DESC") {
+  posts(sort: "publishDate:DESC") {
     data {
       id
       attributes {
         Title,
         Snippet,
+        publishDate,
         Image {
           data {
             attributes {
@@ -123,7 +124,7 @@ query {
               attributes {
               Content,
                 CTA,
-                publishedAt,
+                publishDate,
                 Title,
                 slug,
                 category {
@@ -172,7 +173,7 @@ query {
               attributes {
               Content,
                 CTA,
-                publishedAt,
+                publishDate,
                 slug,
                 Title,
                 category {
@@ -226,6 +227,7 @@ const categoryPostsQuery = (category, limit = 3) => {
                 Snippet,
                 Title,
                 slug,
+                publishDate,
                 tags {
                   data {
                     id,

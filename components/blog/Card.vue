@@ -8,6 +8,9 @@
       />
     </a>
     <div class="card-body">
+      <span class="fst-italic fs-5">
+        {{ formatDateFull(post.attributes.publishDate) }}
+      </span>
       <a :href="`/blog/${post.attributes.slug}`">
         <h3 class="card-title">{{ post.attributes.Title }}</h3>
         <p class="card-text">

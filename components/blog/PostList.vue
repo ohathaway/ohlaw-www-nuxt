@@ -6,6 +6,9 @@
     <div class="list-entries pt-3">
       <div class="entry" v-for="post in posts">
         <div class="entry-wrapper ms-0 py-3 border-bottom">
+          <span class="fst-italic fs-5">
+            {{ formatDateFull(post.attributes.publishDate) }}
+          </span>
           <div class="row">
             <div class="col-12 col-lg-8">
               <NuxtLink

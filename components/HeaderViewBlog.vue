@@ -15,13 +15,66 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse navbar-nav nav-fill mr-auto mt-2" id="navbarToggler">
-        <a class="nav-item nav-link" href="/#lines-of-business">Practice Areas</a>
-        <a class="nav-item nav-link" href="https://app.clio.com/link/3ARYYeKZ7DfX"
-          >Make a Payment</a
-        >
-        <a class="nav-item nav-link" href="/#contact-form">Contact Us</a>
-        <a class="nav-item nav-link" href="tel:+19708183052">970-818-3052</a>
+      <ul class="collapse navbar-collapse navbar-nav nav-fill mr-auto mt-2" id="navbarToggler">
+        <li class="nav-item">
+          <a class="nav-link" href="/#lines-of-business">Practice Areas</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://secure.lawpay.com/pages/owen-hathaway/trust"
+            target="_blank"
+          >
+            Make a Payment
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            href="#"
+          >
+              Contact Us
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class=dropdown-item
+                href="mailto:contact@ohlawcolorado.com"
+              >
+                <font-awesome-icon icon="fas fa-at"></font-awesome-icon>
+                &nbsp;&nbsp;&nbsp;
+                Email
+              </a>
+            </li>
+            <li>
+              <a
+                class=dropdown-item
+                href="tel:+19708183052"
+              >
+                <font-awesome-icon icon="fas fa-phone"></font-awesome-icon>
+                &nbsp;&nbsp;&nbsp;
+                Phone
+              </a>
+            </li>
+            <li>
+              <a
+                class=dropdown-item
+                href="https://calendly.com/ohlaw-owen/new-client"
+                target="_blank"
+              >
+                <font-awesome-icon icon="far fa-calendar-days"></font-awesome-icon>
+                &nbsp;&nbsp;&nbsp;
+                In Person
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tel:+19708183052">970-818-3052</a>
+        </li>
         <!-- Display isn't right. Disabled since the content isn't up to date anyway
     <li class="nav-item">
       <a class="nav-link" href="https://www.facebook.com/ohlawCO/"><i class="fab fa-facebook-f"></i></a>
@@ -30,7 +83,7 @@
       <a class="nav-link" href="https://ohlawcolorado.com/feeds/"><i class="fas fa-rss"></i></a>
     </li>
     -->
-      </div>
+      </ul>
     </nav>
   </header>
 </template>
@@ -42,7 +95,7 @@ const dropdownItemClasses = ['dropdown-item']
 <style lang="scss" scoped>
 @media (min-width: 992px) {
   #navbarToggler {
-    padding-right: 20rem;
+    // padding-right: 20rem;
   }
 }
 </style>
