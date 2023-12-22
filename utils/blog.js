@@ -83,7 +83,7 @@ const singlePostQuery = slug => {
 
 const allPostsQuery = gql`
 query {
-  posts(sort: "publishedAt:ASC") {
+  posts(sort: "publishedAt:DESC") {
     data {
       id
       attributes {
@@ -166,7 +166,7 @@ query {
   spotlight{
     data{
       attributes{
-        posts {
+        posts (sort: "publishDate:DESC") {
           data {
             id,
               attributes {
@@ -219,7 +219,7 @@ const categoryPostsQuery = (category, limit = 3) => {
     ) {
       data {
         attributes {
-          posts {
+          posts (sort: "publishDate:DESC") {
             data {
               id,
               attributes {
@@ -260,7 +260,7 @@ const tagPostsQuery = (tag, limit = 3) => {
     ) {
       data {
         attributes {
-          posts {
+          posts (sort: "publishDate:DESC") {
             data {
               id,
               attributes {

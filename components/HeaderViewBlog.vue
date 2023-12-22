@@ -20,7 +20,7 @@
         <a class="nav-item nav-link" href="https://app.clio.com/link/3ARYYeKZ7DfX"
           >Make a Payment</a
         >
-        <a class="nav-item nav-link" href="#contact-form">Contact Us</a>
+        <a class="nav-item nav-link" href="/#contact-form">Contact Us</a>
         <a class="nav-item nav-link" href="tel:+19708183052">970-818-3052</a>
         <!-- Display isn't right. Disabled since the content isn't up to date anyway
     <li class="nav-item">
@@ -40,7 +40,9 @@ const dropdownItemClasses = ['dropdown-item']
 </script>
 
 <style lang="scss" scoped>
-#navbarToggler {
-  padding-right: 20rem;
+@media (min-width: 992px) {
+  #navbarToggler {
+    padding-right: 20rem;
+  }
 }
 </style>

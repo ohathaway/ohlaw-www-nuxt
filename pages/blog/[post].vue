@@ -1,21 +1,21 @@
 <template>
   <div class="row post-title px-5">
-    <div class="col-6">
+    <div class="col-12 col-md-6">
       <LayoutMediaFocus
         :source="getStrapiUrl(post.attributes.Image)"
         :title="post.attributes.Title"
       />
     </div>
-    <div class="col-6 d-flex align-items-center">
+    <div class="col-12 col-md-6 d-flex align-items-center">
       <h1 class="pb-5">{{ post.attributes.Title }}</h1>
     </div>
   </div>
   <div class="row p-5 post-display">
-    <div class="col-3">
+    <div class="col-3 d-none d-lg-block">
       <BlogTOC :content="post.attributes.Content" />
     </div>
     <div
-      class="col-6"
+      class="col-12 col-md-8 col-lg-6"
       data-bs-spy="scroll"
       data-bs-target="#toc"
       data-bs-smooth-scroll="true"
@@ -27,8 +27,8 @@
         :block="post.attributes.CTA"
       />
     </div>
-    <div class="col-3">
-      <div class="position-sticky top-0">
+    <div class="col-12 col-md-4 col-lg-3">
+      <div class="position-lg-sticky top-0">
         <LayoutPostListSidebar
           title="Related Articles"
           :posts="relatedPosts"

@@ -4,8 +4,8 @@
       <h1>Resources for <i>Life and Legacy Planning</i></h1>
     </div>
   </div>
-  <div
-    class="navbar navbar-expand-lg categories-nav border-top border-bottom w-75 mx-auto"
+  <nav
+    class="navbar navbar-expand-lg categories-nav position-sticky border-top border-bottom w-75 mx-auto"
   >
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerBlog" aria-controls="navbarTogglerBlogCategories" aria-expanded="false" aria-label="Toggle blog categories">
@@ -15,7 +15,7 @@
         <h5>Categories</h5>
       </div>
       <div class="collapse navbar-collapse" id="navbarTogglerBlog">
-        <ul class="nav nav-underline nav-fill w-100 justify-content-center">
+        <ul class="navbar-nav nav-underline nav-fill w-100 justify-content-center">
           <li class="nav-item blog-category">
             <a class="nav-link" href="/blog">Home</a>
           </li>
@@ -34,7 +34,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script setup>
@@ -66,3 +66,9 @@ const getNavLinkClasses = slug => {
     : classes
 }
 </script>
+
+<style lang="scss" scoped>
+.navbar {
+  margin-top: 30px;
+}
+</style>

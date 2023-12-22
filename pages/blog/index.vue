@@ -8,7 +8,7 @@
     </div>
   </div>
   <!-- <BlogSignup /> -->
-  <div class="p-5">
+  <div class="p-md-5">
     <LayoutPostListRow :posts="allPosts" />
   </div>
 </template>
