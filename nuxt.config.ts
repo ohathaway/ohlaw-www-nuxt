@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     clients: {
       default: {
         authType: 'none',
-        httpEndpoint: import.meta.env.VITE_STRAPI_URL || 'http://localhost:1337/graphql'
+        httpEndpoint: 'https://strapi.ohlawcolorado.com/graphql'
       }
     }
   },
@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     autoImport: true
   },
   env: {
-    strapiBaseUri: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
+    strapiBaseUri: 'https://strapi.ohlawcolorado.com/graphql'
   },
   gtag: {
     id: 'G-24N250X41Q'
