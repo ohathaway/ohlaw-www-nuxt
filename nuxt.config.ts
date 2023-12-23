@@ -2,6 +2,13 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/ohlaw_icon.svg'
+        }
+      ],
       meta: [
         {
           name: "google-site-verification",
