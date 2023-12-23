@@ -7,20 +7,6 @@
 }
 
 @font-face {
-  font-family: 'Quatrocento';
-  src: url('Quatrocento-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'QuatrocentoBold';
-  src: url('Quatrocento-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Lato';
   src: url('Lato-normal-400.woff') format('woff');
   font-weight: normal;
@@ -35,7 +21,7 @@
 }
 
 @font-face {
-  font-family: 'LatoLigh';
+  font-family: 'LatoLight';
   src: url('Lato-normal-300.woff') format('woff');
   font-weight: light;
   font-style: normal;

@@ -1,4 +1,4 @@
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 
 export const dateCompPad = (n) => {
   return n < 10 ? '0' + n : n
