@@ -9,9 +9,8 @@ You see, this is exactly why most estate plans fail. Families shop around based 
 
 If you'd like to read more about this, please read my article here on ["how shopping around for an estate plan could leave your family with an unexpected, expensive, uninvited mess."](https://ohlawcolorado.com/blog/5-reasons-why-shopping-for-the-cheapest-estate-plan-could-leave-your-family-with-an-unintended-mess)
 
-In the meantime, here's what I can assure you:
+In the meantime, here's what I can assure you: we've priced our estate planning for you and your family at we believe to be the intersection of affordability and effectiveness.
 
-We've priced our estate planning for you and your family at we believe to be the intersection of affordability and effectiveness.
 
 ## Family Wealth Planning Session™
 We start all of our plans with a Family Wealth Planning Session™, which is designed to get you more financially organized than you have ever been before, and ensure that no matter what happens, none of your hard-earned assets will be lost to the State Department of Unclaimed Property, when something happens to you. This session is designed to help you:

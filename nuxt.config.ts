@@ -62,6 +62,7 @@ export default defineNuxtConfig({
     '@formkit/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/apollo',
+    '@nuxt/content',
     '@nuxtjs/strapi'
   ],
   pages: true,
