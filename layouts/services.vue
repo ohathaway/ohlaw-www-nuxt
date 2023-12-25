@@ -1,7 +1,8 @@
 <template>
   <div>
     <HeaderViewBlog />
-    <main class="main px-3 py-lg-5">
+    <main class="main services-main px-3 py-lg-5">
+      <ServicesHeader />
       <slot />
     </main>
   </div>
@@ -26,5 +27,13 @@ p {
   .nav-link {
     color: #3a3a3a;
   }
+}
+
+.section-1 {
+  background: #ffffff;
+}
+
+.section-2 {
+  background: #d8d8d8;
 }
 </style>
