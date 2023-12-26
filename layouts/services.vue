@@ -36,4 +36,9 @@ p {
 .section-2 {
   background: #d8d8d8;
 }
+
+.section-3 {
+  background: #ffffff;
+  // color: #ffffff;
+}
 </style>

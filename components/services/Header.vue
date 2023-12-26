@@ -1,7 +1,7 @@
 <template>
   <div class="row pb-lg-5">
     <div class="col-12 text-center">
-      <h1>Planning at the intersection of <i>affordability and effectiveness</i></h1>
+      <h1>Planning at the intersection of <i>Affordability and Effectiveness</i></h1>
     </div>
   </div>
   <!--
