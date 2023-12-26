@@ -8,7 +8,7 @@
   </section>
   <section class="section-2 row">
     <div class="col-lg-6 p-5">
-      <div class="card">
+      <div class="card mt-5">
         <img
           src="/assets/img/affordable_and_effective_top_only.webp"
           class="card-img"
