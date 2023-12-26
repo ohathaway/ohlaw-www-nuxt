@@ -8,14 +8,11 @@
   </section>
   <section class="section-2 row">
     <div class="col-lg-6 p-5">
-      <div class="card h-100 p-lg-5">
-        [IMAGE GOES HERE]
-        <!--
+      <div class="card">
         <img
           src="/assets/img/affordable_and_effective_top_only.webp"
           class="card-img"
         />
-        -->
       </div>
     </div>
     <div class="col-lg-6 py-lg-5 px-5 px-lg-3">
