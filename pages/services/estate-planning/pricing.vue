@@ -1,26 +1,24 @@
 <template>
   <section class="section-1 row">
-    <div class="col-12 px-5">
-      <p>
+    <div class="col-lg-6 px-5">
+      <LayoutMediaFocus
+        source="/assets/img/affordable_and_effective_top_only.webp"
+        title="Intersection of Affordability and Effectiveness"
+      />
+    </div>
+    <div class="col-lg-6 py-lg-5 px-5 px-lg-3">
+      <p class="mt-lg-5">
         As you can imagine, we get the question "how much should my estate plan cost" quite frequently. It's not an easy question to answer with an exact cost, but we don't like asking people to approve a blank check either. As with everything we do, we promise no surprises. So here's our approach to helping you manage the cost of your legacy-planning.
       </p>
     </div>
   </section>
   <section class="section-2 row">
-    <div class="col-lg-6 p-5">
-      <div class="card mt-5">
-        <img
-          src="/assets/img/affordable_and_effective_top_only.webp"
-          class="card-img"
-        />
-      </div>
-    </div>
-    <div class="col-lg-6 py-lg-5 px-5 px-lg-3">
-      <h2 class="mb-5">Cost-centered decision making doesn't work for estate planning</h2>
-      <p>
+    <div class="col-12 px-5">
+      <h2 class="mb-5 mx-lg-5">Cost-centered decision making doesn't work for estate planning</h2>
+      <p class="mx-lg-5">
         Most estate plans fail. Even the most expensive plans from the most prestigious law firms don't actually do what the client wants them to do. This isn't because most estate-plannig lawyers don't write good documents or properly inventory their client's estate. It's because life intervenes and things change over time. 
       </p>
-      <p>
+      <p class="mx-lg-5">
         Choosing the lowest cost option, like a form you got online or an attorney who quotes you a price over the phone without extensive discovery ensures your plan too will fail. <a href="https://ohlawcolorado.com/blog/5-reasons-why-shopping-for-the-cheapest-estate-plan-could-leave-your-family-with-an-unintended-mess">Read more</a>
       </p>
     </div>
@@ -29,7 +27,7 @@
     <div class="container px-5">
       <h3 class="text-center">Which option is right for you and your family?</h3>
       <p>
-        We build plans that actually work for our clients. And we aren't the lowest cost option (neither are we necessarily the most exepensive). We put you in control of what you pay by allowing you to choose your own fees based on what works best for you and your family. We provide a <a href="https://calendly.com/ohlaw-owen/life-legacy-design-session">one-hour no-obligation education session</a> to help you understand your choices. We call it the Life and Legacy Planning Session.
+        We build plans that actually work for our clients. And we aren't the lowest cost option (neither are we necessarily the most exepensive). We put you in control of what you pay by allowing you to choose your own fees based on what works best for you and your family. We provide a <a href="https://calendly.com/ohlaw-owen/life-legacy-design-session">no-obligation education session</a> to help you understand your choices. We call it the Life and Legacy Planning Session.
       </p>
       <p>We break down your choices into three programs.
         Each of the programs have option for further customization based on your needs.</p>
@@ -133,7 +131,7 @@
         class="btn btn-primary w-100 my-5"
         href="https://calendly.com/ohlaw-owen/life-legacy-design-session"
       >
-        Book A Life and Legacy Planning Session Today
+        <h5>Book A Life and Legacy Planning Session Today</h5>
       </a>
     </div>
   </section>

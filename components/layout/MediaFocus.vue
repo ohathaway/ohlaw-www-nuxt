@@ -2,12 +2,17 @@
   <div class="media-focus-wrapper py-4 px-md-5 border-right">
     <img
       class="w-100 border rounded-4"
-      :src="props.source"
-      :title="props.title"
+      :src="src"
+      :title="title"
     />
   </div>
 </template>
 
 <script setup>
-const props = defineProps(['source', 'title'])
+const { source, title } = defineProps(['source', 'title'])
+const src = computed(() => {
+  return source.includes('https://')
+    ? source
+    : `/_nuxt${source}`
+})
 </script>
