@@ -153,7 +153,7 @@ const sendMessage = async (fields, event) => {
   try {
     // if (event) event.preventDefault()
     const data = JSON.stringify({
-      first_name: fields.last_name,
+      first_name: fields.first_name,
       last_name: fields.last_name,
       email: fields.email,
       phone: fields.phone,
@@ -170,7 +170,7 @@ const sendMessage = async (fields, event) => {
     // store.addNotification(notification, { root: true })
     store.toastSuccess(notification)
     reset('first_name')
-    reset('last_email')
+    reset('last_name')
     reset('phone')
     reset('email')
     reset('content')
