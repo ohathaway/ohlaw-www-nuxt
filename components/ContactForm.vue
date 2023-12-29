@@ -10,38 +10,55 @@
     #default="{ state: { valid } }"
   >
     <FormKit type="hidden" name="serviceFormName" :value="props.serviceFormName" />
-    <FormKit 
-      type="text"
-      name="from_name"
-      id="from_name"
-      label="Your Name"
-      prefix-icon="user"
-      validation="required"
-      :floating-label="false"
-    />
-    <FormKit
-      type="email"
-      name="from_email"
-      id="from_email"
-      label="Your Email Address"
-      prefix-icon="at"
-      validation="required|email"
-      :floating-label="false"
-    />
-    <FormKit
-      type="tel"
-      name="from_phone"
-      id="from_phone"
-      label="Phone number"
-      placeholder="xxx-xxx-xxxx"
-      validation="required|matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
-      :validation-messages="{
-        matches: 'Phone number must be in the format xxx-xxx-xxxx',
-      }"
-      validation-visibility="dirty"
-      :floating-label="false"
-      prefix-icon="phone"
-    />
+    <div class="row">
+      <FormKit 
+        type="text"
+        name="first_name"
+        id="first_name"
+        label="Your First Name"
+        prefix-icon="user"
+        outer-class="col-md-6"
+        validation="required"
+        :floating-label="false"
+      />
+      <FormKit 
+        type="text"
+        name="last_name"
+        id="last_name"
+        label="Your Last Name"
+        prefix-icon="user"
+        outer-class="col-md-6"
+        validation="required"
+        :floating-label="false"
+      />
+    </div>
+    <div class="row">
+      <FormKit
+        type="email"
+        name="email"
+        id="email"
+        label="Your Email Address"
+        prefix-icon="at"
+        outer-class="col-md-6"
+        validation="required|email"
+        :floating-label="false"
+      />
+      <FormKit
+        type="tel"
+        name="phone"
+        id="phone"
+        label="Phone number"
+        placeholder="xxx-xxx-xxxx"
+        outer-class="col-md-6"
+        validation="required|matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
+        :validation-messages="{
+          matches: 'Phone number must be in the format xxx-xxx-xxxx',
+        }"
+        validation-visibility="dirty"
+        :floating-label="false"
+        prefix-icon="phone"
+      />
+    </div>
     <FormKit
       type="textarea"
       name="content"
@@ -82,14 +99,17 @@ const headlineClasses = [ // eslint-disable-line vue/no-setup-props-destructure
 /* eslint-enable prettier/prettier */
 
 const OHL_EMAIL_URL = import.meta.env.VITE_OHL_EMAIL_URL
+const LM_FORM_URL = 'https://api.lawmatics.com/v1/forms/6a5e3a04-f6ff-4eee-998f-17683b408cf3/submit'
 
 const endpoint = axios.create({
-  baseURL: OHL_EMAIL_URL,
+  // baseURL: OHL_EMAIL_URL,
+  baseURL: LM_FORM_URL,
   headers: {
     'Content-Type': 'application/json'
   }
 })
 
+/* sendgrid via google function
 const sendMessage = async (fields, event) => {
   try {
     // if (event) event.preventDefault()
@@ -127,8 +147,20 @@ ${fields.content}
         name: fields.from_name
       }
     }
+    */
 
-    const result = await endpoint.post('/', body)
+const sendMessage = async (fields, event) => {
+  try {
+    // if (event) event.preventDefault()
+    const data = JSON.stringify({
+      first_name: fields.last_name,
+      last_name: fields.last_name,
+      email: fields.email,
+      phone: fields.phone,
+      case_blurb: fields.content
+    })
+
+    const result = await endpoint.post('/', data)
 
     const notification = {
       type: 'success',
@@ -137,9 +169,10 @@ ${fields.content}
     }
     // store.addNotification(notification, { root: true })
     store.toastSuccess(notification)
-    reset('from_name')
-    reset('from_email')
-    reset('from_phone')
+    reset('first_name')
+    reset('last_email')
+    reset('phone')
+    reset('email')
     reset('content')
     return result
   } catch (error) {

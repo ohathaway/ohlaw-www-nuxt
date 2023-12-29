@@ -62,8 +62,9 @@
             <li>
               <a
                 class=dropdown-item
-                href="https://calendly.com/ohlaw-owen/new-client"
-                target="_blank"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#bookingModal"
               >
                 <font-awesome-icon icon="far fa-calendar-days"></font-awesome-icon>
                 &nbsp;&nbsp;&nbsp;
@@ -71,6 +72,9 @@
               </a>
             </li>
           </ul>
+        </li>
+        <li class="nav-item">
+          <NuxtLink class="nav-link" to="/blog">Learning Resources</NuxtLink>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="tel:+19708183052">970-818-3052</a>

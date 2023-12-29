@@ -14,6 +14,16 @@ export default defineNuxtConfig({
           name: "google-site-verification",
           content: "Q4l9tT_meQV5Wpva7hnU27YZyc6Eja7hVsf8NqHdhKU"
         }
+      ],
+      script: [
+        {
+          type: 'text/javascript',
+          innerHTML: `
+<!-- Start Lawmatics Pixel Snippet -->
+  !function(e,t,n,a,i,s,c,o,l){e[i]||(c=e[i]=function(){c.process?c.process.apply(c,arguments):c.queue.push(arguments)},c.queue=[],c.t=1*new Date,o=t.createElement(n),o.async=1,o.src=a+'?t='+Math.ceil(new Date/s)*s,l=t.getElementsByTagName(n)[0],l.parentNode.insertBefore(o,l))}(window,document,'script','https://navi.lawmatics.com/navi.min.js','lm_navi',864e5),lm_navi('init','517b5861-878f-43ba-9fff-760855f7ceea'),lm_navi('event','pageload');
+<!-- End Lawmatics Pixel Snippet -->
+          `
+        }
       ]
     }
   },

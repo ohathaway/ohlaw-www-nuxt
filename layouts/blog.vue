@@ -5,6 +5,7 @@
       <BlogHeader />
       <slot />
     </main>
+    <Booking />
   </div>
 </template>
 

@@ -3,4 +3,5 @@
     <HeaderView />
     <slot />
   </div>
+  <Booking />
 </template>

@@ -15,8 +15,8 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse navbar-nav nav-fill mr-auto mt-2 pe-5" id="navbarToggler">
-        <div class="nav-item dropdown">
+      <ul class="collapse navbar-collapse navbar-nav nav-fill mr-auto mt-2 pe-5" id="navbarToggler">
+        <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -32,16 +32,67 @@
             <a :class="dropdownItemClasses" href="/#service-estate-planning"> Estate Planning </a>
             <a :class="dropdownItemClasses" href="/#service-bankruptcy"> Bankruptcy </a>
           </div>
-        </div>
-        <a
-          class="nav-item nav-link"
-          href="https://secure.lawpay.com/pages/owen-hathaway/trust"
-          target="_blank"
-        >
-          Make a Payment
-        </a>
-        <a class="nav-item nav-link" href="#contact-form">Contact Us</a>
-        <a class="nav-item nav-link" href="tel:+19708183052">970-818-3052</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://secure.lawpay.com/pages/owen-hathaway/trust"
+            target="_blank"
+          >
+            Make a Payment
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              href="#"
+            >
+                Contact Us
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  class=dropdown-item
+                  href="mailto:contact@ohlawcolorado.com"
+                >
+                  <font-awesome-icon icon="fas fa-at"></font-awesome-icon>
+                  &nbsp;&nbsp;&nbsp;
+                  Email
+                </a>
+              </li>
+              <li>
+                <a
+                  class=dropdown-item
+                  href="tel:+19708183052"
+                >
+                  <font-awesome-icon icon="fas fa-phone"></font-awesome-icon>
+                  &nbsp;&nbsp;&nbsp;
+                  Phone
+                </a>
+              </li>
+              <li>
+                <a
+                  class=dropdown-item
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingModal"
+                >
+                  <font-awesome-icon icon="far fa-calendar-days"></font-awesome-icon>
+                  &nbsp;&nbsp;&nbsp;
+                  In Person
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <NuxtLink class="nav-link" to="/blog">Learning Resources</NuxtLink>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tel:+19708183052">970-818-3052</a>
+          </li>
         <!-- Display isn't right. Disabled since the content isn't up to date anyway
     <li class="nav-item">
       <a class="nav-link" href="https://www.facebook.com/ohlawCO/"><i class="fab fa-facebook-f"></i></a>
@@ -50,7 +101,7 @@
       <a class="nav-link" href="https://ohlawcolorado.com/feeds/"><i class="fas fa-rss"></i></a>
     </li>
     -->
-      </div>
+      </ul>
     </nav>
   </header>
 </template>
