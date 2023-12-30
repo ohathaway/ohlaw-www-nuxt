@@ -38,7 +38,11 @@
         scenarios if they apply to the problem we're working on for you.
       </p>
     </main>
-    <ContactForm></ContactForm>
+    <div class="bg-primary">
+      <div class="w-50 mx-auto py-5">
+        <ContactForm></ContactForm>
+      </div>
+    </div>
   </div>
 </template>
 

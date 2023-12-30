@@ -67,7 +67,11 @@
         Upon request, we will make our internal practices, books, and records including policies and procedures, relating to the use and disclosure of PHI received from, or created or received by the BA on behalf of a Covered Entity available to the Covered Entity or the Secretary of the U.S. Department of Health and Human Services for the purpose of determining compliance with the terms of the BA Agreement and HIPAA regulations.
       </p>
     </main>
-    <ContactForm></ContactForm>
+    <div class="bg-primary">
+      <div class="w-50 mx-auto py-5">
+        <ContactForm></ContactForm>
+      </div>
+    </div>
   </div>
 </template>
 

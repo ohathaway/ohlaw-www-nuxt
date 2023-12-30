@@ -15,13 +15,13 @@
       </p>
       <ul class="list-group horizontal">
         <li class="list-group-item flex-fill">
-          <NuxtLink to="fees">Fees and Other Policies</NuxtLink>
+          <NuxtLink to="/policies/fees">Fees and Other Policies</NuxtLink>
         </li>
         <li class="list-group-item flex-fill">
-          <NuxtLink to="unbundled">Unbundled Services</NuxtLink>
+          <NuxtLink to="/policies/unbundled">Unbundled Services</NuxtLink>
         </li>
         <li class="list-group-item flex-fill">
-          <NuxtLink to="privacy">Privacy Policy</NuxtLink>
+          <NuxtLink to="/policies/privacy">Privacy Policy</NuxtLink>
         </li>
       </ul>
       <p>
@@ -31,7 +31,11 @@
         way we agree to be your attorney. Ever.
       </p>
     </main>
-    <ContactForm></ContactForm>
+    <div class="bg-primary">
+      <div class="w-50 mx-auto py-5">
+        <ContactForm></ContactForm>
+      </div>
+    </div>
   </div>
 </template>
 
