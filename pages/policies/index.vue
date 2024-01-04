@@ -4,7 +4,7 @@
       <h1>Terms and Conditions</h1>
       <p class="text-start">
         To paraphrase the butler in
-        <a href="https://www.youtube.com/watch?v=WiZ8D9akdV4">Indiana Jones and the Last Crusade</a
+        <a href="https://www.youtube.com/watch?v=WiZ8D9akdV4" target="_blank">Indiana Jones and the Last Crusade</a
         >, this is a law firm, and we have many rules. Fortunately they make a lot of sense, and you
         probably already intuitively know how a law firm, attorneys, and attorneys' staff members
         should act. Basically, it's "Do the right thing."
