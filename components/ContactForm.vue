@@ -80,7 +80,17 @@ import { reset } from '@formkit/core'
 import { useMainStore } from '@/stores/mainStore'
 import axios from 'axios'
 
-const props = defineProps(['headline', 'textColor', 'serviceFormName'])
+const props = defineProps({
+  headline: String,
+  position: {
+    type: String,
+    validator(value, props) {
+      return ['row', 'sidebar'].includes(value)
+    }
+  },
+  serviceFormName: String,
+  textColor: String
+})
 
 const store = useMainStore()
 
