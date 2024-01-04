@@ -9,8 +9,6 @@
 </template>
 
 <script setup>
-import { isEmpty } from 'lodash'
-
 definePageMeta({
   layout: 'blog'
 })

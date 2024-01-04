@@ -48,7 +48,15 @@ const {
   }
 } = await useAsyncQuery(spotlightPostsQuery)
 
-const { data: { value: { posts: { data: allPosts } } } } = await useAsyncQuery(allPostsQuery)
+const {
+  data: {
+    value: {
+      posts: {
+        data: allPosts
+      }
+    }
+  }
+} = await useAsyncQuery(allPostsQuery)
 </script>
 
 <style scoped>

@@ -1,3 +1,13 @@
+import axios from 'axios'
+
+const getPostRoutes = async () => {
+  const response = await axios.get(
+    `${process.env.STRAPI_URL}/api/posts?fields[0]=slug`
+  )
+
+  return response?.data?.data.map(post => `/blog/${post.attributes.slug}`)
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -65,9 +75,20 @@ export default defineNuxtConfig({
   gtag: {
     id: 'G-24N250X41Q'
   },
+  /*
+  hooks: {
+    async 'nitro:config'(nitroConfig) {
+      // fetch the routes from our function above
+      const slugs = await getPostRoutes()
+      // add the routes to the nitro config
+      nitroConfig.prerender.routes.push(...slugs)
+    }
+  },
+  */
   modules: [
     'nuxt-icon',
     'nuxt-gtag',
+    'nuxt-lodash',
     '@vueuse/nuxt',
     '@formkit/nuxt',
     '@pinia/nuxt',

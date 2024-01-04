@@ -15,7 +15,6 @@
 
 <script setup>
 import { computed } from 'vue'
-import { isEmpty } from 'lodash'
 const props = defineProps(['address'])
 
 const hasAddress = computed(() => {

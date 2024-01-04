@@ -57,7 +57,6 @@
 <script setup>
 import { FormKitSchema } from '@formkit/vue'
 import { useCaseBkStore } from '@/stores/caseBkStore'
-import { capitalize } from 'lodash'
 const props = defineProps(['formFor', 'address'])
 
 const caseStore = useCaseBkStore()

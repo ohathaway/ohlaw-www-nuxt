@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main id="policies" class="container-fluid">
+    <main id="policies" class="container-fluid main px-3 py-lg-5">
       <h1>Terms and Conditions</h1>
       <p>
         To paraphrase the butler in
@@ -31,7 +31,7 @@
         way we agree to be your attorney. Ever.
       </p>
     </main>
-    <div class="bg-primary">
+    <div class="container-fluid" id="contact-form">
       <div class="w-50 mx-auto py-5">
         <ContactForm></ContactForm>
       </div>
@@ -52,5 +52,7 @@ import ContactForm from '@/components/ContactForm.vue'
 
 #contact-form {
   padding-top: 5.5rem;
+  color: #ffffff;
+  margin-bottom: -80px;
 }
 </style>

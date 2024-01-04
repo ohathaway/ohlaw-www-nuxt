@@ -1,5 +1,3 @@
-import { intersection } from 'lodash'
-
 const { public: { strapi: { url: strapiUrl } } } = useRuntimeConfig()
 
 const isModifier = brick => {

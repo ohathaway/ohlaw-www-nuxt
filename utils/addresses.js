@@ -1,5 +1,3 @@
-import { forOwn, isEmpty, uniq } from 'lodash'
-
 const addrProps = ['street1', 'street2', 'city', 'state', 'zip']
 
 export const useAddressEmpty = () => (addr) => {
