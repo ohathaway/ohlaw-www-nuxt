@@ -69,22 +69,11 @@
     </main>
     <div class="bg-primary">
       <div class="w-50 mx-auto py-5">
-        <ContactForm></ContactForm>
+        <ContactForm position="row" />
       </div>
     </div>
   </div>
 </template>
-
-<script>
-import ContactForm from '@/components/ContactForm.vue'
-
-export default {
-  name: 'PoliciesPrivacy',
-  components: {
-    ContactForm
-  }
-}
-</script>
 
 <style lang="scss">
 #privacy-policy {

@@ -60,12 +60,8 @@
         </p>
       </div>
       <div class="col-3 bg-primary cta-sidebar p-5" id="cta-sidebar-nonprofit">
-        <ContactForm />
+        <ContactForm position="sidebar" />
       </div>
     </div>
   </div>
 </template>
-
-<script setup>
-import ContactForm from './ContactForm.vue'
-</script>

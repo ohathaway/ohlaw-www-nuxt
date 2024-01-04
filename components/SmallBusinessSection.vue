@@ -30,7 +30,7 @@
       id="service-description-small-business"
     >
       <div class="col-3 bg-primary cta-sidebar p-5" id="cta-sidebar-small-business">
-        <ContactForm />
+        <ContactForm position="sidebar" />
       </div>
       <div class="col-9 p-5">
         <h2>Looking to start a business?</h2>
@@ -77,7 +77,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import ContactForm from './ContactForm.vue'
-</script>

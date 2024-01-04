@@ -30,7 +30,7 @@
       id="service-description-estate-planning"
     >
       <div class="col-3 bg-primary cta-sidebar p-5" id="cta-sidebar-estate-planning">
-        <ContactForm />
+        <ContactForm position="sidebar" />
       </div>
       <div class="col-9 p-5">
         <h2>Estate Planning Services</h2>
@@ -63,7 +63,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import ContactForm from './ContactForm.vue'
-</script>

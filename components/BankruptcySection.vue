@@ -45,7 +45,7 @@
         <p class="fw-normal">A Chapter 13 case presents a much more complicated process than Chapter 7. One study found that only 2.3% of Chapter 13 cases filed without an attorney completed successfully. Our experience and expertise allow us to help folks navigate the confusing Chapter 13 process.</p>
       </div>
       <div class="col-3 bg-primary cta-sidebar p-5" id="cta-sidebar-bankruptcy">
-        <ContactForm textColor="white" />
+        <ContactForm textColor="white" position="sidebar" />
       </div>
     </div>
   </div>

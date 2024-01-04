@@ -17,7 +17,7 @@
         id="first_name"
         label="Your First Name"
         prefix-icon="user"
-        outer-class="col-md-6"
+        :outer-class="outerClasses"
         validation="required"
         :floating-label="false"
       />
@@ -27,7 +27,7 @@
         id="last_name"
         label="Your Last Name"
         prefix-icon="user"
-        outer-class="col-md-6"
+        :outer-class="outerClasses"
         validation="required"
         :floating-label="false"
       />
@@ -39,7 +39,7 @@
         id="email"
         label="Your Email Address"
         prefix-icon="at"
-        outer-class="col-md-6"
+        :outer-class="outerClasses"
         validation="required|email"
         :floating-label="false"
       />
@@ -49,7 +49,7 @@
         id="phone"
         label="Phone number"
         placeholder="xxx-xxx-xxxx"
-        outer-class="col-md-6"
+        :outer-class="outerClasses"
         validation="required|matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
         :validation-messages="{
           matches: 'Phone number must be in the format xxx-xxx-xxxx',
@@ -84,7 +84,8 @@ const props = defineProps({
   headline: String,
   position: {
     type: String,
-    validator(value, props) {
+    required: true,
+    validator(value) {
       return ['row', 'sidebar'].includes(value)
     }
   },
@@ -93,6 +94,12 @@ const props = defineProps({
 })
 
 const store = useMainStore()
+
+const outerClasses = computed(() => {
+  return props.position === 'row'
+    ? 'col-md-6'
+    : 'col-md-12'
+})
 
 /* eslint-disable prettier/prettier */
 const headline = computed(() => {

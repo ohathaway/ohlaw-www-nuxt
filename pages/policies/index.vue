@@ -1,15 +1,15 @@
 <template>
   <div>
-    <main id="policies" class="container-fluid main px-3 py-lg-5">
+    <main id="policies" class="container-fluid main px-lg-5 py-lg-5">
       <h1>Terms and Conditions</h1>
-      <p>
+      <p class="text-start">
         To paraphrase the butler in
         <a href="https://www.youtube.com/watch?v=WiZ8D9akdV4">Indiana Jones and the Last Crusade</a
         >, this is a law firm, and we have many rules. Fortunately they make a lot of sense, and you
         probably already intuitively know how a law firm, attorneys, and attorneys' staff members
         should act. Basically, it's "Do the right thing."
       </p>
-      <p>
+      <p class="text-start">
         To learn specifics of what that means in different situations, you can read our policies
         here.
       </p>
@@ -24,7 +24,7 @@
           <NuxtLink to="/policies/privacy">Privacy Policy</NuxtLink>
         </li>
       </ul>
-      <p>
+      <p class="text-start">
         Oh, the one real important thing that may not be real intuitive: reading something on this
         web site does not mean that you have an attorney representing you and giving you legal
         advice. We will always send an engagement letter to a new client. This letter is the only
@@ -33,15 +33,11 @@
     </main>
     <div class="container-fluid" id="contact-form">
       <div class="w-50 mx-auto py-5">
-        <ContactForm></ContactForm>
+        <ContactForm position="row" />
       </div>
     </div>
   </div>
 </template>
-
-<script setup>
-import ContactForm from '@/components/ContactForm.vue'
-</script>
 
 <style lang="scss">
 #policies {
