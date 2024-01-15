@@ -65,8 +65,7 @@ export default defineNuxtConfig({
     // 'bootstrap/scss/bootstrap.scss',
     '@fortawesome/fontawesome-svg-core/styles.css',
     '@formkit/themes/genesis',
-    '@formkit/addons/css/floatingLabels',
-    '~/assets/scss/site.scss'
+    '@formkit/addons/css/floatingLabels'
   ],
   devtools: { enabled: true },
   formkit: {
@@ -97,5 +96,14 @@ export default defineNuxtConfig({
     '@nuxtjs/strapi'
   ],
   pages: true,
-  ssr: false
+  ssr: false,
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/assets/scss/site.scss";'
+        }
+      }
+    }
+  }
 })

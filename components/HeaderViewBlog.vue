@@ -28,6 +28,15 @@
             Make a Payment
           </a>
         </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://ohlaw.portal.lawmatics.com/login"
+            target="_blank"
+          >
+            Client Login
+          </a>
+        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
