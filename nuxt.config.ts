@@ -63,6 +63,8 @@ export default defineNuxtConfig({
   },
   css: [
     // 'bootstrap/scss/bootstrap.scss',
+    '@/assets/fonts/fonts.css',
+    '@/assets/fonts/google-fonts.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
     '@formkit/themes/genesis',
     '@formkit/addons/css/floatingLabels'
@@ -98,6 +100,9 @@ export default defineNuxtConfig({
   pages: true,
   ssr: false,
   vite: {
+    build: {
+      assetsDir: '_nuxt/assets'
+    },
     css: {
       preprocessorOptions: {
         scss: {
