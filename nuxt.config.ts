@@ -76,7 +76,6 @@ export default defineNuxtConfig({
   gtag: {
     id: 'G-24N250X41Q'
   },
-  /*
   hooks: {
     async 'nitro:config'(nitroConfig) {
       // fetch the routes from our function above
@@ -85,7 +84,6 @@ export default defineNuxtConfig({
       nitroConfig.prerender.routes.push(...slugs)
     }
   },
-  */
   modules: [
     'nuxt-icon',
     'nuxt-gtag',
@@ -97,8 +95,12 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/strapi'
   ],
+  lodash: {
+    prefix: '',
+    upperAfterPrefix: false
+  },
   pages: true,
-  ssr: false,
+  ssr: true,
   vite: {
     build: {
       assetsDir: '_nuxt/assets'

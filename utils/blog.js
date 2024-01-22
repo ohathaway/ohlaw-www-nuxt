@@ -1,6 +1,4 @@
-import { intersection } from 'lodash'
-
-const { public: { strapi: { url: strapiUrl } } } = useRuntimeConfig()
+const { public: { strapi: { url: strapiUrl } } } = useAppConfig()
 
 const isModifier = brick => {
   const modifierTypes = [
