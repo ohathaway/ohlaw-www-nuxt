@@ -1,4 +1,5 @@
-const { public: { strapi: { url: strapiUrl } } } = useAppConfig()
+// const { public: { strapi: { url: strapiUrl } } } = useAppConfig()
+const strapiUrl = process.env.STRAPI_URL
 
 const isModifier = brick => {
   const modifierTypes = [

@@ -1,11 +1,17 @@
 <template>
-  <strong v-if="brick.bold">{{ brick.text }}</strong>
-  <i v-else-if="brick.italic">{{ brick.text }}</i>
-  <u v-else-if="brick.underline">{{ brick.text }}</u>
-  <s v-else-if="brick.strikethrough">{{ brick.text }}</s>
-  <pre v-else="brick.code">{{ brick.text }}</pre>
+  <pre v-if="brick.code">{{ brick.text }}</pre>&nbsp;
+  <span :class="classes" v-else>{{ brick.text }}</span>&nbsp;
 </template>
 
 <script setup>
 const { brick } = defineProps(['brick'])
+
+const classes = computed(() => {
+  const list = []
+  if (brick.bold) list.push('fw-bold')
+  if (brick.italic) list.push('fst-italic')
+  if (brick.underline) list.push('text-decoration-underline')
+  if (brick.strikethrough) list.push('text-decoration-line-through')
+  return list
+})
 </script>

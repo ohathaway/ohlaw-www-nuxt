@@ -16,7 +16,7 @@
     <div class="col-12 px-5">
       <h2 class="mb-5 mx-lg-5">Cost-centered decision making doesn't work for estate planning</h2>
       <p class="mx-lg-5">
-        Most estate plans fail. Even the most expensive plans from the most prestigious law firms don't actually do what the client wants them to do. This isn't because most estate-plannig lawyers don't write good documents or properly inventory their client's estate. It's because life intervenes and things change over time. 
+        Most estate plans fail. Even the most expensive plans from the most prestigious law firms don't actually do what the client wants them to do. This isn't because most estate-planning lawyers don't write good documents or properly inventory their client's estate. It's because life intervenes and things change over time. 
       </p>
       <p class="mx-lg-5">
         Choosing the lowest cost option, like a form you got online or an attorney who quotes you a price over the phone without extensive discovery ensures your plan too will fail. <a href="https://ohlawcolorado.com/blog/5-reasons-why-shopping-for-the-cheapest-estate-plan-could-leave-your-family-with-an-unintended-mess">Read more</a>
@@ -129,7 +129,7 @@
       </div>
       <a
         class="btn btn-primary w-100 my-5"
-        href="https://calendly.com/ohlaw-owen/life-legacy-design-session"
+        :href="scheduleLink"
       >
         <h5>Book A Life and Legacy Planning Session Today</h5>
       </a>
@@ -141,6 +141,8 @@
 definePageMeta({
   layout: 'services'
 })
+
+const { schedulingLinks: { newClient: scheduleLink } } = useAppConfig()
 </script>
 
 <style lang="scss" scoped>

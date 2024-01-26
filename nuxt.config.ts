@@ -100,6 +100,11 @@ export default defineNuxtConfig({
     upperAfterPrefix: false
   },
   pages: true,
+  runtimeConfig: {
+    public: {
+      strapiUrl: process.env.STRAPI_URL
+    }
+  },
   ssr: true,
   vite: {
     build: {

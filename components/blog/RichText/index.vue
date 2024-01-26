@@ -30,12 +30,12 @@
         <template v-for="child in brick.children">
           <BlogRichTextModifier v-if="isModifier(child)" :brick="child" />
           <BlogRichTextLink
-            v-if="child.type === 'link'"
+            v-else-if="child.type === 'link'"
             :brick="child"
           />
-          <template v-else-if="child.type === 'text'">
+          <span v-else>
             {{ child.text }}
-          </template>
+          </span>
         </template>
       </p>
     </template>

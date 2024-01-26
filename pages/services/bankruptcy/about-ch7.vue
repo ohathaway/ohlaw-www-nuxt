@@ -76,4 +76,7 @@ const tlContent = [
     content: 'CONGRATULATIONS YOU DID IT'
   }
 ]
+
+const { schedulingLinks: { newClient: link } } = useAppConfig()
+console.debug('link: ', link)
 </script>
