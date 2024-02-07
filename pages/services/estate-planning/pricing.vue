@@ -29,14 +29,14 @@
       <p>
         We build plans that actually work for our clients. And we aren't the lowest cost option (neither are we necessarily the most exepensive). We put you in control of what you pay by allowing you to choose your own fees based on what works best for you and your family. We provide a <a href="https://calendly.com/ohlaw-owen/life-legacy-design-session">no-obligation education session</a> to help you understand your choices. We call it the Life and Legacy Planning Session.
       </p>
-      <p>We break down your choices into three programs.
-        Each of the programs have option for further customization based on your needs.</p>
+      <p>Your choices break down into three programs.
+        Each of the programs have options for further customization based on your needs.</p>
       <div class="row" id="programs">
         <div class="col-lg-4 py-5">
           <div class="card h-100 level1">
             <div class="card-title px-5 pt-4 bg-light border-bottom">
               <h4>Level 1</h4>
-              <h5>Family Plan</h5>
+              <h5>Will-Based Plan</h5>
             </div>
             <div class="card-body needs p-lg-4 mb-lg-5">
               <p>

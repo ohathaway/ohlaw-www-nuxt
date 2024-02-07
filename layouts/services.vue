@@ -6,6 +6,7 @@
       <slot />
     </main>
   </div>
+  <Booking />
 </template>
 
 <style lang="scss">
