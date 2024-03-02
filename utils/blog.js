@@ -30,6 +30,23 @@ const getStrapiUrl = image => {
   return strapiUrl+url
 }
 
+const richTextToPlainText = rich => {
+  try {
+    return rich.map(brick => {
+      if (brick.type === 'paragraph') {
+        return brick.children.map( child => {
+          return child.type === 'text'
+            ? child.text
+            : child.children[0].text
+        }).join(' ').trim()
+      }
+    })[0]
+  } catch (error) {
+    console.error(error)
+    return error
+  }
+}
+
 const addScrollSpy = () => {
 
 }
@@ -48,6 +65,7 @@ const singlePostQuery = slug => {
           CTA,
           publishDate,
           Title,
+          Snippet,
           category {
             data {
               id,
@@ -302,6 +320,7 @@ export {
   getThumbnailUrl,
   featuredPostQuery,
   isModifier,
+  richTextToPlainText,
   singlePostQuery,
   spotlightPostsQuery,
   tagPostsQuery

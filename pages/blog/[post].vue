@@ -55,7 +55,6 @@ const {
   }
 } = await useAsyncQuery(singlePostQuery(path.split('/').pop()))
 
-console.debug('post: ', post)
 const {
   attributes: {
     category: {
@@ -84,6 +83,20 @@ let {
 
 relatedPosts = relatedPosts.filter(relatedPost => {
   return relatedPost.id !== post.id
+})
+
+const { href: fullPath  } = useRequestURL()
+
+const description = richTextToPlainText(post.attributes.Snippet)
+
+useHead({
+  title: post.attributes.Title,
+  meta: [
+    { hid: 'og:title', property: 'og:title', content: post.attributes.Title },
+    { hid: 'og:url', property: 'og:url', content: fullPath },
+    { hid: 'og:description', property: 'og:description', content: description },
+    { hid: 'og:image', property: 'og:image', content: `${process.env.baseUrl}/${getStrapiUrl(post.attributes.Image)}` }
+  ]
 })
 
 if (isEmpty(post)) {
