@@ -2,7 +2,7 @@
   <section class="section-1 row">
     <div class="col-lg-6 px-5">
       <LayoutMediaFocus
-        source="/assets/img/affordable_and_effective_top_only.webp"
+        source="/img/affordable_and_effective_top_only.webp"
         title="Intersection of Affordability and Effectiveness"
       />
     </div>

@@ -1,7 +1,8 @@
 <template>
   <div class="media-focus-wrapper py-4 px-md-5 border-right">
-    <img
+    <NuxtImg
       class="w-100 border rounded-4"
+      provider="cloudflare"
       :src="src"
       :title="title"
     />
@@ -13,6 +14,6 @@ const { source, title } = defineProps(['source', 'title'])
 const src = computed(() => {
   return source.includes('https://')
     ? source
-    : `/_nuxt${source}`
+    : `/${source}`
 })
 </script>

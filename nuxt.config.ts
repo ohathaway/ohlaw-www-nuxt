@@ -85,6 +85,11 @@ export default defineNuxtConfig({
       nitroConfig.prerender.routes.push(...slugs)
     }
   },
+  image: {
+    cloudflare: {
+      baseURL: 'https://ohlawcolorado.com'
+    }
+  },
   lodash: {
     prefix: '',
     upperAfterPrefix: false
@@ -98,6 +103,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/apollo',
     '@nuxt/content',
+    '@nuxt/image',
     '@nuxtjs/strapi'
   ],
   nitro: {
