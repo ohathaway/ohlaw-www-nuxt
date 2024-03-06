@@ -1,5 +1,11 @@
 export default defineAppConfig({
   schedulingLinks: {
-    newClient: 'https://app.lawmatics.com/booking/share/bd7a0579-85cf-42be-9c8d-6b49988ee5b0'
-  }
+    checkIn: 'https://booking.ohlawcolorado.com/check-in',
+    estatePlanCheckup: 'https://booking.ohlawcolorado.com/ll-plan-checkup',
+    estatePlanDesign: 'https://booking.ohlawcolorado.com/ll-plan-design',
+    newClient: 'https://booking.ohlawcolorado.com/new-client',
+    petitionReviewInPerson: 'https://booking.ohlawcolorado.com/bk-review-in-person',
+    petitionReviewRemote: 'https://booking.ohlawcolorado.com/bk-review-remote'
+  },
+  strapiUrl: 'https://strapi.ohlawcolorado.com'
 })

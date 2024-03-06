@@ -1,5 +1,8 @@
-// const { public: { strapi: { url: strapiUrl } } } = useAppConfig()
-const strapiUrl = process.env.STRAPI_URL
+// const nuxtApp = useNuxtApp()
+
+// console.debug('nuxtApp: ', nuxtApp)
+// const { strapiUrl } = nuxtApp.runWithContext(() => useAppConfig())
+const strapiUrl = 'https://strapi.ohlawcolorado.com'
 
 const isModifier = brick => {
   const modifierTypes = [
