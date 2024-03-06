@@ -2,7 +2,7 @@
   <div class="media-focus-wrapper py-4 px-md-5 border-right">
     <NuxtImg
       class="w-100 border rounded-4"
-      provider="cloudflare"
+      provider="strapi"
       :src="src"
       :title="title"
     />

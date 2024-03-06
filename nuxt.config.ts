@@ -88,6 +88,9 @@ export default defineNuxtConfig({
   image: {
     cloudflare: {
       baseURL: 'https://ohlawcolorado.com'
+    },
+    strapi: {
+      baseURL: `${process.env.STRAPI_URL}/uploads`
     }
   },
   lodash: {
