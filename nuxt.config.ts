@@ -80,9 +80,14 @@ export default defineNuxtConfig({
     async 'nitro:config'(nitroConfig) {
       // fetch the routes from our function above
       const slugs = await getPostRoutes()
+      console.debug('slugs: ', slugs)
       // add the routes to the nitro config
       nitroConfig.prerender.routes.push(...slugs)
     }
+  },
+  lodash: {
+    prefix: '',
+    upperAfterPrefix: false
   },
   modules: [
     'nuxt-icon',
@@ -95,9 +100,14 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/strapi'
   ],
-  lodash: {
-    prefix: '',
-    upperAfterPrefix: false
+  nitro: {
+    prerender: {
+      crawlLinks: false,
+      ignore: [
+        '/blog/tags/**',
+        '/blog/categories/**'
+      ]
+    }
   },
   pages: true,
   runtimeConfig: {
