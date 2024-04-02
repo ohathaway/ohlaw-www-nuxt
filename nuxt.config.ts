@@ -101,6 +101,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-gtag',
     'nuxt-lodash',
+    'nuxt-vuefire',
     '@vueuse/nuxt',
     '@formkit/nuxt',
     '@pinia/nuxt',
@@ -136,5 +137,15 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+  vuefire: {
+    config: {
+      apiKey: process.env.VITE_FIREBASE_KEY,
+      appId: process.env.VITE_FIREBASE_APP_ID,
+      projectId: process.env.VITE_FIREBASE_PROJECT,
+      messagingSenderId: process.env.VITE_FIREBASE_MESSAGING_SENDER,
+      storageBucket: process.env.VITE_FIREBASE_BUCKET
+    },
+    emulators: process.env.NODE_ENV !== 'production'
   }
 })

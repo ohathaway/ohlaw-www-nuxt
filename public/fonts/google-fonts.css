@@ -105,3 +105,12 @@
 	src: url(BenguiatRegular.ttf) format('ttf');
 	unicode-range: U+0-10FFFF;
 }
+
+@font-face {
+	font-family: 'Noto Sans Mono';
+	font-style: normal;
+	font-weight: 500;
+	font-display: auto;
+	src: url(NotoSansMono-Regular.woff) format('woff');
+	unicode-range: U+0-10FFFF;
+}

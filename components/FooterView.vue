@@ -43,9 +43,7 @@
         <li>Suite 201</li>
         <li>Fort Collins, CO 80528</li>
       </ul>
-    </div>
-    <div class="col-md footer-address">
-      <ul class="list-unstyled">
+      <ul class="list-unstyled mt-5">
         <li>
           <font-awesome-icon icon="fas fa-mail-bulk"></font-awesome-icon>
           &nbsp;&nbsp;&nbsp;<u>Mailing Address:</u>
@@ -54,6 +52,9 @@
         <li>Suite 7-232</li>
         <li>Fort Collins, CO 80525</li>
       </ul>
+    </div>
+    <div class="col-sm">
+      <h5 class="text-decoration-underline">Low-Income Resources</h5>
     </div>
   </footer>
 </template>
