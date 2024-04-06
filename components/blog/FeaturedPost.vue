@@ -17,5 +17,4 @@
 <script setup>
 const { post } = defineProps(['post'])
 const { attributes: { Image: { data: { attributes: { url: source } } } } } = post
-console.debug('url: ', post.attributes.Image.data.attributes.url)
 </script>

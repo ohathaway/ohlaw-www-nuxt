@@ -57,6 +57,8 @@ const {
     }
   }
 } = await useAsyncQuery(allPostsQuery)
+
+console.debug('featuredPost: ', featuredPost)
 </script>
 
 <style scoped>
