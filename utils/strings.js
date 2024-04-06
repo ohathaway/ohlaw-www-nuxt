@@ -7,3 +7,9 @@ export const toTitleCase = (phrase, delimiter = ' ') => {
 export const toKebobCase = (phrase, delimiter = ' ') => {
   return phrase.toLowerCase().replaceAll(delimiter, '-')
 }
+
+export const httpUrl = url => {
+  return url.startsWith('http')
+    ? url
+    : `https://${url}`
+}

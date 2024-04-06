@@ -22,7 +22,7 @@
         <tr v-for="row in rows" :key="row.name">
           <td>{{ row.category }}</td>
           <td>
-            <a :href="row.website" :title="row.name" target="_blank">
+            <a :href="httpUrl(row.website)" :title="row.name" target="_blank">
               {{ row.name }}
             </a>
           </td>
