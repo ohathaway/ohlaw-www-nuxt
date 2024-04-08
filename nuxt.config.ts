@@ -25,6 +25,7 @@ export default defineNuxtConfig({
           content: "Q4l9tT_meQV5Wpva7hnU27YZyc6Eja7hVsf8NqHdhKU"
         }
       ],
+      /*
       script: [
         {
           type: 'text/javascript',
@@ -35,6 +36,7 @@ export default defineNuxtConfig({
           `
         }
       ]
+      */
     }
   },
   apollo: {
