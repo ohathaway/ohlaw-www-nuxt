@@ -18,7 +18,7 @@
             <font-awesome-icon icon="fas fa-comment-sms"></font-awesome-icon>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a class="text-white" href="sms://+19708185558">
-              970-818-5558
+              970-818-5559
             </a>
           </li>
           <li>
@@ -54,7 +54,6 @@
       </ul>
     </div>
     <div class="col-sm">
-      <h5 class="text-decoration-underline">Low-Income Resources</h5>
     </div>
   </footer>
 </template>

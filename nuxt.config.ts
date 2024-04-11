@@ -148,6 +148,6 @@ export default defineNuxtConfig({
       messagingSenderId: process.env.VITE_FIREBASE_MESSAGING_SENDER,
       storageBucket: process.env.VITE_FIREBASE_BUCKET
     },
-    emulators: process.env.NODE_ENV !== 'production'
+    // emulators: process.env.NODE_ENV !== 'production'
   }
 })
