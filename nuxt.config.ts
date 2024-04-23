@@ -121,7 +121,7 @@ export default defineNuxtConfig({
       ignore: [
         '/blog/tags/**',
         '/blog/categories/**',
-        '/blog'
+        /^\/blog$/
       ]
     }
   },
