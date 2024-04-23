@@ -71,6 +71,9 @@ export default defineNuxtConfig({
     '@formkit/themes/genesis',
     '@formkit/addons/css/floatingLabels'
   ],
+  devServer: {
+    port: 3030
+  },
   devtools: { enabled: true },
   formkit: {
     autoImport: true
@@ -117,7 +120,8 @@ export default defineNuxtConfig({
       crawlLinks: false,
       ignore: [
         '/blog/tags/**',
-        '/blog/categories/**'
+        '/blog/categories/**',
+        '/blog'
       ]
     }
   },
