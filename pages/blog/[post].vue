@@ -1,6 +1,6 @@
 <template>
   <div class="row post-title px-5">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 print-d-none">
       <LayoutMediaFocus
         :source="getStrapiUrl(post.attributes.Image)"
         :title="post.attributes.Title"
@@ -10,7 +10,7 @@
       <h1 class="pb-5">{{ post.attributes.Title }}</h1>
     </div>
   </div>
-  <div class="row p-5 post-display">
+  <article class="row p-5 post-display">
     <div class="col-3 d-none d-lg-block">
       <BlogTOC :content="post.attributes.Content" />
     </div>
@@ -36,7 +36,7 @@
         />
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script setup>
@@ -105,7 +105,13 @@ if (isEmpty(post)) {
 </script>
 
 <style lang="scss">
-.post-title {
-  background: #d8d8d8;
+.rich-text {
+  // background: #d8d8d8;
+}
+
+@media print {
+  .post-list-wrapper {
+    display: none;
+  }
 }
 </style>

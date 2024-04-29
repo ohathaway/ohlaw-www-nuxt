@@ -1,0 +1,40 @@
+@media print {
+  body {
+  /* 2 column layout
+    column-width: 17em;
+    column-gap: 3em;
+  */
+  }
+  article {
+    font-size: 6pt !important;
+  }
+
+  .blog-title,
+  .categories-nav,
+  nav,
+  .navbar-nav,
+  header,
+  footer {
+    display: none !important;
+  }
+
+  .print-d-none {
+    display: none !important;
+  }
+
+  .print-float-left {
+    float: left !important;
+  }
+
+  .print-float-right {
+    float: right !important;
+  }
+
+  .print-w40 > * {
+    width: 40% !important;
+  }
+
+  .print-w60 > * {
+    width: 60% !important;
+  }
+}

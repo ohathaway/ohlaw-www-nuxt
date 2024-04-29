@@ -9,6 +9,10 @@
   </div>
 </template>
 
+<script setup>
+console.debug('Blog Layout')
+</script>
+
 <style lang="scss">
 a {
   color: #003399;
@@ -27,6 +31,19 @@ p {
   font-size: 1.2rem;
   .nav-link {
     color: #3a3a3a;
+  }
+}
+
+@media print {
+  .blog-title, nav, .navbar-nav, header, footer { 
+    // display: none;
+  }
+  .categories-nav {
+    // color: red;
+    // display: none;
+  }
+  .post-title {
+    // color: red !important;
   }
 }
 </style>

@@ -44,4 +44,5 @@
 
 <script setup>
 const { block } = defineProps(['block'])
+console.debug('Rendering block: ', block)
 </script>
