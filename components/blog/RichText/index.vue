@@ -4,7 +4,7 @@
       <!-- headings -->
       <h2
         v-if="brick.type === 'heading' && brick.level === 1"
-        :id="brick.children[0].text.replaceAll(' ', '-').toLowerCase()"
+        :id="formatAnchorText(brick.children[0].text)"
       >
         {{ brick.children[0].text }}
       </h2>
@@ -26,7 +26,7 @@
       />
 
       <!-- paragraphs-->
-      <p v-else-if="brick.type === 'paragraph'">
+      <p v-else-if="brick.type === 'paragraph'" class="paragraph">
         <template v-for="child in brick.children">
           <BlogRichTextModifier v-if="isModifier(child)" :brick="child" />
           <BlogRichTextLink

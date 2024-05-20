@@ -13,3 +13,12 @@ export const httpUrl = url => {
     ? url
     : `https://${url}`
 }
+
+export const formatAnchorText = text => {
+  return `#${text.replaceAll(' ', '-')
+    .replaceAll('(', '')
+    .replaceAll(')', '')
+    .replaceAll(':', '')
+    .toLowerCase()
+  }`
+}
