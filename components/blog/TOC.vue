@@ -27,7 +27,7 @@ const { content, id, sticky } = defineProps({
 
 const resolveClasses = sticky => {
   let classList = ['top-50', 'p-2']
-  console.debug('sticky: ', sticky)
+
   if (sticky === true) classList.push('position-sticky')
   if (id.match('toc')) {
     classList.push(

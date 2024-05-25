@@ -102,10 +102,14 @@ export default defineNuxtConfig({
     prefix: '',
     upperAfterPrefix: false
   },
+  meilisearch: {
+    hostUrl: 'localhost:7700'
+  },
   modules: [
     'nuxt-icon',
     'nuxt-gtag',
     'nuxt-lodash',
+    'nuxt-meilisearch',
     'nuxt-vuefire',
     '@vueuse/nuxt',
     '@formkit/nuxt',

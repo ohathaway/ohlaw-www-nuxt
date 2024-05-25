@@ -133,6 +133,91 @@ query {
   }
 }`
 
+const allPostsSearchQuery = searchTerm => {
+  return gql`
+  query {
+    posts(
+      sort: "publishDate:DESC",
+      filters: { or: [
+        { Title:{ containsi: "${searchTerm}" } },
+        { Snippet:{ containsi: "${searchTerm}" } },
+        { tags: { Name: { containsi: "${searchTerm}" } } },
+        { category: { Name: { containsi: "${searchTerm}" } } }
+      ]}
+    ) {
+      data {
+        id
+        attributes {
+          Title,
+          Snippet,
+          publishDate,
+          Image {
+            data {
+              attributes {
+                name
+                url
+              }
+            }
+          },
+          slug,
+          tags {
+            data {
+              id,
+              attributes {
+                Name,
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+  }`
+}
+
+const allPostsSearchString = searchTerm => {
+  console.debug('searchTerm: ', searchTerm)
+  return `
+  query {
+    posts(
+      sort: "publishDate:DESC",
+      filters: { or: [
+        { Title:{ containsi: "${searchTerm}" } },
+        { Snippet:{ containsi: "${searchTerm}" } },
+        { tags: { Name: { containsi: "${searchTerm}" } } },
+        { category: { Name: { containsi: "${searchTerm}" } } }
+      ]}
+    ) {
+      data {
+        id
+        attributes {
+          Title,
+          Snippet,
+          publishDate,
+          Image {
+            data {
+              attributes {
+                name
+                url
+              }
+            }
+          },
+          slug,
+          tags {
+            data {
+              id,
+              attributes {
+                Name,
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+  }`
+}
+
 const featuredPostQuery = gql`
 query {
   featuredPost{
@@ -317,6 +402,8 @@ const tagPostsQuery = (tag, limit = 3) => {
 
 export {
   allPostsQuery,
+  allPostsSearchQuery,
+  allPostsSearchString,
   categoryPostsQuery,
   getStrapiThumbnailUrl,
   getStrapiUrl,
