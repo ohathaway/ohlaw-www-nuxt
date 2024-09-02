@@ -28,6 +28,4 @@ let {
     }
   }
 } = await useAsyncQuery(categoryPostsQuery(toTitleCase(category, '-')))
-
-console.debug(document.getElementById(category)) //.classList.add('active')
 </script>

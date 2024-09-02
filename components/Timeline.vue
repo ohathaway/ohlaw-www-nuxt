@@ -77,6 +77,7 @@ a {
 
 /*==================================
     TIMELINE
+    liberally copied from https://codepen.io/brady_wright/pen/NNOvrW
 ==================================*/
 
 /*-- GENERAL STYLES

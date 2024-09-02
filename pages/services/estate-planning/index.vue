@@ -3,6 +3,7 @@
 </template>
 
 <script setup>
-definePageMeta({
-  layout: 'services'
-})</script>
+// definePageMeta({
+  // layout: 'services'
+// })
+</script>
