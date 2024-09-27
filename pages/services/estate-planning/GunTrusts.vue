@@ -23,7 +23,7 @@
           <div class="col-md-6">
             <LayoutMediaFocus
               source="/img/gun_trust.webp"
-              provider="ipxStatic"
+              provider="cloudflare"
               title="Gun Trust"
             />
             <!-- <img src="/img/gun_trust.webp" alt="Gun Trust" class="img-fluid"> -->
