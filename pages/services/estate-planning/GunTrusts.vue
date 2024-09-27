@@ -25,6 +25,7 @@
               source="/img/gun_trust.webp"
               provider="cloudflare"
               title="Gun Trust"
+              placeholder
             />
             <!-- <img src="/img/gun_trust.webp" alt="Gun Trust" class="img-fluid"> -->
           </div>
