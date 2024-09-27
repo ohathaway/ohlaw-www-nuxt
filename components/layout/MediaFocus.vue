@@ -5,6 +5,7 @@
       :provider="provider"
       :src="src"
       :title="title"
+      placeholder
     />
   </div>
 </template>
