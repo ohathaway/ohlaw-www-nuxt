@@ -24,6 +24,7 @@
             <LayoutMediaFocus
               source="/img/gun_trust.webp"
               provider="ipx"
+              title="Gun Trust"
             />
             <!-- <img src="/img/gun_trust.webp" alt="Gun Trust" class="img-fluid"> -->
           </div>
