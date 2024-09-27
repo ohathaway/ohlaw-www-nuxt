@@ -67,7 +67,6 @@ export default defineNuxtConfig({
   },
 
   css: [
-    // 'bootstrap/scss/bootstrap.scss',
     'bootstrap-icons/font/bootstrap-icons.css',
     '@/assets/fonts/fonts.css',
     '@/assets/fonts/google-fonts.css',
