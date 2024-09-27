@@ -47,8 +47,8 @@ const tlContent = [
     ]
   },
   {
-    type: 'Delivery and Training',
-    info: '',
+    type: 'content',
+    info: 'Delivery and Training',
     content: [
       ``
     ]

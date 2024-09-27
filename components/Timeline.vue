@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-12 col-lg-11 col-lg-offset-1">
         <ul class="timeline timeline-split">
           <li v-for="item in tlContent" :class="getItemClasses(item.type)">
             <div class="timeline-info">

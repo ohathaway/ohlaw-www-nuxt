@@ -2,17 +2,35 @@
   <div class="media-focus-wrapper py-4 px-md-5 border-right">
     <NuxtImg
       class="w-100 border rounded-4"
-      provider="strapi"
+      :provider="provider"
       :src="src"
       :title="title"
+      placeholder
     />
   </div>
 </template>
 
 <script setup>
-const { source, title } = defineProps(['source', 'title'])
+const { provider, source, title } = defineProps({
+  provider: {
+    type: String,
+    default: 'strapi'
+  },
+  source: {
+    type: String,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  }
+})
+
 const src = computed(() => {
-  return source.includes('https://')
+  const isUrl =  source.includes('https://')
+  const isAbsolute = source.startsWith('/')
+  console.debug(`${source} isUrl? ${isUrl}`)
+  return isUrl || isAbsolute
     ? source
     : `/${source}`
 })

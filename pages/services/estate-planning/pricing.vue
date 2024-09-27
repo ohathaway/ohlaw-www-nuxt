@@ -39,24 +39,20 @@
               <h5>Will-Based Plan</h5>
             </div>
             <div class="card-body needs p-lg-4 mb-lg-5">
-              <p>
-                For the Family Who Wants
-                <ul>
-                  <li>To guarantee their minor children are well cared for no matter what</li>
-                  <li>Their health care wishes turned into directives</li>
-                  <li>Their loved ones to have access to their assets if they become incapacitated.</li>
-                </ul>
-              </p>
+              <p>For the Family Who Wants</p>
+              <ul>
+                <li>To guarantee their minor children are well cared for no matter what</li>
+                <li>Their health care wishes turned into directives</li>
+                <li>Their loved ones to have access to their assets if they become incapacitated.</li>
+              </ul>
             </div>
             <div class="card-body outcomes">
-              <p class="border-top">
-                Outcomes:
-                <ul>
-                  <li>A Will, Health Care Directives & Powers of Attorney so you know that you are well taken care of if anything happens</li>
-                  <li>A Kids Protection Plan to ensure your children are always raised by the people you want, the way you want and never taken out of your home by the authorities</li>
-                  <li>May include post-death trust planning to protect assets for your loved ones.</li>
-                </ul>
-              </p>
+              <p class="border-top">Outcomes:</p>
+              <ul>
+                <li>A Will, Health Care Directives & Powers of Attorney so you know that you are well taken care of if anything happens</li>
+                <li>A Kids Protection Plan to ensure your children are always raised by the people you want, the way you want and never taken out of your home by the authorities</li>
+                <li>May include post-death trust planning to protect assets for your loved ones.</li>
+              </ul>
             </div>
             <div class="clard-body price bg-secondary text-white text-center p-4">
               <h5>$1,500 - $3,500</h5>
@@ -70,25 +66,23 @@
               <h5>Trust Plan</h5>
             </div>
             <div class="card-body needs p-lg-4 mb-lg-5">
+              <p>For the Family Who Wants</p>
+              <ul>
+                <li>Total assurance and peace of mind of knowing Family Wealth will be transferred to heirs with the most ease and convenience possible in the privacy of our office without court involvement</li>
+                <li>Education and support on how to implement their plan themselves</li>
+              </ul>
               <p>
-                For the Family Who Wants
-                <ul>
-                  <li>Total assurance and peace of mind of knowing Family Wealth will be transferred to heirs with the most ease and convenience possible in the privacy of our office without court involvement</li>
-                  <li>Education and support on how to implement their plan themselves</li>
-                </ul>
                 Clients choosing the Trust plan may also opt to protect their beneficiary’s inheritance from lawsuits, spouses, and estate taxes.
               </p>
             </div>
             <div class="card-body outcomes">
-              <p class="border-top">
-                Outcomes:
-                <ul>
-                  <li>Peace of mind knowing we are here to guide you during life & care for your family later</li>
-                  <li>Keeps loved one’s out of court, all of your affairs private & ensures your family can turn to us when necessary</li>
-                  <li>All asset transfers will be handled by you, with unlimited guidance and support from us.</li>
-                  <li>A Kids Protection Plan is included if you have minor children.</li>
-                </ul>
-              </p>
+              <p class="border-top">Outcomes:</p>
+              <ul>
+                <li>Peace of mind knowing we are here to guide you during life & care for your family later</li>
+                <li>Keeps loved one’s out of court, all of your affairs private & ensures your family can turn to us when necessary</li>
+                <li>All asset transfers will be handled by you, with unlimited guidance and support from us.</li>
+                <li>A Kids Protection Plan is included if you have minor children.</li>
+              </ul>
             </div>
             <div class="clard-body price bg-secondary text-white text-center p-4">
               <h5>$3,500 - $5,000</h5>
@@ -102,24 +96,20 @@
               <h5>Wealth Plan</h5>
             </div>
             <div class="card-body needs p-lg-4 mb-lg-5">
-              <p>
-                For the Family Who Wants
-                <ul>
-                  <li>Total assurance and peace of mind of the Trust Plan</li>
-                  <li>Comfort of knowing assets transfers have been taken care of by our office</li>
-                </ul>
-                This plan is perfect for busy families who want the least amount of personal effort and the greatest amount of convenience and care.
-                <p>WE DO IT ALL FOR YOU!</p>
-              </p>
+              <p>For the Family Who Wants</p>
+              <ul>
+                <li>Total assurance and peace of mind of the Trust Plan</li>
+                <li>Comfort of knowing assets transfers have been taken care of by our office</li>
+              </ul>
+              <p>This plan is perfect for busy families who want the least amount of personal effort and the greatest amount of convenience and care.</p>
+              <p>WE DO IT ALL FOR YOU!</p>
             </div>
             <div class="card-body outcomes">
-              <p class="border-top">
-                Outcomes:
-                <ul>
-                  <li>Includes all components of the Trust Plan PLUS we analyze how each of your assets is titled and handle all asset transfers for you to guarantee your plan works for your family</li>
-                  <li>We prepare a Family Wealth Inventory, complete all bank, brokerage, insurance and retirement account documents to transfer title and change beneficiaries.</li>
-                </ul>
-              </p>
+              <p class="border-top">Outcomes:</p>
+              <ul>
+                <li>Includes all components of the Trust Plan PLUS we analyze how each of your assets is titled and handle all asset transfers for you to guarantee your plan works for your family</li>
+                <li>We prepare a Family Wealth Inventory, complete all bank, brokerage, insurance and retirement account documents to transfer title and change beneficiaries.</li>
+              </ul>
             </div>
             <div class="clard-body price bg-secondary text-white text-center p-4">
               <h5>$5,000 - $7,000</h5>

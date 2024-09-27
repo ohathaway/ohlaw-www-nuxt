@@ -39,6 +39,7 @@ export default defineNuxtConfig({
       */
     }
   },
+
   apollo: {
     clients: {
       default: {
@@ -47,6 +48,7 @@ export default defineNuxtConfig({
       }
     }
   },
+
   build: {
     transpile: [
       '@formkit/icons',
@@ -63,24 +65,32 @@ export default defineNuxtConfig({
       'vue-toastification'
     ]
   },
+
   css: [
     // 'bootstrap/scss/bootstrap.scss',
+    'bootstrap-icons/font/bootstrap-icons.css',
     '@/assets/fonts/fonts.css',
     '@/assets/fonts/google-fonts.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
     '@formkit/themes/genesis',
-    '@formkit/addons/css/floatingLabels'
+    '@formkit/addons/css/floatingLabels',
+    '~/assets/css/site.scss'
   ],
+
   devServer: {
     port: 3030
   },
+
   devtools: { enabled: true },
+
   formkit: {
     autoImport: true
   },
+
   gtag: {
     id: 'G-24N250X41Q'
   },
+
   hooks: {
     async 'nitro:config'(nitroConfig) {
       // fetch the routes from our function above
@@ -90,6 +100,7 @@ export default defineNuxtConfig({
       nitroConfig.prerender.routes.push(...slugs)
     }
   },
+
   image: {
     cloudflare: {
       baseURL: 'https://ohlawcolorado.com'
@@ -98,10 +109,12 @@ export default defineNuxtConfig({
       baseURL: `${process.env.STRAPI_URL}/uploads`
     }
   },
+
   lodash: {
     prefix: '',
     upperAfterPrefix: false
   },
+
   modules: [
     'nuxt-icon',
     'nuxt-gtag',
@@ -115,6 +128,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/strapi'
   ],
+
   nitro: {
     prerender: {
       crawlLinks: false,
@@ -125,25 +139,23 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   pages: true,
+
   runtimeConfig: {
     public: {
       strapiUrl: process.env.STRAPI_URL
     }
   },
+
   ssr: true,
+
   vite: {
     build: {
       assetsDir: '_nuxt/assets'
-    },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "@/assets/scss/site.scss";'
-        }
-      }
     }
   },
+
   vuefire: {
     config: {
       apiKey: process.env.VITE_FIREBASE_KEY,
@@ -153,5 +165,7 @@ export default defineNuxtConfig({
       storageBucket: process.env.VITE_FIREBASE_BUCKET
     },
     // emulators: process.env.NODE_ENV !== 'production'
-  }
+  },
+
+  compatibilityDate: '2024-09-25'
 })

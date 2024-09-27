@@ -19,15 +19,13 @@
         <em>Protected Health Information (PHI).</em> PHI includes all “individually identifiable health information” that is transmitted or maintained in any form or medium by a Covered Entity. Individually identifiable health information is any information that can be used to identify an individual and that was created, used, or disclosed in (a) the course of providing a health care service such as diagnosis or treatment, or (b) in relation to the payment for the provision of health care services.
       </p>
       <h1>Use and Disclosure of PII</h1>
-      <p>
-      We will only use PII we collect in the following ways:
-        <ul>
-          <li>to deliver the services our clients have engaged us to provide</li>
-          <li>to communicate with our clients and prospective clients about the services we provide</li>
-          <li>to secure payment for our services</li>
-          <li>to third-parties with the permission of the information owner</li>
-        </ul>
-      </p>
+      <p>We will only use PII we collect in the following ways:</p>
+      <ul>
+        <li>to deliver the services our clients have engaged us to provide</li>
+        <li>to communicate with our clients and prospective clients about the services we provide</li>
+        <li>to secure payment for our services</li>
+        <li>to third-parties with the permission of the information owner</li>
+      </ul>
       <h1>Use and Disclosure of PHI</h1>
       <p>
         We may use PHI for our management, administration, data aggregation and legal obligations to the extent such use of PHI is permitted or required by a BA Agreement and not prohibited by law. We may use or disclose PHI on behalf of, or to provide services to, Covered Entities for purposes of fulfilling our service obligations to Covered Entities, if such use or disclosure of PHI is permitted or required by the BA Agreement and would not violate the Privacy Rule.
@@ -41,24 +39,22 @@
       <h1>Safeguards</h1>
       <p>
         We use appropriate safeguards to prevent the use or disclosure of PII including those provided for in the various BA Agreements. We have implemented administrative, physical, and technical safeguards that reasonably and appropriately protect the confidentiality, integrity, and availability of the electronic PII that we create, receive, maintain, or. Such safeguards include:
-        <ul>
-          <li>Maintaining appropriate clearance procedures and providing supervision to assure that our workforce follows appropriate security procedures;</li>
-          <li>Providing appropriate training for our staff to assure that our staff complies with our security policies;</li>
-          <li>Making use of appropriate encryption when transmitting PII over the Internet;</li>
-          <li>Utilizing appropriate storage, backup, disposal and reuse procedures to protect PII;</li>
-          <li>Utilizing appropriate authentication and access controls to safeguard PII;</li>
-          <li>Utilizing appropriate security incident procedures and providing training to our staff sufficient to detect and analyze security incidents; and</li>
-          <li>Maintaining a current contingency plan and emergency access plan in case of an emergency to assure that the PII we hold is available when needed.</li>
-        </ul>
       </p>
+      <ul>
+        <li>Maintaining appropriate clearance procedures and providing supervision to assure that our workforce follows appropriate security procedures;</li>
+        <li>Providing appropriate training for our staff to assure that our staff complies with our security policies;</li>
+        <li>Making use of appropriate encryption when transmitting PII over the Internet;</li>
+        <li>Utilizing appropriate storage, backup, disposal and reuse procedures to protect PII;</li>
+        <li>Utilizing appropriate authentication and access controls to safeguard PII;</li>
+        <li>Utilizing appropriate security incident procedures and providing training to our staff sufficient to detect and analyze security incidents; and</li>
+        <li>Maintaining a current contingency plan and emergency access plan in case of an emergency to assure that the PII we hold is available when needed.</li>
+      </ul>
       <h1>Mitigation of Harm</h1>
-      <p>
-        In the event of a use or disclosure of PII that is in violation of this policy, the requirements of a BA agreement, or other law, we will mitigate, to the extent practicable, any harmful effect resulting from the violation. Such mitigation will include:
+      <p>In the event of a use or disclosure of PII that is in violation of this policy, the requirements of a BA agreement, or other law, we will mitigate, to the extent practicable, any harmful effect resulting from the violation. Such mitigation will include:</p>
         <ul>
           <li>Reporting any inappropriate use or disclosure of PII and any security incident of which we become aware to the appropriate people or entities; and</li>
           <li>To the extent permitted by the Colorado Rules of Professional Conduct, documenting such disclosures of PII and information related to such disclosures to enable our clients to respond to a request for an accounting of disclosure of PII.</li>
         </ul>
-      </p>
       <h1>Access to PHI</h1>
       <p>
         Where necessary, we will make available to our clients information necessary for Covered Entity to give individuals their rights of access, amendment, and accounting in accordance with HIPAA regulations.

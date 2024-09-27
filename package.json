@@ -12,14 +12,14 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@vueuse/nuxt": "^10.9.0",
-    "nuxt": "^3.12.4",
-    "nuxt-gtag": "^2.0.5",
+    "nuxt": "^3.13.2",
+    "nuxt-gtag": "^2.1.0",
     "nuxt-icon": "^0.6.10",
     "nuxt-lodash": "^2.5.3",
     "sass": "^1.74.1",
     "sass-loader": "^14.1.1",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue": "^3.5.8",
+    "vue-router": "^4.4.5"
   },
   "dependencies": {
     "@formkit/addons": "^1.6.2",
@@ -40,6 +40,7 @@
     "@pinia/nuxt": "^0.5.1",
     "axios": "^1.7.4",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "dayjs": "^1.11.10",
     "fibers": "^5.0.3",
     "firebase": "^10.13.1",
