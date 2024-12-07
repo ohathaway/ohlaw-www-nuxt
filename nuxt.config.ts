@@ -136,7 +136,8 @@ export default defineNuxtConfig({
         '/blog/categories/**',
         /^\/blog$/
       ]
-    }
+    },
+    preset: 'cloudflare-pages'
   },
 
   pages: true,
