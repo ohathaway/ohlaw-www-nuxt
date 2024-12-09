@@ -136,14 +136,15 @@ export default defineNuxtConfig({
         '/blog/categories/**',
         /^\/blog$/
       ]
-    }
+    },
+    preset: 'cloudflare-pages'
   },
 
   pages: true,
 
   runtimeConfig: {
     public: {
-      strapiUrl: process.env.STRAPI_URL
+      // strapiUrl: process.env.STRAPI_URL
     }
   },
 
