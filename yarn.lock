@@ -936,7 +936,7 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-1.0.1.tgz#0b62c9f47f557a5b4adc073bb0a47542ce6af4c4"
   integrity sha512-jmEnr/pk0yVkA7mIlHNnxCi+wWzOFUg0WyIotgkKAb2u1J7fAeDBcVNSTjTihbAYNusCLQdW5s9IJ5qwnEufcQ==
 
-"@formkit/addons@^1.6.9":
+"@formkit/addons@^1.6.5":
   version "1.6.9"
   resolved "https://registry.yarnpkg.com/@formkit/addons/-/addons-1.6.9.tgz#370746501abbd2b632cc2f87ae793dfcd07b0293"
   integrity sha512-Qfq789kpQ5EYqFl6QPE32vMCs0qivbvR50NNRwUadC2hgfGcayKe8Gc43G8neW6HHPjmyzkHQHLknLxHrGni3Q==
@@ -980,7 +980,7 @@
     "@formkit/utils" "1.6.9"
     "@formkit/validation" "1.6.9"
 
-"@formkit/icons@^1.6.9":
+"@formkit/icons@^1.6.5":
   version "1.6.9"
   resolved "https://registry.yarnpkg.com/@formkit/icons/-/icons-1.6.9.tgz#5265e0130a3a13f548caca2fe9f79de59c122176"
   integrity sha512-Fg54j0ArCGNdE1EbwarEhOBj04WlFdF9wafRiwOueqDM9/aUy4j8T2W/4eu8Wk8sNZ1nmrcQ5qUNFIb6MT27aQ==
@@ -995,7 +995,7 @@
     "@formkit/core" "1.6.9"
     "@formkit/utils" "1.6.9"
 
-"@formkit/nuxt@^1.6.9":
+"@formkit/nuxt@^1.6.5":
   version "1.6.9"
   resolved "https://registry.yarnpkg.com/@formkit/nuxt/-/nuxt-1.6.9.tgz#be5e502f09ddd748d08917b2707f97c6884ff5da"
   integrity sha512-G2J20hg1XVvP9l0lcclqeH6xIzVbQ1V1XS0LmVTJ3xBXL2QhXV6EUwkN6FGMjjtBJdtK1SMRmTXDc9rcLJgS1A==
@@ -1039,7 +1039,7 @@
   resolved "https://registry.yarnpkg.com/@formkit/tempo/-/tempo-0.1.2.tgz#85ff615dddc6cc55ab9f9ca83cf9a41cfdf778fc"
   integrity sha512-jNPPbjL8oj7hK3eHX++CwbR6X4GKQt+x00/q4yeXkwynXHGKL27dylYhpEgwrmediPP4y7s0XtN1if/M/JYujg==
 
-"@formkit/themes@1.6.9", "@formkit/themes@^1.6.2":
+"@formkit/themes@1.6.9", "@formkit/themes@^1.6.5":
   version "1.6.9"
   resolved "https://registry.yarnpkg.com/@formkit/themes/-/themes-1.6.9.tgz#71e1febe260e657c4a9aa94c179a22272d191c45"
   integrity sha512-/UD+MehQEdcCEadt73eIBGGAMEK8ODN0yq9r9299WvQxIELCOP2MbcxuWCV/g2Vd15Xhl8YFdn4KCzQi4X7QXA==
@@ -1060,7 +1060,7 @@
     "@formkit/observer" "1.6.9"
     "@formkit/utils" "1.6.9"
 
-"@formkit/vue@1.6.9", "@formkit/vue@^1.6.9":
+"@formkit/vue@1.6.9", "@formkit/vue@^1.6.5":
   version "1.6.9"
   resolved "https://registry.yarnpkg.com/@formkit/vue/-/vue-1.6.9.tgz#2393c49757e3c13790432c7e1e93458710ca9a10"
   integrity sha512-WrjAtEsKnFJzxQuATWsWKMpTAyJE15PUmRh9hwEAqgTDy2yMog1gxqxfZv3rEAdIdgXNp08tWmRVnQgDIF3vAQ==
