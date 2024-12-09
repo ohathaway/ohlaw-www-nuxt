@@ -125,7 +125,7 @@ export default defineNuxtConfig({
     '@nuxtjs/apollo',
     '@nuxt/content',
     '@nuxt/image',
-    '@nuxtjs/strapi'
+    // '@nuxtjs/strapi'
   ],
 
   nitro: {
