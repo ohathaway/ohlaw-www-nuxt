@@ -1,11 +1,20 @@
 import axios from 'axios'
 
 const getPostRoutes = async () => {
-  const response = await axios.get(
-    `${process.env.STRAPI_URL}/api/posts?fields[0]=slug`
-  )
+  if (!process.env.STRAPI_URL) {
+    console.warn('STRAPI_URL not set, skipping post routes generation');
+    return [];
+  }
 
-  return response?.data?.data.map(post => `/blog/${post.attributes.slug}`)
+  try {
+    const response = await axios.get(
+      `${process.env.STRAPI_URL}/api/posts?fields[0]=slug`
+    )
+    return response?.data?.data.map(post => `/blog/${post.attributes.slug}`)
+  } catch (error) {
+    console.error('Error fetching post routes:', error);
+    return [];
+  }
 }
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
