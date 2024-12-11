@@ -144,7 +144,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      // strapiUrl: process.env.STRAPI_URL
+      strapiUrl: process.env.STRAPI_URL
     }
   },
 
@@ -153,9 +153,14 @@ export default defineNuxtConfig({
   vite: {
     build: {
       assetsDir: '_nuxt/assets'
-    }
+    },
+    css: {
+      preprocessorOptions: {
+        quietDeps: true
+      }
+    },
+    optimizeDeps: { include: ['bootstrap', 'vue', 'vuefire'] }
   },
-
   vuefire: {
     config: {
       apiKey: process.env.VITE_FIREBASE_KEY,

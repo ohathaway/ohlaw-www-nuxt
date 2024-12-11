@@ -18,7 +18,7 @@
     "nuxt-gtag": "^2.1.0",
     "nuxt-icon": "^0.6.10",
     "nuxt-lodash": "^2.5.3",
-    "sass": "latest",
+    "sass": "1.32.13",
     "sass-loader": "^14.1.1",
     "vue": "latest",
     "vue-router": "latest"
@@ -38,6 +38,7 @@
     "@nuxt/content": "^2.12.1",
     "@nuxtjs/apollo": "^5.0.0-alpha.12",
     "@pinia/nuxt": "^0.9.0",
+    "@popperjs/core": "^2.11.8",
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
