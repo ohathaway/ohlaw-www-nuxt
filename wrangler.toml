@@ -1,38 +1,34 @@
 name = "ohlaw-www-nuxt"
 pages_build_output_dir = "dist"
 compatibility_date = "2024-12-07"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = [ "nodejs_compat" ]
 
-[env.production]
-vars = {
-  VITE_OHL_EMAIL_URL: "https://us-west3-www-prod-389819.cloudfunctions.net/nodejs-http-ohLawContactFormFunction",
-  VITE_CONTACT_ADDR: "contact@ohlawcolorado.com",
-  VITE_CONTACT_NAME: "OHLaw",
-  VITE_CONTACT_FROM_NAME: "OHLaw Website",
-  VITE_CONTACT_FROM_EMAIL: "website@ohlawcolorado.com",
-  VITE_FIREBASE_APP_ID: "1:566451752897:web:b7503f3ca01744abb92940",
-  VITE_FIREBASE_BUCKET: "www-prod-389819.appspot.com",
-  VITE_FIREBASE_MESSAGING_SENDER: "566451752897",
-  VITE_FIREBASE_PROJECT: "www-prod-389819",
-  VITE_GOOGLEMAPS_API: "https://maps.googleapis.com/maps/api/geocode",
-  STRAPI_URL: "https://strapi.ohlawcolorado.com",
-  VUEFIRE_APPCHECK_DEBUG: "true",
-  VUEFIRE_EMULATORS: "true"
-}
+[env.production.vars]
+VITE_OHL_EMAIL_URL = "https://us-west3-www-prod-389819.cloudfunctions.net/nodejs-http-ohLawContactFormFunction"
+VITE_CONTACT_ADDR = "contact@ohlawcolorado.com"
+VITE_CONTACT_NAME = "OHLaw"
+VITE_CONTACT_FROM_NAME = "OHLaw Website"
+VITE_CONTACT_FROM_EMAIL = "website@ohlawcolorado.com"
+VITE_FIREBASE_APP_ID = "1:566451752897:web:b7503f3ca01744abb92940"
+VITE_FIREBASE_BUCKET = "www-prod-389819.appspot.com"
+VITE_FIREBASE_MESSAGING_SENDER = "566451752897"
+VITE_FIREBASE_PROJECT = "www-prod-389819"
+VITE_GOOGLEMAPS_API = "https://maps.googleapis.com/maps/api/geocode"
+STRAPI_URL = "https://strapi.ohlawcolorado.com"
+VUEFIRE_APPCHECK_DEBUG = "true"
+VUEFIRE_EMULATORS = "true"
 
-[env.preview]
-vars = {
-  VITE_OHL_EMAIL_URL: "https://us-west3-www-prod-389819.cloudfunctions.net/nodejs-http-ohLawContactFormFunction",
-  VITE_CONTACT_ADDR: "contact@ohlawcolorado.com",
-  VITE_CONTACT_NAME: "OHLaw",
-  VITE_CONTACT_FROM_NAME: "OHLaw Website",
-  VITE_CONTACT_FROM_EMAIL: "website@ohlawcolorado.com",
-  VITE_FIREBASE_APP_ID: "1:566451752897:web:b7503f3ca01744abb92940",
-  VITE_FIREBASE_BUCKET: "www-prod-389819.appspot.com",
-  VITE_FIREBASE_MESSAGING_SENDER: "566451752897",
-  VITE_FIREBASE_PROJECT: "www-prod-389819",
-  VITE_GOOGLEMAPS_API: "https://maps.googleapis.com/maps/api/geocode",
-  STRAPI_URL: "https://strapi.ohlawcolorado.com",
-  VUEFIRE_APPCHECK_DEBUG: "true",
-  VUEFIRE_EMULATORS: "true"
-}
+[env.preview.vars]
+VITE_OHL_EMAIL_URL = "https://us-west3-www-prod-389819.cloudfunctions.net/nodejs-http-ohLawContactFormFunction"
+VITE_CONTACT_ADDR = "contact@ohlawcolorado.com"
+VITE_CONTACT_NAME = "OHLaw"
+VITE_CONTACT_FROM_NAME = "OHLaw Website"
+VITE_CONTACT_FROM_EMAIL = "website@ohlawcolorado.com"
+VITE_FIREBASE_APP_ID = "1:566451752897:web:b7503f3ca01744abb92940"
+VITE_FIREBASE_BUCKET = "www-prod-389819.appspot.com"
+VITE_FIREBASE_MESSAGING_SENDER = "566451752897"
+VITE_FIREBASE_PROJECT = "www-prod-389819"
+VITE_GOOGLEMAPS_API = "https://maps.googleapis.com/maps/api/geocode"
+STRAPI_URL = "https://strapi.ohlawcolorado.com"
+VUEFIRE_APPCHECK_DEBUG = "true"
+VUEFIRE_EMULATORS = "true"
