@@ -55,6 +55,7 @@ const {
   }
 } = await useAsyncQuery(singlePostQuery(path.split('/').pop()))
 
+/*
 const {
   attributes: {
     category: {
@@ -66,6 +67,10 @@ const {
     }
   }
 } = post
+*/
+const category = post?.attributes?.category?.data?.attributes?.Name ?? 
+                post?.category?.Name ?? 
+                'Uncategorized'
 
 let {
   data: {

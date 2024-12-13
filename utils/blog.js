@@ -21,16 +21,31 @@ const getThumbnailUrl = url => {
   return urlParts.join('/')
 }
 
+/*
 const getStrapiThumbnailUrl = image => {
   const { data: { attributes: {url } } } = image
   const urlParts = url.split('/')
   urlParts.push(urlParts.pop().replace(/^/, 'thumbnail_'))
   return strapiUrl+urlParts.join('/')
 }
+*/
+const getStrapiThumbnailUrl = image => {
+  const url = image?.data?.attributes?.url ?? image?.url
+  if (!url) return ''
+  const urlParts = url.split('/')
+  urlParts.push(urlParts.pop().replace(/^/, 'thumbnail_'))
+  return strapiUrl + urlParts.join('/')
+}
 
+/*
 const getStrapiUrl = image => {
   const { data: { attributes: {url } } } = image
   return strapiUrl+url
+}
+*/
+const getStrapiUrl = image => {
+  const url = image?.data?.attributes?.url ?? image?.url
+  return url ? strapiUrl + url : ''
 }
 
 const richTextToPlainText = rich => {
