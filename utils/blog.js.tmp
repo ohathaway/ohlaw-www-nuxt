@@ -1,0 +1,29 @@
+const getStrapiThumbnailUrl = image => {
+  const url = image?.data?.attributes?.url ?? image?.url
+  if (!url) return ''
+  const urlParts = url.split('/')
+  urlParts.push(urlParts.pop().replace(/^/, 'thumbnail_'))
+  return strapiUrl + urlParts.join('/')
+}
+
+const getStrapiUrl = image => {
+  const url = image?.data?.attributes?.url ?? image?.url
+  return url ? strapiUrl + url : ''
+}
+
+const richTextToPlainText = rich => {
+  try {
+    return rich.map(brick => {
+      if (brick.type === 'paragraph') {
+        return brick.children.map(child => {
+          return child.type === 'text'
+            ? child.text
+            : child?.children?.[0]?.text ?? ''
+        }).join(' ').trim()
+      }
+    })[0]
+  } catch (error) {
+    console.error(error)
+    return ''
+  }
+}

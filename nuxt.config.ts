@@ -8,9 +8,19 @@ const getPostRoutes = async () => {
 
   try {
     const response = await axios.get(
-      `${process.env.STRAPI_URL}/api/posts?fields[0]=slug`
+      `${process.env.STRAPI_URL}/api/posts?fields[0]=slug`,
+      {
+        headers: {
+          'Strapi-Response-Format': 'v4'
+        }
+      }
     )
-    return response?.data?.data.map(post => `/blog/${post.attributes.slug}`)
+    console.info('Strapi pre-render post list: ', response.data)
+    
+    return response?.data?.data?.map(post => 
+      `/blog/${post?.slug ?? post?.attributes?.slug}`
+    ).filter(Boolean);
+    
   } catch (error) {
     console.error('Error fetching post routes:', error);
     return [];
@@ -53,7 +63,14 @@ export default defineNuxtConfig({
     clients: {
       default: {
         authType: 'none',
-        httpEndpoint: 'https://strapi.ohlawcolorado.com/graphql'
+        httpEndpoint: 'https://strapi.ohlawcolorado.com/graphql',
+        /*
+        httpLinkOptions: {
+          headers: {
+            'Strapi-Response-Format': 'v4'
+          }
+        }
+        */
       }
     }
   },
