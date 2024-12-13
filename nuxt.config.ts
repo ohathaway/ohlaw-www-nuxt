@@ -187,7 +187,6 @@ export default defineNuxtConfig({
     },
     optimizeDeps: { include: ['bootstrap', 'vue', 'vuefire'] }
   },
-
   vuefire: {
     config: {
       apiKey: process.env.VITE_FIREBASE_KEY,
