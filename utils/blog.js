@@ -267,7 +267,8 @@ const categoryPostsQuery = (category, limit = 3) => {
                   data {
                     id,
                     attributes {
-                      Name
+                      Name,
+                      slug
                     }
                   }
                 },
