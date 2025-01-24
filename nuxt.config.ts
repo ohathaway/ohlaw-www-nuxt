@@ -169,6 +169,12 @@ export default defineNuxtConfig({
   pages: true,
 
   runtimeConfig: {
+    cloudflare: {
+      accountId: process.env.CLOUDFLARE_ACCOUNT_ID,
+      accessKeyId: process.env.CLOUDFLARE_ACCESS_KEY_ID,
+      secretAccessKey: process.env.CLOUDFLARE_SECRET_ACCESS_KEY,
+      bucketName: process.env.CLOUDFLARE_BUCKET_NAME
+    },
     public: {
       strapiUrl: process.env.STRAPI_URL
     }
