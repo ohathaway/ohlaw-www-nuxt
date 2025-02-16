@@ -3,7 +3,7 @@ import {
   GetObjectCommand,
   NoSuchKey,
   r2Client
-} from '@/server/utils/r2'
+} from '../../utils/r2'
 
 export default defineEventHandler(async (event) => {
   const id = getRouterParam(event, 'id')

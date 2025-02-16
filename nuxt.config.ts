@@ -77,29 +77,29 @@ export default defineNuxtConfig({
 
   build: {
     transpile: [
-      '@formkit/icons',
-      '@formkit/addons',
-      '@formkit/nuxt',
-      '@formkit/pro',
-      '@formkit/themes',
-      '@formkit/vue',
-      '@fortawesome/fontawesome-free',
-      '@fortawesome/fontawesome-svg-core',
-      '@fortawesome/free-regular-svg-icons',
-      '@fortawesome/free-solid-svg-icons',
-      '@fortawesome/vue-fontawesome',
-      'vue-toastification'
+      // '@formkit/icons',
+      // '@formkit/addons',
+      // '@formkit/nuxt',
+      // '@formkit/pro',
+      // '@formkit/themes',
+      // '@formkit/vue',
+      // '@fortawesome/fontawesome-free',
+      // '@fortawesome/fontawesome-svg-core',
+      // '@fortawesome/free-regular-svg-icons',
+      // '@fortawesome/free-solid-svg-icons',
+      // '@fortawesome/vue-fontawesome',
+      // 'vue-toastification'
     ]
   },
 
   css: [
-    'bootstrap-icons/font/bootstrap-icons.css',
-    '@/assets/fonts/fonts.css',
-    '@/assets/fonts/google-fonts.css',
-    '@fortawesome/fontawesome-svg-core/styles.css',
-    '@formkit/themes/genesis',
-    '@formkit/addons/css/floatingLabels',
-    '~/assets/css/site.scss'
+    // 'bootstrap-icons/font/bootstrap-icons.css',
+    // '@/assets/fonts/fonts.css',
+    // '@/assets/fonts/google-fonts.css',
+    // '@fortawesome/fontawesome-svg-core/styles.css',
+    // '@formkit/themes/genesis',
+    // '@formkit/addons/css/floatingLabels',
+    // '~/assets/css/site.scss'
   ],
 
   devServer: {
@@ -107,6 +107,8 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
+
+  extends: ['@nuxt/ui-pro'],
 
   formkit: {
     autoImport: true
@@ -146,16 +148,17 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    'nuxt-icon',
     'nuxt-gtag',
     'nuxt-lodash',
     'nuxt-vuefire',
-    '@vueuse/nuxt',
     '@formkit/nuxt',
-    '@pinia/nuxt',
-    '@nuxtjs/apollo',
-    '@nuxt/content',
+    // '@nuxt/content',
+    '@nuxt/icon',
     '@nuxt/image',
+    '@nuxt/ui',
+    '@nuxtjs/apollo',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
     // '@nuxtjs/strapi'
   ],
 

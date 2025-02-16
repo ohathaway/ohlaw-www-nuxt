@@ -3,11 +3,12 @@
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-    <FooterView />
+    <!-- <FooterView /> -->
   </div>
 </template>
 
 <style lang="scss">
+/*
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,4 +36,5 @@
     height: 100px;
     margin: -100px 0 0;
 }
+*/
 </style>
