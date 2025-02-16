@@ -112,6 +112,11 @@ export default defineNuxtConfig({
     autoImport: true
   },
 
+  future: { 
+    compatibilityVersion: 4,
+    typescriptBundlerResolution: true
+  },
+
   gtag: {
     id: 'G-24N250X41Q'
   },
