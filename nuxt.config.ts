@@ -99,7 +99,7 @@ export default defineNuxtConfig({
     // '@fortawesome/fontawesome-svg-core/styles.css',
     // '@formkit/themes/genesis',
     // '@formkit/addons/css/floatingLabels',
-    // '~/assets/css/site.scss'
+    '~/assets/css/site.scss'
   ],
 
   devServer: {
@@ -156,6 +156,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/ui',
+    // '@nuxt/ui-pro',
     '@nuxtjs/apollo',
     '@pinia/nuxt',
     '@vueuse/nuxt',
@@ -176,6 +177,11 @@ export default defineNuxtConfig({
 
   pages: true,
 
+  routeRules: {
+    // Temporary workaroud for prerender regression see https://github.com/nuxt/nuxt/issues/27490
+    '/': { prerender: true }
+  },
+
   runtimeConfig: {
     cloudflare: {
       accountId: process.env.CLOUDFLARE_ACCOUNT_ID,
@@ -190,13 +196,20 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  ui: {
+    global: true,
+    icons: ['heroicons', 'simple-icons']
+  },
+
   vite: {
     build: {
       assetsDir: '_nuxt/assets'
     },
     css: {
       preprocessorOptions: {
-        quietDeps: true
+        scss: {
+          quietDeps: true
+        }
       }
     },
     optimizeDeps: { include: ['bootstrap', 'vue', 'vuefire'] }

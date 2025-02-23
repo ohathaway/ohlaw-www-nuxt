@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <UApp>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
     <!-- <FooterView /> -->
-  </div>
+  </UApp>
 </template>
 
 <style lang="scss">
