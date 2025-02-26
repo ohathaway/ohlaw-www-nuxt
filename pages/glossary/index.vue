@@ -37,7 +37,7 @@
 
     <!-- Glossary Terms -->
     <div v-else class="row ps-5">
-      <div class="glossary-terms col-md-9">
+      <div class="glossary-terms col-lg-9">
         <div v-for="(terms, letter) in groupedTerms" :key="letter" class="mb-4">
           <h2 class="h3 border-bottom pb-2 mb-3">{{ letter }}</h2>
           <ul class="list-unstyled">
@@ -50,10 +50,8 @@
           </ul>
         </div>
       </div>
-      <div class="col-md-3 d-none d-lg-block">
-        <div class="sticky-sidebar">
-          <GlossaryCta />
-        </div>
+      <div class="col-lg-3 d-none d-lg-block sticky-sidebar">
+        <GlossaryCta />
       </div>"
     </div>
     <!-- Mobile CTA (visible only on smaller screens) -->

@@ -1,5 +1,5 @@
 <template>
-  <div class="container py-5">
+  <main class="main container py-5">
     <!-- Back to Glossary -->
     <NuxtLink to="/glossary" class="btn btn-outline-secondary mb-4">
       <i class="bi bi-arrow-left"></i> Back to Glossary
@@ -21,66 +21,71 @@
     </div>
 
     <!-- Term Content -->
-    <div v-else-if="term" class="term-content bg-white p-4 rounded shadow-sm">
-      <h1 class="mb-3">{{ term.title }}</h1>
-      
-      <!-- Related categories if any -->
-      <div v-if="term.categories && term.categories.length > 0" class="mb-3">
-        <span class="text-muted me-2">Tags:</span>
-        <span 
-          v-for="(category, index) in term.categories" 
-          :key="category.id" 
-          class="badge bg-secondary me-1"
-        >
-          {{ category.name }}
-        </span>
-      </div>
-      
-      <!-- Definition -->
-      <div class="definition mb-4">
-        <p class="lead">{{ term.definition }}</p>
-      </div>
-      
-      <!-- Expanded description if available -->
-      <div v-if="term.description" class="description mb-4">
-        <div v-html="term.description"></div>
-      </div>
+    <div v-else-if="term" class="row">
+      <div class="term-content bg-white p-4 rounded shadow-sm col-lg-9">
+        <h1 class="mb-3">{{ term.title }}</h1>
+        
+        <!-- Related categories if any -->
+        <div v-if="term.categories && term.categories.length > 0" class="mb-3">
+          <span class="text-muted me-2">Tags:</span>
+          <span 
+            v-for="(category, index) in term.categories" 
+            :key="category.id" 
+            class="badge bg-secondary me-1"
+          >
+            {{ category.name }}
+          </span>
+        </div>
+        
+        <!-- Definition -->
+        <div class="definition mb-4">
+          <p class="lead">{{ term.definition }}</p>
+        </div>
+        
+        <!-- Expanded description if available -->
+        <div v-if="term.description" class="description mb-4">
+          <div v-html="term.description"></div>
+        </div>
 
-      <!-- Related Terms if any -->
-      <div v-if="term.relatedTerms && term.relatedTerms.length > 0" class="related-terms mt-5">
-        <h3 class="h5 mb-3">Related Terms</h3>
-        <ul class="list-unstyled row">
-          <li v-for="relatedTerm in term.relatedTerms" :key="relatedTerm.id" class="col-md-4 mb-2">
-            <NuxtLink :to="`/glossary/${relatedTerm.slug}`" class="text-decoration-none">
-              <i class="bi bi-link-45deg"></i> {{ relatedTerm.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
+        <!-- Related Terms if any -->
+        <div v-if="term.relatedTerms && term.relatedTerms.length > 0" class="related-terms mt-5">
+          <h3 class="h5 mb-3">Related Terms</h3>
+          <ul class="list-unstyled row">
+            <li v-for="relatedTerm in term.relatedTerms" :key="relatedTerm.id" class="col-md-4 mb-2">
+              <NuxtLink :to="`/glossary/${relatedTerm.slug}`" class="text-decoration-none">
+                <i class="bi bi-link-45deg"></i> {{ relatedTerm.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
 
-      <!-- Related Articles if any -->
-      <div v-if="term.relatedArticles && term.relatedArticles.length > 0" class="related-articles mt-5">
-        <h3 class="h5 mb-3">Related Articles</h3>
-        <ul class="list-unstyled">
-          <li v-for="relatedArticle in term.relatedArticles" :key="relatedArticle.slug" class="mb-2">
-            <NuxtLink :to="`/blog/${relatedArticle.slug}`" class="text-decoration-none">
-              <i class="bi bi-link-45deg"></i> {{ relatedArticle.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
+        <!-- Related Articles if any -->
+        <div v-if="term.relatedArticles && term.relatedArticles.length > 0" class="related-articles mt-5">
+          <h3 class="h5 mb-3">Related Articles</h3>
+          <ul class="list-unstyled">
+            <li v-for="relatedArticle in term.relatedArticles" :key="relatedArticle.slug" class="mb-2">
+              <NuxtLink :to="`/blog/${relatedArticle.slug}`" class="text-decoration-none">
+                <i class="bi bi-link-45deg"></i> {{ relatedArticle.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
 
-      <!-- Sources if any -->
-      <div v-if="term.sources && term.sources.length > 0" class="sources mt-4 pt-3 border-top">
-        <h3 class="h6 mb-2">Sources</h3>
-        <ul class="list-unstyled small">
-          <li v-for="(source, index) in term.sources" :key="index">
-            <a v-if="source.url" :href="source.url" target="_blank" rel="noopener noreferrer">
-              {{ source.title }}
-            </a>
-            <span v-else>{{ source.title }}</span>
-          </li>
-        </ul>
+        <!-- Sources if any -->
+        <div v-if="term.sources && term.sources.length > 0" class="sources mt-4 pt-3 border-top">
+          <h3 class="h6 mb-2">Sources</h3>
+          <ul class="list-unstyled small">
+            <li v-for="(source, index) in term.sources" :key="index">
+              <a v-if="source.url" :href="source.url" target="_blank" rel="noopener noreferrer">
+                {{ source.title }}
+              </a>
+              <span v-else>{{ source.title }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 d-none d-lg-block sticky-sidebar">
+        <GlossaryCta />
       </div>
     </div>
 
@@ -91,7 +96,7 @@
         <NuxtLink to="/glossary" class="btn btn-primary">Return to Glossary</NuxtLink>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup>

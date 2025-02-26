@@ -82,8 +82,9 @@ section {
 .sticky-sidebar {
   position: sticky;
   top: 100px; /* 80px navbar height + 20px spacing */
-  max-height: calc(100vh - 120px); /* Viewport height minus navbar and some padding */
+  max-height: calc(100vh - 140px); /* Viewport height minus navbar and some padding */
   overflow-y: auto;
+  padding-bottom: 40px;
 }
 
 /* For scroll-spy targets, add padding to account for fixed header */
