@@ -4,6 +4,16 @@
 │   └── queries
 │       └── post
 │           └── posts.gql
+├── app
+│   ├── assets
+│   │   └── fonts
+│   ├── components
+│   │   └── blog
+│   ├── composables
+│   └── pages
+│       ├── blog
+│       ├── functions
+│       └── services
 ├── app.config.ts
 ├── app.vue
 ├── assets
@@ -125,6 +135,8 @@
 │   │   ├── FormEditControl.vue
 │   │   ├── FormSaveButton.vue
 │   │   └── FormsIntakeBkSectionStart.vue
+│   ├── glossary
+│   │   └── Cta.vue
 │   ├── layout
 │   │   ├── MediaFocus.vue
 │   │   ├── MediaListing.vue
@@ -133,25 +145,28 @@
 │   └── services
 │       ├── Header.vue
 │       └── dstAssumptions.vue
-├── composables
 ├── content
 │   └── about
+│       ├── index.docx
 │       ├── index.md
 │       └── owen.md
 ├── doc
+│   ├── Breaking changes _ Strapi 5 Documentation.pdf
+│   ├── Strapi 5 has a new, flattened response format for API calls _ Strapi 5 Documentation.pdf
+│   ├── The GraphQL API has been updated _ Strapi 5 Documentation.pdf
+│   ├── documentId should be used instead of id in API calls _ Strapi 5 Documentation.pdf
 │   ├── dstRoiCalcs.xlsx
 │   └── file_tree.txt
 ├── firebase.json
 ├── firestore.indexes.json
 ├── firestore.rules
 ├── formkit.config.js
-├── functions
-│   └── helloWorld.js
 ├── layouts
 │   ├── blog.vue
 │   ├── default.vue
 │   └── services.vue
 ├── nuxt.config.ts
+├── package-lock.json
 ├── package.json
 ├── pages
 │   ├── [...slug].vue
@@ -165,7 +180,9 @@
 │   │       ├── [tag].vue
 │   │       └── index.vue
 │   ├── contact.vue
-│   ├── functions
+│   ├── glossary
+│   │   ├── [...term].vue
+│   │   └── index.vue
 │   ├── index.vue
 │   ├── policies
 │   │   ├── Fees.vue
@@ -242,6 +259,7 @@
 │   │   ├── cropped-ohlaw_icon_512-32x32.png
 │   │   ├── dotorgtablet_1024_smallest.jpg
 │   │   ├── estatenotebook_1024_smallest.jpg
+│   │   ├── glossary-article-header.webp
 │   │   ├── gun_safe.webp
 │   │   ├── gun_safe_o56.webp
 │   │   ├── gun_safe_o66.webp
@@ -254,7 +272,14 @@
 │   └── sitemap.xml
 ├── server
 │   ├── api
-│   └── tsconfig.json
+│   │   ├── documents
+│   │   │   └── [id].get.ts
+│   │   └── glossary
+│   │       ├── [term].get.js
+│   │       └── index.js
+│   ├── tsconfig.json
+│   └── utils
+│       └── r2.ts
 ├── stores
 │   ├── blogStore.js
 │   ├── dstStore.js
@@ -263,10 +288,11 @@
 ├── utils
 │   ├── addresses.js
 │   ├── blog.js
+│   ├── blog.js.tmp
 │   ├── dates.js
 │   ├── forms.js
 │   ├── ohlaw.js
 │   └── strings.js
-└── yarn.lock
+└── wrangler.toml
 
-40 directories, 230 files
+52 directories, 244 files

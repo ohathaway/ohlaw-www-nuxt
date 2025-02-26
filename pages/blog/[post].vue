@@ -12,14 +12,11 @@
   </div>
   <article class="row p-5 post-display">
     <div class="col-3 d-none d-lg-block">
-      <BlogTOC :content="post.attributes.Content" />
+      <div class="sticky-sidebar">
+        <BlogTOC :content="post.attributes.Content" />
+      </div>
     </div>
-    <div
-      class="col-12 col-md-8 col-lg-6"
-      data-bs-spy="scroll"
-      data-bs-target="#toc"
-      data-bs-smooth-scroll="true"
-    >
+    <div class="col-12 col-md-8 col-lg-6">
       <span class="fst-italic fs-5">{{ formatDateFull(post.attributes.publishDate) }}</span>
       <BlogRichText
         :block="post.attributes.Content"
@@ -29,7 +26,7 @@
       />
     </div>
     <div class="col-12 col-md-4 col-lg-3">
-      <div class="position-lg-sticky top-0">
+      <div class="sticky-sidebar">
         <LayoutPostListSidebar
           title="Related Articles"
           :posts="relatedPosts"

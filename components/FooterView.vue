@@ -60,7 +60,7 @@
 
 <style scoped>
 a {
-  color: v-bind(white);
+  color: #ffffff;
   text-decoration: none;
   &:hover {
     text-decoration: underline;

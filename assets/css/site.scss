@@ -78,6 +78,19 @@ section {
   padding-bottom: 50px;
 }
 
+/* Global sticky sidebar class that accounts for the fixed navbar */
+.sticky-sidebar {
+  position: sticky;
+  top: 100px; /* 80px navbar height + 20px spacing */
+  max-height: calc(100vh - 120px); /* Viewport height minus navbar and some padding */
+  overflow-y: auto;
+}
+
+/* For scroll-spy targets, add padding to account for fixed header */
+[id] {
+  scroll-margin-top: 100px; /* Ensures when scrolling to anchors, content isn't hidden behind navbar */
+}
+
 #breaking-news {
   color: #ffffff;
   background: #001F5B;

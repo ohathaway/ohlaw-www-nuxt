@@ -14,17 +14,21 @@
         </div>
         <div class="modal-body">
           <ClientOnly fallback-tag="span" fallback="Loading booking form...">
-            <!-- Start Lawmatics Embedded Snippet -->
-            <component :is="'script'" id="lm-embedded-script">
-              !function(e,t,n,a,s,c,i){if(!e[s]){i=e[s]=function(){i.process?i.process.apply(i,arguments):i.queue.push(arguments)},i.queue=[],i.t=1*new Date;var o=t.createElement(n);o.async=1,o.src=a+"?t="+Math.ceil(new Date/c)*c;var r=t.getElementsByTagName(n)[0];r.parentNode.insertBefore(o,r)}}(window,document,"script","https://navi.lawmatics.com/intake.min.js","lm_intake",864e5),lm_intake("bd7a0579-85cf-42be-9c8d-6b49988ee5b0");
-            </component>
-            <!-- End Lawmatics Embedded Snippet -->
+            <iframe
+              ref="bookingFrame" 
+              :src="bookingUrl" 
+              style="width: 100%; height: 100%; border: none;"
+            ></iframe>
           </ClientOnly>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+const { schedulingLinks: { newClient: bookingUrl } } = useAppConfig()
+</script>
 
 <style lang="scss" scoped>
 .modal-body {
