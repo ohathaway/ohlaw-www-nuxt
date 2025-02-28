@@ -1,3 +1,4 @@
+<!-- pages/blog/index.vue -->
 <template>
   <div class="row py-3 p-lg-5">
     <div class="col-md-7">
@@ -57,8 +58,6 @@ const {
     }
   }
 } = await useAsyncQuery(allPostsQuery)
-
-console.debug('featuredPost: ', featuredPost)
 </script>
 
 <style scoped>

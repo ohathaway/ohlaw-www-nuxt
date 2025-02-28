@@ -112,12 +112,12 @@ a {
 /*----- TIMELINE INFO -----*/
 
 .timeline-info {
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 3px;
   margin: 0 0 .5em 0;
   text-transform: uppercase;
-  white-space: nowrap;
+  // white-space: nowrap;
 }
 
 /*----- TIMELINE MARKER -----*/

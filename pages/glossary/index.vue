@@ -1,3 +1,4 @@
+<!-- pages/glossary/index.vue -->
 <template>
   <main class="main">
 
@@ -68,73 +69,101 @@ defineProps({
     type: Array,
     default: () => []
   }
-});
+})
 
 // Static data
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-const activeLetter = ref('all');
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+const activeLetter = ref('all')
+const loading = ref(true)
 
 // Get the data from props or directly from the server
 // This ensures data is available both during SSR and client-side navigation
+/*
 const { data: fetchedTerms } = await useAsyncData(
   'glossary-terms',
   () => $fetch('/api/glossary')
-);
+)
+*/
 
-const allTerms = computed(() => fetchedTerms.value || []);
+const { data, error, pending } = await useAsyncQuery(allTermsQuery)
+// Update loading state based on pending
+watch(pending, (newValue) => {
+  loading.value = newValue
+})
+
+console.debug('data: ', data)
+console.debug('error: ', error)
+// Transform Strapi response to the format expected by the component
+const transformTerms = (data) => {
+  if (!data || !data.terms || !data.terms.data) return []
+  
+  return data.terms.data.map(item => ({
+    id: item.id,
+    title: item.attributes.term,
+    slug: item.attributes.slug,
+    definition: item.attributes.definition,
+    categories: item.attributes.tags?.data?.map(tag => tag.attributes.name) || []
+  }))
+}
+
+const strapiTerms = computed(() => transformTerms(data.value))
 
 // Filter by letter
 function filterByLetter(letter) {
-  activeLetter.value = letter;
+  activeLetter.value = letter
 }
 
 // Computed property for filtered terms
 const filteredTerms = computed(() => {
+  if (!strapiTerms.value) return []
+  
   if (activeLetter.value === 'all') {
-    return allTerms.value;
+    return strapiTerms.value
   } else {
-    return allTerms.value.filter(term => 
-      term.title.toUpperCase().startsWith(activeLetter.value)
-    );
+    return strapiTerms.value.filter(term => 
+      term.title && term.title.toUpperCase().startsWith(activeLetter.value)
+    )
   }
-});
+})
 
 // Group terms by first letter
 const groupedTerms = computed(() => {
-  const grouped = {};
+  const grouped = {}
   filteredTerms.value.forEach(term => {
-    const firstLetter = term.title.charAt(0).toUpperCase();
+    if (!term.title) return
+    
+    const firstLetter = term.title.charAt(0).toUpperCase()
     if (!grouped[firstLetter]) {
-      grouped[firstLetter] = [];
+      grouped[firstLetter] = []
     }
-    grouped[firstLetter].push(term);
-  });
+    grouped[firstLetter].push(term)
+  })
   
   // Sort by letter
-  const sorted = {};
+  const sorted = {}
   Object.keys(grouped).sort().forEach(key => {
-    sorted[key] = grouped[key];
-  });
+    sorted[key] = grouped[key]
+  })
   
-  return sorted;
-});
+  return sorted
+})
 
 // Helper function to truncate text
 function truncate(text, length) {
-  if (!text) return '';
-  return text.length > length ? `${text.substring(0, length)}...` : text;
+  if (!text) return ''
+  return text.length > length ? `${text.substring(0, length)}...` : text
 }
 
 // SEO Metadata
 useHead({
-  title: 'Legal Glossary | O\'Haire Law',
+  title: 'Legal Glossary | OHLaw',
   meta: [
     { 
       name: 'description', 
       content: 'Browse our comprehensive legal glossary to help understand legal terminology and concepts.'
     }
   ]
-});
+})
 </script>
 
 <style scoped>
