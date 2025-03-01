@@ -18,6 +18,19 @@
             <p>You should receive a confirmation email shortly with details about your<br />{{ appointmentTypeLabel }} appointment.</p>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2 text-center">
+            <h5 class="my-5">In the meantime...</h5>
+            <p class="mb-4">We need you to do some homework.</p>
+            <a class="btn btn-outline-primary p-4 me-5" href="https://app.lawmatics.com/forms/share/d57bebf9-6e6b-4966-b019-bb97036f8594" target="_blank">
+              <font-awesome-icon icon="fas fa-laptop-file" size="3x"></font-awesome-icon> 
+            </a>
+            <a class="btn btn-outline-primary p-4 ms-5" href="/api/documents/Life-and-Legacy-Assessment-and-Inventory-v2.pdf" download="Life-and-Legacy-Assessment-and-Inventory-v2.pdf">
+              <font-awesome-icon icon="fas fa-file-pdf" size="3x"></font-awesome-icon> 
+            </a>
+            <p class="m-md-4">Our work together will be <u>much</u> more productive if you can have this back to us at least 1 week before our session. We're happy to reschedule if you need more time.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -26,7 +39,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h2>What to Expect</h2>
+            <h2 class="text-center">What to Expect</h2>
             <div v-if="pageContent.expectationsList">
               <ul class="expectation-list">
                 <li v-for="(item, index) in pageContent.expectationsList" :key="index">
@@ -50,9 +63,10 @@
     </section>
 
     <!-- What to Bring -->
-    <section class="py-5 bg-light" v-if="pageContent.preparations">
+    <section class="py-5 bg-secondary" v-if="pageContent.preparations">
       <div class="container">
         <h2 class="text-center mb-4">How to Prepare</h2>
+        <h4 class="text-center text-style-italic mb-4">Do The Homework</h4>
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="preparation-cards">
@@ -236,8 +250,8 @@ const contentData = {
       url: '/services/estate-planning#our-process'
     },
     ctaSecondaryButton: {
-      text: 'View Pricing',
-      url: '/services/estate-planning/pricing'
+      text: 'Read About Estate Planning Issues',
+      url: '/blog/categories/legacy-planning'
     }
   },
   'new-client': {

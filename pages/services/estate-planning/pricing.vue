@@ -221,7 +221,7 @@
                 <h3 class="card-title">Enhanced Protection</h3>
                 <ul class="feature-list">
                   <li><strong>Lifetime Asset Protection Trust</strong> for beneficiaries: $1,000</li>
-                  <li><strong>Concierge Asset Transfer Service</strong>: $200-$1,000 (based on asset complexity)</li>
+                  <li><strong>Concierge Asset Transfer Service</strong>: $500-$1,000 (based on asset complexity)</li>
                   <li><strong>Advanced Tax Planning Provisions</strong>: Custom pricing based on needs</li>
                   <li><strong>Special Needs Planning</strong>: Custom pricing based on complexity</li>
                 </ul>

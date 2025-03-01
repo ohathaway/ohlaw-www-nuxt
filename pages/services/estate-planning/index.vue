@@ -17,10 +17,10 @@
             <h2>What Sets Our Estate Planning Services Apart</h2>
             <p>You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them.</p>
             <ul class="expectation-list">
-              <li><strong>Plain Language</strong>: We explain complex legal concepts in terms you can understand.</li>
               <li><strong>Personal Attention</strong>: Your plan is customized to your unique situation and goals.</li>
               <li><strong>Practical Solutions</strong>: We focus on what works in the real world, not just theory.</li>
               <li><strong>Proactive Planning</strong>: We help you anticipate and prevent problems before they arise.</li>
+              <li><strong>Plain Language</strong>: We explain complex legal concepts in terms you can understand.</li>
               <li><strong>Ongoing Support</strong>: Estate planning is a process, not a one-time event.</li>
             </ul>
           </div>
@@ -57,7 +57,7 @@
               <div class="card-body text-center">
                 <i class="bi bi-coin fs-1 mb-3"></i>
                 <h3 class="card-title">Preserve Your Assets</h3>
-                <p class="card-text">Minimize taxes, avoid probate costs, and protect your assets from creditors. Ensure your hard-earned wealth goes to your chosen beneficiaries.</p>
+                <p class="card-text">Avoid probate costs, protect your assets from creditors and minimize taxes. Ensure your hard-earned wealth goes to your chosen beneficiaries.</p>
               </div>
             </div>
           </div>
