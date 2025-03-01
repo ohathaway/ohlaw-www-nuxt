@@ -26,7 +26,7 @@
         :data-bs-parent="`#${uniqueId}`"
       >
         <div class="accordion-body">
-          <p v-html="item.answer"></p>
+          <div v-html="item.answer"></div>
         </div>
       </div>
     </div>
