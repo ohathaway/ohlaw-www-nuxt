@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="hero bg-primary text-center py-5">
       <div class="container">
-        <h1 class="display-4">Estate Planning That Works For Real People</h1>
+        <h1 class="display-4">Estate Planning That Works<br />For Real People</h1>
         <p class="lead">Protecting Your Legacy and Providing Peace of Mind</p>
         <button class="btn btn-light btn-lg mt-3" @click="openSchedulingLink">Schedule Your Free Consultation</button>
       </div>
@@ -15,7 +15,7 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>What Sets Our Estate Planning Services Apart</h2>
-            <p>We believe that estate planning shouldn't be intimidating, confusing, or prohibitively expensive. Our approach focuses on:</p>
+            <p>You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them.</p>
             <ul class="expectation-list">
               <li><strong>Plain Language</strong>: We explain complex legal concepts in terms you can understand.</li>
               <li><strong>Personal Attention</strong>: Your plan is customized to your unique situation and goals.</li>

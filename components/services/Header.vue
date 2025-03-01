@@ -1,9 +1,4 @@
 <template>
-  <div class="row pb-lg-5">
-    <div class="col-12 text-center">
-      <h1>Planning at the intersection of <i>Affordability and Effectiveness</i></h1>
-    </div>
-  </div>
   <!--
   <nav
     class="navbar navbar-expand-lg categories-nav position-sticky border-top border-bottom w-75 mx-auto"

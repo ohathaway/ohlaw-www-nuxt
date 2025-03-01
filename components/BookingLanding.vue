@@ -186,7 +186,7 @@ const contentData = {
     }
   },
   'estate-plan-education': {
-    title: 'Estate Plan Education Session Confirmed',
+    title: 'Life & Legacy Plan Education Session Confirmed',
     subtitle: 'The first step toward protecting your legacy',
     expectationsList: [
       `We\'ll discuss your family situation, assets, and goals to design a customized estate plan`,
@@ -230,7 +230,7 @@ const contentData = {
     ],
     */
     ctaHeading: 'Before Your Session',
-    ctaText: `We've designed the homework we've assigned you to help you think about your goals and what you want to accomplish with your estate plan. Completing the homework as best you can helps us tailor your experience to your life and dreams.`,
+    ctaText: `We've designed the homework we've assigned you to help you think about your goals and what you want to accomplish with your estate plan. Completing the homework as best you can helps us tailor your experience to your life and dreams. And if you're worried about costs, we promise that you will be in control of your costs. Our process gives you choices on how to balance cost and effectiveness.`,
     ctaButton: {
       text: 'Learn More About Our Process',
       url: '/services/estate-planning#our-process'

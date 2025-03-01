@@ -1,10 +1,8 @@
 <template>
   <div>
     <HeaderViewBlog />
-    <main class="main services-main px-3 py-lg-5">
-      <ServicesHeader />
-      <slot />
-    </main>
+    <!-- <ServicesHeader /> -->
+    <slot />
   </div>
   <Booking />
 </template>

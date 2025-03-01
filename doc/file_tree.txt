@@ -69,6 +69,7 @@
 │       ├── business1_1024_o20.png
 │       ├── dotorgtablet_1024_o20.png
 │       ├── estatenotebook_1024_o20.png
+│       ├── estatenotebook_1024_smallest.webp
 │       ├── helpinghand_1024_o20.png
 │       ├── horsetooth_hiker_1275_485_smallest.jpg
 │       ├── ohlaw-logo-trans-450.svg
@@ -77,6 +78,7 @@
 ├── components
 │   ├── BankruptcySection.vue
 │   ├── Booking.vue
+│   ├── BookingLanding.vue
 │   ├── ContactForm.vue
 │   ├── ContactSection.vue
 │   ├── DifferentSection.vue
@@ -184,6 +186,8 @@
 │   │   ├── [...term].vue
 │   │   └── index.vue
 │   ├── index.vue
+│   ├── landings
+│   │   └── booking.vue
 │   ├── policies
 │   │   ├── Fees.vue
 │   │   ├── Privacy.vue
@@ -196,9 +200,8 @@
 │       └── estate-planning
 │           ├── GunTrusts.vue
 │           ├── LifeAndLegacyPlanningSession.vue
-│           ├── about.vue
-│           ├── index.vue
-│           └── pricing.vue
+│           ├── index.vue.js
+│           └── pricing.vue.js
 ├── plugins
 │   ├── bootstrap.client.js
 │   ├── fontawesome.js
@@ -277,6 +280,8 @@
 │   │   └── glossary
 │   │       ├── [term].get.js
 │   │       └── index.js
+│   ├── middleware
+│   │   └── request-logger.js
 │   ├── tsconfig.json
 │   └── utils
 │       └── r2.ts
@@ -291,8 +296,9 @@
 │   ├── blog.js.tmp
 │   ├── dates.js
 │   ├── forms.js
+│   ├── glossary.js
 │   ├── ohlaw.js
 │   └── strings.js
 └── wrangler.toml
 
-52 directories, 244 files
+54 directories, 248 files

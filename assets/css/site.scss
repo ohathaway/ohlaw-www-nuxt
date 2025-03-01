@@ -78,7 +78,13 @@ section {
   padding-bottom: 50px;
 }
 
-.card-body .bi { color: #8A716A; }
+.card-body .bi { color: #8A716A !important; }
+.btn-outline-primary {
+  color: #003399 !important;
+  &:hover {
+    background-color: $blue-100;
+  }
+}
 
 /* Global sticky sidebar class that accounts for the fixed navbar */
 .sticky-sidebar {
