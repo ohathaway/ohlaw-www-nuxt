@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row no-gutters" id="service-bankruptcy">
-      <div class="col-lg service-text service-text-left">
+      <div class="col-lg service-text" :class="`service-text-${imageLocation}`">
         <div class="p-3 pt-lg-5 px-lg-4">
           <h4>Bankruptcy</h4>
           <p class="fw-normal">
@@ -13,13 +13,12 @@
             in a financial situation they can't get out of.
           </p>
           <!--p><a class="btn btn-outline-primary learn-more bankruptcy" data-toggle="collapse" data-target=".service-description.bankruptcy">Learn more</a></p-->
-          <button
+          <a
             class="btn btn-outline-primary"
-            data-bs-toggle="collapse"
-            data-bs-target="#service-description-bankruptcy"
+            href="/services/bankruptcy"
           >
             Learn more
-          </button>
+          </a>
         </div>
       </div>
       <div class="col-lg service-img">
@@ -45,12 +44,14 @@
         <p class="fw-normal">A Chapter 13 case presents a much more complicated process than Chapter 7. One study found that only 2.3% of Chapter 13 cases filed without an attorney completed successfully. Our experience and expertise allow us to help folks navigate the confusing Chapter 13 process.</p>
       </div>
       <div class="col-3 bg-primary cta-sidebar p-5" id="cta-sidebar-bankruptcy">
-        <ContactForm textColor="white" position="sidebar" />
+        <ClientOnly>
+          <ContactForm textColor="white" position="sidebar" />
+        </ClientOnly>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import ContactForm from './ContactForm.vue'
+const { imageLocation } = defineProps(['image-location'])
 </script>

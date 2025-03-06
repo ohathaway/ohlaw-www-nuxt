@@ -1,9 +1,9 @@
 <template>
   <section class="container-fluid" id="lines-of-business">
-    <SmallBusinessSection></SmallBusinessSection>
-    <NonprofitsSection></NonprofitsSection>
-    <EstatePlanningSection></EstatePlanningSection>
-    <BankruptcySection></BankruptcySection>
+    <EstatePlanningSection image-location="left"></EstatePlanningSection>
+    <BankruptcySection image-location="left"></BankruptcySection>
+    <SmallBusinessSection image-location="right"></SmallBusinessSection>
+    <NonprofitsSection image-location="right"></NonprofitsSection>
   </section>
 </template>
 

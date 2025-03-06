@@ -1,49 +1,152 @@
 <template>
   <main class="main">
     <!-- Hero Section -->
-    <ServicesHero
-      title="Estate Planning That Works<br />For Real People"
-      subtitle="Protecting Your Legacy and Providing Peace of Mind"
-      buttonText="Schedule Your Free Consultation"
-      :button-link="link"
-      backgroundImage="/img/estatenotebook_1024_o20.png"
-    />
+    <section class="hero bg-primary text-center py-5">
+      <div class="container">
+        <h1 class="display-4">Estate Planning That Works<br />For Real People</h1>
+        <p class="lead">Protecting Your Legacy and Providing Peace of Mind</p>
+        <button class="btn btn-light btn-lg mt-3" @click="openSchedulingLink">Schedule Your Free Consultation</button>
+      </div>
+    </section>
 
     <!-- Introduction Section -->
-    <ServicesIntro
-      title="What Sets Our<br />Estate Planning Services Apart"
-      description="<p>You work hard toward your life's accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life's plan.</p><p>We can help you express your wishes for what happens to you and your estate when you no longer can express them.</p>"
-      :features="introFeatures"
-      imageSource="/img/estatenotebook_1024_smallest.jpg"
-      imageProvider="cloudflare"
-      imageTitle="Estate Planning"
-      buttonText="Get Started Today"
-      :button-link="link"
-    />
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>What Sets Our Estate Planning Services Apart</h2>
+            <p>You work hard toward your life’s accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life’s plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them.</p>
+            <ul class="expectation-list">
+              <li><strong>Personal Attention</strong>: Your plan is customized to your unique situation and goals.</li>
+              <li><strong>Practical Solutions</strong>: We focus on what works in the real world, not just theory.</li>
+              <li><strong>Proactive Planning</strong>: We help you anticipate and prevent problems before they arise.</li>
+              <li><strong>Plain Language</strong>: We explain complex legal concepts in terms you can understand.</li>
+              <li><strong>Ongoing Support</strong>: Estate planning is a process, not a one-time event.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <LayoutMediaFocus
+              source="/img/estatenotebook_1024_smallest.jpg"
+              provider="cloudflare"
+              title="Estate Planning"
+            />
+            <div class="text-center mt-4">
+              <button class="btn btn-primary btn-lg" @click="openSchedulingLink">Get Started Today</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Why Estate Planning Matters -->
-    <ServicesFeatures
-      title="Why Estate Planning Matters"
-      :features="whyItMattersFeatures"
-      :columns="3"
-      background="light"
-    />
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Why Estate Planning Matters</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <i class="bi bi-shield-check fs-1 mb-3"></i>
+                <h3 class="card-title">Protect Your Family</h3>
+                <p class="card-text">Ensure your loved ones are provided for and avoid family conflicts over your assets. Designate guardians for minor children and dependents with special needs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <i class="bi bi-coin fs-1 mb-3"></i>
+                <h3 class="card-title">Preserve Your Assets</h3>
+                <p class="card-text">Avoid probate costs, protect your assets from creditors and minimize taxes. Ensure your hard-earned wealth goes to your chosen beneficiaries.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <i class="bi bi-heart-pulse fs-1 mb-3"></i>
+                <h3 class="card-title">Healthcare Decisions</h3>
+                <p class="card-text">Make your healthcare wishes known through advance directives. Appoint trusted individuals to make medical decisions if you're unable to do so.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Our Process Timeline -->
-    <ServicesProcess
-      id="our-process"
-      title="Our Estate Planning Process"
-      description="We've developed a streamlined, client-friendly process to make creating your estate plan as simple and stress-free as possible."
-      :process-steps="tlContent"
-    />
+    <section id="our-process" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Estate Planning Process</h2>
+        <p class="text-center mb-5">We've developed a streamlined, client-friendly process to make creating your estate plan as simple and stress-free as possible.</p>
+        <Timeline :tl-content="tlContent"></Timeline>
+      </div>
+    </section>
 
     <!-- Estate Planning Tools -->
-    <ServicesOfferings
-      title="Some Estate Planning Tools We Offer"
-      :offerings="toolsOfferings"
-      :columns="2"
-      background="light"
-    />
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Some Estate Planning Tools We Offer</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body p-lg-5">
+                <h3 class="card-title">Wills</h3>
+                <p class="card-text">A will is the foundation of many estate plans. It allows you to:</p>
+                <ul>
+                  <li>Name beneficiaries for your assets</li>
+                  <li>Designate guardians for minor children</li>
+                  <li>Appoint an executor to manage your estate</li>
+                  <li>Provide instructions for asset distribution</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body p-lg-5">
+                <h3 class="card-title">Trusts</h3>
+                <p class="card-text">Trusts offer additional benefits beyond wills:</p>
+                <ul>
+                  <li>Avoid probate and maintain privacy</li>
+                  <li>Provide for minor children or beneficiaries with special needs</li>
+                  <li>Control asset distribution over time</li>
+                  <li>Can be joint plans for both spouses</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body p-lg-5">
+                <h3 class="card-title">Specialized Trusts</h3>
+                <p class="card-text">We offer specialized trusts for specific situations:</p>
+                <ul>
+                  <li><a href="/services/estate-planning/gun-trusts">Gun Trusts</a> for firearm owners</li>
+                  <li>Special Needs Trusts for beneficiaries with disabilities</li>
+                  <li>Pet Trusts for beloved animal companions</li>
+                  <li>Spendthrift Trusts for beneficiaries who need protection from creditors and predators</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body p-lg-5">
+                <h3 class="card-title">Concierge Trust Funding</h3>
+                <p class="card-text">Creating a trust is useless unless you put something in it. We offer:</p>
+                <ul>
+                  <li>Complete asset transfer management, eliminating the frustration of DIY trust funding</li>
+                  <li>Professional handling of complex property titles, financial accounts, and investment transfers</li>
+                  <li>Regular progress updates throughout the transfer process to keep you informed</li>
+                  <li>Peace of mind knowing your trust is properly funded and will work as intended when needed</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="py-5">
@@ -54,16 +157,19 @@
     </section>
 
     <!-- Call to Action -->
-    <ServicesCta
-      title="Ready to Protect Your Legacy?"
-      description="Schedule your Life and Legacy Planning Session today and take the first step toward peace of mind."
-      buttonText="Schedule Your Free Consultation"
-      :button-link="link"
-    />
+    <section class="py-5 bg-primary text-white text-center">
+      <div class="container">
+        <h2 class="mb-4">Ready to Protect Your Legacy?</h2>
+        <p class="lead mb-4">Schedule your Life and Legacy Planning Session today and take the first step toward peace of mind.</p>
+        <button class="btn btn-light btn-lg" @click="openSchedulingLink">Schedule Your Free Consultation</button>
+      </div>
+    </section>
   </main>
 </template>
 
 <script setup>
+// import { useHead } from '@vueuse/head'
+
 // Get the scheduling link from app config
 const { schedulingLinks: { newClient: link } } = useAppConfig()
 
@@ -78,92 +184,10 @@ useHead({
   ]
 })
 
-// Introduction section features
-const introFeatures = [
-  {
-    title: 'Personal Attention',
-    description: 'Your plan is customized to your unique situation and goals.'
-  },
-  {
-    title: 'Practical Solutions',
-    description: 'We focus on what works in the real world, not just theory.'
-  },
-  {
-    title: 'Proactive Planning',
-    description: 'We help you anticipate and prevent problems before they arise.'
-  },
-  {
-    title: 'Plain Language',
-    description: 'We explain complex legal concepts in terms you can understand.'
-  },
-  {
-    title: 'Ongoing Support',
-    description: 'Estate planning is a process, not a one-time event.'
-  }
-]
-
-// Why Estate Planning Matters features
-const whyItMattersFeatures = [
-  {
-    icon: 'shield-check',
-    title: 'Protect Your Family',
-    description: 'Ensure your loved ones are provided for and avoid family conflicts over your assets. Designate guardians for minor children and dependents with special needs.'
-  },
-  {
-    icon: 'coin',
-    title: 'Preserve Your Assets',
-    description: 'Avoid probate costs, protect your assets from creditors and minimize taxes. Ensure your hard-earned wealth goes to your chosen beneficiaries.'
-  },
-  {
-    icon: 'heart-pulse',
-    title: 'Healthcare Decisions',
-    description: 'Make your healthcare wishes known through advance directives. Appoint trusted individuals to make medical decisions if you\'re unable to do so.'
-  }
-]
-
-// Estate Planning Tools offerings
-const toolsOfferings = [
-  {
-    title: 'Wills',
-    description: 'A will is the foundation of many estate plans. It allows you to:',
-    features: [
-      { text: 'Name beneficiaries for your assets' },
-      { text: 'Designate guardians for minor children' },
-      { text: 'Appoint an executor to manage your estate' },
-      { text: 'Provide instructions for asset distribution' }
-    ]
-  },
-  {
-    title: 'Trusts',
-    description: 'Trusts offer additional benefits beyond wills:',
-    features: [
-      { text: 'Avoid probate and maintain privacy' },
-      { text: 'Provide for minor children or beneficiaries with special needs' },
-      { text: 'Control asset distribution over time' },
-      { text: 'Can be joint plans for both spouses' }
-    ]
-  },
-  {
-    title: 'Specialized Trusts',
-    description: 'We offer specialized trusts for specific situations:',
-    features: [
-      { text: '<a href="/services/estate-planning/gun-trusts">Gun Trusts</a> for firearm owners', isHtml: true },
-      { text: 'Special Needs Trusts for beneficiaries with disabilities' },
-      { text: 'Pet Trusts for beloved animal companions' },
-      { text: 'Spendthrift Trusts for beneficiaries who need protection from creditors and predators' }
-    ]
-  },
-  {
-    title: 'Concierge Trust Funding',
-    description: 'Creating a trust is useless unless you put something in it. We offer:',
-    features: [
-      { text: 'Complete asset transfer management, eliminating the frustration of DIY trust funding' },
-      { text: 'Professional handling of complex property titles, financial accounts, and investment transfers' },
-      { text: 'Regular progress updates throughout the transfer process to keep you informed' },
-      { text: 'Peace of mind knowing your trust is properly funded and will work as intended when needed' }
-    ]
-  }
-]
+// Function to open scheduling link
+const openSchedulingLink = () => {
+  window.open(link, '_blank');
+}
 
 // Timeline content - expanded from the existing timeline
 const tlContent = [
@@ -292,7 +316,57 @@ const faqItems = [
 ]
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.hero {
+  background-image: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('/img/estatenotebook_1024_o20.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+}
+
+.expectation-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+
+    &:before {
+      content: "\f633";  /* Bootstrap Icons code for checkbox */
+      font-family: "bootstrap-icons";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: #0056b3;
+    }
+  }
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.card-title {
+  color: #0056b3;
+  font-weight: 600;
+}
+
+.card-body .bi {
+  color: #8A716A;
+}
+
 h2 {
   color: #0056b3;
   font-weight: 700;
@@ -311,12 +385,6 @@ h2 {
   }
 }
 
-@media (max-width: 768px) {
-  h2.text-center:after {
-    width: 60px;
-  }
-}
-
 .btn-primary {
   background-color: #0056b3;
   border-color: #0056b3;
@@ -329,5 +397,23 @@ h2 {
 
 .bg-primary {
   background-color: #0056b3 !important;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  h2.text-center:after {
+    width: 60px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .expectation-list li {
+    padding-left: 25px;
+  }
 }
 </style>

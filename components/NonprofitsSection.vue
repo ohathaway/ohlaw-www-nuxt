@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row no-gutters" id="service-nonprofit">
-      <div class="col-lg m-0 service-text service-text-left">
+      <div class="col-lg m-0 service-text" :class="`service-text-${imageLocation}`">
         <div class="p-3 pt-lg-5 px-lg-4">
           <h4>Nonprofits</h4>
           <p class="fw-normal">
@@ -60,8 +60,14 @@
         </p>
       </div>
       <div class="col-3 bg-primary cta-sidebar p-5" id="cta-sidebar-nonprofit">
-        <ContactForm position="sidebar" />
+        <ClientOnly>
+          <ContactForm position="sidebar" />
+        </ClientOnly>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+const { imageLocation } = defineProps(['image-location'])
+</script>
