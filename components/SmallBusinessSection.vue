@@ -15,13 +15,12 @@
             predictable legal costs.
           </p>
           <!--p><a class="btn btn-outline-primary learn-more small-business" data-toggle="collapse" data-target=".service-description.small-business" href="#service-description-small-business">Learn more</a></p-->
-          <button
+          <a
             class="btn btn-outline-primary"
-            data-bs-toggle="collapse"
-            data-bs-target="#service-description-small-business"
+            href="/services/small-business"
           >
             Learn more
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -30,7 +29,9 @@
       id="service-description-small-business"
     >
       <div class="col-3 bg-primary cta-sidebar p-5" id="cta-sidebar-small-business">
-        <ContactForm position="sidebar" />
+        <ClientOnly>
+          <ContactForm position="sidebar" />
+        </ClientOnly>
       </div>
       <div class="col-9 p-5">
         <h2>Looking to start a business?</h2>

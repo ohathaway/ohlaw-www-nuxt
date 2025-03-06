@@ -11,8 +11,8 @@
 
     <!-- Introduction Section -->
     <ServicesIntro
-      title="What Sets Our Estate Planning Services Apart"
-      description="You work hard toward your life's accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life's plan. We can help you express your wishes for what happens to you and your estate when you no longer can express them."
+      title="What Sets Our<br />Estate Planning Services Apart"
+      description="<p>You work hard toward your life's accomplishments. Whether that includes some measure of wealth, a business legacy, or raising a family you are proud of, the way you pass it all on to the people and causes you care about is an important part of your life's plan.</p><p>We can help you express your wishes for what happens to you and your estate when you no longer can express them.</p>"
       :features="introFeatures"
       imageSource="/img/estatenotebook_1024_smallest.jpg"
       imageProvider="cloudflare"

@@ -7,6 +7,7 @@ export default defineAppConfig({
     newClient: 'https://booking.ohlawcolorado.com/new-client',
     newBusinessClient: 'https://booking.ohlawcolorado.com/new-business-client',
     newBankruptcyClient: 'https://booking.ohlawcolorado.com/new-bankruptcy-client',
+    newNonprofitClient: 'https://booking.ohlawcolorado.com/new-nonprofit-client',
     petitionReviewInPerson: 'https://booking.ohlawcolorado.com/bk-review-in-person',
     petitionReviewRemote: 'https://booking.ohlawcolorado.com/bk-review-remote'
   },

@@ -12,7 +12,7 @@
     <!-- Introduction Section -->
     <ServicesIntro
       title="Small Business Legal Support"
-      description="We are a small business. We've started and run several small businesses. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees? We can help you keep your focus on building your business while managing predictable legal costs."
+      description="<p>We are a small business. We've started and run several small businesses. We understand the reward as well as the challenges small business owners face. Choosing an entity, dividing ownership, managing liability, vendor contracts, staying out of tax trouble, employees?</p><p>We can help you keep your focus on building your business while managing predictable legal costs.</p>"
       :features="businessFeatures"
       imageSource="/img/business1_1024_smallest.jpg"
       imageProvider="cloudflare"

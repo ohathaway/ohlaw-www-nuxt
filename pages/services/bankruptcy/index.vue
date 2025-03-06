@@ -12,7 +12,7 @@
     <!-- Introduction Section -->
     <ServicesIntro
       title="Compassionate Bankruptcy Services"
-      description="Financial distress can happen to anyone. Job loss, medical bills, divorce, or unexpected expenses can quickly lead to overwhelming debt. Our bankruptcy services offer a path to financial recovery with dignity and respect. We understand that seeking bankruptcy protection is a difficult decision, and we're here to guide you through the process with empathy and expertise."
+      description="<p>Financial distress can happen to anyone. Job loss, medical bills, divorce, or unexpected expenses can quickly lead to overwhelming debt. Our bankruptcy services offer a path to financial recovery with dignity and respect.</p><p>We understand that seeking bankruptcy protection is a difficult decision, and we're here to guide you through the process with empathy and expertise.</p>"
       :features="introFeatures"
       imageSource="/img/helpinghand_1024_smallest.jpg"
       imageProvider="cloudflare"

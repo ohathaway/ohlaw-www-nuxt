@@ -27,10 +27,10 @@
             Practice Areas
           </a>
           <div class="dropdown-menu">
-            <a :class="dropdownItemClasses" href="/#service-small-business"> Small Business </a>
-            <a :class="dropdownItemClasses" href="/#service-nonprofit"> NonProfits </a>
             <a :class="dropdownItemClasses" href="/services/estate-planning"> Estate Planning </a>
-            <a :class="dropdownItemClasses" href="/#service-bankruptcy"> Bankruptcy </a>
+            <a :class="dropdownItemClasses" href="/services/small-business"> Small Business </a>
+            <a :class="dropdownItemClasses" href="/services/bankruptcy"> Bankruptcy </a>
+            <a :class="dropdownItemClasses" href="/services/nonprofits"> NonProfits </a>
           </div>
         </li>
         <li class="nav-item">
