@@ -78,6 +78,18 @@ section {
   padding-bottom: 50px;
 }
 
+.card-hover-shadow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
 .card-body .bi { color: #8A716A !important; }
 .btn-outline-primary {
   color: #003399 !important;
