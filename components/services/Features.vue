@@ -10,7 +10,7 @@
           :class="columnClass"
           class="mb-4"
         >
-          <div class="card h-100">
+          <div class="card card-hover-shadow h-100">
             <div class="card-body text-center">
               <!-- Bootstrap Icon -->
               <i 
@@ -126,18 +126,6 @@ const parseFontAwesomeIcon = (icon) => {
 </script>
 
 <style scoped lang="scss">
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-}
-
 .card-title {
   color: #0056b3;
   font-weight: 600;
