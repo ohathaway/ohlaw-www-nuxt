@@ -3,8 +3,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <h2>{{ title }}</h2>
-          <p>{{ description }}</p>
+          <h2><span v-html="title"></span></h2>
+          <p><span v-html="description"></span></p>
           <ul v-if="features.length" class="feature-list">
             <li v-for="(feature, index) in features" :key="index">
               <strong>{{ feature.title }}:</strong> <span v-html="feature.description"></span>

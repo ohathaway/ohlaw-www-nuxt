@@ -15,13 +15,12 @@
             longer can express them.
           </p>
           <!--p><a class="btn btn-outline-primary learn-more estate-planning" data-toggle="collapse" data-target=".service-description.estate-planning">Learn more</a></p-->
-          <button
+          <a
             class="btn btn-outline-primary"
-            data-bs-toggle="collapse"
-            data-bs-target="#service-description-estate-planning"
+            href="/services/estate-planning"
           >
             Learn more
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -30,7 +29,9 @@
       id="service-description-estate-planning"
     >
       <div class="col-3 bg-primary cta-sidebar p-5" id="cta-sidebar-estate-planning">
-        <ContactForm position="sidebar" />
+        <ClientOnly>
+          <ContactForm position="sidebar" />
+        </ClientOnly>
       </div>
       <div class="col-9 p-5">
         <h2>Estate Planning Services</h2>
