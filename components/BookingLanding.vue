@@ -155,11 +155,11 @@ const appointmentTypeLabel = computed(() => {
 // Content data for different appointment types
 const contentData = {
   'check-in': {
-    title: 'Thank You for Checking In',
-    subtitle: 'We\'re looking forward to meeting with you shortly.',
+    title: 'Your Check In Appointment is Confirmed',
+    subtitle: `We're looking forward to catching up with you.`,
     expectations: [
-      'Your attorney will be with you shortly. If you have any documents with you that weren\'t previously submitted, please have them ready.',
-      'Check-in appointments typically last 15-30 minutes and are designed to review your progress and answer any quick questions you might have.'
+      `If you have any documents that we need to review, please send them either through the portal or by email.`,
+      'Check-in appointments typically last 15-30 minutes and are designed to answer any quick questions and basically take stock of the state of your legal foundation.'
     ],
     image: '/img/chair_on_laptop.webp',
     ctaHeading: 'While You Wait',
