@@ -18,7 +18,7 @@
             <p>You should receive a confirmation email shortly with details about your<br />{{ appointmentTypeLabel }} appointment.</p>
           </div>
         </div>
-        <div class="row">
+        <div v-if="appointmentType === 'estate-plan-education'" class="row">
           <div class="col-md-8 offset-md-2 text-center">
             <h5 class="my-5">In the meantime...</h5>
             <p class="mb-4">We need you to do some homework.</p>
@@ -130,6 +130,8 @@ const appointmentLabels = {
   'estate-plan-signing': 'Life & Legacy Plan Signing',
   'estate-plan-delivery': 'Life & Legacy Plan Delivery',
   'new-client': 'New Client Consultation',
+  'new-bankruptcy-client': 'New Bankruptcy Client Consultation',
+  'new-business-client': 'New Business Client Consultation',
   'petition-review-in-person': 'Bankruptcy Petition Review (In-Person)',
   'petition-review-remote': 'Bankruptcy Petition Review (Remote)',
   'gun-trust': 'Gun Trust Consultation'
@@ -172,7 +174,7 @@ const contentData = {
     subtitle: 'Let\'s make sure your estate plan is still working for you.',
     expectations: [
       'During your Estate Plan Checkup, we\'ll review your existing documents and discuss any changes in your life, assets, or goals that might require updates to your plan.',
-      'This appointment typically lasts 45-60 minutes and helps ensure your estate plan continues to protect what matters most to you.'
+      'This appointment typically lasts 60 minutes and helps ensure your estate plan continues to protect what matters most to you.'
     ],
     preparations: [
       {
@@ -269,9 +271,121 @@ const contentData = {
       url: '/services'
     }
   },
+  'new-bankruptcy-client': {
+    title: `Bankruptcy Consultation Confirmed`,
+    subtitle: `Your first step toward financial freedom and a fresh start`,
+    expectationsList: [
+      `We'll review your current financial situation and discuss your goals`,
+      `You'll learn about bankruptcy options (Chapter 7 vs. Chapter 13) specific to your situation`,
+      `We'll assess your debts, assets, income, and expenses to determine eligibility`,
+      `You'll understand what property you can keep through exemptions`,
+      `We'll outline clear next steps, including costs and timeline`,
+      `This consultation typically lasts 30 minutes`
+    ],
+    preparations: [
+      {
+        icon: `bi-list-check`,
+        title: `List Your Debts`,
+        description: `Make a list of all your creditors, including approximate balances and account numbers if available.`
+      },
+      {
+        icon: `bi-wallet2`,
+        title: `Income Information`,
+        description: `Gather recent pay stubs or documentation of your income sources for the past few months.`
+      },
+      {
+        icon: `bi-house-door`,
+        title: `Asset Overview`,
+        description: `Make notes about your major assets (home, vehicles, retirement accounts, etc.) and their approximate values.`
+      }
+    ],
+    image: `/img/helpinghand_1024_smallest.jpg`,
+    faq: [
+      {
+        question: `Do I need to bring documents to my initial consultation?`,
+        answer: `While not required for the initial consultation, having a general list of your debts, recent pay stubs, and information about major assets can help us provide more specific guidance. Don't worry if you don't have everything organized yet - we'll help you through the document collection process after your consultation.`
+      },
+      {
+        question: `How much does bankruptcy cost?`,
+        answer: `Our bankruptcy services are offered at competitive flat rates. Chapter 7 bankruptcy typically costs between $1,725-$2,500, including the court filing fee. Chapter 13 bankruptcy in Colorado starts at $4,813 including the court filing fee. We offer flexible payment plans to make our services accessible. During your consultation, we'll provide a clear quote based on your specific situation.`
+      },
+      {
+        question: `Will filing bankruptcy stop creditor calls right away?`,
+        answer: `Yes, once your bankruptcy petition is filed with the court, the "automatic stay" immediately goes into effect. This legal protection prohibits creditors from contacting you, garnishing wages, repossessing property, or taking any collection actions. Even before filing, we can help you manage creditor communications once you've engaged our services.`
+      },
+      {
+        question: `Am I eligible for bankruptcy?`,
+        answer: `Eligibility depends on several factors including your income, household size, debt types, and previous bankruptcy filings. During your consultation, we'll analyze your specific situation to determine which bankruptcy options are available to you. Most people who feel they need bankruptcy relief do qualify for some form of bankruptcy protection.`
+      }
+    ],
+    ctaHeading: `Start Your Journey to Financial Freedom`,
+    ctaText: `Complete our intake forms before your appointment to help us provide the most comprehensive guidance for your situation.`,
+    ctaButton: {
+      text: `Learn More About Bankruptcy`,
+      url: `/services/bankruptcy`
+   /* },
+    ctaSecondaryButton: {
+      text: `Bankruptcy FAQ`,
+      url: `/services/bankruptcy/about-ch7`
+      */
+    }
+  },
+  'new-business-client': {
+    title: 'Business Consultation Confirmed',
+    subtitle: `We're looking forward to helping you create a solid legal foundation for your business.`,
+    expectationsList: [
+      `We'll discuss your business structure, goals, and specific legal needs`,
+      `You'll learn about entity options and their legal and tax implications`,
+      `We'll identify any immediate legal vulnerabilities in your current setup`,
+      `You'll get clear next steps and pricing options for your business legal needs`,
+      `This consultation typically lasts 45-60 minutes`
+    ],
+    preparations: [
+      {
+        icon: 'bi-building',
+        title: `Business Details`,
+        description: `Prepare a brief overview of your business, including current structure, owners, and goals.`
+      },
+      {
+        icon: 'bi-file-earmark-text',
+        title: `Existing Documents`,
+        description: `Gather any existing business documents (entity filings, contracts, etc.) you\'d like us to review.`
+      },
+      {
+        icon: 'bi-question-circle',
+        title: `Specific Questions`,
+        description: `Write down your top business legal questions or concerns to ensure we address them.`
+      }
+    ],
+    image: '/img/business1_1024_smallest.jpg',
+    faq: [
+      {
+        question: `What should I bring to my business consultation?`,
+        answer: `If you have existing business documents such as formation papers, contracts, operating agreements, or partnership documents, please have those available. Also prepare a list of your most pressing legal questions or concerns about your business. Don't worry if you don't have anything formal yet - we can start from scratch too.`
+      },
+      {
+        question: `What will we cover in the initial consultation?`,
+        answer: `We'll discuss your business structure, goals, current legal setup, and identify the most important legal needs for your specific situation. We\'ll explain your options for entity formation, key contracts, compliance requirements, and develop a prioritized plan for addressing your business legal needs. You'll leave with a clear understanding of next steps and associated costs.`
+      },
+      {
+        question: `How much will my business legal services cost?`,
+        answer: `During our consultation, we'll provide transparent pricing for the specific services your business needs. We typically offer flat-fee packages for common services like entity formation ($800-1,200), operating agreements ($800-1,500), and contract creation ($500-1,000 per contract). We also offer ongoing small business counsel arrangements for predictable legal support costs. You'll always know costs upfront before committing to any services.`
+      }
+    ],
+    ctaHeading: `Prepare for Your Business Consultation`,
+    ctaText: `Think about your business goals and specific legal concerns to help us provide the most valuable guidance during our session.`,
+    ctaButton: {
+      text: 'Learn About Small Business Services',
+      url: '/services/small-business'
+    },
+    ctaSecondaryButton: {
+      text: 'Read Our Business Articles',
+      url: '/blog/categories/small-business'
+    }
+  },
   'petition-review-in-person': {
     title: 'Bankruptcy Petition Review Confirmed',
-    subtitle: 'We\'re ready to review your bankruptcy petition in person',
+    subtitle: `We're ready to review your bankruptcy petition in person`,
     expectationsList: [
       'We\'ll go through your bankruptcy petition line by line to ensure accuracy',
       'We\'ll explain what to expect at your 341 meeting with creditors',
