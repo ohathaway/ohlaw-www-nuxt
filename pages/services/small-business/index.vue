@@ -77,11 +77,11 @@ const businessFeatures = [
     description: `Guidance on choosing the right business structure (LLC, Corporation, etc.)`
   },
   {
-    title: `Business Agreements`,
-    description: `Operating agreements, partnership agreements, and ownership documents`
+    title: `Core Business Agreements`,
+    description: `Operating agreements, partnership agreements, buy/sell agreements, and ownership documents`
   },
   {
-    title: `Contracts & Negotiation`,
+    title: `Contracts`,
     description: `Vendor contracts, leases, employment agreements, and more`
   },
   {

@@ -15,7 +15,7 @@
         <div class="modal-body">
           <div class="row p-0">
             <div class="col-lg-3">
-              <div class="card m-3 p-0">
+              <div class="card card-hover-shadow m-3 p-0">
                 <a :href="schedulingLinks.estatePlanEducation">
                   <div class="card-body text-center">
                     <h3 class="card-title">Estate Planning</h3>
@@ -29,7 +29,7 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="card m-3 p-0">
+              <div class="card card-hover-shadow m-3 p-0">
                 <a :href="schedulingLinks.newBusinessClient">
                   <div class="card-body text-center">
                     <h3 class="card-title">Small Business</h3>
@@ -43,7 +43,7 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="card m-3 p-0">
+              <div class="card card-hover-shadow m-3 p-0">
                 <a :href="schedulingLinks.newBankruptcyClient">
                   <div class="card-body text-center">
                     <h3 class="card-title">Bankruptcy</h3>
@@ -57,7 +57,7 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="card m-3 p-0">
+              <div class="card card-hover-shadow m-3 p-0">
                 <a :href="schedulingLinks.newNonprofitClient">
                   <div class="card-body text-center">
                     <h3 class="card-title">Nonprofits</h3>
@@ -93,6 +93,7 @@ const { schedulingLinks } = useAppConfig()
 }
 
 .card-img-top { height: 200px; }
+
 .card-body {
   // height: 130px;
   overflow: auto;

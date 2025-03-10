@@ -36,10 +36,9 @@
         <li class="nav-item">
           <a
             class="nav-link"
-            href="https://secure.lawpay.com/pages/owen-hathaway/trust"
-            target="_blank"
+            href="/about-us"
           >
-            Make a Payment
+            About Us
           </a>
         </li>
         <li class="nav-item">
