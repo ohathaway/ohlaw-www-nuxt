@@ -38,7 +38,7 @@
             class="nav-link"
             href="/about-us"
           >
-            Make a Payment
+            About Us
           </a>
         </li>
         <li class="nav-item">
