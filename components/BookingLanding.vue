@@ -132,6 +132,7 @@ const appointmentLabels = {
   'new-client': 'New Client Consultation',
   'new-bankruptcy-client': 'New Bankruptcy Client Consultation',
   'new-business-client': 'New Business Client Consultation',
+  'new-nonprofit-client': 'New Nonprofit Consultation',
   'petition-review-in-person': 'Bankruptcy Petition Review (In-Person)',
   'petition-review-remote': 'Bankruptcy Petition Review (Remote)',
   'gun-trust': 'Gun Trust Consultation'
@@ -383,7 +384,57 @@ const contentData = {
       url: '/blog/categories/small-business'
     }
   },
-  'petition-review-in-person': {
+  'new-nonprofit-client': {
+    title: 'Nonprofit Consultation Confirmed',
+    subtitle: 'We\'re looking forward to helping you structure your charitable mission for success',
+    expectationsList: [
+      `We'll discuss your charitable purpose and mission`,
+      `You'll learn about entity options (501c3, B corps, etc.) and their legal implications`,
+      `We'll explore sustainable revenue models that align with your charitable purpose`,
+      `You'll understand the process and requirements for tax-exempt status`,
+      `We'll outline clear next steps and pricing options for your nonprofit legal needs`,
+      `This consultation typically lasts 45-60 minutes`
+    ],
+    preparations: [
+      {
+        icon: 'bi-heart',
+        title: 'Charitable Purpose',
+        description: 'Think about how to clearly articulate your charitable purpose in preparation for a form 1023 submission.'
+      },
+      {
+        icon: 'bi-cash-coin',
+        title: 'Revenue Model',
+        description: 'Consider your revenue model and how it aligns with your charitable purpose to ensure you have margin with which to accomplish your mission.'
+      },
+      {
+        icon: 'bi-diagram-3',
+        title: 'Organizational Structure',
+        description: 'Think about potential board members and how you envision your organization\'s governance structure.'
+      }
+    ],
+    image: '/img/dotorgtablet_1024_smallest.jpg',
+    faq: [
+      {
+        question: 'Do I really need to form a nonprofit or are there alternatives?',
+        answer: 'Not every charitable mission requires a standalone nonprofit. During our consultation, we\'ll explore various options including fiscal sponsorship, donor-advised funds, B corporations, or partnering with existing organizations. We\'ll help you determine which structure best supports your specific mission and goals.'
+      },
+      {
+        question: 'How much does it cost to form a nonprofit?',
+        answer: 'Our nonprofit formation services typically range from $1,000-$3,000 depending on complexity, plus state filing fees ($50 as of 2025), plus IRS filing fees ($275-$600). This includes formation documents, bylaws, initial board resolutions, and guidance on the 501(c)(3) application process. We\'ll provide a clear quote during your consultation based on your specific needs.'
+      },
+      {
+        question: 'How long does it take to get 501(c)(3) status?',
+        answer: 'The complete process typically takes 3-9 months. State incorporation usually takes 1-2 weeks, while IRS 501(c)(3) determination can take 3-9 months depending on application completeness and IRS backlog. We\'ll help you understand the timeline and what you can and cannot do while waiting for IRS approval.'
+      }
+    ],
+    ctaHeading: 'Prepare for Your Nonprofit Consultation',
+    ctaText: 'Think about your charitable mission and how you envision making a sustainable impact in your community.',
+    ctaButton: {
+      text: 'Learn About Our Nonprofit Services',
+      url: '/services/nonprofits'
+    }
+  },
+    'petition-review-in-person': {
     title: 'Bankruptcy Petition Review Confirmed',
     subtitle: `We're ready to review your bankruptcy petition in person`,
     expectationsList: [

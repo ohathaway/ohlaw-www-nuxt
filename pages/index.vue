@@ -5,7 +5,6 @@
       <WelcomeSection></WelcomeSection>
       <LinesOfBusinessSection></LinesOfBusinessSection>
       <DifferentSection></DifferentSection>
-      <ContactSection></ContactSection>
     </main>
   </div>
 </template>
