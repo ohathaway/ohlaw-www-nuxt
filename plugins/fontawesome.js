@@ -30,6 +30,8 @@ import {
   faPhone,
   faPlus,
   faQuoteLeft,
+  faQuoteRight,
+  faStar,
   faTrashCan,
   faTriangleExclamation,
   faUser
@@ -82,6 +84,8 @@ library.add(
   faPhone,
   faPlus,
   faQuoteLeft,
+  faQuoteRight,
+  faStar,
   faTrashCan,
   faTriangleExclamation,
   faRectangleXmark,
