@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import TestimonialCarousel from './TestimonialCarousel.vue'
+
+</script>
+
 <template>
   <footer class="row p-5">
     <div class="col footer-address">
@@ -64,6 +69,16 @@
         <h5>Useful Links:</h5>
         <ul class="list-unstyled">
           <li class="my-1">
+            <font-awesome-icon icon="fas fa-credit-card"></font-awesome-icon>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://secure.lawpay.com/pages/owen-hathaway/trust"
+              title="Make a Payment"
+              target="_blank"
+            >
+              Make a Payment
+            </a>
+          </li>
+          <li class="my-1">
             <font-awesome-icon icon="fas fa-file-contract"></font-awesome-icon>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <NuxtLink to="/policies">
@@ -102,7 +117,7 @@
       </ClientOnly>
     </div>
     <div class="col-sm">
-      Social Proof
+      <TestimonialCarousel />
     </div>
   </footer>
 </template>

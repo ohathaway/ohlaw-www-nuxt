@@ -26,9 +26,9 @@
         <div class="row align-items-center">
           <div class="col-md-6 order-md-2">
             <LayoutMediaFocus 
-              source="/img/placeholder_1024.webp" 
+              source="/img/IMG_5943.webp" 
               provider="cloudflare" 
-              title="Family First" 
+              title="Strangely this is the closest thing we have to a photo of our family at the moment. This is Owen and all his brothers and sisters at our oldest daughter's wedding." 
             />
           </div>
           <div class="col-md-6 order-md-1">

@@ -229,7 +229,7 @@ const contentData = {
         description: 'Consider what matters most to you in protecting your family and legacy.'
       }
     ],
-    image: '/img/estatenotebook_1024_smallest.webp',
+    image: '/img/estatenotebook_1024.webp',
     /*
     faq: [
       {
