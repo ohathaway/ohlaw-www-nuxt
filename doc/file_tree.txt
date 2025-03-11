@@ -63,15 +63,16 @@
 │   │   ├── google-fonts.css
 │   │   └── google-fonts.list
 │   └── img
+│       ├── IMG_5943.webp
 │       ├── Newsletter_Signup_portrait.svg
 │       ├── affordable_and_effective.webp
 │       ├── affordable_and_effective_top_only.webp
 │       ├── business1_1024_o20.png
 │       ├── dotorgtablet_1024_o20.png
 │       ├── estatenotebook_1024_o20.png
-│       ├── estatenotebook_1024_smallest.webp
 │       ├── helpinghand_1024_o20.png
 │       ├── horsetooth_hiker_1275_485_smallest.jpg
+│       ├── it2lawyer2.webp
 │       ├── ohlaw-logo-trans-450.svg
 │       ├── ohlaw_icon.svg
 │       └── ohlaw_icon_circle.svg
@@ -94,6 +95,7 @@
 │   ├── NonprofitsSection.vue
 │   ├── SignupForm.vue
 │   ├── SmallBusinessSection.vue
+│   ├── TestimonialCarousel.vue
 │   ├── Timeline.vue
 │   ├── WelcomeSection.vue
 │   ├── __tests__
@@ -145,7 +147,14 @@
 │   │   ├── PostListRow.vue
 │   │   └── PostListSidebar.vue
 │   └── services
+│       ├── Cta.vue
+│       ├── Features.vue
 │       ├── Header.vue
+│       ├── Hero.vue
+│       ├── Intro.vue
+│       ├── Offerings.vue
+│       ├── PflPromise.vue
+│       ├── Process.vue
 │       └── dstAssumptions.vue
 ├── content
 │   └── about
@@ -172,6 +181,7 @@
 ├── package.json
 ├── pages
 │   ├── [...slug].vue
+│   ├── about-us.vue
 │   ├── blog
 │   │   ├── [post].vue
 │   │   ├── categories
@@ -197,11 +207,19 @@
 │       ├── bankruptcy
 │       │   ├── about-ch7.vue
 │       │   └── index.vue
-│       └── estate-planning
-│           ├── GunTrusts.vue
-│           ├── LifeAndLegacyPlanningSession.vue
-│           ├── index.vue.js
-│           └── pricing.vue.js
+│       ├── estate-planning
+│       │   ├── GunTrusts.vue
+│       │   ├── LifeAndLegacyPlanningSession.vue
+│       │   ├── gun-trusts
+│       │   │   └── index.vue
+│       │   ├── index-mono.vue
+│       │   ├── index.vue
+│       │   └── pricing.vue
+│       ├── index.vue
+│       ├── nonprofits
+│       │   └── index.vue
+│       └── small-business
+│           └── index.vue
 ├── plugins
 │   ├── bootstrap.client.js
 │   ├── fontawesome.js
@@ -252,7 +270,11 @@
 │   │   └── google-fonts.list
 │   ├── googleab019e91f60ca7c7.html
 │   ├── img
+│   │   ├── 3genfamily1.webp
+│   │   ├── IMG_5943.webp
+│   │   ├── Search_GSA.original.png
 │   │   ├── affordable_and_effective_top_only.webp
+│   │   ├── business1_1024.webp
 │   │   ├── business1_1024_smallest.jpg
 │   │   ├── chair_on_laptop.webp
 │   │   ├── cropped-ohlaw_icon_512-1-1.png
@@ -260,14 +282,19 @@
 │   │   ├── cropped-ohlaw_icon_512-192x192.png
 │   │   ├── cropped-ohlaw_icon_512-270x270.png
 │   │   ├── cropped-ohlaw_icon_512-32x32.png
+│   │   ├── dotorgtablet_1024.webp
 │   │   ├── dotorgtablet_1024_smallest.jpg
+│   │   ├── estatenotebook_1024.webp
 │   │   ├── estatenotebook_1024_smallest.jpg
 │   │   ├── glossary-article-header.webp
 │   │   ├── gun_safe.webp
 │   │   ├── gun_safe_o56.webp
 │   │   ├── gun_safe_o66.webp
 │   │   ├── gun_trust.webp
+│   │   ├── helpinghand_1024.webp
 │   │   ├── helpinghand_1024_smallest.jpg
+│   │   ├── it2lawyer.webp
+│   │   ├── it2lawyer2.webp
 │   │   └── placeholder_1024.webp
 │   ├── js
 │   │   └── site.js
@@ -298,7 +325,8 @@
 │   ├── forms.js
 │   ├── glossary.js
 │   ├── ohlaw.js
+│   ├── scheduling.js
 │   └── strings.js
 └── wrangler.toml
 
-54 directories, 248 files
+57 directories, 273 files

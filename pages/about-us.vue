@@ -130,6 +130,57 @@
       </div>
     </section>
 
+    <!-- Personal Family Lawyer Section -->
+    <section id="pfl" class="pfl-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <img src="/img/PFL_StackedLogo_FullColor.png" alt="Personal Family Lawyer Logo" class="img-fluid mb-4 mb-lg-0" />
+          </div>
+          <div class="col-lg-7">
+            <div class="section-content p-4">
+              <h2 class="section-title position-relative pb-3">The Perfect Partnership</h2>
+              <p>I'm excited to announce that I've joined the Personal Family Lawyer® network, which perfectly aligns with the approach to legal services we've always believed in.</p>
+              <p>This partnership strengthens our commitment to serving families at every stage of life. The PFL philosophy mirrors our own: transparent fixed fees, personalized service, and going beyond document preparation to create meaningful legal solutions that truly protect what matters most.</p>
+              <div class="callout p-3 bg-primary text-white mt-3 rounded">
+                <p class="mb-0"><strong>The PFL Promise:</strong></p>
+                <p class="ps-lg-3"><i>Planning that works to keep your family out of court and out of conflict while protecting everything you care about from predators and the government - keeping it all in your chosen family's hands.</i></p>
+              </div>
+              <p class="mt-3">While we've always aimed to make legal services affordable and accessible to everyone—from <span class="fst-italic">the outhouse to the penthouse</span>—the PFL system has equiped us with additional systems and processes to deliver even more value to the families we serve.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <h5 class="text-center fst-italic fw-bold">The Personal Family Lawyer approach reinforces our existing commitments while adding these valuable dimensions:</h5>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <div class="feature-box text-center p-3 h-100">
+              <i class="bi bi-calendar-check text-primary fs-1 mb-3"></i>
+              <h4>3-Meeting Process</h4>
+              <p>A structured approach that ensures your planning gets done right and nothing falls through the cracks—complementing our commitment to thoroughness and personalized service.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box text-center p-3 h-100">
+              <i class="bi bi-shield-check text-primary fs-1 mb-3"></i>
+              <h4>Proven Systems</h4>
+              <p>Access to battle-tested estate planning systems that enhance our ability to serve you—aligning perfectly with our goal of delivering high-value experiences to all families.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box text-center p-3 h-100">
+              <i class="bi bi-arrow-repeat text-primary fs-1 mb-3"></i>
+              <h4>3-Year Review Process</h4>
+              <p>Regular plan reviews ensure your plan stays up-to-date as your life changes—because we believe legal planning should evolve with your family's journey.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Our Unique Approach Section (with cards) -->
     <section class="unique-approach-section py-5 bg-light">
       <div class="container">
@@ -224,6 +275,8 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials-section py-5 bg-light">
+      <TestimonialCarousel />
+      <!--
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8 offset-lg-2 text-center">
@@ -257,6 +310,7 @@
           </div>
         </div>
       </div>
+      -->
     </section>
 
     <!-- Final CTA Section -->
@@ -279,6 +333,8 @@
 </template>
 
 <script setup>
+import TestimonialCarousel from '~/components/TestimonialCarousel.vue'
+
 // You can add any necessary imports and composables here
 </script>
 
@@ -351,6 +407,10 @@
     .card-body {
       height: 360px;
     }
+  }
+
+  .pfl-section {
+    background: #d8d8d8;
   }
 
   // Testimonial cards
