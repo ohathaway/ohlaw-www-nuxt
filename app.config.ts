@@ -1,4 +1,10 @@
 export default defineAppConfig({
+  contactEmail: 'contact@ohlawcolorado.com',
+  phoneNumbers: {
+    voice: '9708183052',
+    sms: '9708185559',
+    fax: '9703607028'
+  },
   schedulingLinks: {
     checkIn: 'https://booking.ohlawcolorado.com/check-in',
     estatePlanCheckup: 'https://booking.ohlawcolorado.com/ll-plan-checkup',

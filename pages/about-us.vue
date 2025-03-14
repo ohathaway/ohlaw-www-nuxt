@@ -33,8 +33,8 @@
           </div>
           <div class="col-md-6 order-md-1">
             <div class="section-content p-4">
-              <h2 class="section-title position-relative pb-3">Family First</h2>
-              <p>Like most families, it has been a long and winding road to where we are today. We were married in 2000, just after the Y2k bug blew up (or maybe it didn't) all the world's computers. I was running IT departments for hospitals, and Michelle had just finished college.</p>
+              <h2 class="section-title position-relative text-center pb-3">Family First</h2>
+              <p>Like most families, it has been a long and winding road to where we are today. We were married in 2000, just after the <a href="https://en.wikipedia.org/wiki/Year_2000_problem" title="Y2k Problem" target="_blank">Y2k bug</a> blew up (or maybe it didn't) all the world's computers. I was running IT departments for hospitals, and Michelle had just finished college.</p>
               <p>Not long after, with a baby on the way, we both decided that it was important for us that someone, in our case Michelle, be a full-time parent for our kids. That decision and the values we hold that led to it have been central to every decision we've made together ever since.</p>
             </div>
           </div>
@@ -71,7 +71,7 @@
           </div>
           <div class="col-md-6 d-flex align-items-center">
             <div class="section-content p-4">
-              <h2 class="section-title position-relative pb-3">Lawyer Second</h2>
+              <h2 class="section-title position-relative text-center pb-3">Lawyer Second</h2>
               <p>Then my work told me I had to implement this new law called HIPAA. Believe it or not, this led to a new love affair... the law.</p>
               <p>You see, I had always been fascinated with The Way Things Work (not just the book, but for real too). It turns out that one way of being a lawyer is to know how things work and use that knowledge to serve your community.</p>
               <p>So off to law school in Denver while starting our first business selling Jeep accessories online, working as a full-time tech consultant helping spend $16 million in federal grant money, and still driving the kids (three now) to school every morning.</p>
@@ -87,7 +87,7 @@
         <div class="row">
           <div class="col-md-8">
             <div class="section-content p-4">
-              <h2 class="section-title position-relative pb-3">Building Businesses</h2>
+              <h2 class="section-title position-relative text-center pb-3">Building Businesses</h2>
               <p>Shortly after passing the bar, one of my clients asked me to join their small, family-owned private equity firm. They bought and operated technology-forward healthcare service companies, and it seemed like a natural fit.</p>
               <p>Together, we bought and built companies until I realized that the private equity game isn't in my blood the way building around passion is. It was also time to stop driving 90 miles to work every day.</p>
               <p>Meanwhile, Michelle had started a part-time job, mostly as something to do, and it wasn't working out very well. So we decided to start a business where the two of us could build something together.</p>
@@ -118,9 +118,9 @@
           </div>
           <div class="col-lg-6 order-lg-1">
             <div class="section-content p-4">
-              <h2 class="section-title position-relative pb-3">Putting it All Together</h2>
+              <h2 class="section-title position-relative text-center pb-3">Putting it All Together</h2>
               <p>When it comes to family-owned businesses, it's super important not to forget the "family" part. That means our business needed to be able to serve families as well as businesses.</p>
-              <p>Families come in all sorts of configurations, colors, backgrounds, and economic conditions. As people who value serving others, Michelle and I wanted to be able to provide a high-value experience to any family, not just upper-middle-class or wealthy families. And we didn't want to help take them apart as so-called a "family lawyer."</p>
+              <p>Families come in all sorts of configurations, colors, backgrounds, and economic conditions. As people who value serving others, Michelle and I wanted to be able to provide a high-value experience to any family, not just upper-middle-class or wealthy families. And we didn't want to help take them apart as a so-called "family lawyer."</p>
               <p class="callout p-3 bg-warning mt-3 rounded">
                 <strong>We aim to be able to meaningfully serve any family. I like to say, "we can get you from the outhouse to the penthouse."<a href="#sayings">*</a></strong>
               </p>
@@ -139,7 +139,7 @@
           </div>
           <div class="col-lg-7">
             <div class="section-content p-4">
-              <h2 class="section-title position-relative pb-3">The Perfect Partnership</h2>
+              <h2 class="section-title position-relative text-center pb-3">The Perfect Partnership</h2>
               <p>I'm excited to announce that I've joined the Personal Family Lawyer® network, which perfectly aligns with the approach to legal services we've always believed in.</p>
               <p>This partnership strengthens our commitment to serving families at every stage of life. The PFL philosophy mirrors our own: transparent fixed fees, personalized service, and going beyond document preparation to create meaningful legal solutions that truly protect what matters most.</p>
               <div class="callout p-3 bg-primary text-white mt-3 rounded">

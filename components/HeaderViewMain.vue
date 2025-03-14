@@ -50,50 +50,13 @@
             Client Login
           </a>
         </li>
-        <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              href="#"
+        <li class="nav-item">
+            <NuxtLink
+              class="nav-link"
+              to="/contact-us"
             >
                 Contact Us
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a
-                  class=dropdown-item
-                  href="mailto:contact@ohlawcolorado.com"
-                >
-                  <font-awesome-icon icon="fas fa-at"></font-awesome-icon>
-                  &nbsp;&nbsp;&nbsp;
-                  Email
-                </a>
-              </li>
-              <li>
-                <a
-                  class=dropdown-item
-                  href="tel:+19708183052"
-                >
-                  <font-awesome-icon icon="fas fa-phone"></font-awesome-icon>
-                  &nbsp;&nbsp;&nbsp;
-                  Phone
-                </a>
-              </li>
-              <li>
-                <a
-                  class=dropdown-item
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#bookingModal"
-                >
-                  <font-awesome-icon icon="far fa-calendar-days"></font-awesome-icon>
-                  &nbsp;&nbsp;&nbsp;
-                  In Person
-                </a>
-              </li>
-            </ul>
+            </NuxtLink>
           </li>
           <li class="nav-item">
             <NuxtLink class="nav-link" to="/blog">Learning Resources</NuxtLink>

@@ -64,7 +64,7 @@ strong {
   width: 400px;
 }
 
-main.main {
+main, .main {
   position: relative;
   top: 80px;
 }
@@ -78,6 +78,8 @@ section {
   padding-bottom: 50px;
 }
 
+.text-primary { color: #003399 !important; }
+
 .card-hover-shadow {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 8px;
@@ -90,7 +92,10 @@ section {
   }
 }
 
-.card-body .bi { color: #8A716A !important; }
+.card-body {
+  .bi, .svg-inline--fa { color: #8A716A !important; }
+}
+
 .btn-outline-primary {
   color: #003399 !important;
   &:hover {
