@@ -1,5 +1,4 @@
 // utils/scheduling.js
-
 /**
  * Opens a scheduling link in a new tab
  * @param {string} type - The type of scheduling link to open (matches keys in schedulingLinks config)
@@ -33,7 +32,7 @@ export const useScheduling = () => {
   }
   
   return {
-    openSchedulingLink,
-    getSchedulingUrl
+    getSchedulingUrl,
+    openSchedulingLink
   }
 }
