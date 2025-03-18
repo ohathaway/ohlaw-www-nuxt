@@ -10,7 +10,7 @@
     >
       <button 
         class="btn btn-primary cta-button" 
-        @click="openBookingModal"
+        @click="handleButtonClick"
       >
         <i class="bi bi-calendar-check me-2"></i>
         <span v-if="!isMobile">Schedule a Consultation</span>
@@ -52,6 +52,8 @@ const isMobile = ref(false)
 const position = ref({ ...props.initialPosition })
 const startPos = ref({ x: 0, y: 0 })
 const ctaElement = ref(null)
+const wasMoved = ref(false)
+const dragStartTime = ref(0)
 
 // Computed style for positioning
 const ctaStyle = computed(() => {
@@ -70,6 +72,20 @@ const checkMobile = () => {
 const handleScroll = () => {
   if (isDismissed.value) return
   isVisible.value = window.scrollY > props.scrollThreshold
+}
+
+// Handle button click - only open the modal if not coming from a drag operation
+const handleButtonClick = (event) => {
+  // Check if this click follows a drag operation
+  if (isDragging.value || wasMoved.value) {
+    // Prevent the click from opening the modal
+    event.preventDefault()
+    event.stopPropagation()
+    return
+  }
+
+  // If not from a drag operation, open the booking modal
+  openBookingModal()
 }
 
 // Open the booking modal
@@ -103,6 +119,8 @@ const startDrag = (event) => {
   const clientY = event.touches ? event.touches[0].clientY : event.clientY
   
   isDragging.value = true
+  wasMoved.value = false
+  dragStartTime.value = Date.now()
   
   // Save the starting position
   startPos.value = {
@@ -136,6 +154,12 @@ const handleDrag = (event) => {
   const offsetX = clientX - startPos.value.x
   const offsetY = clientY - startPos.value.y
   
+  // Check if we've moved at least 5px in any direction
+  // This helps differentiate between a click and a drag
+  if (Math.abs(offsetX) > 5 || Math.abs(offsetY) > 5) {
+    wasMoved.value = true
+  }
+  
   // Calculate new left/top positions
   let newLeft = startPos.value.left + offsetX
   let newTop = startPos.value.top + offsetY
@@ -160,7 +184,11 @@ const handleDrag = (event) => {
   event.preventDefault()
 }
 
-const endDrag = () => {
+const endDrag = (event) => {
+  // Calculate drag duration
+  const dragDuration = Date.now() - dragStartTime.value
+  
+  // Clean up drag state
   isDragging.value = false
   
   // Remove event listeners
@@ -169,11 +197,20 @@ const endDrag = () => {
   document.removeEventListener('touchmove', handleDrag)
   document.removeEventListener('touchend', endDrag)
   
-  // Save position to localStorage for persistence
-  try {
-    localStorage.setItem('floatingCtaPosition', JSON.stringify(position.value))
-  } catch (e) {
-    console.warn('Unable to store CTA position in local storage', e)
+  // Save position to localStorage if the component was actually moved
+  if (wasMoved.value) {
+    try {
+      localStorage.setItem('floatingCtaPosition', JSON.stringify(position.value))
+    } catch (e) {
+      console.warn('Unable to store CTA position in local storage', e)
+    }
+    
+    // Prevent click events from firing after drag
+    if (event && event.type === 'mouseup' && event.target) {
+      // Create and dispatch a custom event to cancel the upcoming click
+      const preventClickEvent = new CustomEvent('preventClick', { bubbles: true })
+      event.target.dispatchEvent(preventClickEvent)
+    }
   }
 }
 
@@ -181,6 +218,15 @@ const endDrag = () => {
 onMounted(() => {
   // Check for saved position
   try {
+    // Listen for the custom preventClick event
+    ctaElement.value?.addEventListener('preventClick', (e) => {
+      wasMoved.value = true
+      // Reset the flag after a short delay to allow normal clicks again
+      setTimeout(() => {
+        wasMoved.value = false
+      }, 300)
+    })
+
     const savedPosition = localStorage.getItem('floatingCtaPosition')
     if (savedPosition) {
       position.value = JSON.parse(savedPosition)
