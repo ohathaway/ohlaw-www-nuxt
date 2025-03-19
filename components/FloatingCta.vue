@@ -287,7 +287,7 @@ onUnmounted(() => {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     
     &:hover {
-      background-color: darken(#003399, 10%);
+      background-color: color-mix(in srgb, #003399, black 10%);
     }
     
     i {
