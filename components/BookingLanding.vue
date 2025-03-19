@@ -15,7 +15,7 @@
           <div class="col-md-8 offset-md-2 text-center">
             <h2>Your Appointment is Confirmed</h2>
             <p class="lead">Thank you for scheduling with OH Law.</p>
-            <p>You should receive a confirmation email shortly with details about your<br />{{ appointmentTypeLabel }} appointment.</p>
+            <p>If you scheduled your appointment from our website, you should receive a confirmation email shortly with details about your<br />{{ appointmentTypeLabel }} appointment.</p>
           </div>
         </div>
         <div v-if="appointmentType === 'estate-plan-education'" class="row">
