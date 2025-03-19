@@ -410,7 +410,7 @@ onMounted(() => {
 
   // CTA section
   .cta-section {
-    background-image: linear-gradient(135deg, var(--bs-primary) 0%, darken(#003399, 15%) 100%);
+    background-image: linear-gradient(135deg, var(--bs-primary) 0%, #00245c 100%);
   }
 }
 

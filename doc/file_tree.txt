@@ -85,6 +85,7 @@
 │   ├── DifferentSection.vue
 │   ├── EstatePlanningSection.vue
 │   ├── FaqAccordion.vue
+│   ├── FloatingCta.vue
 │   ├── FooterView.vue
 │   ├── HeaderView.vue
 │   ├── HeaderViewBlog.vue
@@ -93,6 +94,7 @@
 │   ├── HeroSection.vue
 │   ├── LinesOfBusinessSection.vue
 │   ├── NonprofitsSection.vue
+│   ├── SchedulingCards.vue
 │   ├── SignupForm.vue
 │   ├── SmallBusinessSection.vue
 │   ├── TestimonialCarousel.vue
@@ -162,6 +164,7 @@
 │       ├── index.md
 │       └── owen.md
 ├── doc
+│   ├── Bankruptcy Exemptions - Colorado.mhtml
 │   ├── Breaking changes _ Strapi 5 Documentation.pdf
 │   ├── Strapi 5 has a new, flattened response format for API calls _ Strapi 5 Documentation.pdf
 │   ├── The GraphQL API has been updated _ Strapi 5 Documentation.pdf
@@ -191,6 +194,7 @@
 │   │   └── tags
 │   │       ├── [tag].vue
 │   │       └── index.vue
+│   ├── contact-us.vue
 │   ├── contact.vue
 │   ├── glossary
 │   │   ├── [...term].vue
@@ -272,6 +276,7 @@
 │   ├── img
 │   │   ├── 3genfamily1.webp
 │   │   ├── IMG_5943.webp
+│   │   ├── PFL_StackedLogo_FullColor.png
 │   │   ├── Search_GSA.original.png
 │   │   ├── affordable_and_effective_top_only.webp
 │   │   ├── business1_1024.webp
@@ -329,4 +334,4 @@
 │   └── strings.js
 └── wrangler.toml
 
-57 directories, 273 files
+57 directories, 278 files

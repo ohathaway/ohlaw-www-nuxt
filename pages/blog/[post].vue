@@ -10,7 +10,26 @@
       <h1 class="pb-5">{{ post.attributes.Title }}</h1>
     </div>
   </div>
-  <article class="row p-5 post-display">
+  <div class="row m-0 p-0">
+    <div class="col-12 col-md-9 offset-md-3">
+    <ul class="tags">
+      <li
+        v-for="tag in post.attributes.tags.data"
+        class="tag me-3"
+      >
+        <span
+          class="badge rounded-pill text-bg-primary text-light">
+          <NuxtLink
+            :to="`/blog/tags/${tag.attributes.slug}`"
+          >
+            {{ tag.attributes.Name }}
+          </NuxtLink>
+        </span>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <article class="row px-5 pb-5 post-display">
     <div class="col-3 d-none d-lg-block">
       <div class="sticky-sidebar">
         <BlogTOC :content="post.attributes.Content" />
@@ -107,9 +126,11 @@ if (isEmpty(post)) {
 </script>
 
 <style lang="scss">
-.rich-text {
-  // background: #d8d8d8;
-}
+ul.tags { list-style-type: none; }
+li.tag { 
+  display: inline;
+  a { color: #f8f8f8;}
+} 
 
 @media print {
   .post-list-wrapper {

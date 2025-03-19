@@ -32,7 +32,5 @@
 :target:before {
     content: "";
     display: block;
-    height: 100px;
-    margin: -100px 0 0;
 }
 </style>
