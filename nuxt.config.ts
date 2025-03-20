@@ -144,7 +144,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-gtag',
     'nuxt-lodash',
-    'nuxt-vuefire',
+    // 'nuxt-vuefire',
     '@vueuse/nuxt',
     '@formkit/nuxt',
     '@pinia/nuxt',
@@ -161,9 +161,10 @@ export default defineNuxtConfig({
         '/blog/tags/**',
         '/blog/categories/**',
         /^\/blog$/
-      ]
+      ],
+      routes: ['/']
     },
-    // preset: 'cloudflare-pages'
+    preset: 'cloudflare-pages'
   },
 
   pages: true,
@@ -193,6 +194,7 @@ export default defineNuxtConfig({
     },
     optimizeDeps: { include: ['bootstrap', 'vue', 'vuefire'] }
   },
+  /*
   vuefire: {
     config: {
       apiKey: process.env.VITE_FIREBASE_KEY,
@@ -203,6 +205,7 @@ export default defineNuxtConfig({
     },
     // emulators: process.env.NODE_ENV !== 'production'
   },
+  */
 
   compatibilityDate: '2024-09-25'
 })
