@@ -335,7 +335,9 @@
 <script setup>
 import TestimonialCarousel from '~/components/TestimonialCarousel.vue'
 
-// You can add any necessary imports and composables here
+useHead(useSeo({
+  title: 'About The Law Offices of Owen Hathaway | A Family Serving Families'
+}))
 </script>
 
 <style scoped lang="scss">

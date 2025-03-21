@@ -1,6 +1,5 @@
 <template>
-  <div class="main">
-
+  <main>
     <!-- Hero Section -->
     <section class="hero bg-primary text-center py-5">
       <div class="container">
@@ -127,21 +126,21 @@
         <button class="btn btn-primary btn-lg" @click="openNewWindow('https://booking.ohlawcolorado.com/new-client')">Talk Guns & Law: Free Consultation</button>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script setup>
 import { useHead } from '@vueuse/head'
 
-useHead({
-  title: 'OHLaw Gun Trust Services - Protect Your Firearms Legacy',
+useHead(useSeo({
+  title: 'Gun Trust Services - Protect Your Firearms Legacy',
   meta: [
     {
       name: 'description',
       content: 'Protect your firearms legacy with a legally sound gun trust. Learn what a gun trust is, why you need one, and why you should choose our expert services.'
     }
   ]
-})
+}))
 
 const gunTrustTimeline = [
   {

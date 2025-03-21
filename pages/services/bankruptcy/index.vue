@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main>
     <!-- Hero Section -->
     <ServicesHero
       title="Bankruptcy Relief<br />That Gives You a Fresh Start"
@@ -68,15 +68,15 @@
 const { schedulingLinks } = useAppConfig()
 
 // SEO metadata
-useHead({
-  title: 'Bankruptcy Services | OH Law',
+useHead(useSeo({
+  title: 'Bankruptcy Services',
   meta: [
     {
       name: 'description',
       content: `Explore our compassionate bankruptcy services. We help individuals and families overcome debt, stop creditor harassment, and regain financial control through Chapter 7 and Chapter 13 bankruptcy.`
     }
   ]
-})
+}))
 
 // Introduction section features
 const introFeatures = [

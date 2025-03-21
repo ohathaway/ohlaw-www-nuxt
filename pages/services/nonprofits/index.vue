@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main>
     <!-- Hero Section -->
     <ServicesHero
       title="Nonprofit Services<br />That Build Sustainability"
@@ -68,15 +68,15 @@
 const { schedulingLinks } = useAppConfig()
 
 // SEO metadata
-useHead({
-  title: 'Nonprofit Legal Services | OH Law',
+useHead(useSeo({
+  title: 'Nonprofit Legal Services',
   meta: [
     {
       name: 'description',
       content: 'Comprehensive legal services for nonprofits. We help you establish, maintain, and grow your nonprofit organization with a focus on long-term sustainability and mission fulfillment.'
     }
   ]
-})
+}))
 
 // Introduction section features
 const introFeatures = [
