@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main>
     <!-- Hero Section -->
     <ServicesHero
       title="Small Business Legal Services<br />That Make Sense"
@@ -60,15 +60,15 @@
 const { schedulingLinks } = useAppConfig()
 
 // SEO metadata
-useHead({
-  title: `Small Business Legal Services | OH Law`,
+useHead(useSeo({
+  title: `Small Business Legal Services`,
   meta: [
     {
       name: 'description',
       content: `Legal services for small businesses in Colorado. Entity formation, contracts, employment matters, and ongoing legal support for entrepreneurs.`
     }
   ]
-})
+}))
 
 // Introduction section features
 const businessFeatures = [

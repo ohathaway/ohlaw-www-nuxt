@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main>
     <!-- Hero Section -->
     <ServicesHero
       title="Estate Planning That Works<br />For Real People"
@@ -68,15 +68,23 @@
 const { schedulingLinks: { newClient: link } } = useAppConfig()
 
 // SEO metadata
-useHead({
-  title: 'About Our Estate Planning Services | OH Law',
+useHead(useSeo({
+  title: 'Estate Planning That Works For Real People | The Law Offices of Owen Hathaway',
   meta: [
-    {
-      name: 'description',
-      content: 'Learn about our comprehensive estate planning services. We help you protect your legacy, provide for your loved ones, and gain peace of mind through customized estate plans.'
-    }
+    { name: 'keywords', content: 'estate planning Colorado, wills and trusts Fort Collins, revocable living trust, estate lawyer, guardianship planning, healthcare directive, power of attorney, probate avoidance, asset protection' },
+    { property: 'og:title', content: 'Estate Planning That Works For Real People | The Law Offices of Owen Hathaway' },
+    { property: 'og:description', content: 'Don\'t let your legacy fall into legal limbo. Our practical estate planning solutions protect what matters most to you without the legal mumbo-jumbo. Free consultation available.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://ohlawcolorado.com/estate-planning' },
+    { property: 'og:image', content: 'https://ohlawcolorado.com/files/ohlaw-logo-trans-450.D38LfYoB.svg' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Estate Planning That Works For Real People | The Law Offices of Owen Hathaway' },
+    { name: 'twitter:description', content: 'Don\'t let your legacy fall into legal limbo. Our practical estate planning solutions protect what matters most to you without the legal mumbo-jumbo. Free consultation available.' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://ohlawcolorado.com/estate-planning' }
   ]
-})
+}))
 
 // Introduction section features
 const introFeatures = [
@@ -267,11 +275,11 @@ const tlContent = [
 const faqItems = [
   {
     question: 'How much does estate planning cost?',
-    answer: `Our estate planning services range from $600 for essential documents to $7,000 for complex tax-planning trust arrangements. We offer several tiered options and add-on services you can <a href="/services/estate-planning/pricing">learn more about here</a>.`
+    answer: `Our estate planning services range from $600 for essential documents only to $7,000 for complex tax-planning trust arrangements. We offer several tiered options and add-on services you can <a href="/services/estate-planning/pricing">learn more about here</a>. One thing we always promise, you'll know exactly what you're going to pay and exactly what we'll deliver.`
   },
   {
     question: 'Do I need a trust or is a will sufficient?',
-    answer: `Whether you need a trust depends on your specific circumstances, goals, and assets. A will may be sufficient if you have a relatively simple estate and are comfortable with the probate process. Trusts offer benefits like probate avoidance, privacy, and more control over asset distribution. One important difference for married couples: you cannot create a joint will, but we can create a joint trust. During your consultation, we'll help you understand which tools are most appropriate for your situation.`
+    answer: `Whether you need a trust depends on your specific circumstances, goals, and assets. A will may be sufficient if you have a relatively simple estate, can effectively avoid probate through beneficiary designations, or are comfortable with your family navigating the probate process. Trusts offer benefits like default probate avoidance, privacy, and more control over asset distribution. One important difference for married couples: you cannot create a joint will, but we can create a joint trust. During your consultation, we'll help you understand which tools are most appropriate for your situation.`
   },
   {
     question: 'How long does the estate planning process take?',
@@ -279,11 +287,11 @@ const faqItems = [
   },
   {
     question: 'What happens if I need to update my estate plan in the future?',
-    answer: `Life changes, and your estate plan should evolve accordingly. We recommend reviewing your estate plan every 3-5 years or after major life events (marriage, divorce, birth of children, significant changes in assets, etc.). As our client, you'll have access to our team for questions and updates. We offer maintenance programs to help ensure your plan remains current and effective.`
+    answer: `Life changes, and your estate plan should evolve accordingly. We recommend reviewing your estate plan at least every 3 years or after major life events (marriage, divorce, birth of children, significant changes in assets, etc.). As our client, you'll have access to our team for questions and updates. We include every 3-year checkups in our fees to help ensure your plan remains current and effective.`
   },
   {
     question: 'What if I own property in multiple states?',
-    answer: `Owning property in multiple states can complicate estate planning. Without proper planning, your heirs might face probate proceedings in each state where you own property. We can help you create a comprehensive plan that addresses multi-state property ownership, potentially using tools like revocable living trusts to avoid multi-state probate issues.`
+    answer: `Owning property in multiple states can complicate estate planning. Without proper planning, your heirs might face probate proceedings in each state where you own property. The plans we design create a comprehensive roadmap that addresses multi-state property ownership, potentially using tools like revocable living trusts to avoid multi-state probate issues. We also offer an option to help you implment the plan by making sure all the correct documents are filed with all the correct entities to make your plan effective.`
   },
   {
     question: 'How do I ensure my minor children are protected?',

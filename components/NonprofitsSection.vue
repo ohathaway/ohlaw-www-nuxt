@@ -12,13 +12,12 @@
             set itself up for long-term, mission-driven sustainability.
           </p>
           <!--p><a class="btn btn-outline-primary learn-more nonprofit" data-toggle="collapse" data-target=".service-description.nonprofit">Learn more</a></p-->
-          <button
+          <a
             class="btn btn-outline-primary"
-            data-bs-toggle="collapse"
-            data-bs-target="#service-description-nonprofit"
+            href="/services/nonprofits"
           >
             Learn more
-          </button>
+          </a>
         </div>
       </div>
       <div class="col-lg m-0 service-img">

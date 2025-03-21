@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main>
     <!-- Hero Section -->
     <section class="hero bg-primary text-center py-5">
       <div class="container">
@@ -335,7 +335,7 @@ definePageMeta({
 const { openSchedulingLink, getSchedulingUrl } = useScheduling()
 
 // SEO metadata
-useHead({
+useHead(useSeo({
   title: 'Estate Planning Pricing | OH Law',
   meta: [
     {
@@ -343,7 +343,7 @@ useHead({
       content: 'Transparent pricing for estate planning services. Choose from will-based plans, trust plans, or comprehensive wealth plans, all designed to protect your legacy.'
     }
   ]
-})
+}))
 </script>
 
 <style scoped lang="scss">

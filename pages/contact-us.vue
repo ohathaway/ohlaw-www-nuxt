@@ -1,5 +1,5 @@
 <template>
-  <main class="contact-us-container">
+  <div class="contact-us-container">
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
@@ -152,16 +152,36 @@
         </div>
       </div>
     </section>
-  </main>
+  </div>
 </template>
 
 <script setup>
 const { contactEmail, phoneNumbers } = useAppConfig()
 
+// SEO metadata
+useHead(useSeo({
+  title: 'Contact The Law Offices of Owen Hathaway | Multiple Ways to Reach Us',
+  meta: [
+    { name: 'description', content: 'Reach our team the most convenient way for you. Schedule a consultation, visit our offices, call, text, or email us. There\'s no wrong door when you need our help.' },
+    { property: 'og:title', content: 'Contact The Law Offices of Owen Hathaway | Multiple Ways to Reach Us' },
+    { property: 'og:description', content: 'Reach our team the most convenient way for you. Schedule a consultation, visit our offices, call, text, or email us. There\'s no wrong door when you need legal help.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://ohlawcolorado.com/contact-us' },
+    { name: 'twitter:title', content: 'Contact The Law Offices of Owen Hathaway | Multiple Ways to Reach Us' },
+    { name: 'twitter:description', content: 'Reach our team the most convenient way for you. Schedule a consultation, visit our offices, call, text, or email us. There\'s no wrong door when you need legal help.' },
+    { name: 'twitter:image', content: 'https://ohlawcolorado.com/files/ohlaw-logo-trans-450.D38LfYoB.svg' },
+    { name: 'twitter:image:alt', content: 'The Law Offices of Owen Hathaway logo' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://ohlawcolorado.com/contact-us' }
+  ]
+}))
+
 // Sticky header controls
 const isHeadingSticky = ref(false)
 let observer = null
 
+/*
 onMounted(() => {
   if (process.client) {
     nextTick(() => {
@@ -229,6 +249,7 @@ onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
   }
 })
+*/
 
 // Open the booking modal
 const openBookingModal = () => {

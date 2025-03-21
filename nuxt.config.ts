@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { seoConfig } from './seo.config'
 
 const getPostRoutes = async () => {
   if (!process.env.STRAPI_URL) {
