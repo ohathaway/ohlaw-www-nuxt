@@ -141,19 +141,9 @@ export default defineNuxtConfig({
     upperAfterPrefix: false
   },
 
-  modules: [
-    'nuxt-icon',
-    'nuxt-gtag',
-    'nuxt-lodash',
-    // 'nuxt-vuefire',
-    '@vueuse/nuxt',
-    '@formkit/nuxt',
-    '@pinia/nuxt',
-    '@nuxtjs/apollo',
-    '@nuxt/content',
-    '@nuxt/image',
-    // '@nuxtjs/strapi'
-  ],
+  modules: ['nuxt-icon', 'nuxt-gtag', // 'nuxt-vuefire',
+  'nuxt-lodash', '@vueuse/nuxt', '@formkit/nuxt', '@pinia/nuxt', '@nuxtjs/apollo', // '@nuxtjs/strapi'
+  '@nuxt/content', '@nuxt/image', '@nuxtjs/sitemap', '@nuxtjs/robots'],
 
   nitro: {
     prerender: {
@@ -169,6 +159,25 @@ export default defineNuxtConfig({
   },
 
   pages: true,
+
+  robots: {
+    disallow: [
+      '/contact',
+      '/glossary',
+      '/services',
+      '/blog/categories',
+      '/blog/tags',
+      '/landings/booking',
+      '/services/bankruptcy/about-ch7',
+      '/services/estate-planning/GunTrusts'
+    ],
+    allow: [
+      '/services/bankruptcy',
+      '/services/estate-planning',
+      '/services/nonprofits',
+      '/services/small-business'
+    ]
+  },
 
   runtimeConfig: {
     cloudflare: {
