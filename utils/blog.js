@@ -82,6 +82,7 @@ const singlePostQuery = slug => {
           Content,
           CTA,
           publishDate,
+          updatedAt,
           Title,
           Snippet,
           category {
