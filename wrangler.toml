@@ -4,7 +4,7 @@ compatibility_date = "2024-12-07"
 compatibility_flags = [ "nodejs_compat" ]
 
 [env.production.vars]
-NUXT_SITE_URL = https://ohlawcolorado.com
+NUXT_SITE_URL = "https://ohlawcolorado.com"
 VITE_OHL_EMAIL_URL = "https://us-west3-www-prod-389819.cloudfunctions.net/nodejs-http-ohLawContactFormFunction"
 VITE_CONTACT_ADDR = "contact@ohlawcolorado.com"
 VITE_CONTACT_NAME = "OHLaw"
