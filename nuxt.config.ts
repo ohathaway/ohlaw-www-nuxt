@@ -8,17 +8,48 @@ const getPostRoutes = async () => {
   }
 
   try {
-    const response = await axios.get(
-      `${process.env.STRAPI_URL}/api/posts?fields[0]=slug`,
+    const pageSize = 25
+    const initialResponse = await axios.get(
+      `${process.env.STRAPI_URL}/api/posts?fields[0]=slug&pagination[pageSize]=${pageSize}`,
       {
         headers: {
           'Strapi-Response-Format': 'v4'
         }
       }
     )
-    console.info('Strapi pre-render post list: ', response.data)
+    const { pagination } = initialResponse.data.meta;
+    const { pageCount, total } = pagination;
     
-    return response?.data?.data?.map(post => 
+    
+    // Create an array of all page numbers we need to fetch
+    const pageNumbers = Array.from({ length: pageCount }, (_, i) => i + 1)
+      .filter(page => page > 1); // Filter out page 1 which we already have
+
+    // Define a function to fetch a specific page
+    const fetchPage = async (page) => {
+      const response = await axios.get(
+        `${process.env.STRAPI_URL}/api/posts?fields[0]=slug&pagination[page]=${page}&pagination[pageSize]=${pageSize}`,
+        {
+          headers: {
+            'Strapi-Response-Format': 'v4'
+          }
+        }
+      )
+      return response.data.data;
+    }
+
+    // Initial posts from first page
+    let allPosts = [...initialResponse.data.data]
+
+    // Fetch additional pages if needed
+    if (pageNumbers.length > 0) {
+      const additionalPosts = await Promise.all(pageNumbers.map(fetchPage));
+      allPosts = allPosts.concat(additionalPosts.flat());
+    }
+
+    console.info('Strapi pre-render post list: ', allPosts)
+    
+    return allPosts.map(post => 
       `/blog/${post?.slug ?? post?.attributes?.slug}`
     ).filter(Boolean);
     
@@ -121,7 +152,7 @@ export default defineNuxtConfig({
     async 'nitro:config'(nitroConfig) {
       // fetch the routes from our function above
       const slugs = await getPostRoutes()
-      console.debug('slugs: ', slugs)
+      console.info('slugs: ', slugs)
       // add the routes to the nitro config
       nitroConfig.prerender.routes.push(...slugs)
     }
@@ -141,19 +172,9 @@ export default defineNuxtConfig({
     upperAfterPrefix: false
   },
 
-  modules: [
-    'nuxt-icon',
-    'nuxt-gtag',
-    'nuxt-lodash',
-    // 'nuxt-vuefire',
-    '@vueuse/nuxt',
-    '@formkit/nuxt',
-    '@pinia/nuxt',
-    '@nuxtjs/apollo',
-    '@nuxt/content',
-    '@nuxt/image',
-    // '@nuxtjs/strapi'
-  ],
+  modules: ['nuxt-icon', 'nuxt-gtag', // 'nuxt-vuefire',
+  'nuxt-lodash', '@vueuse/nuxt', '@formkit/nuxt', '@pinia/nuxt', '@nuxtjs/apollo', // '@nuxtjs/strapi'
+  '@nuxt/content', '@nuxt/image', '@nuxtjs/sitemap', '@nuxtjs/robots'],
 
   nitro: {
     prerender: {
@@ -169,6 +190,25 @@ export default defineNuxtConfig({
   },
 
   pages: true,
+
+  robots: {
+    disallow: [
+      '/contact',
+      '/glossary',
+      '/services',
+      '/blog/categories',
+      '/blog/tags',
+      '/landings/booking',
+      '/services/bankruptcy/about-ch7',
+      '/services/estate-planning/GunTrusts'
+    ],
+    allow: [
+      '/services/bankruptcy',
+      '/services/estate-planning',
+      '/services/nonprofits',
+      '/services/small-business'
+    ]
+  },
 
   runtimeConfig: {
     cloudflare: {
