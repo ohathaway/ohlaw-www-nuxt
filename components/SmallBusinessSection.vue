@@ -2,7 +2,7 @@
   <div>
     <div class="row no-gutters" id="service-small-business">
       <div class="col-lg m-0 service-img">
-        <img src="/img/business1_1024_smallest.jpg" />
+        <img src="/img/business1_1024_smallest.jpg" alt="a small group meeting around a table" />
       </div>
       <div class="col-lg m-0 service-text service-text-right">
         <div class="p-3 py-lg-5 px-lg-4">
@@ -19,7 +19,7 @@
             class="btn btn-outline-primary"
             href="/services/small-business"
           >
-            Learn more
+            Learn more about our Small Business services
           </a>
         </div>
       </div>

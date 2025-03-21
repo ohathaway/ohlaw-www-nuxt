@@ -17,12 +17,12 @@
             class="btn btn-outline-primary"
             href="/services/bankruptcy"
           >
-            Learn more
+            Learn more about our Bankruptcy Services
           </a>
         </div>
       </div>
       <div class="col-lg service-img">
-        <img src="/img/helpinghand_1024_smallest.jpg" />
+        <img src="/img/helpinghand_1024_smallest.jpg"  alt="a helping hand pulling another out of a pile of bills" />
       </div>
     </div>
     <div

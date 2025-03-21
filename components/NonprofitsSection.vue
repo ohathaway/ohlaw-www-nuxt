@@ -16,12 +16,12 @@
             class="btn btn-outline-primary"
             href="/services/nonprofits"
           >
-            Learn more
+            Learn more about our services for Nonprofits
           </a>
         </div>
       </div>
       <div class="col-lg m-0 service-img">
-        <img src="/img/dotorgtablet_1024_smallest.jpg" />
+        <img src="/img/dotorgtablet_1024_smallest.jpg" alt="a block puzzle spelling 'nonprofit'"/>
       </div>
     </div>
     <div

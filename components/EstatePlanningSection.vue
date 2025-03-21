@@ -2,7 +2,7 @@
   <div>
     <div class="row no-gutters" id="service-estate-planning">
       <div class="col-lg service-img">
-        <img src="/img/estatenotebook_1024_smallest.jpg" />
+        <img src="/img/estatenotebook_1024_smallest.jpg" alt="an estate planning notebook" />
       </div>
       <div class="col-lg service-text service-text-right">
         <div class="p-3 pt-lg-5 px-lg-4">
@@ -19,7 +19,7 @@
             class="btn btn-outline-primary"
             href="/services/estate-planning"
           >
-            Learn more
+            Learn more about our Estate Planning services
           </a>
         </div>
       </div>
