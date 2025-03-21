@@ -7,6 +7,9 @@
     </main>
     <Booking />
   </div>
+  <ClientOnly>
+    <FloatingCta :scroll-threshold="300" />
+  </ClientOnly>
 </template>
 
 <script setup>
