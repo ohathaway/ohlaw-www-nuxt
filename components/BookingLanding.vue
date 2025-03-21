@@ -564,10 +564,6 @@ const pageContent = computed(() => {
 <style scoped lang="scss">
 .btn-primary { background-color: #003399 !important; }
 
-.booking-landing {
-  padding-top: 80px;
-}
-
 .hero {
   background-color: #0056b3;
   color: white;
