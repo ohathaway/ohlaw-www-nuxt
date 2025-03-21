@@ -122,7 +122,7 @@ useHead({
 
 useSeoMeta({
   // will be inferred as the lastmod value in the sitemap
-  articleModifiedTime: post.attributes.publishDate
+  articleModifiedTime: getDateAsPaddedString(post.attributes.updatedAt)
 })
 
 if (isEmpty(post)) {
