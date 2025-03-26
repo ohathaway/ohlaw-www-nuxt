@@ -96,9 +96,9 @@ let {
   }
 } = await useAsyncQuery(categoryPostsQuery(category))
 
-relatedPosts = relatedPosts.filter(relatedPost => {
+relatedPosts = dedupPosts(relatedPosts.filter(relatedPost => {
   return relatedPost.documentId !== post.documentId
-})
+}))
 
 const { href: fullPath  } = useRequestURL()
 
