@@ -158,6 +158,8 @@
 │       ├── PflPromise.vue
 │       ├── Process.vue
 │       └── dstAssumptions.vue
+├── composables
+│   └── useSeo.js
 ├── content
 │   └── about
 │       ├── index.docx
@@ -171,9 +173,6 @@
 │   ├── documentId should be used instead of id in API calls _ Strapi 5 Documentation.pdf
 │   ├── dstRoiCalcs.xlsx
 │   └── file_tree.txt
-├── firebase.json
-├── firestore.indexes.json
-├── firestore.rules
 ├── formkit.config.js
 ├── layouts
 │   ├── blog.vue
@@ -213,10 +212,8 @@
 │       │   └── index.vue
 │       ├── estate-planning
 │       │   ├── GunTrusts.vue
-│       │   ├── LifeAndLegacyPlanningSession.vue
 │       │   ├── gun-trusts
 │       │   │   └── index.vue
-│       │   ├── index-mono.vue
 │       │   ├── index.vue
 │       │   └── pricing.vue
 │       ├── index.vue
@@ -226,11 +223,10 @@
 │           └── index.vue
 ├── plugins
 │   ├── bootstrap.client.js
+│   ├── default-seo.ts
 │   ├── fontawesome.js
-│   ├── smart-table.client.js
 │   └── toast.client.js
 ├── public
-│   ├── 404.html
 │   ├── fonts
 │   │   ├── BenguiatItalic.ttf
 │   │   ├── BenguiatRegular.ttf
@@ -304,7 +300,7 @@
 │   ├── js
 │   │   └── site.js
 │   ├── ohlaw_icon.svg
-│   └── sitemap.xml
+│   └── sitemap.xml.old
 ├── server
 │   ├── api
 │   │   ├── documents
@@ -334,4 +330,4 @@
 │   └── strings.js
 └── wrangler.toml
 
-57 directories, 278 files
+58 directories, 273 files

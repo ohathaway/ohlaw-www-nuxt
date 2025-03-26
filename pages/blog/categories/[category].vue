@@ -18,16 +18,10 @@ console.debug(categoryPostsQuery(toTitleCase(category, '-')))
 let {
   data: {
     value: {
-      categories: {
-        data: [{
-          attributes: {
-            posts: { data: posts }
-          }
-        }]
-      }
+      categories:
+        [{ posts }]
     }
   }
 } = await useAsyncQuery(categoryPostsQuery(toTitleCase(category, '-')))
-
-console.debug(document.getElementById(category)) //.classList.add('active')
+posts = dedupPosts(posts)
 </script>

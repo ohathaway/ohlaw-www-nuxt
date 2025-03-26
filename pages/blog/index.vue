@@ -23,41 +23,31 @@ const {
   data: {
     value: {
       featuredPost: {
-        data: {
-          attributes: {
-            post: { data: featuredPost }
-          }
-        }
+        post: featuredPost 
       }
     }
   }
 } = await useAsyncQuery(featuredPostQuery)
 
-const {
+let {
   data: {
     value: {
       spotlight: {
-        data: {
-          attributes: {
-            posts: {
-              data: spotlightPosts 
-            }
-          }
-        }
+        posts: spotlightPosts 
       }
     }
   }
 } = await useAsyncQuery(spotlightPostsQuery)
+spotlightPosts = dedupPosts(spotlightPosts)
 
-const {
+let {
   data: {
     value: {
-      posts: {
-        data: allPosts
-      }
+      posts: allPosts
     }
   }
 } = await useAsyncQuery(allPostsQuery)
+allPosts = dedupPosts(allPosts)
 </script>
 
 <style scoped>

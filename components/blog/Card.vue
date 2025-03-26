@@ -1,20 +1,20 @@
 <template>
   <div class="card m-3">
-    <a :href="`/blog/${post.attributes.slug}`">
+    <a :href="`/blog/${post.slug}`">
       <img
         class="card-img-top object-fit-cover"
-        :src="getStrapiUrl(post.attributes.Image)"
-        :title="post.attributes.Title"
+        :src="getStrapiUrl(post.Image)"
+        :title="post.Title"
       />
     </a>
     <div class="card-body">
       <span class="fst-italic fs-5">
-        {{ formatDateFull(post.attributes.publishDate) }}
+        {{ formatDateFull(post.publishDate) }}
       </span>
-      <a :href="`/blog/${post.attributes.slug}`">
-        <h3 class="card-title">{{ post.attributes.Title }}</h3>
+      <a :href="`/blog/${post.slug}`">
+        <h3 class="card-title">{{ post.Title }}</h3>
         <p class="card-text">
-          <BlogRichText :block="post.attributes.Snippet" />
+          <BlogRichText :block="post.Snippet" />
         </p>
       </a>
     </div>
