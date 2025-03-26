@@ -18,15 +18,10 @@ const { params: { tag } } = useRoute()
 let {
   data: {
     value: {
-      tags: {
-        data: [{
-          attributes: {
-            posts: { data: posts }
-          }
-        }]
-      }
+      tags:
+        [{ posts }]
     }
   }
 } = await useAsyncQuery(tagPostsQuery(tag))
-console.debug('posts: ', posts)
+posts = dedupPosts(posts)
 </script>

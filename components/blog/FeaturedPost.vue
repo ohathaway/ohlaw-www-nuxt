@@ -1,9 +1,9 @@
 <template>
-  <NuxtLink :to="`/blog/${post.attributes.slug}`">
-    <h1 class="px-5 text-center">{{ post.attributes.Title }}</h1>
+  <NuxtLink :to="`/blog/${post.slug}`">
+    <h1 class="px-5 text-center">{{ post.Title }}</h1>
     <LayoutMediaFocus
       :source="source.split('/')[2]"
-      :title="post.attributes.Title"
+      :title="post.Title"
     />
     <!--
     <LayoutMediaFocus
@@ -16,5 +16,5 @@
 
 <script setup>
 const { post } = defineProps(['post'])
-const { attributes: { Image: { data: { attributes: { url: source } } } } } = post
+const { Image: { url: source } } = post
 </script>
