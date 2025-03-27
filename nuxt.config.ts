@@ -235,6 +235,12 @@ export default defineNuxtConfig({
     },
     optimizeDeps: { include: ['bootstrap', 'vue', 'vuefire'] }
   },
+
+  sitemap: {
+    sources: [
+      'https://strapi.ohlawcolorado.com/api/sitemap/index.xml'
+    ]
+  },
   /*
   vuefire: {
     config: {
