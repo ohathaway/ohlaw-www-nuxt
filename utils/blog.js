@@ -88,6 +88,7 @@ const singlePostQuery = slug => {
         Image {
           name
           caption
+          alternativeText
           url
           previewUrl
           provider
@@ -126,6 +127,8 @@ query Posts {
       Title
       Image {
           name
+          caption
+          alternativeText
           url
           previewUrl
           provider
@@ -173,10 +176,12 @@ query FeaturedPost {
         publishedAt
       }
       Image {
-        documentId
         name
+        caption
+        alternativeText
         url
         previewUrl
+        provider
       }
       tags {
         Name
@@ -202,6 +207,8 @@ query Spotlight {
       publishedAt
       Image {
         name
+        caption
+        alternativeText
         url
         previewUrl
         provider
@@ -227,24 +234,36 @@ const categoryPostsQuery = (category, limit = 3) => {
       pagination: { start: 0, limit: ${limit} },
       filters: { Name: { eq: "${category}" } }
     ) {
-      posts (sort: "publishDate:DESC") {
+      hero
+      faq {
+          question
+          answer
+      },
+      Image {
+        name
+        alternativeText
+        caption
+        url
+        previewUrl
+        provider
+      },
+      posts(sort: "publishDate:DESC") {
         documentId
         Snippet
         Title
         slug
         publishDate
         tags {
-            Name
-            slug
-            documentId
+          Name
+          slug
         }
         Image {
-            name
-            caption
-            alternativeText
-            url
-            previewUrl
-            provider
+          name
+          caption
+          alternativeText
+          url
+          previewUrl
+          provider
         }
       }
     }
@@ -272,6 +291,7 @@ const tagPostsQuery = (tag, limit = 3) => {
         Title
         Image {
           name
+          caption
           alternativeText
           url
           previewUrl
