@@ -36,7 +36,9 @@
         <h2 class="text-center mb-4">
           {{ toTitleCase(category, '-') }} <span v-if="category === 'being-human'"> - as if you needed the practice</span>
         </h2>
-        <LayoutPostListRow :posts="dedupPosts(categoryData.posts)" />
+        <ClientOnly>
+          <LayoutPostListRow :posts="posts" />
+        </ClientOnly>
       </div>
     </section>
 
@@ -66,6 +68,8 @@ if (categoryResponse.value.categories.length > 0) {
   console.debug('extracting category data...')
   categoryData.value = categoryResponse.value.categories[0]
 }
+
+const posts = ref(dedupPosts(categoryResponse?.value?.categories[0]?.posts))
 
 // Meta tags for SEO
 useHead({
