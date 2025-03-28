@@ -76,8 +76,14 @@ export default defineNuxtConfig({
           content: "Q4l9tT_meQV5Wpva7hnU27YZyc6Eja7hVsf8NqHdhKU"
         }
       ],
-      /*
       script: [
+        {
+          src: 'https://tracker.metricool.com/resources/be.js',
+          body: true, // or false if you want it in head
+          defer: true,
+          callback: `beTracker.t({hash:"6d06e4cf44232147adf9fc4da3f37e76"})`,
+        }
+      /*
         {
           type: 'text/javascript',
           innerHTML: `
@@ -86,8 +92,8 @@ export default defineNuxtConfig({
 <!-- End Lawmatics Pixel Snippet -->
           `
         }
-      ]
       */
+      ]
     }
   },
 
