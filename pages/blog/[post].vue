@@ -75,7 +75,8 @@ const category = post?.category?.Name ??
                 'Uncategorized'
 
 const restQuery = categoryPostsQueryREST(category)
-const fetchUrl = ref(`https://strapi.ohlawcolorado.com/api/categories?${restQuery}`)
+const { strapiUrl } = useAppConfig()
+const fetchUrl = ref(`${strapiUrl}/api/categories?${restQuery}`)
 const {
   data: {
     value: {
