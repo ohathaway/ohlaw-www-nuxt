@@ -11,7 +11,7 @@
             </h1>
             <BlogRichText :block="categoryData.hero" />
           </div>
-          <div class="col-lg-5">
+          <div class="d-none d-lg-inline col-lg-5">
             <div class="d-flex align-items-center justify-content-center" style="min-height: 400px;">
               <LayoutMediaFocus 
                 v-if="categoryData.Image"
@@ -53,6 +53,8 @@
 </template>
 
 <script setup>
+import qs from 'qs'
+
 definePageMeta({
   layout: 'blog'
 })
@@ -61,15 +63,19 @@ const { params: { category } } = useRoute()
 const categoryData = ref(null)
 
 // Get posts for this category
-const { data: categoryResponse } = await useAsyncQuery(categoryPostsQuery(toTitleCase(category, '-')))
+// const { data: categoryResponse } = await useAsyncQuery(categoryPostsQuery(toTitleCase(category, '-')))
+// const restQuery = qs.stringify(categoryPostsQueryREST('Legacy Planning'), { encode: false })
+const restQuery = categoryPostsQueryREST(toTitleCase(category, '-'))
+const fetchUrl = ref(`https://strapi.ohlawcolorado.com/api/categories?${restQuery}`)
+const { data: categoryResponseREST } = await useLazyFetch(fetchUrl.value)
 
 // Extract category data if it exists
-if (categoryResponse.value.categories.length > 0) {
+if (categoryResponseREST.value.data.length > 0) {
   console.debug('extracting category data...')
-  categoryData.value = categoryResponse.value.categories[0]
+  categoryData.value = categoryResponseREST.value.data[0]
 }
 
-const posts = ref(dedupPosts(categoryResponse?.value?.categories[0]?.posts))
+const posts = ref(dedupPosts(categoryResponseREST?.value?.data[0]?.posts))
 
 // Meta tags for SEO
 useHead({
