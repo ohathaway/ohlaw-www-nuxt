@@ -1,3 +1,4 @@
+import qs from 'qs'
 // const nuxtApp = useNuxtApp()
 
 // console.debug('nuxtApp: ', nuxtApp)
@@ -69,9 +70,25 @@ const addScrollSpy = () => {
 
 }
 
+const getMultipleRandom = (arr, num) => {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+
+  return shuffled.slice(0, num);
+}
+
 /*
- * graphQl queries
+ * API queries
  */
+
+const imageFields = [
+  'name',
+  'caption',
+  'alternativeText',
+  'url',
+  'previewUrl',
+  'provider'
+]
+
 const singlePostQuery = slug => {
   return gql`
     query Posts {
@@ -125,6 +142,7 @@ query Posts {
       documentId
       Content
       Title
+      slug
       Image {
           name
           caption
@@ -148,6 +166,53 @@ query Posts {
   }
 }
 `
+
+const allPostsQueryREST = () => {
+  try {
+    const params = {
+      sort: [
+        'publishDate:desc'
+      ],
+      populate: {
+        Image: {
+          fields: imageFields
+        },
+        populate: {
+          Image: {
+            fields: imageFields
+          },
+          tags: {
+            fields: [
+              'Name',
+              'slug'
+            ]
+          }
+        }
+      },
+      fields: [
+        'Content',
+        'CTA',
+        'hero',
+        'publishDate',
+        'slug',
+        'Snippet',
+        'Title'
+      ],
+      pagination: {
+        pageSize: limit,
+        page: 1
+      },
+      status: 'published',
+      locale: [
+        'en'
+      ]
+    }
+    return qs.stringify(params, { encode: false })
+  } catch (error) {
+    console.error('error parsing parameters for all posts query', error)
+    return ''
+  }
+}
 
 const featuredPostQuery = gql`
 query FeaturedPost {
@@ -226,7 +291,7 @@ query Spotlight {
   }
 }
 `
-
+/*
 const categoryPostsQuery = (category, limit = 3) => {
   return gql`
   query Categories {
@@ -269,6 +334,55 @@ const categoryPostsQuery = (category, limit = 3) => {
     }
   }
   `
+}
+*/
+
+const categoryPostsQueryREST = (category, limit = 6) => {
+  try {
+    const params = {
+      filters: {
+        Name: {
+          '$eq': category
+        }
+      },
+      populate: {
+        Image: {
+          fields: imageFields
+        },
+        posts: {
+          sort: [
+            'publishDate:desc'
+          ],
+          populate: {
+            Image: {
+              fields: imageFields
+            },
+            tags: {
+              fields: [
+                'Name',
+                'slug'
+              ]
+            }
+          }
+        }
+      },
+      fields: [
+        'hero'
+      ],
+      pagination: {
+        pageSize: limit,
+        page: 1
+      },
+      status: 'published',
+      locale: [
+        'en'
+      ]
+    }
+    return qs.stringify(params, { encode: false })
+  } catch (error) {
+    console.error('error parsing parameters for category query', error)
+    return ''
+  }
 }
 
 const tagPostsQuery = (tag, limit = 3) => {
@@ -322,8 +436,10 @@ const dedupPosts = posts =>{
 
 export {
   allPostsQuery,
-  categoryPostsQuery,
+  allPostsQueryREST,
+  categoryPostsQueryREST ,
   dedupPosts,
+  getMultipleRandom,
   getStrapiThumbnailUrl,
   getStrapiUrl,
   getThumbnailUrl,
