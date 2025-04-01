@@ -167,7 +167,7 @@ query Posts {
 }
 `
 
-const allPostsQueryREST = () => {
+const allPostsQueryREST = limit => {
   try {
     const params = {
       sort: [
@@ -192,7 +192,6 @@ const allPostsQueryREST = () => {
       fields: [
         'Content',
         'CTA',
-        'hero',
         'publishDate',
         'slug',
         'Snippet',

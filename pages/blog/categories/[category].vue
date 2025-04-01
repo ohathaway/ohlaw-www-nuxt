@@ -66,7 +66,8 @@ const categoryData = ref(null)
 // const { data: categoryResponse } = await useAsyncQuery(categoryPostsQuery(toTitleCase(category, '-')))
 // const restQuery = qs.stringify(categoryPostsQueryREST('Legacy Planning'), { encode: false })
 const restQuery = categoryPostsQueryREST(toTitleCase(category, '-'))
-const fetchUrl = ref(`https://strapi.ohlawcolorado.com/api/categories?${restQuery}`)
+const { strapiUrl } = useAppConfig()
+const fetchUrl = ref(`${strapiUrl}/api/categories?${restQuery}`)
 const { data: categoryResponseREST } = await useLazyFetch(fetchUrl.value)
 
 // Extract category data if it exists
