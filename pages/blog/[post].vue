@@ -70,13 +70,14 @@ const {
   }
 } = await useAsyncQuery(singlePostQuery(path.split('/').pop()))
 
-const category = post?.category?.Name ?? 
-                post?.category?.Name ?? 
+const category = post?.category?.slug ?? 
+                post?.category?.slug ?? 
                 'Uncategorized'
 
-const restQuery = categoryPostsQueryREST(category)
+const restQuery = postListQueryREST(category)
 const { strapiUrl } = useAppConfig()
 const fetchUrl = ref(`${strapiUrl}/api/categories?${restQuery}`)
+console.info('fetchUrl:', fetchUrl.value)
 const {
   data: {
     value: {
@@ -85,7 +86,7 @@ const {
       ]
     }
   }
-} = await useLazyFetch(fetchUrl.value)
+} = await useFetch(fetchUrl.value)
 
 relatedPosts.value = relatedPosts.filter(relatedPost => {
   return relatedPost.documentId !== post.documentId

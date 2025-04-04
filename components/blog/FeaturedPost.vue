@@ -11,6 +11,9 @@
       :title="post.attributes.Title"
     />
     -->
+  <div class="px-lg-5">
+    <BlogRichText :block="post.Snippet" />
+  </div>
   </NuxtLink>
 </template>
 
@@ -18,3 +21,10 @@
 const { post } = defineProps(['post'])
 const { Image: { url: source } } = post
 </script>
+
+<style lang="scss" scoped>
+a {
+  color: #010101;
+  h1 { color: #003399; }
+}
+</style>

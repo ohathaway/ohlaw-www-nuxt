@@ -336,38 +336,40 @@ const categoryPostsQuery = (category, limit = 3) => {
 }
 */
 
-const categoryPostsQueryREST = (category, limit = 6) => {
+const postListQueryREST = (filterSlug, listType = 'category', limit = 6) => {
   try {
-    const params = {
-      filters: {
-        Name: {
-          '$eq': category
-        }
-      },
-      populate: {
-        Image: {
-          fields: imageFields
-        },
-        posts: {
-          sort: [
-            'publishDate:desc'
-          ],
-          populate: {
-            Image: {
-              fields: imageFields
-            },
-            tags: {
-              fields: [
-                'Name',
-                'slug'
-              ]
-            }
+    const fields = []
+    if (listType === 'category') fields.push('hero')
+
+    const populate = {
+      posts: {
+        sort: [
+          'publishDate:desc'
+        ],
+        populate: {
+          Image: {
+            fields: imageFields
+          },
+          tags: {
+            fields: [
+              'Name',
+              'slug'
+            ]
           }
         }
+      }
+    }
+    if (listType === 'category') Object.defineProperty(populate, 'Image' , { fields: imageFields })
+      
+
+    const params = {
+      filters: {
+        slug: {
+          '$eq': filterSlug
+        }
       },
-      fields: [
-        'hero'
-      ],
+      populate,
+      fields, 
       pagination: {
         pageSize: limit,
         page: 1
@@ -436,7 +438,6 @@ const dedupPosts = posts =>{
 export {
   allPostsQuery,
   allPostsQueryREST,
-  categoryPostsQueryREST ,
   dedupPosts,
   getMultipleRandom,
   getStrapiThumbnailUrl,
@@ -444,6 +445,7 @@ export {
   getThumbnailUrl,
   featuredPostQuery,
   isModifier,
+  postListQueryREST ,
   richTextToPlainText,
   singlePostQuery,
   spotlightPostsQuery,

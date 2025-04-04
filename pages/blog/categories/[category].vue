@@ -53,8 +53,6 @@
 </template>
 
 <script setup>
-import qs from 'qs'
-
 definePageMeta({
   layout: 'blog'
 })
@@ -62,13 +60,10 @@ definePageMeta({
 const { params: { category } } = useRoute()
 const categoryData = ref(null)
 
-// Get posts for this category
-// const { data: categoryResponse } = await useAsyncQuery(categoryPostsQuery(toTitleCase(category, '-')))
-// const restQuery = qs.stringify(categoryPostsQueryREST('Legacy Planning'), { encode: false })
-const restQuery = categoryPostsQueryREST(toTitleCase(category, '-'))
+const restQuery = postListQueryREST(category)
 const { strapiUrl } = useAppConfig()
 const fetchUrl = ref(`${strapiUrl}/api/categories?${restQuery}`)
-const { data: categoryResponseREST } = await useLazyFetch(fetchUrl.value)
+const { data: categoryResponseREST } = await useFetch(fetchUrl.value)
 
 // Extract category data if it exists
 if (categoryResponseREST.value.data.length > 0) {

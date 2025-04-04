@@ -3,8 +3,9 @@
     <h2 class="text-center pt-5 pb-3">
       Articles Related to {{ toTitleCase(tag, '-') }}
     </h2>
-    <LayoutPostListRow v-if="!isEmpty(posts)" :posts="posts" />
-    <p v-else class="text-center">No articles found</p>
+    <ClientOnly>
+      <LayoutPostListRow :posts="posts" />
+    </ClientOnly>
   </div>
 </template>
 
@@ -14,14 +15,20 @@ definePageMeta({
 })
 
 const { params: { tag } } = useRoute()
+const tagData = ref(null)
 
-let {
-  data: {
-    value: {
-      tags:
-        [{ posts }]
-    }
-  }
-} = await useAsyncQuery(tagPostsQuery(tag))
-posts = dedupPosts(posts)
+const restQuery = postListQueryREST(tag, 'tag', 6)
+const { strapiUrl } = useAppConfig()
+const fetchUrl = ref(`${strapiUrl}/api/tags?${restQuery}`)
+console.info('fetchUrl:', fetchUrl)
+const { data: tagResponseREST } = await useFetch(fetchUrl.value)
+console.info('tagResponseREST:', tagResponseREST)
+
+// Extract category data if it exists
+if (tagResponseREST.value.data.length > 0) {
+  console.info('extracting tag data...')
+  tagData.value = tagResponseREST.value.data[0]
+}
+
+const posts = ref(dedupPosts(tagResponseREST?.value?.data[0]?.posts))
 </script>
