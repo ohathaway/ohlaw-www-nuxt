@@ -10,7 +10,7 @@
   </div>
   <!-- <BlogSignup /> -->
   <div class="p-md-5">
-    <LayoutPostListRow :posts="allPosts" />
+    <LayoutPostListRow :posts="allPostsREST" />
   </div>
 </template>
 
@@ -47,7 +47,9 @@ let {
     }
   }
 } = await useAsyncQuery(allPostsQuery)
-allPosts = dedupPosts(allPosts)
+const fetchUrl = allPostsQueryREST(9)
+const { strapiUrl } = useAppConfig()
+const { data: { value: { data: allPostsREST } } } = await useFetch(`${strapiUrl}/api/posts?${fetchUrl}`)
 </script>
 
 <style scoped>

@@ -46,10 +46,12 @@
     </div>
     <div class="col-12 col-md-4 col-lg-3">
       <div class="sticky-sidebar">
-        <LayoutPostListSidebar
-          title="Related Articles"
-          :posts="relatedPosts"
-        />
+        <ClientOnly>
+          <LayoutPostListSidebar
+            title="Related Articles"
+            :posts="getMultipleRandom(relatedPosts, 5)"
+          />
+        </ClientOnly>
       </div>
     </div>
   </article>
@@ -67,38 +69,28 @@ const {
    value: { posts: [post] }
   }
 } = await useAsyncQuery(singlePostQuery(path.split('/').pop()))
-console.debug('post: ', post)
 
-/*
-const {
-  attributes: {
-    category: {
-      data: {
-        attributes: {
-          Name: category
-        }
-      }
-    }
-  }
-} = post
-*/
-const category = post?.category?.Name ?? 
-                post?.category?.Name ?? 
+const category = post?.category?.slug ?? 
+                post?.category?.slug ?? 
                 'Uncategorized'
 
-let {
+const restQuery = postListQueryREST(category)
+const { strapiUrl } = useAppConfig()
+const fetchUrl = ref(`${strapiUrl}/api/categories?${restQuery}`)
+console.info('fetchUrl:', fetchUrl.value)
+const {
   data: {
     value: {
-      categories: [{
-        posts: relatedPosts
-      }]
+      data: [
+        { posts: relatedPosts }
+      ]
     }
   }
-} = await useAsyncQuery(categoryPostsQuery(category))
+} = await useFetch(fetchUrl.value)
 
-relatedPosts = dedupPosts(relatedPosts.filter(relatedPost => {
+relatedPosts.value = relatedPosts.filter(relatedPost => {
   return relatedPost.documentId !== post.documentId
-}))
+})
 
 const { href: fullPath  } = useRequestURL()
 
