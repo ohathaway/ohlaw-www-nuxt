@@ -49,7 +49,7 @@ let {
 } = await useAsyncQuery(allPostsQuery)
 const fetchUrl = allPostsQueryREST(9)
 const { strapiUrl } = useAppConfig()
-const { data: { value: { data: allPostsREST } } } = await useLazyFetch(`${strapiUrl}/api/posts?${fetchUrl}`)
+const { data: { value: { data: allPostsREST } } } = await useFetch(`${strapiUrl}/api/posts?${fetchUrl}`)
 </script>
 
 <style scoped>
