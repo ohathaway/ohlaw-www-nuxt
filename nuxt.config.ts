@@ -164,6 +164,8 @@ export default defineNuxtConfig({
     }
   },
 
+  hub: {},
+
   image: {
     cloudflare: {
       baseURL: 'https://ohlawcolorado.com'
