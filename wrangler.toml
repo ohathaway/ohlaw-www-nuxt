@@ -5,7 +5,6 @@ compatibility_flags = [ "nodejs_compat" ]
 
 [env.production.vars]
 NUXT_SITE_URL = "https://ohlawcolorado.com"
-VITE_OHL_EMAIL_URL = "https://us-west3-www-prod-389819.cloudfunctions.net/nodejs-http-ohLawContactFormFunction"
 VITE_CONTACT_ADDR = "contact@ohlawcolorado.com"
 VITE_CONTACT_NAME = "OHLaw"
 VITE_CONTACT_FROM_NAME = "OHLaw Website"
@@ -16,12 +15,9 @@ VITE_FIREBASE_MESSAGING_SENDER = "566451752897"
 VITE_FIREBASE_PROJECT = "www-prod-389819"
 VITE_GOOGLEMAPS_API = "https://maps.googleapis.com/maps/api/geocode"
 STRAPI_URL = "https://strapi.ohlawcolorado.com"
-VUEFIRE_APPCHECK_DEBUG = "true"
-VUEFIRE_EMULATORS = "true"
 
 [env.preview.vars]
 NUXT_SITE_URL = "https://www-stage.ohlawcolorado.com"
-VITE_OHL_EMAIL_URL = "https://us-west3-www-prod-389819.cloudfunctions.net/nodejs-http-ohLawContactFormFunction"
 VITE_CONTACT_ADDR = "contact@ohlawcolorado.com"
 VITE_CONTACT_NAME = "OHLaw"
 VITE_CONTACT_FROM_NAME = "OHLaw Website"
@@ -32,5 +28,3 @@ VITE_FIREBASE_MESSAGING_SENDER = "566451752897"
 VITE_FIREBASE_PROJECT = "www-prod-389819"
 VITE_GOOGLEMAPS_API = "https://maps.googleapis.com/maps/api/geocode"
 STRAPI_URL = "https://strapi.ohlawcolorado.com"
-VUEFIRE_APPCHECK_DEBUG = "true"
-VUEFIRE_EMULATORS = "true"

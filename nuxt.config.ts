@@ -178,9 +178,9 @@ export default defineNuxtConfig({
     upperAfterPrefix: false
   },
 
-  modules: ['nuxt-icon', 'nuxt-gtag', // 'nuxt-vuefire',
-  'nuxt-lodash', '@vueuse/nuxt', '@formkit/nuxt', '@pinia/nuxt', '@nuxtjs/apollo', // '@nuxtjs/strapi'
-  '@nuxt/content', '@nuxt/image', '@nuxtjs/sitemap', '@nuxtjs/robots'],
+  modules: ['nuxt-icon', // 'nuxt-vuefire',
+  'nuxt-gtag', 'nuxt-lodash', '@vueuse/nuxt', '@formkit/nuxt', '@pinia/nuxt', // '@nuxtjs/strapi'
+  '@nuxtjs/apollo', '@nuxt/content', '@nuxt/image', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxthub/core'],
 
   nitro: {
     prerender: {

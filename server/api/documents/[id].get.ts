@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
 
     const response = await r2Client.send(command)
     
-    console.info('r2 response: ', response)
+    console.info('r2 response code: ', response.$metadata.httpStatusCode)
     if (!response.Body) {
       throw createError({
         statusCode: 404,
