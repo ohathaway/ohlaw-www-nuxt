@@ -20,9 +20,9 @@ const tagData = ref(null)
 const restQuery = postListQueryREST(tag, 'tag', 6)
 const { strapiUrl } = useAppConfig()
 const fetchUrl = ref(`${strapiUrl}/api/tags?${restQuery}`)
-console.info('fetchUrl:', fetchUrl)
+// console.info('fetchUrl:', fetchUrl)
 const { data: tagResponseREST } = await useFetch(fetchUrl.value)
-console.info('tagResponseREST:', tagResponseREST)
+// console.info('tagResponseREST:', tagResponseREST)
 
 // Extract category data if it exists
 if (tagResponseREST.value.data.length > 0) {

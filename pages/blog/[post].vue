@@ -77,7 +77,7 @@ const category = post?.category?.slug ??
 const restQuery = postListQueryREST(category)
 const { strapiUrl } = useAppConfig()
 const fetchUrl = ref(`${strapiUrl}/api/categories?${restQuery}`)
-console.info('fetchUrl:', fetchUrl.value)
+// console.info('fetchUrl:', fetchUrl.value)
 const {
   data: {
     value: {
