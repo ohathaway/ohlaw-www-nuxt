@@ -164,7 +164,7 @@ export default defineNuxtConfig({
     }
   },
 
-  hub: {},
+  hub: { blob: true },
 
   image: {
     cloudflare: {
