@@ -1,4 +1,5 @@
 // server/api/documents/[id].ts
+import crypto from 'node:crypto'
 import {
   GetObjectCommand,
   NoSuchKey,
@@ -37,14 +38,20 @@ export default defineEventHandler(async (event) => {
       chunks.push(chunk)
     }
     const buffer = Buffer.concat(chunks)
+    const hashBuffer = crypto.createHash('sha256').update(buffer).digest('hex')
+    
+    console.info('buffer b64:', hashBuffer)
 
-    setHeaders(event, {
+    const responseHeaders = {
       'Content-Type': response.ContentType || 'application/pdf',
-      'Content-Disposition': `attachment filename="${id}"`,
+      'Content-Disposition': `inline; filename="${id}"`,
+      // 'Content-Disposition': `attachment filename="${id}"`,
       'Cache-Control': 'public, max-age=31536000',
       'Content-Length': buffer.length.toString()
-    })
+    }
+    // console.info('responseHeaders:', responseHeaders)
 
+    setHeaders(event, responseHeaders)
     return buffer
   } catch (error) {
     if (error instanceof NoSuchKey){
