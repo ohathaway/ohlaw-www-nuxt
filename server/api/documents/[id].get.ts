@@ -64,7 +64,7 @@ export default defineEventHandler(async (event) => {
       console.error('R2 Error:', error.message)
       throw createError({
         statusCode: 500,
-        message: 'Error retrieving document'
+        message: `Error retrieving document: ${error.message}`
       })
     }
   }
