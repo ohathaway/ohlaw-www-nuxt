@@ -9,6 +9,11 @@ $bs-nav-link-color: #3a3a3a;
 // @import url(./responsive-borders.scss);
 
 
+::selection {
+  background-color: #d9e6ff;
+  // color: #f9f9f9;
+}
+
 html {
   scroll-behavior: smooth;
 }
