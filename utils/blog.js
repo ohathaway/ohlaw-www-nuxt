@@ -360,8 +360,6 @@ const postListQueryREST = (filterSlug, listType = 'category', limit = 6) => {
       }
     }
     if (listType === 'category') populate.Image = { fields: imageFields }
-    console.debug('populate:', JSON.stringify(populate, null, 2))
-    // console.debug('imageFields:', { imageFields })
 
 
     const params = {

@@ -64,7 +64,6 @@ const restQuery = postListQueryREST(category)
 const { strapiUrl } = useAppConfig()
 const fetchUrl = ref(`${strapiUrl}/api/categories?${restQuery}`)
 const { data: categoryResponseREST } = await useFetch(fetchUrl.value)
-console.debug('fetchUrl:', fetchUrl)
 
 // Extract category data if it exists
 if (categoryResponseREST.value.data.length > 0) {
