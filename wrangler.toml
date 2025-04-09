@@ -15,6 +15,9 @@ VITE_FIREBASE_MESSAGING_SENDER = "566451752897"
 VITE_FIREBASE_PROJECT = "www-prod-389819"
 VITE_GOOGLEMAPS_API = "https://maps.googleapis.com/maps/api/geocode"
 STRAPI_URL = "https://strapi.ohlawcolorado.com"
+CLOUDFLARE_ACCOUNT_ID = 2ca9396d0d550468217f97315db045b1
+CLOUDFLARE_ACCESS_KEY_ID = e9df8e70edf7d563576b81d270d73a13
+CLOUDFLARE_BUCKET_NAME = ohlaw-resources
 
 [env.preview.vars]
 NUXT_SITE_URL = "https://www-stage.ohlawcolorado.com"
@@ -28,3 +31,6 @@ VITE_FIREBASE_MESSAGING_SENDER = "566451752897"
 VITE_FIREBASE_PROJECT = "www-prod-389819"
 VITE_GOOGLEMAPS_API = "https://maps.googleapis.com/maps/api/geocode"
 STRAPI_URL = "https://strapi.ohlawcolorado.com"
+CLOUDFLARE_ACCOUNT_ID = 2ca9396d0d550468217f97315db045b1
+CLOUDFLARE_ACCESS_KEY_ID = e9df8e70edf7d563576b81d270d73a13
+CLOUDFLARE_BUCKET_NAME = ohlaw-resources
