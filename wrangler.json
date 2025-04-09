@@ -1,0 +1,46 @@
+{
+  "name": "ohlaw-www-nuxt",
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2024-12-07",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "env": {
+    "production": {
+      "vars": {
+        "NUXT_SITE_URL": "https://ohlawcolorado.com",
+        "VITE_CONTACT_ADDR": "contact@ohlawcolorado.com",
+        "VITE_CONTACT_NAME": "OHLaw",
+        "VITE_CONTACT_FROM_NAME": "OHLaw Website",
+        "VITE_CONTACT_FROM_EMAIL": "website@ohlawcolorado.com",
+        "VITE_FIREBASE_APP_ID": "1:566451752897:web:b7503f3ca01744abb92940",
+        "VITE_FIREBASE_BUCKET": "www-prod-389819.appspot.com",
+        "VITE_FIREBASE_MESSAGING_SENDER": "566451752897",
+        "VITE_FIREBASE_PROJECT": "www-prod-389819",
+        "VITE_GOOGLEMAPS_API": "https://maps.googleapis.com/maps/api/geocode",
+        "STRAPI_URL": "https://strapi.ohlawcolorado.com",
+        "CLOUDFLARE_ACCOUNT_ID": "2ca9396d0d550468217f97315db045b1",
+        "CLOUDFLARE_ACCESS_KEY_ID": "e9df8e70edf7d563576b81d270d73a13",
+        "CLOUDFLARE_BUCKET_NAME": "ohlaw-resources"
+      }
+    },
+    "preview": {
+      "vars": {
+        "NUXT_SITE_URL": "https://www-stage.ohlawcolorado.com",
+        "VITE_CONTACT_ADDR": "contact@ohlawcolorado.com",
+        "VITE_CONTACT_NAME": "OHLaw",
+        "VITE_CONTACT_FROM_NAME": "OHLaw Website",
+        "VITE_CONTACT_FROM_EMAIL": "website@ohlawcolorado.com",
+        "VITE_FIREBASE_APP_ID": "1:566451752897:web:b7503f3ca01744abb92940",
+        "VITE_FIREBASE_BUCKET": "www-prod-389819.appspot.com",
+        "VITE_FIREBASE_MESSAGING_SENDER": "566451752897",
+        "VITE_FIREBASE_PROJECT": "www-prod-389819",
+        "VITE_GOOGLEMAPS_API": "https://maps.googleapis.com/maps/api/geocode",
+        "STRAPI_URL": "https://strapi.ohlawcolorado.com",
+        "CLOUDFLARE_ACCOUNT_ID": "2ca9396d0d550468217f97315db045b1",
+        "CLOUDFLARE_ACCESS_KEY_ID": "e9df8e70edf7d563576b81d270d73a13",
+        "CLOUDFLARE_BUCKET_NAME": "ohlaw-resources"
+      }
+    }
+  }
+}
