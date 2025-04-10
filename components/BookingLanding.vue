@@ -25,7 +25,7 @@
             <a class="btn btn-outline-primary p-4 me-5" href="https://app.lawmatics.com/forms/share/d57bebf9-6e6b-4966-b019-bb97036f8594" target="_blank">
               <font-awesome-icon icon="fas fa-laptop-file" size="3x"></font-awesome-icon> 
             </a>
-            <a class="btn btn-outline-primary p-4 ms-5" href="/api/documents/Life-and-Legacy-Assessment-and-Inventory-v2.pdf" download="Life-and-Legacy-Assessment-and-Inventory-v2.pdf">
+            <a class="btn btn-outline-primary p-4 ms-5" href="https://downloads.ohlawcolorado.com/Life-and-Legacy-Assessment-and-Inventory-v2.pdf" download="Life-and-Legacy-Assessment-and-Inventory-v2.pdf">
               <font-awesome-icon icon="fas fa-file-pdf" size="3x"></font-awesome-icon> 
             </a>
             <p class="m-md-4">Our work together will be <u>much</u> more productive if you can have this back to us at least 1 week before our session. We're happy to reschedule if you need more time.</p>
