@@ -1,13 +1,24 @@
-@import './print.scss';
-@import 'bootstrap/scss/bootstrap';
+// Define Bootstrap theme variables BEFORE importing Bootstrap
 $theme-colors: (
-  primary: #003399
+  "primary": #003399,
+  "secondary": #6c757d,
+  "success": #28a745,
+  "info": #479bdf,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+  "dark": #343a40
 );
-$bs-nav-link-color: #3a3a3a;
 
-// @import "@/../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-// @import url(./responsive-borders.scss);
+$navbar-light-color: #3a3a3a;
+$btn-active-bg: #003399;
 
+// Import Bootstrap after defining custom variables
+@import 'bootstrap/scss/bootstrap';
+
+// Import other stylesheets
+@import './print.scss';
+@import './responsive-borders.scss';
 
 ::selection {
   background-color: #d9e6ff;
@@ -83,7 +94,13 @@ section {
   padding-bottom: 50px;
 }
 
+/* Bootstrap overrides - these should be less necessary now with proper theme variables */
 .text-primary { color: #003399 !important; }
+.btn-primary {
+  &:hover {
+    background-color: #25476e !important;
+  }
+}
 
 .card-hover-shadow {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -102,7 +119,6 @@ section {
 }
 
 .btn-outline-primary {
-  color: #003399 !important;
   &:hover {
     background-color: $blue-100;
   }
@@ -277,5 +293,4 @@ footer {
       font-size: 32px;
     }
   }
-
 }

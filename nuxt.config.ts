@@ -101,6 +101,12 @@ export default defineNuxtConfig({
     clients: {
       default: {
         authType: 'none',
+        connectToDevTools: true,
+        defaultOptions: {
+          watchQuery: {
+            fetchPolicy: 'cache-and-network'
+          }
+        },
         httpEndpoint: 'https://strapi.ohlawcolorado.com/graphql',
         /*
         httpLinkOptions: {
@@ -110,7 +116,8 @@ export default defineNuxtConfig({
         }
         */
       }
-    }
+    },
+    devtools: true
   },
 
   build: {

@@ -67,7 +67,7 @@ const { data: categoryResponseREST } = await useFetch(fetchUrl.value)
 
 // Extract category data if it exists
 if (categoryResponseREST.value.data.length > 0) {
-  console.debug('extracting category data...')
+  // console.debug('extracting category data...')
   categoryData.value = categoryResponseREST.value.data[0]
 }
 

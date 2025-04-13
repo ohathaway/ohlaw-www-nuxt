@@ -9,3 +9,8 @@ export const stripCountry = address => {
 export const relType = input => 
   (input === 'Client' && '') || 
   `rel_${input.toLowerCase().replace(/ /g, '_')}|`
+
+export const linkLocal = link => {
+  const { seo: { siteUrl } } = useAppConfig()
+  return link.includes(siteUrl)
+}
