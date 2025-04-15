@@ -174,6 +174,10 @@ export const useQuizStore = defineStore('quiz', () => {
     }
   }
 
+  const handlePrevious = () => {
+    if (currentQuestionIndex.value > 0) currentQuestionIndex.value--
+  }
+
   const calculateResult = () => {
     // Simple scoring for now - sum the answer values
     let totalScore = 0
@@ -454,6 +458,7 @@ export const useQuizStore = defineStore('quiz', () => {
     handleAnswer,
     handleContactSubmit,
     handleContactSkip,
+    handlePrevious,
     loadQuiz,
     resetQuiz,
     resetQuizState,

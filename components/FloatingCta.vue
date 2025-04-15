@@ -41,11 +41,16 @@ const props = defineProps({
   initialPosition: {
     type: Object,
     default: () => ({ bottom: '30px', right: '30px' })
+  },
+  visible: {
+    type: Boolean,
+    default: false
   }
+
 })
 
 // State
-const isVisible = ref(false)
+const isVisible = ref(props.visible)
 const isDismissed = ref(false)
 const isDragging = ref(false)
 const isMobile = ref(false)
@@ -71,7 +76,7 @@ const checkMobile = () => {
 // Show/hide based on scroll position
 const handleScroll = () => {
   if (isDismissed.value) return
-  isVisible.value = window.scrollY > props.scrollThreshold
+  isVisible.value = window.scrollY > props.scrollThreshold || props.visible
 }
 
 // Handle button click - only open the modal if not coming from a drag operation

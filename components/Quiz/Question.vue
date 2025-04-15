@@ -134,7 +134,7 @@
     <!-- Navigation buttons -->
     <div class="navigation-buttons d-flex justify-content-between mt-5">
       <button 
-        v-if="showPrevButton" 
+        v-if="showPrevButton && question.order > 1" 
         class="btn btn-outline-secondary" 
         @click="$emit('previous')"
         type="button"
@@ -205,14 +205,11 @@ onMounted(() => {
 
 // Sync the checkbox map with the selectedAnswers array
 const syncSelectedAnswers = () => {
-  console.debug('syncing selected answers')
   selectedAnswers.value = Object.keys(selectedAnswersMap.value).filter(key => selectedAnswersMap.value[key])
-  console.debug('selectedAnswers after sync:', selectedAnswers.value)
 }
 
 // Toggle checkbox via clicking on the content div
 const toggleCheckbox = (answerId) => {
-  console.debug('toggling checkbox for:', answerId)
   selectedAnswersMap.value[answerId] = !selectedAnswersMap.value[answerId]
   syncSelectedAnswers()
 }

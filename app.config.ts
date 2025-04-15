@@ -52,5 +52,10 @@ export default defineAppConfig({
       'Nonprofit Legal Services'
     ]
   },
-  strapiUrl: 'https://strapi.ohlawcolorado.com'
+  strapiUrl: 'https://strapi.ohlawcolorado.com',
+  floatingCta: {
+    alwaysPaths: [
+      '/quizzes'
+    ]
+  }
 })

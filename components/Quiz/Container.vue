@@ -19,9 +19,10 @@
 
     <!-- Quiz content -->
     <div v-else-if="quiz" class="quiz-content">
+      <h2 class="mb-4">{{ quiz.title }}</h2>
       <!-- Introduction (shown before starting) -->
       <div v-if="!started && !completed" class="quiz-intro text-center p-4">
-        <h2 class="mb-4">{{ quiz.title }}</h2>
+        <!-- <h2 class="mb-4">{{ quiz.title }}</h2> -->
         <div class="quiz-description mb-5"><BlogRichText :block="quiz.description" /></div>
         <button class="btn btn-primary btn-lg" @click="startQuiz">
           Start Quiz
@@ -42,7 +43,10 @@
           :question="currentQuestion"
           :key="currentQuestionIndex"
           :isLastQuestion="progressPercent === 100"
+          :initialAnswers="userAnswers[currentQuestion.questionId]"
+          showPrevButton
           @answer="handleAnswer"
+          @previous="handlePrevious"
         />
       </div>
 
@@ -51,6 +55,7 @@
         <QuizResults 
           :result="quizResult"
           :quiz="quiz"
+          @reset="resetQuiz"
         />
 
         <!-- Contact form or thank you message -->
@@ -62,7 +67,7 @@
         </div>
         <div v-else class="text-center p-4">
           <div v-html="quiz.successMessage || 'Thank you for completing the quiz!'"></div>
-          
+
           <div class="mt-4">
             <button class="btn btn-outline-primary me-3" @click="resetQuiz">
               Take Quiz Again
@@ -78,8 +83,6 @@
 </template>
 
 <script setup>
-import { getQuizBySlug } from '~/utils/quizQueries'
-
 // Props and route
 const {quizSlug } = defineProps({
   quizSlug: {
@@ -109,6 +112,7 @@ const {
   handleAnswer,
   handleContactSubmit,
   handleContactSkip,
+  handlePrevious,
   resetQuiz,
   startQuiz
 } = useQuizStore()

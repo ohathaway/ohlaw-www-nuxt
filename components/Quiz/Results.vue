@@ -2,35 +2,36 @@
   <div class="quiz-results">
     <!-- Results header -->
     <div class="results-header text-center mb-4">
-      <h2 class="mb-3">Your Results</h2>
-      <div v-if="result.category" class="result-category mb-3">
+      <h2 class="mb-0">Your Results</h2>
+      <small class="mb-5">not legal advice, if you want legal advice you have to talk to us</small>
+      <div v-if="result.category" class="result-category my-3">
         <span class="badge bg-primary p-2 fs-5">{{ result.category.title }}</span>
       </div>
     </div>
-    
+
     <!-- Result content -->
     <div class="result-content p-4 border rounded bg-light">
       <!-- Result media if available -->
       <div v-if="result.category && result.category.media" class="result-media text-center mb-4">
         <img :src="result.category.media" :alt="result.category.title" class="img-fluid rounded">
       </div>
-      
+
       <!-- Result description -->
       <div v-if="result.category && result.category.description" class="result-description mb-4">
         <BlogRichText :block="result.category.description" />
       </div>
-      
+
       <!-- Fallback if no category found -->
       <div v-else class="result-default">
         <p>Thank you for completing our quiz. Based on your answers, we've prepared some insights that might be helpful for your situation.</p>
       </div>
-      
+
       <!-- Call to action -->
       <div class="result-cta mt-4 text-center">
         <p class="lead mb-4">
           {{ result.category?.ctaText || quiz.defaultCTA || 'Want to learn more about how we can help?' }}
         </p>
-        
+
         <!-- CTA buttons -->
         <div class="d-grid gap-2 d-md-flex justify-content-md-center">
           <a 
@@ -49,7 +50,7 @@
           >
             Get Personalized Advice
           </button>
-          
+
           <!-- Lead magnet download if available -->
           <a 
             v-if="quiz.leadMagnet"
@@ -62,41 +63,7 @@
         </div>
       </div>
     </div>
-    
-    <!-- Additional resources -->
-    <div class="additional-resources mt-5">
-      <h4 class="mb-3">Additional Resources</h4>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Free Consultation</h5>
-              <p class="card-text">Schedule a free consultation with one of our attorneys to discuss your specific situation.</p>
-              <a href="/contact-us" class="btn btn-outline-secondary">Contact Us</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Legal Blog</h5>
-              <p class="card-text">Explore our blog for articles and insights related to your legal questions.</p>
-              <a href="/blog" class="btn btn-outline-secondary">Read Articles</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">FAQ</h5>
-              <p class="card-text">Find answers to commonly asked questions about legal issues.</p>
-              <a href="/faq" class="btn btn-outline-secondary">View FAQs</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+
     <!-- Social sharing -->
     <div class="social-sharing mt-5 text-center">
       <p class="mb-3">Found this quiz helpful? Share it with others who might benefit:</p>
@@ -115,7 +82,7 @@
         </button>
       </div>
     </div>
-    
+
     <!-- Retake quiz option -->
     <div class="retake-quiz mt-4 text-center">
       <button class="btn btn-link" @click="$emit('reset')">
