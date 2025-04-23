@@ -1,0 +1,252 @@
+{
+  "data": {
+    "quizzes": [
+      {
+        "defaultCTA": "Call us for help",
+        "collectContactInfo": true,
+        "contactFormFields": [
+          {
+            "id": "last_name",
+            "type": "string",
+            "label": "Last Name",
+            "required": true
+          },
+          {
+            "id": "first_name",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "email",
+            "type": "email",
+            "required": true
+          }
+        ],
+        "successMessage": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Good job completing the quiz.",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "documentId": "wru6yuvtdyk9wk1ucgjd7qvm",
+        "createdAt": "2025-04-10T23:47:21.613Z",
+        "updatedAt": "2025-04-14T20:24:13.856Z",
+        "publishedAt": "2025-04-14T20:24:13.922Z",
+        "leadMagnet": [],
+        "questions": [
+          {
+            "id": "15",
+            "questionText": "What is name of the document that tells physicians whether you want to remain connected to life support, even after a terminal diagnosis?",
+            "description": null,
+            "type": "multiple_choice",
+            "questionId": "q1",
+            "required": true,
+            "order": 1,
+            "media": [],
+            "answers": [
+              {
+                "id": "47",
+                "answerText": "living will",
+                "value": 10,
+                "answerId": "q1a1",
+                "isCorrect": true,
+                "branchToQuestion": null,
+                "media": []
+              },
+              {
+                "id": "48",
+                "answerText": "advance directive",
+                "value": 10,
+                "answerId": "q1a2",
+                "isCorrect": true,
+                "branchToQuestion": null,
+                "media": []
+              },
+              {
+                "id": "49",
+                "answerText": "last will",
+                "value": 0,
+                "answerId": "q1a3",
+                "isCorrect": null,
+                "branchToQuestion": null,
+                "media": []
+              },
+              {
+                "id": "50",
+                "answerText": "medical power of attorney",
+                "value": 0,
+                "answerId": "q1a4",
+                "isCorrect": null,
+                "branchToQuestion": null,
+                "media": []
+              }
+            ]
+          },
+          {
+            "id": "16",
+            "questionText": "My adult children will automatically get my estate if when I die.",
+            "description": null,
+            "type": "boolean",
+            "questionId": "q2",
+            "required": true,
+            "order": 2,
+            "media": [],
+            "answers": [
+              {
+                "id": "51",
+                "answerText": "true",
+                "value": 0,
+                "answerId": "q2a1",
+                "isCorrect": null,
+                "branchToQuestion": null,
+                "media": []
+              },
+              {
+                "id": "52",
+                "answerText": "false",
+                "value": 10,
+                "answerId": "q2a2",
+                "isCorrect": true,
+                "branchToQuestion": null,
+                "media": []
+              }
+            ]
+          },
+          {
+            "id": "17",
+            "questionText": "The document that allows your loved ones to talk to your doctors about your health conditions is called ____",
+            "description": null,
+            "type": "single_choice",
+            "questionId": "q3",
+            "required": true,
+            "order": 3,
+            "media": [],
+            "answers": [
+              {
+                "id": "53",
+                "answerText": "Engagement Letter",
+                "value": 0,
+                "answerId": "q3a1",
+                "isCorrect": null,
+                "branchToQuestion": null,
+                "media": []
+              },
+              {
+                "id": "54",
+                "answerText": "Living Will",
+                "value": 0,
+                "answerId": "q3a2",
+                "isCorrect": null,
+                "branchToQuestion": null,
+                "media": []
+              },
+              {
+                "id": "55",
+                "answerText": "Medical Power of Attorney",
+                "value": 2,
+                "answerId": "q3a3",
+                "isCorrect": null,
+                "branchToQuestion": null,
+                "media": []
+              },
+              {
+                "id": "56",
+                "answerText": "HIPAA Authorization",
+                "value": 10,
+                "answerId": "q3a4",
+                "isCorrect": true,
+                "branchToQuestion": null,
+                "media": []
+              }
+            ]
+          }
+        ],
+        "isActive": true,
+        "version": "1.0",
+        "description": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "This quiz will help you identify whether you know enough about the necessary pieces, can avoid making common critical mistakes, and are disciplined enough to successfully plan and implement your own estate plan.",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "slug": "should-i-diy-my-estate-plan",
+        "title": "Should I DIY My Estate Plan?",
+        "resultCategories": [
+          {
+            "id": "10",
+            "title": "You're pretty on top of this stuff",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "You know what you're talking about. You can do this.",
+                    "type": "text"
+                  }
+                ]
+              }
+            ],
+            "minScore": 40,
+            "maxScore": null,
+            "criteria": null,
+            "ctaText": "Download the forms",
+            "ctaLink": "https://trustandwill.com",
+            "media": []
+          },
+          {
+            "id": "11",
+            "title": "You know some things, but you might make some critical misakes",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "If your life doesn't have a lot of complexities, like blended families, investment properties, or loved ones with special needs, you can probably get this done and avoid the big mistakes.",
+                    "type": "text"
+                  }
+                ]
+              }
+            ],
+            "minScore": 20,
+            "maxScore": 32,
+            "criteria": null,
+            "ctaText": "Go ahead and try",
+            "ctaLink": "https://trustandwill.com",
+            "media": []
+          },
+          {
+            "id": "12",
+            "title": "You can try, but you probably need help from someone",
+            "description": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "If you're going to do this yourself, you're going to need to do some studying.",
+                    "type": "text"
+                  }
+                ]
+              }
+            ],
+            "minScore": null,
+            "maxScore": 19,
+            "criteria": null,
+            "ctaText": "Read up on estate planning topics",
+            "ctaLink": "https://ohlawcolorado.com/blog",
+            "media": []
+          }
+        ]
+      }
+    ]
+  }
+}

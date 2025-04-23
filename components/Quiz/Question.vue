@@ -271,9 +271,10 @@ const submitAnswer = () => {
   background-color: rgba(0, 51, 153, 0.05);
 }
 
-.answer-option.selected {
+.answer-option.selected, .btn-check:checked + label {
   border-color: #003399;
   background-color: rgba(0, 51, 153, 0.1);
+  color: var(--bs-body-color);
 }
 
 .scale-choice {
@@ -297,21 +298,6 @@ const submitAnswer = () => {
 .boolean-choice .btn {
   font-weight: bold;
   transition: all 0.2s ease;
-}
-
-.btn-primary {
-  background-color: #003399;
-  border-color: #003399;
-}
-
-.btn-outline-primary {
-  color: #003399;
-  border-color: #003399;
-}
-
-.btn-outline-primary:hover {
-  background-color: #003399;
-  color: white;
 }
 
 .visually-hidden {

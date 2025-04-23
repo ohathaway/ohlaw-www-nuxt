@@ -2,7 +2,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import axios from 'axios'
-import { getQuizBySlug, submitQuizResults as submitQuizResultsMutation } from '~/utils/quizQueries'
 
 export const useQuizStore = defineStore('quiz', () => {
   // State
@@ -15,6 +14,9 @@ export const useQuizStore = defineStore('quiz', () => {
   const started = ref(false)
   const completed = ref(false)
   const contactSubmitted = ref(false)
+  const basicContactSubmitted = ref(false)
+  const enhancedContactSubmitted = ref(false)
+  const contactEnhanced = ref(false)
   const currentQuestionIndex = ref(0)
   const userAnswers = ref({})
   const quizResult = ref(null)
@@ -42,27 +44,27 @@ export const useQuizStore = defineStore('quiz', () => {
   const loadQuiz = async (slug) => {
     loading.value = true
     error.value = null
-    
+
     try {
       const { $apollo } = useNuxtApp()
-      
+
       // Use Apollo client to fetch quiz
       const { data } = await $apollo.defaultClient.query({
         query: getQuizBySlug,
         variables: { slug }
       })
-      
+
       // Check if quiz exists and is active
       const quizData = data?.quizzes?.[0]
-      
+
       if (!quizData) {
         throw new Error('Quiz not found')
       }
-      
+
       if (!quizData.isActive) {
         throw new Error('This quiz is currently unavailable')
       }
-      
+
       // Process and store quiz data
       quiz.value = {
         id: quizData.documentId,
@@ -78,7 +80,7 @@ export const useQuizStore = defineStore('quiz', () => {
         contactFormFields: quizData.contactFormFields || {},
         successMessage: quizData.successMessage
       }
-      
+
       loading.value = false
       return quiz.value
     } catch (err) {
@@ -92,7 +94,7 @@ export const useQuizStore = defineStore('quiz', () => {
   // Helper functions for processing quiz data
   const processQuestions = (questions) => {
     if (!questions) return []
-    
+
     return [...questions]
       .sort((a, b) => a.id - b.id)
       .map(q => ({
@@ -109,7 +111,7 @@ export const useQuizStore = defineStore('quiz', () => {
 
   const processAnswers = (answers) => {
     if (!answers) return []
-    
+
     return answers.map(a => ({
       answerId: a.answerId,
       answerText: a.answerText,
@@ -122,7 +124,7 @@ export const useQuizStore = defineStore('quiz', () => {
 
   const processResultCategories = (resultCategories) => {
     if (!resultCategories) return []
-    
+
     return resultCategories.map(rc => ({
       title: rc.title,
       description: rc.description,
@@ -148,12 +150,12 @@ export const useQuizStore = defineStore('quiz', () => {
   const handleAnswer = (questionId, answer) => {
     // Store answer
     userAnswers.value[questionId] = answer
-    
+
     // Check for branching logic (for future implementation)
     const currentAnswerObj = currentQuestion.value.answers.find(a => 
       a.answerId === (Array.isArray(answer) ? answer[0] : answer)
     )
-    
+
     // If there's branching logic and it's enabled, use it
     if (currentAnswerObj?.branchToQuestion) {
       const branchToIndex = quiz.value.questions.findIndex(
@@ -165,7 +167,7 @@ export const useQuizStore = defineStore('quiz', () => {
         return
       }
     }
-  
+
     // Otherwise, go to next question
     if (currentQuestionIndex.value < quiz.value.questions.length - 1) {
       currentQuestionIndex.value++
@@ -181,10 +183,10 @@ export const useQuizStore = defineStore('quiz', () => {
   const calculateResult = () => {
     // Simple scoring for now - sum the answer values
     let totalScore = 0
-  
+
     Object.entries(userAnswers.value).forEach(([questionId, answer]) => {
       const question = quiz.value.questions.find(q => q.questionId === questionId)
-  
+
       if (question) {
         if (Array.isArray(answer)) {
           // Multiple choice question
@@ -199,32 +201,32 @@ export const useQuizStore = defineStore('quiz', () => {
         }
       }
     })
-  
+
     // Find matching result category
     let resultCategory = null
-  
+
     for (const category of quiz.value.resultCategories) {
       // Check if score is within range
       const isInRange = (category.minScore === null || totalScore >= category.minScore) && 
                         (category.maxScore === null || totalScore <= category.maxScore)
-  
+
       if (isInRange) {
         resultCategory = category
         break
       }
     }
-  
+
     // Fallback to first category if no match
     if (!resultCategory && quiz.value.resultCategories.length) {
       resultCategory = quiz.value.resultCategories[0]
     }
-  
+
     // Set result
     quizResult.value = {
       score: totalScore,
       category: resultCategory
     }
-  
+
     // Mark quiz as completed
     completed.value = true
   }
@@ -238,36 +240,27 @@ export const useQuizStore = defineStore('quiz', () => {
   const submitQuizResults = async (submissionData) => {
     isSubmitting.value = true
     submissionError.value = null
-    
+
     try {
-      // Access Nuxt's Apollo client
-      const { $apollo } = useNuxtApp()
-      
-      // Use Apollo client to submit the mutation
-      const response = await $apollo.mutate({
-        mutation: submitQuizResultsMutation,
-        variables: {
-          data: {
-            quiz: submissionData.quiz,
-            quizVersion: submissionData.quizVersion,
-            answers: JSON.stringify(submissionData.answers),
-            score: submissionData.score,
-            resultCategory: submissionData.resultCategory,
-            contactInfo: submissionData.contactInfo ? JSON.stringify(submissionData.contactInfo) : null,
-            startedAt: submissionData.startedAt,
-            submittedToCRM: submissionData.submittedToCRM,
-            crmSubmissionId: submissionData.crmSubmissionId || null,
-            userAgent: submissionData.userAgent || null
-          }
+      // Use REST api to submit the mutation
+      // const submitQuery = submitQuizResults(submissionData)
+      // console.debug('submitQuery:', submitQuery)
+      const { strapiUrl } = useAppConfig()
+      const response = await $fetch(`${strapiUrl}/api/quiz-submissions`, {
+        method: 'post',
+        body: {
+          data: submissionData
         }
       })
-      
+
+      console.debug('strapi REST response:', response)
       // Store the submission locally
-      const submission = response.data.createQuizSubmission.data
-      quizSubmissions.value.push(submission)
-      
+      // const submission = response.data.createQuizSubmission.data
+      // quizSubmissions.value.push(submission)
+
       isSubmitting.value = false
-      return submission
+      // return submission
+      return
     } catch (error) {
       console.error('Error submitting quiz results:', error)
       submissionError.value = 'Failed to submit quiz results. Please try again.'
@@ -279,7 +272,7 @@ export const useQuizStore = defineStore('quiz', () => {
   const handleContactSubmit = async (contactInfo) => {
     try {
       // Submit to Strapi
-      await quizStore.submitQuizResults({
+      await submitQuizResults({
         quiz: quiz.value.id,
         quizVersion: quiz.value.version,
         answers: userAnswers.value,
@@ -287,26 +280,26 @@ export const useQuizStore = defineStore('quiz', () => {
         resultCategory: quizResult.value.category?.title,
         contactInfo,
         startedAt: startTime.value,
-        submittedAt: new Date(),
         submittedToCRM: false,
         userAgent: navigator.userAgent
       })
-  
-      // Submit to CRM
-      const crmSubmitted = await quizStore.submitToCRM(contactInfo, {
-        quiz: quiz.value.title,
-        score: quizResult.value.score,
-        result: quizResult.value.category?.title,
-        startedAt: startTime.value,
-        completedAt: new Date()
-      })
-  
-      // Update submission with CRM status if needed
-      if (crmSubmitted) {
-        // Update the submission with CRM ID if available
+
+      // Submit to Mailer Lite
+      console.debug('contactInfo:', contactInfo)
+      await $fetch('/api/subscribe', { method: 'post', body: contactInfo })
+
+      // Submit to CRM if enhancedMarketingConsent is true
+      if (contactInfo.enhancedMarketingConsent) {
+        await submitToCRM(contactInfo, {
+          quiz: quiz.value.title,
+          score: quizResult.value.score,
+          result: quizResult.value.category?.title,
+          startedAt: startTime.value,
+          completedAt: new Date()
+        })
+
+        contactSubmitted.value = true
       }
-  
-      contactSubmitted.value = true
     } catch (err) {
       console.error('Error submitting quiz results:', err)
       // Show error message
@@ -328,7 +321,7 @@ export const useQuizStore = defineStore('quiz', () => {
         submittedToCRM: false,
         userAgent: navigator.userAgent
       })
-  
+
       contactSubmitted.value = true
     } catch (err) {
       console.error('Error submitting quiz results:', err)
@@ -344,7 +337,7 @@ export const useQuizStore = defineStore('quiz', () => {
     userAnswers.value = {}
     quizResult.value = null
   }
-  
+
   /**
    * Submit quiz results and contact info to CRM
    * @param {Object} contactInfo - The user's contact information
@@ -355,34 +348,31 @@ export const useQuizStore = defineStore('quiz', () => {
     if (!contactInfo || !contactInfo.email) {
       return false
     }
-    
+
     try {
       // Adapt this to your specific CRM API
-      const response = await axios.post('/api/crm/leads', {
-        contact: {
+      const { public: { lawmatics: { quizFormUrl } } } = useRuntimeConfig()
+      console.debug('quizFormUrl:', quizFormUrl)
+      const crmResponse = await $fetch(quizFormUrl, {
+        method: 'post',
+        body: {
           email: contactInfo.email,
-          firstName: contactInfo.firstName || '',
-          lastName: contactInfo.lastName || '',
+          first_name: contactInfo.firstName,
+          last_name: contactInfo.lastName || '',
           phone: contactInfo.phone || '',
-        },
-        source: 'Website Quiz',
-        quiz: {
-          title: quizData.quiz,
-          score: quizData.score,
-          result: quizData.result,
-          startedAt: quizData.startedAt,
-          completedAt: quizData.completedAt
-        },
-        consent: contactInfo.marketingConsent || false
+          general_field_cd24: quizData.quiz,
+          general_field_4215: JSON.stringify(quizData.answers),
+          general_field_a3fa: JSON.stringify(quizData.result)
+        }
       })
-      
-      return response.data?.success || false
+
+      return crmResponse.data?.success || false
     } catch (error) {
       console.error('Error submitting to CRM:', error)
       return false
     }
   }
-  
+
   /**
    * Update a quiz submission with CRM submission status
    * @param {string} submissionId - The ID of the quiz submission
@@ -400,14 +390,14 @@ export const useQuizStore = defineStore('quiz', () => {
         quizSubmissions.value[submissionIndex].attributes.submittedToCRM = true
         quizSubmissions.value[submissionIndex].attributes.crmSubmissionId = crmSubmissionId
       }
-      
+
       return true
     } catch (error) {
       console.error('Error updating CRM submission status:', error)
       return false
     }
   }
-  
+
   /**
    * Get analytics for a specific quiz
    * @param {string} quizId - The ID of the quiz
@@ -436,6 +426,9 @@ export const useQuizStore = defineStore('quiz', () => {
     // State
     completed,
     contactSubmitted,
+    basicContactSubmitted,
+    enhancedContactSubmitted,
+    contactEnhanced,
     currentQuestionIndex,
     error,
     isSubmitting,

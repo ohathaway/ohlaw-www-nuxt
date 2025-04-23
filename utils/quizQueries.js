@@ -124,28 +124,54 @@ export const getQuizBySlug = gql`
 /**
  * GraphQL mutation to submit quiz results
  */
-export const submitQuizResults = gql`
-  mutation submitQuizResults($data: QuizSubmissionInput!) {
-    createQuizSubmission(data: $data) {
-      data {
-        id
-        attributes {
-          quiz {
-            data {
-              id
-            }
+export const submitQuizResults = results => {
+  console.debug('constructing quiz submission from:', results)
+  try {
+    const {
+      answers,
+      quiz,
+      quizVersion,
+      score,
+      resultCategory,
+      contactInfo,
+      submittedToCRM,
+      userAgent,
+      startedAt
+    } = results
+
+    const params = {
+      data: {results}
+    }
+    return qs.stringify(params, { encode: false })
+
+    /*
+    return gql`
+      mutation submitQuizResults(
+        createQuizSubmission(
+          data: {
+            answers: ${answers}
+            quiz: ${quiz}
+            quizVersion: ${quizVersion}
+            score: ${score}
+            resultCategory: ${resultCategory}
+            contactInfo: ${contactInfo}
+            submittedToCRM: ${submittedToCRM}
+            userAgent: ${userAgent}
+            startedAt: ${startedAt}
           }
-          quizVersion
-          score
-          resultCategory
-          submittedAt
-          submittedToCRM
-          crmSubmissionId
+        ) {
+          publishedAt
+          documentId
         }
       }
-    }
+    `
+    */
+  } catch (error) {
+    console.error('failed to compile result mutation for graphql:', error)
+    throw error
   }
-`
+}
+
 
 /**
  * GraphQL query to get all active quizzes

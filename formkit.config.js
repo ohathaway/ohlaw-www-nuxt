@@ -17,33 +17,35 @@ const validZip = (node) => {
   return !isEmpty(node.value.match(/^\d{5}(?:[-\s]\d{4})?$/))
 }
 
+const isTrue = (node) => {
+  return typeof node.value === 'boolean' ? node.value : false
+}
+
+const legends = ['checkbox_multi', 'radio_multi', 'repeater', 'transferlist']
+
 function addAsteriskPlugin(node) {
+  if (['button', 'submit', 'hidden', 'group', 'meta'].includes(node.props.type)) return
+
   node.on('created', () => {
-    const isRequired = node.props.parsedRules.some((rule) => rule.name === 'required')
-    if (!isRequired) return
+    const legendOrLabel = legends.includes(`${node.props.type}${node.props.options ? '_multi' : ''}`) ? 'legend' : 'label'
 
-    const isMultiOption = isCheckboxAndRadioMultiple(node)
-
-    // if we're going to modify the schema then we need
-    // to update the schemaMemoKey so we don't get an
-    // invalid cached schema.
-    node.props.definition.schemaMemoKey = `required_${isMultiOption ? 'multi_' : ''}${
-      node.props.definition.schemaMemoKey
-    }`
-
+    if (node.props.definition.schemaMemoKey) {
+      node.props.definition.schemaMemoKey += `${node.props.options ? '_multi' : ''}_add_asterisk`
+    }
+    
     const schemaFn = node.props.definition.schema
     node.props.definition.schema = (sectionsSchema = {}) => {
-      if (isRequired) {
-        if (isMultiOption) {
-          sectionsSchema.legend = {
-            children: ['$label', '*']
-          }
-        } else {
-          sectionsSchema.label = {
-            children: ['$label', '*']
-          }
-        }
+      sectionsSchema[legendOrLabel] = {
+        children: ['$label', {
+          $el: 'span',
+          if: '$state.required',
+          attrs: {
+            class: '$classes.asterisk',
+          },
+          children: [' *']
+        }]
       }
+      
       return schemaFn(sectionsSchema)
     }
   })
@@ -59,9 +61,23 @@ export default {
       },
       */
       input: {
-        'input-bg-white': true
-        // 'form-control': true,
-        // 'formkit-input': true
+        'input-bg-white': true,
+        'form-control': true,
+      },
+      outer: {
+      },
+      checkbox: {
+        'form-control': true,
+        'label-class': {
+          $reset: true
+        }
+      },
+      submit: {
+        input: {
+          'btn': true,
+          'btn-primary': true
+        }
+      }
       /*
       },
       prefixIcon: {
@@ -70,8 +86,8 @@ export default {
       },
       wrapper: {
         'formkit-wrapper': false
-      */
       }
+      */
     }
   },
   icons: {
@@ -87,9 +103,9 @@ export default {
     }
   },
   plugins: [
-    // addAsteriskPlugin,
+    addAsteriskPlugin,
     createFloatingLabelsPlugin({ useAsDefault: true }),
     pro
   ],
-  rules: { validZip }
+  rules: { isTrue, validZip }
 }

@@ -14,3 +14,7 @@ export const linkLocal = link => {
   const { seo: { siteUrl } } = useAppConfig()
   return link.includes(siteUrl)
 }
+
+export const sleep = duration => {
+  return new Promise(resolve => setTimeout(resolve, duration))
+}

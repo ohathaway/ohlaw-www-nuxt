@@ -27,6 +27,7 @@ $theme-colors: (
 );
 
 // Other Bootstrap customizations
+$enable-cssgrid: true;
 $navbar-light-color: #3a3a3a;
 $btn-active-bg: $blue-primary;
 $border-radius: 3.5px;
@@ -34,6 +35,8 @@ $font-family-sans-serif: 'Poppins', Helvetica, Arial, sans-serif;
 $font-family-serif: 'Benguiat', Georgia, "Times New Roman", serif;
 $font-weight-normal: 300;
 $line-height-base: 2.25; // Equivalent to 36px with 16px font-size
+$form-check-input-checked-bg-color: $blue-primary;
+$form-check-input-checked-border-color: $blue-primary;
 
 // Import Bootstrap after defining custom variables
 @import 'bootstrap/scss/bootstrap';
@@ -41,6 +44,26 @@ $line-height-base: 2.25; // Equivalent to 36px with 16px font-size
 // Import other stylesheets
 @import './print.scss';
 @import './responsive-borders.scss';
+
+// =============================================================================
+// FormKit overrides
+// =============================================================================
+
+:root {
+  --fk-font-family: 'Poppins', sans-serif;
+  --fk-font-weight: 300;
+  --fk-line-height: 36px;
+  --fk-bg-submit: #003399;
+}
+
+[data-type="checkbox"] {
+  .formkit-wrapper {
+    align-items: flex-start;
+  }
+  .formkit-inner {
+  top: 8px;
+  }
+}
 
 // =============================================================================
 // BASE STYLES - Core element styling

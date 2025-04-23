@@ -1,96 +1,117 @@
 <template>
   <div class="quiz-contact-form">
     <!-- Form header -->
-    <div class="form-header text-center mb-4">
-      <h3>Get Your Personalized Recommendations</h3>
-      <p class="text-muted">
-        Enter your contact information below to receive personalized advice 
-        based on your quiz results.
-      </p>
-    </div>
     
-    <!-- Contact form -->
-    <form @submit.prevent="submitForm" class="p-4 border rounded bg-light">
-      <div class="row g-3">
-        <!-- First name -->
-        <div class="col-md-6">
-          <label for="firstName" class="form-label">First Name*</label>
-          <input 
-            type="text" 
-            class="form-control" 
-            id="firstName" 
-            v-model="formData.firstName"
-            :class="{ 'is-invalid': errors.firstName }"
-            required
-          >
-          <div class="invalid-feedback" v-if="errors.firstName">
-            {{ errors.firstName }}
-          </div>
-        </div>
-        
-        <!-- Last name -->
-        <div class="col-md-6">
-          <label for="lastName" class="form-label">Last Name*</label>
-          <input 
-            type="text" 
-            class="form-control" 
-            id="lastName" 
-            v-model="formData.lastName"
-            :class="{ 'is-invalid': errors.lastName }"
-            required
-          >
-          <div class="invalid-feedback" v-if="errors.lastName">
-            {{ errors.lastName }}
-          </div>
-        </div>
-        
-        <!-- Email -->
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email Address*</label>
-          <input 
-            type="email" 
-            class="form-control" 
-            id="email" 
-            v-model="formData.email"
-            :class="{ 'is-invalid': errors.email }"
-            required
-          >
-          <div class="invalid-feedback" v-if="errors.email">
-            {{ errors.email }}
-          </div>
-        </div>
-        
-        <!-- Phone -->
-        <div class="col-md-6">
-          <label for="phone" class="form-label">Phone Number</label>
-          <input 
-            type="tel" 
-            class="form-control" 
-            id="phone" 
-            v-model="formData.phone"
-            :class="{ 'is-invalid': errors.phone }"
-          >
-          <div class="invalid-feedback" v-if="errors.phone">
-            {{ errors.phone }}
-          </div>
-        </div>
-        
-        <!-- Marketing consent -->
-        <div class="col-12 mt-3">
-          <div class="form-check">
-            <input 
-              class="form-check-input" 
-              type="checkbox" 
-              id="marketingConsent" 
-              v-model="formData.marketingConsent"
-            >
-            <label class="form-check-label" for="marketingConsent">
-              I agree to receive follow-up communications about my quiz results and related legal services.
-            </label>
-          </div>
-        </div>
+    <FormKit
+      type="form"
+      :actions="false"
+      name="quizContactForm"
+      ref="formData"
+      id="quizContactForm"
+      #default="{ node }"
+      @submit.prevent
+
+      :classes="{
+        form: {
+          $reset: true,
+          'p-4': true,
+          border: true,
+          rounded: true,
+          'bg-light': true
+        }
+      }"
+    >
+      <div class="form-header text-center mb-4">
+        <h3>Get Your Personalized Recommendations</h3>
+        <p class="text-muted px-5">
+          Enter your contact information below to receive personalized advice 
+          based on your quiz results.
+        </p>
       </div>
-      
+      <div class="grid">
+        <FormKit
+          type="text"
+          name="firstName"
+          label="First Name"
+          validation="required"
+          :classes="{
+            outer: {
+              'g-col-6': true
+            },
+            input: {
+              $reset: true,
+              'form-control': true
+            }
+          }"
+        />
+        <FormKit
+          v-if="showEnhancedFields"
+          type="text"
+          name="lastName"
+          label="Last Name"
+          validation="required"
+          :classes="{
+            outer: {
+              'g-col-6': true
+            },
+            input: {
+              $reset: true,
+              'form-control': true
+            }
+          }"
+        />
+        <FormKit
+          type="text"
+          name="email"
+          label="Email Address"
+          validation="required|email"
+          :classes="{
+            outer: {
+              'g-col-6': true
+            },
+            input: {
+              $reset: true,
+              'form-control': true
+            }
+          }"
+        />
+        <FormKit
+          v-if="showEnhancedFields"
+          type="tel"
+          name="phone"
+          label="Phone Number"
+          validation="required|matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
+          :validation-messages="{
+            required: 'Yeah. We need your phone number to give you the enhanced results',
+            matches: 'Phone number must be in the format xxx-xxx-xxxx',
+          }"
+          :classes="{
+            outer: {
+              'g-col-6': true
+            },
+            input: {
+              $reset: true,
+              'form-control': true
+            }
+          }"
+        />
+      </div>
+      <FormKit
+        type="checkbox"
+        :label="marketingConsentText"
+        name="marketingConsent"
+        validation="isTrue"
+        :validation-messages="{ isTrue: 'Sorry, we need your consent to give you your results.'}"
+      />
+      <FormKit
+        type="checkbox"
+        name="enhancedMarketingConsent"
+        @input="updateEnhancedConsent"
+      >
+        <template #label>
+          <span v-html="enhancedConsentText" />
+        </template>
+      </FormKit>
       <!-- Privacy notice -->
       <div class="privacy-notice mt-4 mb-4">
         <p class="small text-muted">
@@ -98,116 +119,56 @@
           See our <a href="/policies/Privacy" target="_blank">Privacy Policy</a> for details.
         </p>
       </div>
-      
-      <!-- Form buttons -->
-      <div class="d-flex justify-content-between mt-4">
-        <button 
-          type="button" 
-          class="btn btn-outline-secondary" 
-          @click="$emit('skip')"
-        >
-          Skip for now
-        </button>
-        <button 
-          type="submit" 
-          class="btn btn-primary"
-          :disabled="isSubmitting"
-        >
-          <span v-if="isSubmitting" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-          {{ isSubmitting ? 'Submitting...' : 'Get My Results' }}
-        </button>
-      </div>
-    </form>
+
+      <FormKit
+        type="button"
+        :disabled="!node.context.state.valid"
+        @click="submitForm(node.value)"
+        :classes="{
+          outer: {
+            'mx-auto': true
+          },
+          input: {
+            $reset: true,
+            btn: true,
+            'btn-primary': true
+          },
+          label: {
+            'text-dark': true
+          }
+        }"
+      >
+        {{ isSubmitting ? 'Submitting...' : 'Get My Results' }}
+      </FormKit>
+    </FormKit>
   </div>
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+const { isSubmitting }  = storeToRefs(useQuizStore())
 
 const emit = defineEmits(['submit', 'skip'])
+const showEnhancedFields = ref(false)
 
 // Form data
-const formData = reactive({
-  firstName: '',
-  lastName: '',
-  email: '',
-  phone: '',
-  marketingConsent: false
-})
+const formData = ref(null)
 
-// Form state
-const isSubmitting = ref(false)
-const errors = reactive({
-  firstName: '',
-  lastName: '',
-  email: '',
-  phone: ''
-})
-
-// Form validation
-const validateForm = () => {
-  let isValid = true
-  
-  // Reset errors
-  Object.keys(errors).forEach(key => errors[key] = '')
-  
-  // Validate first name
-  if (!formData.firstName.trim()) {
-    errors.firstName = 'First name is required'
-    isValid = false
-  }
-  
-  // Validate last name
-  if (!formData.lastName.trim()) {
-    errors.lastName = 'Last name is required'
-    isValid = false
-  }
-  
-  // Validate email
-  if (!formData.email.trim()) {
-    errors.email = 'Email address is required'
-    isValid = false
-  } else if (!isValidEmail(formData.email)) {
-    errors.email = 'Please enter a valid email address'
-    isValid = false
-  }
-  
-  // Validate phone (if provided)
-  if (formData.phone.trim() && !isValidPhone(formData.phone)) {
-    errors.phone = 'Please enter a valid phone number'
-    isValid = false
-  }
-  
-  return isValid
-}
-
-// Email validation helper
-const isValidEmail = (email) => {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  return re.test(String(email).toLowerCase())
-}
-
-// Phone validation helper
-const isValidPhone = (phone) => {
-  // Basic US phone format validation (can be adjusted for international formats)
-  const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
-  return re.test(String(phone).trim())
-}
+const marketingConsentText = `I agree to receive follow-up communications about my quiz results and related legal services.`
+const enhancedConsentText = `<strong>Get Enhanced Report:</strong>I want to receive the full report on my quiz results and speak to a <em>Life & Legacy</em> professional about them.`
 
 // Form submission
-const submitForm = async () => {
-  if (!validateForm()) return
-  
-  isSubmitting.value = true
-  
+const submitForm = async formValues => {
   try {
     // Emit the form data to parent component
-    emit('submit', { ...formData })
+    emit('submit', { ...formValues })
   } catch (error) {
     console.error('Error submitting form:', error)
   } finally {
-    isSubmitting.value = false
   }
+}
+
+const updateEnhancedConsent = value => {
+  showEnhancedFields.value = value
 }
 </script>
 
@@ -220,16 +181,6 @@ const submitForm = async () => {
 .form-header h3 {
   color: #003399;
   margin-bottom: 1rem;
-}
-
-.btn-primary {
-  background-color: #003399;
-  border-color: #003399;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #f8f9fa;
-  color: #6c757d;
 }
 
 .privacy-notice {

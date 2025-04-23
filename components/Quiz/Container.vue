@@ -52,30 +52,20 @@
 
       <!-- Results -->
       <div v-else-if="completed" class="quiz-results">
-        <QuizResults 
-          :result="quizResult"
-          :quiz="quiz"
-          @reset="resetQuiz"
-        />
-
-        <!-- Contact form or thank you message -->
-        <div v-if="!contactSubmitted && quiz.collectContactInfo" class="mt-5">
+        <!-- Basic Contact form or thank you message -->
+        <div v-if="!basicContactSubmitted && quiz.collectContactInfo" class="mt-5">
           <QuizContactForm 
             @submit="handleContactSubmit"
             @skip="handleContactSkip"
           />
         </div>
-        <div v-else class="text-center p-4">
-          <div v-html="quiz.successMessage || 'Thank you for completing the quiz!'"></div>
 
-          <div class="mt-4">
-            <button class="btn btn-outline-primary me-3" @click="resetQuiz">
-              Take Quiz Again
-            </button>
-            <NuxtLink to="/" class="btn btn-primary">
-              Back to Home
-            </NuxtLink>
-          </div>
+        <div v-else>
+          <QuizResults 
+            :result="quizResult"
+            :quiz="quiz"
+            @reset="resetQuiz"
+          />
         </div>
       </div>
     </div>
@@ -100,6 +90,7 @@ const {
   started,
   completed,
   contactSubmitted,
+  basicContactSubmitted,
   currentQuestionIndex,
   currentQuestion,
   progressPercent,

@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { seoConfig } from './seo.config'
 
 const getPostRoutes = async () => {
   if (!process.env.STRAPI_URL) {
@@ -187,9 +186,20 @@ export default defineNuxtConfig({
     upperAfterPrefix: false
   },
 
-  modules: ['nuxt-icon', // 'nuxt-vuefire',
-  'nuxt-gtag', 'nuxt-lodash', '@vueuse/nuxt', '@formkit/nuxt', '@pinia/nuxt', // '@nuxtjs/strapi'
-  '@nuxtjs/apollo', '@nuxt/content', '@nuxt/image', '@nuxtjs/sitemap', '@nuxtjs/robots', '@nuxthub/core'],
+  modules: [// 'nuxt-vuefire',
+    'nuxt-icon',
+    'nuxt-gtag',
+    'nuxt-lodash',
+    '@vueuse/nuxt',
+    '@formkit/nuxt', // '@nuxtjs/strapi'
+    '@pinia/nuxt',
+    '@nuxtjs/apollo',
+    '@nuxt/content',
+    '@nuxt/image',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    '@nuxthub/core'
+  ],
 
   nitro: {
     prerender: {
@@ -233,7 +243,17 @@ export default defineNuxtConfig({
       bucketName: process.env.CLOUDFLARE_BUCKET_NAME
     },
     public: {
-      strapiUrl: process.env.STRAPI_URL
+      strapiUrl: process.env.STRAPI_URL,
+      lawmatics: {
+        quizFormUrl: process.env.LAWMATICS_QUIZ_FORM_URL
+      }
+    },
+    mailerLite: {
+      apiKey: process.env.MAILER_LITE_KEY
+    },
+    lawmatics: {
+      url: process.env.LAWMATICS_URL,
+      key: process.env.LAWMATICS_KEY,
     }
   },
 
