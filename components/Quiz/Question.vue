@@ -242,6 +242,7 @@ const submitAnswer = () => {
     syncSelectedAnswers()
   }
   
+  // HERE IS WHERE WE EMIT THE ANSWER - NEED TO ADD OVERRIDE HANDLING
   const answer = props.question.type === 'multiple_choice' 
     ? selectedAnswers.value 
     : selectedAnswer.value

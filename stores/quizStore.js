@@ -35,6 +35,36 @@ export const useQuizStore = defineStore('quiz', () => {
     return quiz.value.questions[currentQuestionIndex.value]
   })
 
+  const minimumResultAnswers = computed(() => {
+    if (!quiz.value || !quiz.value.questions.length) return []
+    const answers = quiz.value.questions.reduce((allAnswers, question) => {
+      if (question.answers && Array.isArray(question.answers)) {
+        return [...allAnswers, ...question.answers]
+      }
+      return allAnswers
+    }, []).filter(answer => {
+      return answer.minimumResultScore > 0
+    })
+    return answers
+  })
+
+  const maximumResultAnswers = computed(() => {
+    if (!quiz.value || !quiz.value.questions.length) return []
+    const answers = quiz.value.questions.reduce((allAnswers, question) => {
+      if (question.answers && Array.isArray(question.answers)) {
+        return [...allAnswers, ...question.answers]
+      }
+      return allAnswers
+    }, []).filter(answer => {
+      return answer.maximumResultScore > 0
+    })
+    return answers
+  })
+
+  const userAnswersFlat = computed(() => {
+    return Object.values(userAnswers.value).flat()
+  })
+
   // Actions
   /**
    * Load a quiz by slug
@@ -118,7 +148,9 @@ export const useQuizStore = defineStore('quiz', () => {
       value: a.value,
       isCorrect: a.isCorrect,
       media: a.media?.url,
-      branchToQuestion: a.branchToQuestion
+      branchToQuestion: a.branchToQuestion,
+      maximumResultScore: a.maximumResultScore,
+      minimumResultScore: a.minimumResultScore
     }))
   }
 
@@ -180,7 +212,92 @@ export const useQuizStore = defineStore('quiz', () => {
     if (currentQuestionIndex.value > 0) currentQuestionIndex.value--
   }
 
+  const calculateScoreBoundaries = (overrides) => {
+    // Get all non-null minimumResultScore values
+    const minScores = overrides
+      .filter(override => override.minimumResultScore !== null)
+      .map(override => override.minimumResultScore)
+    
+    // Get all non-null maximumResultScore values
+    const maxScores = overrides
+      .filter(override => override.maximumResultScore !== null)
+      .map(override => override.maximumResultScore)
+    
+    // Find highest minimum (or null if none exist)
+    const minScore = minScores.length ? Math.max(...minScores) : null
+    
+    // Find lowest maximum (or null if none exist)
+    const maxScore = maxScores.length ? Math.min(...maxScores) : null
+    
+    return { minScore, maxScore }
+  }
+
+  const checkResultOverride = userAnswers => {
+    // list all user answers that appear in the minimumResultScore property
+    const minOverrides = minimumResultAnswers.value.filter(mrAnswer => {
+      return userAnswersFlat.value.includes(mrAnswer.answerId)
+    })
+
+    // list all user answers that appear in the maximumResultScore property
+    const maxOverrides = maximumResultAnswers.value.filter(mrAnswer => {
+      return userAnswersFlat.value.includes(mrAnswer.answerId)
+    })
+
+    // merge the two together
+    const allOverrides =  minOverrides.concat(maxOverrides)
+
+    return allOverrides
+  }
+
+  const determineResultCategory = (rawScore,
+                                   resultCategories,
+                                   overrides,
+                                   userAnswers) => {
+    // First, calculate score boundaries from overrides
+    const {
+      minScore: overrideMin,
+      maxScore: overrideMax
+    } = calculateScoreBoundaries(
+      overrides.filter(override => userAnswers.includes(override.answerId))
+    )
+    
+    // Find the default category based on raw score
+    const defaultCategory = resultCategories.find(category => {
+      const meetsMinRequirement = category.minScore === null ||
+        rawScore >= category.minScore
+      const meetsMaxRequirement = category.maxScore === null ||
+        rawScore <= category.maxScore
+      return meetsMinRequirement && meetsMaxRequirement
+    })
+    
+    // If no overrides apply, return the default category
+    if (overrideMin === null && overrideMax === null) {
+      return defaultCategory
+    }
+    
+    // Apply overrides to find the correct category
+    // If an override sets a minimum score, we need a category where minScore <= overrideMin
+    // If an override sets a maximum score, we need a category where maxScore >= overrideMax
+    return resultCategories.find(category => {
+      // Check if this category satisfies the override minimum (if one exists)
+      const satisfiesOverrideMin = overrideMin === null || 
+        (category.minScore !== null && category.minScore <= overrideMin)
+      
+      // Check if this category satisfies the override maximum (if one exists)
+      const satisfiesOverrideMax = overrideMax === null || 
+        (category.maxScore !== null && category.maxScore >= overrideMax)
+      
+      return satisfiesOverrideMin && satisfiesOverrideMax;
+    }) || defaultCategory // Fallback to default if no category matches overrides
+  }
+
+  // wrapper function for calculating the quiz results
   const calculateResult = () => {
+    // Check for Overrides
+    console.debug('checking for answer overrides:', userAnswers.value)
+    const overrides = checkResultOverride(userAnswers.value)
+    console.debug('overrides:', overrides)
+
     // Simple scoring for now - sum the answer values
     let totalScore = 0
 
@@ -203,24 +320,10 @@ export const useQuizStore = defineStore('quiz', () => {
     })
 
     // Find matching result category
-    let resultCategory = null
-
-    for (const category of quiz.value.resultCategories) {
-      // Check if score is within range
-      const isInRange = (category.minScore === null || totalScore >= category.minScore) && 
-                        (category.maxScore === null || totalScore <= category.maxScore)
-
-      if (isInRange) {
-        resultCategory = category
-        break
-      }
-    }
-
-    // Fallback to first category if no match
-    if (!resultCategory && quiz.value.resultCategories.length) {
-      resultCategory = quiz.value.resultCategories[0]
-    }
-
+    const resultCategory = determineResultCategory(totalScore,
+                                                   quiz.value.resultCategories,
+                                                   overrides,
+                                                   userAnswersFlat.value)
     // Set result
     quizResult.value = {
       score: totalScore,
@@ -445,6 +548,8 @@ export const useQuizStore = defineStore('quiz', () => {
     currentQuestion,
     isQuizLoaded,
     progressPercent,
+    maximumResultAnswers,
+    minimumResultAnswers,
     
     // Actions
     getQuizAnalytics,

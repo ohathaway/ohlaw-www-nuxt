@@ -63,6 +63,8 @@ export const getQuizBySlug = gql`
           answerId
           isCorrect
           branchToQuestion
+          maximumResultScore
+          minimumResultScore
           media {
             name
             alternativeText
