@@ -25,7 +25,7 @@
     "sass-loader": "^16.0.5",
     "vue": "latest",
     "vue-router": "latest",
-    "wrangler": "^4.7.2"
+    "wrangler": "^4.59.1"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.734.0",
